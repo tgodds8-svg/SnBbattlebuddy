@@ -1,0 +1,1504 @@
+{
+  "last_verified": "2026-10-02",
+  "current_season": "Y3S2 (Crimson Waters)",
+  "sources": [
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2aVFScvAB18TIE5BY4VDSW/y3s2-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/7fVVY1bpHbvXCP8sUw64aP/y3s1-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/3wJTkZubG55fhncijrWGtA/y2s3-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/5oojUG3ZZTZJiIooM7FxC8",
+    "https://www.ubisoft.com/en-sg/game/skull-and-bones/news-updates/2CFEWvtQ3dYOKjMGO7Trnl/y2s2-patch-notes",
+    "https://www.ubisoft.com/en-gb/game/skull-and-bones/news-updates/4eKdSwXD2Ff2GANU8BPLyP/y1s4-shadows-of-the-deep-patch-notes",
+    "https://www.ubisoft.com/en-au/game/skull-and-bones/seasons/chorusofhavoc",
+    "http://game8.co/games/Skull-and-Bones/archives/445104",
+    "https://game8.co/games/Skull-and-Bones/archives/445103",
+    "https://game8.co/games/Skull-and-Bones/archives/445106",
+    "https://mp1st.com/title-updates-and-patches/skull-and-bones-update-1-000-029-enters-year-2-with-patch-y2s1",
+    "https://updatecrazy.com/skull-and-bones-update-1-000-037-patch-notes-on-june-17-2025/",
+    "https://updatecrazy.com/skull-and-bones-update-1-000-028-patch-notes-y2s1/",
+    "https://mp1st.com/title-updates-and-patches/skull-and-bones-update-1-000-014-hits-the-seas-for-season-3-this-aug-22-full-patch-notes-listed",
+    "https://mp1st.com/title-updates-and-patches/skull-and-bones-update-1-000-020-out-for-season-4-patch-this-november-19",
+    "https://www.psu.com/news/skull-and-bones-season-4-patch-notes-ps5/",
+    "https://skullandbonestools.de/en/codex/item/bloodyRed",
+    "https://skullandbonestools.de/en/codex/item/cannonballCarvingStation",
+    "https://skullandbonestools.de/en/codex/item/warDrums",
+    "https://skullandbonestools.de/en/codex/item/munitionsMixer",
+    "https://skullandbonestools.de/codex/item/ironCapstan",
+    "https://skullandbonestools.de/codex/item/scopingStation",
+    "https://skullandbonestools.de/codex/item/ropeLocker",
+    "https://skullandbonestools.de/en/codex/item/riggingStation",
+    "https://skullandbonestools.de/codex/item/scrapperStation"
+  ],
+  "furniture": [
+    {
+      "name": "DROWNING CABINET",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases Flooding Weapon Damage for targets with Severe Damage. When dealing damage to a target with reduced Max Hull Health, Flooding Weapons deal 15% more weapon damage for 20s with a 60s cooldown. Flooded status applied to targets within 250m lasts 12% longer. -10% reload time for Flooding Weapons. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "BLOODY RED",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A large banner stained red to incite vengeance, drawing the enemy's ire. Reduces Threat Generation of nearby friendly ships by 60%. Increases Taunt Bonus Threat by 40%. Increases Threat Generation by 25%. Ship rank 4. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "HELLSHOT SMITHY",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A forbidden shipboard forge, built to enhance the Ablaze status effect and spread Burning damage across enemy targets. Dealing at least 2000 Burning Damage in a single hit to a target applies the Charred status effect to them for 30s. While Charred, targets receive 30% more Burning Damage from your ship and increase the Torn Sails status charge received by 15%. Charred targets that are also Ablaze will build Charred status on targets within 150m. 10% of the Burning Damage dealt to a target which is Ablaze is also dealt to enemy ships within 150m. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "DOUBLE-PLANKED HULL I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": 400,
+      "perk_text": "Increases Max Hull Health by 5%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "ORGAN HARVESTING STATION",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Rocket perks: +5% rocket damage per 20% hull health missing, +10% rocket secondary damage, -5% rocket reload time. Ship rank 4.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "COUNTERTHRUST LOCKER",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": 160,
+      "perk_text": "+300% acceleration for 5s after ramming, +10% top speed and -10% crew stamina depletion when sailing against the wind. Ship rank 4.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "STERILE GALLEY I",
+      "tier": "Minor",
+      "cost": 65,
+      "cost_secondary": null,
+      "perk_text": "+7% maximum stamina. Ship rank 1.",
+      "ship_rank_required": 1,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "DYNAMIC BALLAST CONTROL",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces incoming secondary damage by range (capped at 30% reduction at 600m and beyond), -8% incoming enemy piercing charge, +3% equipped armor rating. Ship rank 4.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "BREECHLOCK FURNACE",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Ha! What a shot! In one end and clean out the other! +20% secondary damage up close (scaling down 2% per 50m of distance), +5% Shell-shocked charge rate, +3% Shell-shocked damage. Ship rank 4.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "GRINDSTONE I",
+      "tier": "Minor",
+      "cost": 175,
+      "cost_secondary": null,
+      "perk_text": "+5% projectile speed for all weapons except Sea Fire and auxiliary weapons. Ship rank 1.",
+      "ship_rank_required": 1,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "Rope Locker",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Oi, lad! Use a spoon to wipe your ass? That's the trim rope, not the anchor line! Increases Acceleration to 450% when trim is activated at full Stamina. 7% of Stamina is instantly consumed to trigger this effect. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "First Aid Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases repair weapon amount by 30% when hull health is below 33%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Signal Gong",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases weapon damage by 20% for 30s after using a Crew Attack. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Megaphone",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases reload speed by 0.5% per consecutive hit, up to a maximum of 15%. Effect resets if no hit is landed within 10s. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Scoping Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Keep yer eye on that enemy ship, lad! Don't let me catch ya sneaking winks at them mermaids! Hitting a target more than 320m away applies the Marked status. Targets with the Marked status take 100% more damage to weakpoints. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Scrapper Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A pickaxe, butter knife, or your damned left shoe! Patch the hull, me hearties! Restores 8000 Hull Health after a Crew Attack. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Iron Capstan",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Release the anchor, Captain! Those gutter swabs won't be able to hit us! Reduces damage taken by 15% and increases Threat Generation by 100% while Anchored. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Munitions Mixer",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Careful with that mix, you bastards! I'm not having my other brow seared off! Increases duration of Flooded and Ablaze effects applied to enemy ships by 100%, but reduces damage dealt from these effects by 20%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "War Drums",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Here they come, sea dogs! And if Davy Jones comes knocking, tell 'im we ain't ready for his locker yet! While trimming, reduces Brace Stamina Consumption by 50% and increases Armor Rating by 200. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Water Tank",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Reduces stamina depletion while bracing by 50% and increases stamina recovery by 20%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Rigging Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Grab yer tools, sea rats! We'll mend the hull faster than they make holes in it! Recovers 1% Hull Health per second when Hull Health is less than 20%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Gunner's Quadrant",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Decreases Reload Time by 15% for the same weapon used to hit a weakpoint from at least 160m range. The effect after hitting a weakpoint lasts for 10 seconds and applies only to the first shot. (Reworked in Y2S1; pre-Y2S1: -50% reload time on the first shot after destroying a weakpoint from at least 320m.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Freeman's Embrace",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Reduces incoming damage from damaging status effects on self by 30%. (Reworked in Y2S1; original Y1S3 perks: while under the effect of Ablaze, Flooded or Stormstruck, ramming an enemy ship spreads the status effect to the target; increases duration of Ablaze, Flooded or Stormstruck on self by 30%; reduces incoming damage from Ablaze, Flooded or Stormstruck on self by 10%.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Shot Carving Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Yer kiss your mother with those cannons?! Hitting a weakpoint applies Taunting Charge on the target. Increases Taunt Duration by 15%. Reduces Reload Time of Piercing weapons by 5%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Spikes Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Hitting a weakpoint has a 40% chance of reducing all Repair effects on the target by 75% for 15 seconds, regardless of the source. This chance increases to 30%... (sources conflict on the Flooded-target bonus; base chance was 25% before the Y2S1 buff to 40%.) Also listed in some sources as 'Spiteful Spikes Station'. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Chained Links",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "While trimming sails, reduces incoming Weakpoint Damage by 60% at the cost of 10 Crew Stamina per hit. Reduces incoming damage to weakpoints by 20%. (Original Y1S4 values: 50% at 10% stamina per hit, 15% weakpoint damage reduction, +10% armor rating; buffed in Y2S1.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Pain-Piper",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Getting hit by a Crew Attack increases damage of your next Crew Attack by 80%. Decreases incoming Crew Attack damage by 10%. Increases Maximum Stamina by 5%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Drowned One's Toll",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "When above 60% of Crew Stamina and below Max Hull Health, 6% of Crew Stamina is consumed to restore 0.28% of Hull Health per second. Increases Max Hull Health by 8%. Increases Crew Stamina Recovery Speed by 6% while out of combat. (Original Y1S4 values: 0.25%/s, +5% max hull, +3% stamina recovery; buffed in Y2S1.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Teuling's Guidance",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Reduces Reload Time of Front Weapons by 5% (reduced from 7% in Y2S1 balance patch). Other perks of this furniture could not be verified from available sources. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Wyrm's Breath Churner",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Triggering Shell-shocked on the target increases the Reload Time of their weapons by 25% for 20s. Increases Secondary Damage of Explosive Weapons by 25%. Increases weapon damage of Explosive Weapons by 5%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Bilgefire Barrels",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Weapon hits against a target with a damaging status effect have a 5% chance to fully recharge those status effects. This effect has a 30s cooldown. Increases Secondary Damage of Broadside weapons by 10%. Increases Broadside weapons damage by 5%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Mark of the Wolf",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Triggering Ablaze on the target also increases Shell-shocked charge rate by 50% for 7s (reduced from 100% for 10s in Y2S1 balance patch). Increases Fire Rate of Explosive weapons by 20%. Increases damage to structures by 5%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Emergency Locker",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Reduces duration of all damaging status effects applied to your ship by 50% but increases damage dealt by these effects by 15%. Reduces incoming Secondary Damage by 10%. Increases Max Hull Health by 6%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Buoy Locker I",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases the number of buoys your Springloader can launch for healing allies or devastating enemies. Exact numbers could not be verified from available sources. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Dummy Springloader I",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Reduces duration of incoming Torn Sails effect by 25%. Reduces incoming Flooding Charge by 20%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Royal Sterilization Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Stinkpot Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A station patchworked together with La Peste's many designs. Deals 12% more Toxic weapon damage to bracing targets within 250m. Poisoned targets within 250m take 10% more damage. +8% Toxic damage. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Sheeting Winch Console",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A shelf of equipment that eases sailing maneuvers. +0.8% weapon damage per 1 knot of sailing speed. Dealing no damage for 5s while trimming reduces broadside reload time by 12% for 10s. +20% acceleration. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Gimbal Ring Stores",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "For every Demi-Cannon weapon equipped, increase weapon damage of equipped weapons by 5%. +14% Demi-Cannon projectile speed. +12% Demi-Cannon maximum range. (Reworked in Y3S2; pre-Y3S2: hitting a target over 180m away increased Demi-Cannon damage by 17% for 12s.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Siphon Furnace",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "A table used to optimize Toxic Weapons. Targets that are Poisoned take 10% more Toxic weapon damage (Smuggler Pass version lists 14%). +12% projectile speed. +10% maximum range. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Ballista Mount Smithy",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Dealing 2000 Ballista damage in a single hit marks the target for 20s. Marked targets take 12% more Ballista damage and more secondary damage from all sources. -18% Ballista charge time. +14% Ballista weakpoint damage. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Blubber Works",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "After 4 consecutive hits on a sea monster, broadside reload time is reduced by 15% for 20s; missing resets the count. Consecutive weakpoint hits on sea monsters increase secondary damage by 10% per hit up to 40% for 5s. +10% weapon damage to sea monsters. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Royal Ramming Works",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Primary: Ramming instantly builds 50% of the Punctured status effect on the target and slows the target by 20% for 20s. Secondary: Punctured targets receive 15% more damage from Piercing weapons. Tertiary: Targets within 250m receive 7% more Punctured status charge. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "St. Elmo's Chains",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Primary: Dealing Electric damage to Flooded targets also deals 50% of the Electric damage to other nearby targets within 150m. Secondary: Deal 50% more Electric damage to Flooded targets. Tertiary: Increase the duration of the Flooded status on targets by 10%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Infernal Artificer's Bench",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Primary: 60% of Explosive damage dealt to a target with Shell-shocked is dealt as Burning damage; 40% of the Burning damage dealt to a target with Ablaze is dealt as Explosive damage. Secondary: Increase Shell-Shocked and Ablaze charge rate by 10%. Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Ballista Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Ballista by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Bombard Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Bombard by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Culverin Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Culverin by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Demi-cannon Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Demi-cannon by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Long Gun Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Long Gun by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Mortar Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Mortar by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Rocket Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Rocket by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Sea Fire Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Sea Fire by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Torpedo Works I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Elemental Damage Multiplier of Torpedo by 19%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Front Powder Kegs I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Front Weapon damage by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Port Powder Kegs I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Port Weapon damage by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Starboard Powder Kegs I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Starboard Weapon damage by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Iron Cladding Station I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases damage from ramming by 25%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Vat of Volatiles I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases damage to structures by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Maintained Arsenal I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases damage from auxiliary weapons by 13%. (Increased from 10% in the Y2S1 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Bombard Powderhouse I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Area-of-effect Radius of Bombard by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Mortar Powderhouse I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Area-of-effect Radius of Mortar by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Demi-cannon Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Demi-cannon by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Mortar Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Mortar by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Rocket Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Rocket by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Sea Fire Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Sea Fire by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Torpedo Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Torpedo by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Brazing Furnace I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of all weapons by 5%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Ballista Grinder I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Projectile Speed of Ballista by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Bombard Grinder I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Projectile Speed of Bombard by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Culverin Grinder I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Projectile Speed of Culverin by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Long Gun Grinder I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Projectile Speed of Long Gun by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Torpedo Grinder I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Projectile Speed of Torpedo by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "La Potence Schematics I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Toxic resistance penetration by 10%. (Reworked in Y2S3; pre-Y2S3: +10% damage to weak points.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Charge Stores",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Maintenance Forge I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases severe damage dealt per second by 1% while out of combat.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Boatswain's Call I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Crew Attack damage by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Chains Locker I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases duration of the Torn Sails effect on enemy ships by 20%. (Increased from 10% in Y2S1.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Flag Painting Station I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Threat Generation by 5%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Gunpowder Bench I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases damage to targets with Ablaze by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Joinery Workshop I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases repair amount from Repair Weapons by 6%. (Reduced from 10% in the Y2S1 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Lead Kettle I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Flooded duration by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Spiked War Horn I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Crew Attack charge rate by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Sticky Fuel Station I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Ablaze duration by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Volatile Fuel I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Ablaze charge rate by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Balanced Mast I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases acceleration and deceleration by 8%. (Increased to 16% in the Y2S2 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Leather Rope Grips I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Crew Stamina depletion while trimming by 15%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Lightened Mast I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Acceleration by 26%. (Increased from 13% in the Y2S2 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Rum Pantry I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Stamina Recovery by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Storage Compartment I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Cargo capacity by 10%.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Tool Smithy I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "+1 harvest loot bonus in bonus zones.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Ramrod Workshop",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Decreases Reload Time of Broadside weapons by 7%. Increases Secondary Damage dealt by Broadside weapons by 7%. (Reduced from 15%/10% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Fuse-Fusing Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Decreases Reload Time of Front and Rear Weapons by 9%. Increases Secondary Damage dealt by Front and Rear weapons by 9%. (Reduced from 12%/15% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Devil's Concoction",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Secondary Damage of Burning weapons by 12%. (Reduced from 15% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Cannonball Charging Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases the Charge Rate of the Stormstruck status effect on enemy targets already affected by the Punctured status effect by 50%. Increases Charge Rate of the Punctured status effect on a target by 16%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Rifled Barrel Workshop",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases the Charge Rate of the Punctured status effect on enemy targets already affected by the Flooded status effect by 50%. Increases Charge Rate of the Flooded status effect on a target by 16%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Debris Locker",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases the Charge Rate of the Flooded status effect on enemy targets already affected by the Torn Sails status effect by 50%. Increases Charge Rate of the Torn Sails status effect on a target by 16%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "High-Velocity Kegs",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Secondary Damage of Piercing weapons by 12%. (Reduced from 15% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Shell-Packing Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Area-of-Effect of Bombard weapons by 5%. Reduces Reload Time of Bombard weapons by 5%. (Both reduced from 7% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Compagnie Screens",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces incoming Area-of-effect Damage from enemy ships by 20%. Reduces incoming Burning Charge by 10%. Increases Max Hull Health by 5%. (Buffed in the Y2S1 balance patch from 15%/7%/3%.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Brouwer's Powderhouse",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Area-of-effect Radius of Mortar by 10%. Reduces Reload Time of Mortar by 7%. (Buffed in the Y2S1 balance patch from 7%/5%.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Braced Gunwales",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces incoming Secondary Damage while anchored by 20%. (Reduced from 50% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Copper Fastening Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Secondary Damage of Electric weapons by 12%. (Reduced from 15% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Density Furnace",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Flooded Charge Rate by 12%. Increases Flooded Duration by 12%. (Both increased from 8% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Expanding Corkscrew Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Secondary Damage of Flooding weapons by 12%. (Reduced from 15% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Machinist Table (Mines)",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Minefield Buoy Damage by 20%. Increases Area-of-Operation Radius of Minefield Buoys by 20%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Mine-Clearing Locker",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "While sailing at half-sails or less, your ship has an 80% chance to avoid triggering Mine Buoys. Reduces all incoming damage from Mine Buoys by 15%. Increases Brace Strength by 5%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Secret Cache",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Turning Speed by 16%. Increases Acceleration by 16%. (Both increased from 8% in the Y2S2 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Lestari Trophy",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Acceleration by 14%. (Increased from 7% in the Y2S2 balance patch.)",
+      "ship_rank_required": null,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Accelerated Gunrail Smithy",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Reload Time by 4% and increases Secondary Damage of Auxiliary Weapons by 4% for each weapon quadrant being reloaded, up to 16%. While not trimming sails, increases weapon damage for Auxiliary Weapons by 9%. Increases Turning Speed by 8%.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Ammo-Priming Bench",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases damage to structures by 20% for Siege Weapons and repair amount of Repair Weapons by 18% when more than 160m away from the target. Siege Weapons deal 4% increased weapon damage. Repair Weapons repair 7% more Hull Health. Increases Projectile Speed of Siege Weapons and Repair Weapons by 10%, except for Sea Fire and Auxiliary Weapons.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Caustic Spall Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Flooding weapon hits beyond 200m increase Flooding damage by 13% for 10s. +1% Flooding damage per 1% projectile speed bonus, capped at 15% (reduced from 30% in the Y3S2 balance patch). +10% damage vs Flooded targets.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Leyden Vault Array",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "+2% weapon damage as Electric damage per 5m of AoE radius. -6% Electric weapon reload time. +8% damage vs Stormstruck targets.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Cascade Coil Bench",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "+13% Sea Fire weapon damage. +15% Sea Fire secondary damage. (The Y2S3 devblog summary listed the secondary value as 7%; the detailed patch notes list 15%.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Curare Crushing Bench",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "+8% Poisoned charge rate. +8% Poisoned duration.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Inverted Flag Rack",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "+14% weapon damage vs Taunted targets. +15% Taunted duration.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Anatomy Cabinet",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "-18% brace-strength damage from sea monsters. -10% damaging status and curse mark duration on self.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Apothecary Tool Bench",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "At full sails or while trimming, -50% Poisoned duration on self. -16% Toxic damage taken.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Emergency Sails",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Trim speed by 10% and charge rate of Torn Sails by 10% while pursuing an enemy ship within 400m.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Plaguebringer's Ward",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Reduces Reload Time of Toxic weapons by 7%. Increases damage of Toxic weapons by 4%. (Reduced from 15%/8% in the Y2S1 balance patch.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Hubac Tuning Rack",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Increases Maximum Range of Torpedo by 14%. Reduces Arming Distance of Torpedo by 25%. Increases Projectile Speed of Torpedo by 10%. (Buffed in the Y2S1 balance patch from 12%/20%/8%.)",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Tuning Station",
+      "tier": "Major",
+      "cost": 250,
+      "cost_secondary": null,
+      "perk_text": "Increases Secondary Damage of Torpedo by 20%. Increases Projectile Speed of Torpedo by 13%. Increases Crew Stamina restored per second while out of combat by 10%. (All buffed in the Y2S1 balance patch from 17%/10%/5%.) Only one Major Furniture can be installed per ship.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Trunnion Furnace",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Smoked Canisters",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Beam Supports",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Machinist Table (Repair)",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Bombard Menuiserie",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Quick-Igniting Powder",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Medicine Cabinet",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": "Toxic-related utility furniture (localization references Toxic attacks). Exact perks could not be verified from available sources.",
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Cursed Banner",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Scupper Station I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Raised Quarterdeck I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Leather Station I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Lemari Makanan I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Amber Coating Station",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Langrage Barrels",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Gears Workshop",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Blade's Itch",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Judgment's Point",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Crimson Crown",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Compagnie Spirits Locker",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "First Mate's Ledger",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Decoy Deck",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Float Collars",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Boatswain's Toll I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Kinckel's Laboratory I",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    },
+    {
+      "name": "Strange Elixir",
+      "tier": "Minor",
+      "cost": 80,
+      "cost_secondary": null,
+      "perk_text": null,
+      "ship_rank_required": 4,
+      "verified_from_gameplay": false,
+      "estimated": true
+    }
+  ],
+  "notes": "Covers Year 1 Season 0 (launch) through Year 3 Season 2 (Crimson Waters, current as of 2026-10-02). Ship ranks now extend to 33. The 10 entries marked verified_from_gameplay:true are ground truth from the player's 2026-10-01 warehouse screenshots. GAPS: (1) cost_secondary: the parenthetical second number on some in-game costs (e.g. 80 (400), 80 (160)) is recorded verbatim where known but its meaning is unconfirmed; Game8 lists blueprint costs in Pieces of Eight that may correspond (e.g. Grindstone I blueprint costs 400 Po8). (2) ship_rank_required is null/estimated for all launch-era items: pre-Y2S1 items used Infamy-rank blueprint requirements instead of ship ranks (Outcast < Scoundrel < Rover < Freebooter < Buccaneer < Brigand < Marauder < Corsair < Cutthroat < Kingpin); from Y2S1 onward, item ship-rank requirements cap at SR4. Per-item Infamy requirements: Ballista Works I: Kingpin I; Culverin Works I, Vat of Volatiles I: Marauder I; Demi-cannon Works I, Torpedo Works I, Torpedo Furnace I, Torpedo Grinder I: Buccaneer I; Front/Port/Starboard Powder Kegs I, Sea Fire Works I, Sea Fire Furnace I, Ballista Grinder I, Double-planked Hull I, Flag Painting Station I, Lightened Mast I, Rum Pantry I: Corsair I; Bombard Works I, Long Gun Works I, Iron Cladding Station I, Bombard Powderhouse I, Demi-cannon Furnace I, Bombard Grinder I, Culverin Grinder I, Long Gun Grinder I: Rover I; Maintained Arsenal I, Mortar Works I, Rocket Works I, Mortar Furnace I, Mortar Powderhouse I, Rocket Furnace I, Brazing Furnace I, Grindstone I: Cutthroat I; Double-planked Hull I, Flag Painting Station I: Corsair I; Boatswain's Call I, Lead Kettle I, Tool Smithy I: Buccaneer I; Chains Locker I, Sticky Fuel Station I, Leather Rope Grips I: Marauder I; Maintenance Forge I, Gunpowder Bench I, Balanced Mast I: Brigand I; Sterile Galley I, Joinery Workshop I, Storage Compartment I: Freebooter I. (3) Perk numbers that changed across balance patches are recorded at their CURRENT (Y3S2) values with prior values noted in the text; affected: Rope Locker (300->450%), War Drums (stamina->brace stamina), Gunner's Quadrant (full Y2S1 rework), Munitions Mixer (-30%->-20%), Chains Locker I (10->20%), Lightened Mast I (13->26%), Balanced Mast I (8->16%), Secret Cache (8->16%), Lestari Trophy (7->14%), Signal Gong (15->20%), Maintained Arsenal I (10->13%), Joinery Workshop I (10->6%), Bloody Red (50/25/10->60/40/25), Breechlock Furnace (30/3%/7%/5%->20/2%/5%/3%), Dynamic Ballast Control (cap 40->30%), Chained Links (50%/10%/15%->60%/20% + armor perk removed), Drowned One's Toll (0.25/5/3->0.28/8/6), Freeman's Embrace (full rework to -30% status damage), Dummy Springloader (per Y2S1 notes), Mark of the Wolf (100%/10s->50%/7s), Ramrod Workshop (15/10->7/7), Fuse-Fusing Station (12/15->9/9), Shell-Packing Station (7/7->5/5), Teuling's Guidance (-7%->-5% front reload), Spikes Station (25->40% chance), Braced Gunwales (50->20%), Compagnie Screens (15/7/3->20/10/5), Copper Fastening Station (15->12%), Density Furnace (8/8->12/12), Expanding Corkscrew Station (15->12%), Devil's Concoction (15->12%), High-Velocity Kegs (15->12%), Plaguebringer's Ward (15/8->7/4), Hubac Tuning Rack (12/20/8->14/25/10), Tuning Station (17/10/5->20/13/10), Brouwer's Powderhouse (7/5->10/7), Caustic Spall Station (cap 30->15%), Gimbal Ring Stores (full Y3S2 rework), La Potence Schematics I (weakpoint dmg->toxic res penetration). (4) Number conflicts between sources flagged in perk_text: Siphon Furnace toxic damage 10% (patch notes) vs 14% (Smuggler Pass copy); Cascade Coil Bench secondary 15% (patch notes) vs 7% (devblog summary); Spikes Station Flooded-target chance bonus wording conflicts between mp1st (increases to 30%) and updatecrazy (buffed to 40%). (5) ~30 minor/event furniture entries (mostly from The Founding event shop and William Blackwood rotations) have confirmed names but unverifiable perk text; recorded with estimated:true and null perk_text. (6) Name variants seen: 'Spiteful Spikes Station' = Spikes Station; 'Pain Piper' = Pain-Piper; 'Cannonball-Charging Station' = Cannonball Charging Station; 'Riffled Barrel Workshop' = Rifled Barrel Workshop; 'Buoy Locker' = Buoy Locker I. (7) All Major furniture costs 250 in-game; most Minor furniture costs 80; Sterile Galley I costs 65; Grindstone I costs 175. Costs for non-anchor items are estimated from these patterns. (8) Season of introduction per item: Y1S0 launch (12 majors, 47 minors); Y1S1: Dummy Springloader I, Tuning Station, La Potence Schematics I; Y1S2 (Chorus of Havoc): Buoy Locker I, Teuling's Guidance; Y1S3 (Dragon's Wake): Bloody Red, Freeman's Embrace, Shot Carving Station, Spikes Station, Emergency Sails; Y1S4 (Shadows of the Deep): Chained Links, Pain-Piper, Drowned One's Toll, Mine-Clearing Locker; Y2S1: Wyrm's Breath Churner, Emergency Locker, Bilgefire Barrels, Mark of the Wolf, Breechlock Furnace, Dynamic Ballast Control, Ramrod Workshop, Fuse-Fusing Station, Debris Locker, Cannonball Charging Station, Rifled Barrel Workshop, Machinist Table (Mines), Organ Harvesting Station, Counterthrust Locker; Y2S2: Accelerated Gunrail Smithy, Ammo-Priming Bench, Trunnion Furnace, Smoked Canisters, Devil's Concoction, Beam Supports, Shell-Packing Station, Machinist Table (Repair), Bombard Menuiserie, Quick-Igniting Powder, Compagnie Screens, High-Velocity Kegs, Royal Sterilization Station; Y2S3: Stinkpot Station, Sheeting Winch Console, Gimbal Ring Stores, Siphon Furnace, Caustic Spall Station, Leyden Vault Array, Cascade Coil Bench, Curare Crushing Bench; Y2S4: Drowning Cabinet, Ballista Mount Smithy, Blubber Works, Inverted Flag Rack, Anatomy Cabinet, Apothecary Tool Bench; Y3S1: Royal Ramming Works; Y3S2: Hellshot Smithy, St. Elmo's Chains, Infernal Artificer's Bench. Some season attributions for shop/rotation items (Secret Cache, Lestari Trophy, Medicine Cabinet, Hubac Tuning Rack, Plaguebringer's Ward, Cursed Banner, Founding-shop items) are approximate."
+}

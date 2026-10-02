@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a1420">
+<title>SnB Loadouts — Skull and Bones Loadout &amp; DPS Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="header-title">
+    <span class="skull">☠</span>
+    <div>
+      <h1>SnB Loadouts</h1>
+      <p class="subtitle">Skull &amp; Bones loadout &amp; DPS calculator · Y3S2</p>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="ships" role="tab">Ships</button>
+    <button class="tab" data-tab="builder" role="tab">Builder</button>
+    <button class="tab" data-tab="buffs" role="tab">Season</button>
+    <button class="tab" data-tab="mastery" role="tab">Mastery</button>
+    <button class="tab" data-tab="dps" role="tab">DPS</button>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- SHIPS TAB -->
+  <section id="tab-ships" class="tab-panel active">
+    <div class="search-row">
+      <input id="ship-search" type="search" placeholder="Search ships…" autocomplete="off">
+      <select id="ship-class-filter"><option value="">All classes</option></select>
+    </div>
+    <div id="ship-list" class="card-grid"></div>
+  </section>
+
+  <!-- BUILDER TAB -->
+  <section id="tab-builder" class="tab-panel">
+    <div id="builder-empty" class="empty-state">
+      <p>No loadout started. Pick a ship from the <strong>Ships</strong> tab, or load a saved one.</p>
+      <button id="btn-load-preset" class="btn btn-primary">Load "Help me?" preset</button>
+    </div>
+    <div id="builder-main" hidden>
+      <div class="loadout-header">
+        <input id="loadout-name" placeholder="Loadout name">
+        <div class="loadout-actions">
+          <button id="btn-save-loadout" class="btn btn-primary">Save</button>
+          <button id="btn-load-loadout" class="btn">Saved…</button>
+        </div>
+      </div>
+      <div id="saved-list" class="saved-list" hidden></div>
+
+      <h2>Weapons <span class="hint">tap a slot to pick</span></h2>
+      <div id="weapon-slots"></div>
+
+      <h2>Furniture <span class="hint">1 Major + minors</span></h2>
+      <div class="furniture-controls">
+        <label>Minor slots
+          <input id="minor-slot-count" type="number" min="0" max="8" value="4">
+        </label>
+      </div>
+      <div id="furniture-slots"></div>
+
+      <h2>Stacking rules <span class="hint">additive vs multiplicative is unpublished — flip after testing</span></h2>
+      <div id="stacking-toggles" class="stacking-grid"></div>
+
+      <h2>Combat assumptions</h2>
+      <div class="assumptions">
+        <label>Engagement range (m)
+          <input id="assume-range" type="number" min="0" max="1500" value="300">
+        </label>
+        <label>Weakpoint hit rate %
+          <input id="assume-weakpoint" type="number" min="0" max="100" value="20">
+        </label>
+        <label>Weakpoint damage bonus %
+          <input id="assume-weakpoint-bonus" type="number" min="0" max="200" value="50">
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASONAL BUFFS TAB -->
+  <section id="tab-buffs" class="tab-panel">
+    <div class="notice">
+      <strong>Year 3 Season 2</strong> · <span id="season-dates"></span><br>
+      Only the officially documented nodes are listed — the full 500+ node tree is not published.
+    </div>
+    <div id="buff-list"></div>
+  </section>
+
+  <!-- MASTERY TAB -->
+  <section id="tab-mastery" class="tab-panel">
+    <div class="mastery-bar">
+      <div><strong>Mastery points</strong></div>
+      <div class="points"><span id="mastery-used">0</span> / 90 used</div>
+      <div class="points-bar"><div id="mastery-fill"></div></div>
+    </div>
+    <div class="notice">Documented Y3S2 seasonal perks. Toggle what you've unlocked; costs are the unlock levels (10/30/50 = 90).</div>
+    <div id="mastery-list"></div>
+  </section>
+
+  <!-- DPS TAB -->
+  <section id="tab-dps" class="tab-panel">
+    <div id="dps-empty" class="empty-state"><p>Build a loadout first, then come back for numbers.</p></div>
+    <div id="dps-main" hidden>
+      <div class="dps-summary">
+        <div class="dps-total">
+          <div class="dps-label">Sustained DPS <span class="est-flag" title="Absolute numbers are estimates — armor formula unpublished">est.</span></div>
+          <div id="dps-total" class="dps-number">0</div>
+        </div>
+        <div class="dps-total">
+          <div class="dps-label">Broadside alpha <span class="est-flag">est.</span></div>
+          <div id="dps-alpha" class="dps-number">0</div>
+        </div>
+      </div>
+      <div class="notice small">Absolute DPS is an <strong>estimate</strong>: the armor-mitigation formula is unpublished. Use <strong>Compare</strong> for armor-independent relative numbers.</div>
+      <div id="dps-breakdown"></div>
+      <h2>Compare loadouts <span class="hint">relative % — armor cancels out</span></h2>
+      <div class="compare-row">
+        <select id="compare-a"></select>
+        <span class="vs">vs</span>
+        <select id="compare-b"></select>
+        <button id="btn-compare" class="btn btn-primary">Compare</button>
+      </div>
+      <div id="compare-result"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Generic searchable picker modal -->
+<div id="picker-modal" class="modal" hidden>
+  <div class="modal-sheet">
+    <div class="modal-head">
+      <input id="picker-search" type="search" placeholder="Search…" autocomplete="off">
+      <button id="picker-close" class="btn">✕</button>
+    </div>
+    <div id="picker-clear-row"><button id="picker-clear" class="btn btn-danger">Clear slot</button></div>
+    <div id="picker-list" class="picker-list"></div>
+  </div>
+</div>
+
+<!-- Weapon detail editor modal -->
+<div id="weapon-modal" class="modal" hidden>
+  <div class="modal-sheet">
+    <div class="modal-head"><h3 id="weapon-modal-title">Weapon</h3><button id="weapon-close" class="btn">✕</button></div>
+    <div id="weapon-modal-body" class="modal-body"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1895 @@
+{
+  "game": "Skull and Bones (Ubisoft)",
+  "last_verified": "2026-10-02",
+  "notes": "GAPS AND CAVEATS. (1) Reload times for torpedoes, sea fire, mortars, rockets and springloaders could not be verified from any source — recorded as null with estimated:true. (2) Base damage for most named/epic seasonal weapons (Faule Ilse, The Warhammer, Endless Requiem, La Piqûre, Divine Thunder, Le Fléau, Crouching Tiger, Phoenix Talons, Heaven's Mandate, Bane of the Ten Suns, White Jade, Agni's Fury, Heavenly Thunder, Virulent Accord, Cloudbinder, Stormtongue, Brightmaw, Reachwarden, Celestial Bloom, Woundcaller, Roaring Meg, Infernal Moss, Nashkar, Vogel Greif) is estimated from same-class equivalents or left null — flagged estimated:true. (3) Year 2 ascension (Basic/Advanced/Mythic tiers, weapon mods) scales damage beyond listed max-craft-tier values and adds rolled mods; listed numbers are pre-ascension max crafted tier. E.g. Thunder Dragon Cannon seen at 2014/2755/3146 base damage across sources depending on ascension and buffs. (4) 'Wicked Wail' (mentioned in task brief) produced zero search hits anywhere — likely does not exist; not included. 'Phoenix Pyre' and 'Ash Breaker' are named in community build guides but no stats found — listed in gaps, Ash Breaker omitted pending confirmation. (5) Vogel Greif appears on the Fandom weapon taxonomy and in tier lists (S-tier demi-cannon) but no stats were published — included with estimated:true. (6) Repair weapons list repair amounts where known; Repair Mortar I-III repair values unverified. (7) Projectile speeds are not published by Ubisoft; all null. (8) Infernal Maw buoy stats (3930 total damage, 65m range, 25s operation, 500 buoy health) and ascension tiers come from gameplay ground truth provided with this task, cross-checked against Y1S2 patch notes (300% eruption damage, Smuggler Pass source). (9) Y3 SUPPLEMENTARY PASS (2026-10-02): added 12 new weapons from Year 3 Season 1 'Shattered Seas' (May 2026) and Year 3 Season 2 'Crimson Waters' (Aug 2026) — Hullcarver, De Breker, L'Aiguille, Blightbearer, Soulsnatcher, Atma's Toll (Y3S1); Scorch Song, Drowning Hellion, Hellfire, Claws of the Deep, Drakon's Jaws, Anathema (Y3S2). Perk text is quoted from the official Ubisoft Y3S1/Y3S2 patch notes. Base damage numbers for all named Y3 weapons are unpublished — damage_per_shot is null and reload/range are inherited from the family class, all marked estimated:true. Hullcarver's Pulverize perk was cross-verified against a community Galleon build guide. Ascended variants (e.g. Siege Dardannelles, Piercing l'Aiguille, Burning Alecto) and Adept-modded weapons are re-ascensions of existing weapons, not new weapons, and are not listed separately. (10) Pre-Y3 gap noticed during this pass: the 'Blightkeeper Springloader' appears in the official Y2S1.1 patch notes but is not in this file — left for a separate pass since it predates Y3.",
+  "season_context": "Year 3 Season 2 'Crimson Waters' (launched 18 Aug 2026) is the latest released season as of this writing.",
+  "sources": [
+    "https://game8.co/games/Skull-and-Bones/archives/443250",
+    "http://game8.co/games/Skull-and-Bones/archives/444523",
+    "http://game8.co/games/Skull-and-Bones/archives/444081",
+    "https://game8.co/games/Skull-and-Bones/archives/445065",
+    "https://game8.co/games/Skull-and-Bones/archives/445054",
+    "https://GameRant.com/skull-and-bones-best-weapons-get-first-blueprints/",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2CFEWvtQ3dYOKjMGO7Trnl/y2s2-patch-notes",
+    "https://www.ubisoft.com/en-gb/game/skull-and-bones/news-updates/Yfnv84AkcMhgXbPlAXdMa",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/3wJTkZubG55fhncijrWGtA/y2s3-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/5oojUG3ZZTZJiIooM7FxC8",
+    "https://mp1st.com/title-updates-and-patches/skull-and-bones-update-1-000-014-hits-the-seas-for-season-3-this-aug-22-full-patch-notes-listed",
+    "https://news.ubisoft.com/en-gb/article/1r70KgZtUkbbl22aPup39j/skull-and-bones-season-3-into-the-dragons-wake-out-now",
+    "https://updatecrazy.com/skull-and-bones-update-1-000-028-patch-notes-y2s1/",
+    "https://www.mmoah.com/news/skull-and-bones-is-this-mortar-weapon-worth-trying-le-fl%C3%A9au",
+    "https://skullandbones.fandom.com/wiki/Weapons",
+    "https://www.omaada.com/blogs/337050/MMOexp-Skull-and-Bones-Thunder-Dragon-Cannon-Explained-The-Core",
+    "https://www.thefpsreview.com/2024/08/22/skull-and-bones-arrives-on-steam-with-free-new-season-3-content-into-the-dragons-wake/",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/7fVVY1bpHbvXCP8sUw64aP/y3s1-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2aVFScvAB18TIE5BY4VDSW/y3s2-patch-notes",
+    "https://www.runescape4guide.com/2026/07/21/skull-and-bones-galleon-hullcarver-build-guide/",
+    "https://bleedingcool.com/games/skull-and-bones-reveals-roadmap-for-year-3-sails-of-power/"
+  ],
+  "status_effect_reference": {
+    "Ablaze": "Triggered by sufficient fire/burning damage. High damage over time.",
+    "Flooded": "Triggered by sufficient flooding damage. Medium DoT (half irreparable via repair kits); slows the ship.",
+    "Poisoned": "Triggered by sufficient toxic damage (Y2S3). ~175-230 base damage/sec vs players (scales with target max HP); -50% brace mitigation; bracing costs 60% more crew stamina.",
+    "Shell-shocked": "Disables the ship's weapons (Y2S1.1: 3.3s duration, up from 5s; +20% buildup threshold on players; diminishing returns enabled). Triggers a one-off 3000 damage AoE.",
+    "Stormstruck": "Triggered by sufficient electric damage. Electric status; synergizes with lightning-strike perks.",
+    "Taunted": "Provoke-family status; increases weakpoint damage taken (50% on Battle Junk). Unlucky Taunt: 250 damage/sec, stacks to 5.",
+    "Torn Sails": "Triggered by sail (tearing) damage. Immobilizes/slows the ship (Y2S1.1: -75% sailing speed).",
+    "Punctured": "Y3S1 status effect. L'Aiguille's Splinter has a 30% chance to instantly Puncture targets in its area of operation; Punctured targets lose 2% Armor Rating per second (up to 14%) within the area. Hullcarver's Pulverize scales to +18% weapon damage against Punctured targets. Ramming with Royal Ramming Works instantly applies 50% Punctured; Needle Shield armor gains Armor Rating and Piercing damage from Bracing hits on Punctured targets."
+  },
+  "weapons": [
+    {
+      "damage_per_shot": 1125,
+      "damage_types": {
+        "basic": 1125
+      },
+      "estimated": false,
+      "family": "Culverin",
+      "name": "Culverin V",
+      "notes": "Damage/range cross-verified Game8 infamy table + gamerant (Culverin II 625/6.00s/600m on both). Tier progression I-V: 500/625/750/1000/1125.",
+      "perks": [
+        "No innate perks (base variant)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": 936,
+      "damage_types": {
+        "basic": 936
+      },
+      "estimated": false,
+      "family": "Tearing Culverin",
+      "name": "Tearing Culverin III",
+      "notes": "Damage from Game8 (552/744/936 across tiers I-III). Reload/range inherited from culverin family.",
+      "perks": [
+        "Tearing II: increased damage to sails, builds Torn Sails status"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "Tearing II — increased sail damage / Torn Sails charge rate (exact numbers unverified)",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": 1025,
+      "damage_types": {
+        "basic": 1025,
+        "piercing": 205
+      },
+      "estimated": false,
+      "family": "Basilisk",
+      "name": "Basilisk III",
+      "notes": "Damage 625/825/1025 across tiers (Game8). Piercing II = +20%.",
+      "perks": [
+        "Raider: increased weakpoint damage (exact value unverified)",
+        "Piercing II: adds 20% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "electric": "30% of damage",
+        "explosive": "10% of damage"
+      },
+      "estimated": true,
+      "family": "Stormtongue",
+      "name": "Stormtongue",
+      "notes": "Rare lightning culverin added Y2S4 (Ubisoft patch notes). Base damage unpublished — estimated:null. Reload/range inherited from culverin family (estimated).",
+      "perks": [
+        "Electric III: adds 30% of damage as Electric damage",
+        "Combustion I: adds 10% of damage as Explosive damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Electric III damage (charge rate unverified)",
+          "effect": "Stormstruck"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "Burning II"
+      },
+      "estimated": true,
+      "family": "Burning Culverin",
+      "name": "Burning Culverin III",
+      "notes": "Uncommon weapon added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Burning II: adds fire/burning secondary damage (exact % unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": 1188,
+      "damage_types": {
+        "basic": 1188
+      },
+      "estimated": false,
+      "family": "Demi-cannon",
+      "name": "Demi-cannon V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Demi-cannon II 660/3.50s/250m on both). Tier progression I-V: 528/660/792/1056/1188.",
+      "perks": [
+        "No innate perks (base variant)",
+        "150% weakpoint damage (community-reported, unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1028,
+      "damage_types": {
+        "basic": 1028,
+        "flooding": 51
+      },
+      "estimated": false,
+      "family": "Flooding Demi-cannon",
+      "name": "Flooding Demi-cannon III",
+      "notes": "Damage 604/816/1028 across tiers (Game8). Reload/range from demi-cannon family.",
+      "perks": [
+        "Flooding II: adds 5% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "Flooding II — +5% flooding damage, builds Flooded (exact charge unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1292,
+      "damage_types": {
+        "basic": 1292,
+        "fire": 64
+      },
+      "estimated": false,
+      "family": "Zamzama",
+      "name": "Zamzama III",
+      "notes": "Damage 788/1040/1292 across tiers (Game8). Ascended/community builds report up to ~2254 with buffs — ascension scales beyond this.",
+      "perks": [
+        "Raider: increased weakpoint damage (exact value unverified)",
+        "Burning II: adds 5% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "piercing": "Piercing II"
+      },
+      "estimated": true,
+      "family": "Piercing Demi-cannon",
+      "name": "Piercing Demi-cannon III",
+      "notes": "Uncommon weapon added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Piercing II: adds 20% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "explosive": "Combustion II"
+      },
+      "estimated": true,
+      "family": "Explosive Demi-cannon",
+      "name": "Explosive Demi-cannon III",
+      "notes": "Uncommon weapon added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Combustion II: adds explosive secondary damage (exact % unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1350,
+      "damage_types": {
+        "basic": 1350
+      },
+      "estimated": true,
+      "family": "Faule Ilse",
+      "name": "Faule Ilse",
+      "notes": "Epic demi-cannon added Y1S2 (Black Market). Base damage unpublished — 1350 estimated from Zamzama-III-class epic (estimated:true). Reload/range from family.",
+      "perks": [
+        "Ricochet: shrapnel ricochets to nearby targets on impact, dealing 75% of original damage on secondary hit"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "Vogel Greif",
+      "name": "Vogel Greif",
+      "notes": "Listed on Fandom weapon taxonomy under Demi-Cannon (Special) and S-tier in community tier lists. No stats published anywhere found.",
+      "perks": [
+        "Unverified — listed as special/epic demi-cannon, rated S-tier by community tier lists"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "yes (exact % unverified)"
+      },
+      "estimated": true,
+      "family": "Phoenix Talons",
+      "name": "Phoenix Talons",
+      "notes": "Epic demi-cannon added Y1S3 (Li Tian Ning reward). Base damage unpublished (estimated:true). 18-hit volley means damage_per_shot here would be per-hit of the volley.",
+      "perks": [
+        "Lands 18 hits in a single volley",
+        "Massive burning damage per hit",
+        "Deals 200% damage to targets with the Ablaze effect",
+        "Builds Taunt status"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "burning damage per hit; deals 200% damage to targets already Ablaze",
+          "effect": "Ablaze"
+        },
+        {
+          "application": "builds Taunt status (rate unverified)",
+          "effect": "Taunted"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "toxic": "Toxic III"
+      },
+      "estimated": true,
+      "family": "Brightmaw",
+      "name": "Brightmaw",
+      "notes": "Epic poison demi-cannon added Y2S4 (Nian event). Base damage unpublished (estimated:true). Note: its Toxic III wording differs from Virulent Accord's Toxic III — quoted verbatim.",
+      "perks": [
+        "Caustic Ammo: landing 15 hits in a single volley on a target increases weapon damage the target receives by 8% for 10s; 12% more damage from all sources if target is Poisoned",
+        "Toxic III: hits sap Crew Stamina; adds 20% damage that cannot be blocked by Bracing"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via toxic damage (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 2755,
+      "damage_types": {
+        "basic": 2755,
+        "electric": "20% of damage"
+      },
+      "estimated": true,
+      "family": "Thunder Dragon",
+      "name": "Thunder Dragon Cannon",
+      "notes": "Epic demi-cannon added Y2S2 (Smuggler Pass). Perks from official Ubisoft Y2S2 patch notes. Reload 3.29s and range 488m cross-verified by two MMOexp build guides. Base damage varies by ascension/buffs across sources (2014 / 2755 / 3146) — 2755 recorded as max-rank reference with estimated:true.",
+      "perks": [
+        "Skyrend: each volley on enemy sails has a chance to summon a lightning strike dealing 5000 Electric damage; every 5 hits adds 15% chance up to 45%; strike damage increases to 10000 if target has Torn Sails",
+        "Tearing III: increases damage by 75% when hitting sails",
+        "Electric II: adds 20% of damage as Electric damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 488,
+      "reload_time_s": 3.29,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via electric damage; synergizes with Leyden Vault Array (+8% damage vs Stormstruck)",
+          "effect": "Stormstruck"
+        },
+        {
+          "application": "Tearing III — +75% damage to sails",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 2452,
+      "damage_types": {
+        "basic": 2452,
+        "piercing": 245
+      },
+      "estimated": false,
+      "family": "Long Gun",
+      "name": "Long Gun V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Long Gun II 1362/9.00s/1000m on both). Tier progression I-V: 1090/1362/1635/2180/2452.",
+      "perks": [
+        "Piercing I: adds 10% of damage as Piercing damage",
+        "Precision: increased weakpoint damage (exact value unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2125,
+      "damage_types": {
+        "basic": 2125,
+        "fire": 212,
+        "piercing": 425
+      },
+      "estimated": false,
+      "family": "Fire Long Gun",
+      "name": "Fire Long Gun III",
+      "notes": "Damage 1253/1689/2125 across tiers (Game8). Reload/range from long gun family.",
+      "perks": [
+        "Piercing II: adds 20% of damage as Piercing damage",
+        "Burning I: adds 10% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": "hull restoration (lesser)"
+      },
+      "estimated": true,
+      "family": "Repair Long Gun",
+      "name": "Repair Long Gun III",
+      "notes": "Repair values: tier I 1150, tier II 1550 (Game8). Tier III repair amount unpublished (estimated:true). Range/reload from family. Repair weapons deal no damage.",
+      "perks": [
+        "Repair: fires projectiles that restore hull health of allied ships"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2234,
+      "damage_types": {
+        "basic": 2234,
+        "piercing": "unverified %"
+      },
+      "estimated": false,
+      "family": "Scurlock's Long Nines",
+      "name": "Scurlock's Long Nines",
+      "notes": "Damage 2234 and range 1000m from Game8 infamy table. Perks unpublished (estimated:true on perks). Reload from family.",
+      "perks": [
+        "Perks unpublished — estimated:false on damage/range only"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2234,
+      "damage_types": {
+        "basic": 2234,
+        "electric": "20% of damage",
+        "piercing": "20% of damage"
+      },
+      "estimated": true,
+      "family": "Divine Thunder",
+      "name": "Divine Thunder",
+      "notes": "Epic long gun added Y1S3 (Smuggler Pass). Perks from Ubisoft 1.000.014 patch notes (verified). Base damage unpublished — 2234 estimated from Scurlock's Long Nines class epic (estimated:true). Range/reload from family.",
+      "perks": [
+        "Lightning strike: hits to a target's weakpoint have a 35% chance to summon a lightning strike dealing 3000 Electric damage",
+        "Adds 20% of damage as Electric damage",
+        "Adds 20% of damage as Piercing damage",
+        "Increases damage to weakpoints by 75%"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "35% on weakpoint hits — 3000 electric lightning strike",
+          "effect": "Stormstruck"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2234,
+      "damage_types": {
+        "basic": 2234,
+        "toxic": "yes (drains stamina)"
+      },
+      "estimated": true,
+      "family": "La Piqûre",
+      "name": "La Piqûre",
+      "notes": "Epic poison long gun added Y1S2 (La Peste's cronies). Described in Y1S2 patch notes: 'fires tainted shells that drain Crew Stamina; adds 20% damage that cannot be blocked'. Y2S1.1 reduced stamina drain from 15 to 7. Retroactively converted to Toxic damage type in Y2S3. Base damage unpublished — estimated from epic long gun class. Also spelled 'La Piqure'.",
+      "perks": [
+        "Toxic: tainted shells drain Crew Stamina (15 per hit, reduced to 7 in Y2S1.1; Y2S3: 1% of toxic damage drains stamina)",
+        "Adds 20% damage that cannot be blocked"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via toxic damage (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "flooding": "Flooding I",
+        "piercing": "Piercing I"
+      },
+      "estimated": true,
+      "family": "Farscourge",
+      "name": "Farscourge III",
+      "notes": "Rare weapon added Y2S1 (tiers I-III). Weapon type inferred as long gun from name ('far') and perk set (Raider I/Flooding I/Piercing I) — type inference marked estimated. Base damage unpublished.",
+      "perks": [
+        "Raider I: increased weakpoint damage (exact value unverified)",
+        "Flooding I: adds flooding secondary damage (exact % unverified)",
+        "Piercing I: adds 10% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via flooding damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "piercing": "Piercing I",
+        "tearing": "Tearing II"
+      },
+      "estimated": true,
+      "family": "Tearing Long Gun",
+      "name": "Tearing Long Gun III",
+      "notes": "Uncommon weapon added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Tearing II: increased damage to sails, builds Torn Sails status",
+        "Piercing I: adds 10% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "Tearing II — increased sail damage",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": "hull restoration (lesser)"
+      },
+      "estimated": true,
+      "family": "Reachwarden",
+      "name": "Reachwarden",
+      "notes": "Epic repair long gun added Y2S4 (Faction War rewards). Repair amount unpublished. Range/reload from family (estimated).",
+      "perks": [
+        "Argus' Touch: hits on allied ships apply 1 stack restoring 1% Hull Health over 2s, up to 10 stacks (10% over 20s); beyond 200m applies 2 stacks per hit; at max stacks removes Torn Sails and prevents further Torn Sails charges for the duration",
+        "Repair: lesser restoration of Hull Health to friendly ships"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "Nashkar",
+      "name": "Nashkar Long Gun",
+      "notes": "Mentioned in community discussion (zleague) as obtainable long guns. No stats published anywhere found.",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 3375,
+      "damage_types": {
+        "basic": 3375,
+        "explosive": 337
+      },
+      "estimated": false,
+      "family": "Bombard",
+      "name": "Bombard V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Bombard II 1875/7.50s/550m on both). Tier progression I-V: 1500/1875/2250/3000/3375.",
+      "perks": [
+        "Explosive I: adds 10% of damage as Explosive damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 2925,
+      "damage_types": {
+        "basic": 2925,
+        "explosive": 585,
+        "fire": 292
+      },
+      "estimated": false,
+      "family": "Fire Bombard",
+      "name": "Fire Bombard III",
+      "notes": "Damage 1725/2325/2925 across tiers (Game8). Reload/range from bombard family.",
+      "perks": [
+        "Explosive II: adds 20% of damage as Explosive damage",
+        "Burning I: adds 10% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": 2925
+      },
+      "estimated": false,
+      "family": "Repair Bombard",
+      "name": "Repair Bombard III",
+      "notes": "Repair amount 2925 at tier III from Game8 infamy table (1725/2325/2925 across tiers I-III). Repair weapons deal no damage. Reload/range from family.",
+      "perks": [
+        "Repair Bomb: projectiles repair allied ships (restores 2925 hull at tier III)"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 3075,
+      "damage_types": {
+        "basic": 3075,
+        "explosive": 307,
+        "piercing": 307
+      },
+      "estimated": false,
+      "family": "Mons Meg",
+      "name": "Mons Meg III",
+      "notes": "Damage 1875/2475/3075 across tiers (Game8). Siege bombard: dense precise projectiles, extreme piercing in small area.",
+      "perks": [
+        "Siege: dense precise projectiles; no explosive damage falloff in blast; very effective vs static targets/structures",
+        "Explosive I: adds 10% of damage as Explosive damage",
+        "Piercing I: adds 10% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 3075,
+      "damage_types": {
+        "basic": 3075,
+        "explosive": 922
+      },
+      "estimated": false,
+      "family": "Dardanelles Gun",
+      "name": "Dardanelles Gun",
+      "notes": "Damage 3075 and range 550m from Game8 infamy table; +922 explosive = 30% explosive. Reload from family (estimated on reload only).",
+      "perks": [
+        "Adds 30% of damage as Explosive damage (+922)"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 1362,
+      "damage_types": {
+        "basic": 1362,
+        "piercing": 408
+      },
+      "estimated": false,
+      "family": "Scurlock's Chasers",
+      "name": "Scurlock's Chasers",
+      "notes": "Damage 1362 at gear score 60 (Game8). Bombard-family weapon. Range/reload inherited from family (estimated on those).",
+      "perks": [
+        "Mast Breaker: increased damage to masts/sails",
+        "Piercing III: adds 30% of damage as Piercing damage (+408)",
+        "Tearing II: increased damage to sails, builds Torn Sails status"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "Tearing II — increased sail damage",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "explosive": "Explosive II"
+      },
+      "estimated": true,
+      "family": "Brickbreaker",
+      "name": "Brickbreaker III",
+      "notes": "Rare bombard added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Siege: dense precise projectiles vs structures",
+        "Explosive II: adds 20% of damage as Explosive damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "explosive": "Explosive I",
+        "flooding": "Flooding II"
+      },
+      "estimated": true,
+      "family": "Flooding Bombard",
+      "name": "Flooding Bombard III",
+      "notes": "Uncommon bombard added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated).",
+      "perks": [
+        "Flooding II: adds 5% of damage as Flooding damage",
+        "Explosive I: adds 10% of damage as Explosive damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via flooding damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 1107,
+      "damage_types": {
+        "basic": 1107,
+        "flooding": 332
+      },
+      "estimated": false,
+      "family": "Torpedo",
+      "name": "Torpedo III",
+      "notes": "Damage 653/880/1107 across tiers (Game8). Torpedo: slow-moving, must arm; range and reload unpublished (estimated:true on those).",
+      "perks": [
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Flooding III: adds 30% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "explosive": 232,
+        "flooding": 232
+      },
+      "estimated": false,
+      "family": "Shalei",
+      "name": "Shalei III",
+      "notes": "Damage 710/937/1164 across tiers (Game8). Range/reload unpublished (estimated:true on those).",
+      "perks": [
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Explosive II: adds 20% of damage as Explosive damage",
+        "Flooding II: adds 5% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via flooding damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 710,
+      "damage_types": {
+        "basic": 710,
+        "flooding": 213
+      },
+      "estimated": false,
+      "family": "Rahma's Ambition",
+      "name": "Rahma's Ambition",
+      "notes": "Damage 710 at gear score 60 (Game8). Range/reload unpublished (estimated:true on those).",
+      "perks": [
+        "Cataclysmic: (unique perk, exact effect unverified)",
+        "Flooding III: adds 30% of damage as Flooding damage",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "flooding": 349
+      },
+      "estimated": false,
+      "family": "Rahma's Legacy",
+      "name": "Rahma's Legacy",
+      "notes": "Damage 1164 at gear score 110 (Game8). Perks inferred from Rahma's Ambition (same family) — estimated:true on perks. Range/reload unpublished.",
+      "perks": [
+        "Cataclysmic: (unique perk, exact effect unverified)",
+        "Flooding III: adds 30% of damage as Flooding damage",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164
+      },
+      "estimated": true,
+      "family": "Endless Requiem",
+      "name": "Endless Requiem",
+      "notes": "Epic torpedo added Y1S2 (Black Market). 'Highly advanced torpedoes with target seeking capability.' Base damage unpublished — 1164 estimated from Rahma's Legacy class epic (estimated:true).",
+      "perks": [
+        "Target seeking: torpedoes home in on targets (exact tracking behavior unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "flooding": "Flooding II"
+      },
+      "estimated": true,
+      "family": "Woundcaller",
+      "name": "Woundcaller",
+      "notes": "Epic provoking torpedo added Y2S4 (Smuggler Pass). Perks from official Ubisoft Y2S4 patch notes (verified). Base damage unpublished — 1164 estimated from epic torpedo class (estimated:true).",
+      "perks": [
+        "Red Sunrise: hits have a 15% chance to trigger Taunted; already-Taunted targets become afflicted with Unlucky Taunt (250 damage/sec, stacks to 5). Armed bonus: 50% chance to trigger Taunt instead",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Provoking: hits cause buildup of the Taunted status effect",
+        "Flooding II: adds 20% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding II damage (charge rate unverified)",
+          "effect": "Flooded"
+        },
+        {
+          "application": "Provoking / Red Sunrise — 15% chance per hit (50% armed)",
+          "effect": "Taunted"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 2340,
+      "damage_types": {
+        "basic": 2340,
+        "piercing": 468
+      },
+      "estimated": false,
+      "family": "Ballista",
+      "name": "Ballista III",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Ballista I 1380/1.00s/900m on both). Tier progression I-III: 1380/1860/2340. Charged-shot weapon: longer charge = more damage/range/speed; 1.00s is base cycle, not a fixed reload.",
+      "perks": [
+        "Piercing: adds 20% of damage as Piercing damage (+468)",
+        "Charged shots: damage, range and projectile speed scale with charge time"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": 1.0,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": 2460,
+      "damage_types": {
+        "basic": 2460,
+        "piercing": 492
+      },
+      "estimated": false,
+      "family": "Great Springald",
+      "name": "Great Springald III",
+      "notes": "Damage 1500/1980/2460 across tiers, range 900m (Game8). Reload: charged-shot family; base cycle unpublished (estimated:true on reload).",
+      "perks": [
+        "Piercing: adds 20% of damage as Piercing damage (+492)",
+        "Charged shots: damage, range and projectile speed scale with charge time"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": 4302,
+      "damage_types": {
+        "basic": 4302,
+        "piercing": 860
+      },
+      "estimated": false,
+      "family": "Twin-winch Ballista",
+      "name": "Twin-winch Ballista",
+      "notes": "Damage 4302 and range 1350m from Game8 infamy table. Rapid-fire ballista; reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Piercing: adds 20% of damage as Piercing damage (+860)",
+        "Charged shots travel further and hit harder"
+      ],
+      "projectile_speed": null,
+      "range_m": 1350,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "Bane of the Ten Suns",
+      "name": "Bane of the Ten Suns",
+      "notes": "Ballista added Y1S3 (Ubisoft season-3 announcement). No stats published anywhere found.",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "electric": "Electric II",
+        "piercing": "Piercing II"
+      },
+      "estimated": true,
+      "family": "Cloudbinder",
+      "name": "Cloudbinder",
+      "notes": "Epic lightning ballista added Y2S4 (Blackwood store). Perks from official Ubisoft Y2S4 patch notes (verified). Base damage unpublished (estimated:true).",
+      "perks": [
+        "Charged Barb: a hit attaches a charged metal bolt to the target for 10s; the bolt deals 10% of weapon damage as lightning damage every second; if another bolt is within 200m both explode and chain lightning dealing 12% of the weapon's secondary damage to up to 4 targets between the bolts",
+        "Electric II: adds 20% of damage as Electric damage",
+        "Piercing II: adds 20% of damage as Piercing damage",
+        "Increases damage to weakpoints by 75%"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via electric damage (charge rate unverified)",
+          "effect": "Stormstruck"
+        }
+      ],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": 526,
+      "damage_types": {
+        "basic": 526,
+        "burning": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Sea Fire",
+      "name": "Sea Fire III",
+      "notes": "Damage 526 and range 125m from Game8 infamy table. Sea Fire: short-range flamethrower-style DoT weapon. Reload unpublished (estimated:true on reload). Perks unpublished.",
+      "perks": [
+        "Unverified — fire/burning DoT weapon"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "continuous fire damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": 553,
+      "damage_types": {
+        "basic": 553,
+        "fire": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Kallinikos Flame",
+      "name": "Kallinikos Flame III",
+      "notes": "Damage 337/445/553 across tiers, range 125m (Game8). Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Unverified — fire damage variant of Sea Fire"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "fire damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": 502,
+      "damage_types": {
+        "basic": 502
+      },
+      "estimated": false,
+      "family": "Blue Specter",
+      "name": "Blue Specter",
+      "notes": "Damage 502 at gear score 110, range 125m (Game8). Reload/perks unpublished (estimated:true on those).",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "Burning I",
+        "piercing": "Piercing II"
+      },
+      "estimated": true,
+      "family": "Agni's Fury",
+      "name": "Agni's Fury",
+      "notes": "Epic sea fire added Y1S4 (Black Market). Perks from 1.000.020 patch notes (verified). Base damage unpublished (estimated:true).",
+      "perks": [
+        "Pneumatic Engine: rapidly fires Sea Fire darts up to 250m range; weapon takes a moment to wind up before firing",
+        "Piercing II: adds 20% of damage as Piercing damage; increases damage to weakpoints by 75%",
+        "Burning I: adds 10% of damage as Burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "Burning I",
+        "electric": "Electric III"
+      },
+      "estimated": true,
+      "family": "Heavenly Thunder",
+      "name": "Heavenly Thunder",
+      "notes": "Sea Fire added Y2S3 (Faction War rewards). Perks from official Ubisoft Y2S3 patch notes (verified). Range derived: base sea fire 125m + 75m Lancer bonus = 200m (marked estimated). Base damage unpublished.",
+      "perks": [
+        "Lancer: fires a streak of lightning that chains up to 4 targets in proximity; increases damage by 1% per 10m of weapon range; adds 75m to weapon range",
+        "Electric III: adds 30% of damage as Electric damage",
+        "Burning I: adds 10% of damage as Burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 200,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via electric damage (charge rate unverified)",
+          "effect": "Stormstruck"
+        },
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "toxic": "Toxic III"
+      },
+      "estimated": true,
+      "family": "Virulent Accord",
+      "name": "Virulent Accord",
+      "notes": "Sea Fire added Y2S3 (Faction War rewards). Perks from official Ubisoft Y2S3 patch notes (verified). Base damage unpublished (estimated:true).",
+      "perks": [
+        "Infectious: hitting the same target 8 times deals 13% Toxic damage to nearby enemies within 150m; weapon damage increases by 1% for each subsequent hit on the same target",
+        "Toxic III: adds 30% of damage as Toxic damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via toxic damage (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": 11700,
+      "damage_types": {
+        "basic": 11700,
+        "explosive": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Mortar",
+      "name": "Mortar III",
+      "notes": "Damage 11700 at tier III, range 600m (Game8 infamy table). Blasting mortar: large explosive radius, slower projectiles. Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Large explosive blast radius; AoE damage reduced with distance from blast center"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": "hull restoration (oakum bombs)"
+      },
+      "estimated": true,
+      "family": "Repair Mortar",
+      "name": "Repair Mortar III",
+      "notes": "Fires oakum bombs that repair allied ships; deals no damage. Range 600m (Game8). Repair amounts unpublished (estimated:true). Reload unpublished.",
+      "perks": [
+        "Repair: oakum bombs restore hull health of allied ships; longer range than Repair Bombard"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 11275,
+      "damage_types": {
+        "basic": 11275
+      },
+      "estimated": false,
+      "family": "Leopold",
+      "name": "Leopold III",
+      "notes": "Damage 9075/11275 across tiers II-III, range 600m (Game8). Siege mortar: reduced blast radius, very high crushing damage, no blast falloff. Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Siege: reduced blast radius, very high crushing damage, no damage drop-off across blast radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 11275,
+      "damage_types": {
+        "basic": 11275,
+        "explosive": "15% in 50m radius",
+        "toxic": "yes (fumes, unblockable)"
+      },
+      "estimated": true,
+      "family": "Le Fléau",
+      "name": "Le Fléau",
+      "notes": "Epic mortar added Y1S1 (Black Market). Described by MMOAH: 'releases toxic fume for a sharp period on impact, dealing damage and sapping crew stamina; toxic fume damage cannot be blocked or braced against; +15% damage as explosive damage in a 50m blast radius'. Retroactively converted to Toxic damage type in Y2S3. Base damage unpublished — 11275 estimated from Leopold class (estimated:true).",
+      "perks": [
+        "Petrifying toxic fumes: on impact releases toxic fumes dealing damage over a short period and sapping crew stamina; fume damage cannot be blocked or braced against",
+        "Blast: adds 15% of damage as Explosive damage in a 50m blast radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "via toxic fumes (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 11275,
+      "damage_types": {
+        "basic": 11275
+      },
+      "estimated": true,
+      "family": "Crouching Tiger",
+      "name": "Crouching Tiger",
+      "notes": "Epic mortar added Y1S3 (1.000.014 patch notes). Base damage unpublished — 11275 estimated from Leopold class (estimated:true).",
+      "perks": [
+        "Taunting: hitting a target instantly confers the Taunted status effect"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "instant on hit",
+          "effect": "Taunted"
+        }
+      ],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 11275,
+      "damage_types": {
+        "basic": 11275
+      },
+      "estimated": true,
+      "family": "Roaring Meg",
+      "name": "Roaring Meg",
+      "notes": "Named in a community Y2 build guide as an auxiliary-slot weapon (implies mortar; type inference estimated). No stats published anywhere found.",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 12750,
+      "damage_types": {
+        "basic": 12750,
+        "burning": "yes (community-reported, unverified)"
+      },
+      "estimated": false,
+      "family": "Rocket",
+      "name": "Rocket III",
+      "notes": "Damage 12750 at tier III, range 300m (Game8). Short-range unguided rocket-propelled projectiles. Reload unpublished (estimated:true on reload). Community builds report burning damage (unverified).",
+      "perks": [
+        "Unverified — community reports burning damage on Rocket III"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": 13380,
+      "damage_types": {
+        "basic": 13380
+      },
+      "estimated": false,
+      "family": "The Termites",
+      "name": "The Termites III",
+      "notes": "Damage 10770/13380 across tiers II-III, range 400m (Game8). Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": 13000,
+      "damage_types": {
+        "basic": 13000,
+        "explosive": "yes (volley of 10)"
+      },
+      "estimated": true,
+      "family": "The Warhammer",
+      "name": "The Warhammer",
+      "notes": "Epic rocket added Y1S2 (Black Market). 'Fires a volley of 10 heavy explosive rockets from above.' Base damage unpublished — 13000 estimated from Rocket-III-class epic (estimated:true); interpret as per-rocket or per-volley unknown.",
+      "perks": [
+        "Volley: fires 10 heavy explosive rockets from above in a single volley"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": "hull restoration + brace strength"
+      },
+      "estimated": true,
+      "family": "Celestial Bloom",
+      "name": "Celestial Bloom",
+      "notes": "Epic repair rocket added Y2S4 (Faction War rewards). Perks from official Ubisoft Y2S4 patch notes (verified). Repair amounts unpublished.",
+      "perks": [
+        "Fortifying Salvo: each consecutive hit repairs 5% more per projectile; consecutive hits on the same target also restore Brace Strength by 2% per rocket hit",
+        "Repair: applies a lesser restoration of Hull Health to friendly ships"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": "hull/mast restoration via buoys"
+      },
+      "estimated": true,
+      "family": "Little Grace",
+      "name": "Little Grace",
+      "notes": "Springloader variant added Y1S2 (seasonal contract 'Curtain Call'). Launches floating buoys that repair and restore integrity of damaged hulls and masts. All numeric stats unpublished (estimated:true).",
+      "perks": [
+        "Repair buoys: deploys floating buoys that repair damaged hulls and masts"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "springloader"
+    },
+    {
+      "damage_per_shot": 3930,
+      "damage_types": {
+        "basic": 3930,
+        "fire": "sea fire mines + 300% eruption"
+      },
+      "estimated": false,
+      "family": "Infernal Maw",
+      "name": "Infernal Maw",
+      "notes": "Epic springloader added Y1S2 (Smuggler Pass). Buoy stats from gameplay ground truth: Sea Fire Mines buoys deal 3930 total damage, 65m operation range, 25s operation time, 500 buoy health. Y1S2 notes: buoys carry volatile sea fire that erupts when destroyed dealing 300% damage; destroy torpedoes on collision. Deploy cost 160 (per ground truth). Ascension tiers from ground truth: Basic (instant Ablaze, +30% burning damage, +71 damage/shot), Advanced (16% chance to restore 7.1% crew stamina per hit, +33.1% existing burning damage), Mythic (+7% electric damage, Stormstruck chance +2% per hit up to 40%, resets after 10s without hitting). Reload unpublished.",
+      "perks": [
+        "Basic ascension: instant Ablaze application; +30% burning damage; +71 damage per shot",
+        "Advanced ascension: 16% chance to restore 7.1% crew stamina per hit; +33.1% existing burning damage",
+        "Mythic ascension: +7% electric damage; Stormstruck chance stacking +2% per hit up to 40%, resets after 10s without hitting",
+        "Sea Fire Mines: buoys deal fire damage, destroy torpedoes on collision, erupt for 300% damage when destroyed"
+      ],
+      "projectile_speed": null,
+      "range_m": 65,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "instant on buoy hit (Basic ascension)",
+          "effect": "Ablaze"
+        },
+        {
+          "application": "Mythic ascension — +2% chance per hit, stacks to 40%, resets after 10s without hitting",
+          "effect": "Stormstruck"
+        }
+      ],
+      "type": "springloader"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "Infernal Moss",
+      "name": "Infernal Moss",
+      "notes": "Named in a community Y2 build guide ('Infernal Moss mine launcher', auxiliary slot). Single source; no stats published anywhere found.",
+      "perks": [
+        "Unverified — mine launcher (springloader family)"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "springloader"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "electric": "Electric II",
+        "shock": "Lightning II"
+      },
+      "estimated": true,
+      "family": "Heaven's Mandate",
+      "name": "Heaven's Mandate",
+      "notes": "Carronade-style cannon added Y1S3 (sea dragon reward). Perks from Ubisoft season-3 announcement (verified). Base damage unpublished (estimated:true). Carronade: quick reload, lower damage per shot (per pre-launch weapon guide).",
+      "perks": [
+        "Heaven's Wrath: when targets with the Stormstruck effect are hit, 25% chance to summon a devastating lightning attack",
+        "Lightning II: adds 20% of damage as shock damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "25% on hitting Stormstruck targets — lightning attack",
+          "effect": "Stormstruck"
+        }
+      ],
+      "type": "carronade"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "White Jade",
+      "name": "White Jade",
+      "notes": "Cannon added Y1S3 (Ubisoft season-3 announcement). No stats published anywhere found.",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "piercing": "30%"
+      },
+      "estimated": true,
+      "family": "Hullcarver",
+      "name": "Hullcarver",
+      "notes": "Epic Piercing Culverin added Y3S1 'Shattered Seas' (launched 12 May 2026) (Smuggler Pass). Base damage unpublished (estimated:true). Reload/range inherited from culverin family. Pulverize values cross-verified against the official Y3S1 patch notes and a community Galleon/Hullcarver build guide (6 consecutive hits, +12% for 25s, +18% vs Punctured).",
+      "perks": [
+        "Pulverize: after landing 6 consecutive hits, increase this weapon's damage by 12% for 25s; if the target is Punctured, hits increase weapon damage up to 18% instead; missing a hit removes this effect",
+        "Piercing III: adds 30% of damage as Piercing Damage; increases damage to weakpoints by 100%"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "synergy only — Pulverize scales to +18% damage if the target is Punctured (Punctured itself is applied by L'Aiguille/ramming)",
+          "effect": "Punctured"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "flooding": "30%",
+        "explosive": "15% in 50m radius"
+      },
+      "estimated": true,
+      "family": "De Breker",
+      "name": "De Breker",
+      "notes": "Epic Flooding Mortar added Y3S1 'Shattered Seas' (launched 12 May 2026) (Faction War). Base damage unpublished (estimated:true). Range from mortar family; reload unpublished like all mortars. Spelling 'De Breker' confirmed by a second community source (Y3 Galleon build guide lists 'De Breker Mortar').",
+      "perks": [
+        "Ocean's Snare: hits from this weapon reduce the target's sailing speed by an additional 12% when they are Flooded; hits on stationary targets or targets affected by Flooded or Torn Sails status deal 60% more damage",
+        "Flooding III: adds 30% damage as Flooding Damage",
+        "Blast: adds 15% of damage as Explosive Damage in a 50m Blast Radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified); Ocean's Snare punishes already-Flooded targets",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "piercing": "20%",
+        "explosive": "10% in 30m radius"
+      },
+      "estimated": true,
+      "family": "L'Aiguille",
+      "name": "L'Aiguille",
+      "notes": "Epic Piercing Springloader added Y3S1 'Shattered Seas' (launched 12 May 2026) (Faction War). All numeric stats unpublished (estimated:true). Perk text quoted from official Y3S1 patch notes.",
+      "perks": [
+        "Splinter: targets within the area of operation of this weapon have a 30% chance to be instantly Punctured; Punctured targets within the area of operation lose 2% Armor Rating per second up to 14%",
+        "Piercing II: adds 20% of damage as Piercing Damage; increases damage to weakpoints by 75%",
+        "Explosive I: adds 10% of damage as Explosive Damage in a 30m Blast Radius"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "Splinter — 30% chance instantly on targets in the area of operation; Punctured targets lose 2% Armor Rating per second up to 14%",
+          "effect": "Punctured"
+        }
+      ],
+      "type": "springloader"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "toxic": "20%"
+      },
+      "estimated": true,
+      "family": "Blightbearer",
+      "name": "Blightbearer",
+      "notes": "Epic Poison Elite Long Gun added Y3S1 'Shattered Seas' (launched 12 May 2026) (Blackwood). Base damage unpublished (estimated:true). Reload/range from long gun family. Perk text quoted from official Y3S1 patch notes.",
+      "perks": [
+        "Sickly: for each 1% Brace Strength missing from the target, deal 0.5% more Weapon Damage with this weapon up to 1%; if the target is Poisoned, gain an extra 30%",
+        "Toxic II: adds 20% of damage as Toxic Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Toxic II damage (charge rate unverified); Sickly grants +30% weapon damage vs Poisoned targets",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%",
+        "explosive": "10% in 30m radius"
+      },
+      "estimated": true,
+      "family": "Soulsnatcher",
+      "name": "Soulsnatcher",
+      "notes": "Epic Lifesteal Bombard added Y3S1 'Shattered Seas' (launched 12 May 2026) (Honorless time-limited event reward). Base damage unpublished (estimated:true). Reload/range from bombard family. Perk text quoted from official Y3S1 patch notes.",
+      "perks": [
+        "Haunting Mending: 20% of damage dealt restores Hull Health, increasing by 20% for every additional target within impact area up to a maximum of 60%",
+        "Burning II: adds 20% of damage as Burning Damage",
+        "Explosive I: adds 10% of damage as Explosive Damage in a 30m Blast Radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%"
+      },
+      "estimated": true,
+      "family": "Atma's Toll",
+      "name": "Atma's Toll",
+      "notes": "Epic Lifesteal Demi-cannon added Y3S1 'Shattered Seas' (launched 12 May 2026) (Honorless time-limited event reward). Base damage unpublished (estimated:true). Reload/range from demi-cannon family. Perk text quoted from official Y3S1 patch notes.",
+      "perks": [
+        "Mystic Mend: heal for 10% of damage dealt; hitting 16 projectiles in one salvo increases mending amount from this weapon to 35% for 16 seconds",
+        "Burning II: adds 20% of damage as Burning Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%",
+        "explosive": "10% + Ignition (1000 flat)"
+      },
+      "estimated": true,
+      "family": "Scorch Song",
+      "name": "Scorch Song",
+      "notes": "Epic Burning Explosive Culverin added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Smuggler Pass Gunnermaster track). Base damage unpublished (estimated:true). Reload/range from culverin family. Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Ignition: trigger an explosion when the target is either Ablaze or Shell-shocked; Ignition's explosion deals 1000 Explosive Damage and an additional 20% Weapon Damage as Explosive Damage per hit; consecutive shots increase this bonus up to 500%; this effect cannot trigger again for 30 seconds",
+        "Burning II: adds 20% Damage as Burning Damage",
+        "Combustion II: adds 10% of damage as Explosive Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified); Ignition triggers on Ablaze targets",
+          "effect": "Ablaze"
+        },
+        {
+          "application": "synergy only — Ignition triggers on Shell-shocked targets (Shell-shocked itself applied by other sources)",
+          "effect": "Shell-shocked"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "flooding": "20%"
+      },
+      "estimated": true,
+      "family": "Drowning Hellion",
+      "name": "Drowning Hellion",
+      "notes": "Epic Flooding Demi-cannon added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Requiem of the Lost event reward). Base damage unpublished (estimated:true). Reload/range from demi-cannon family. Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Sea's Fury: each volley has a 15% chance of dealing 100% Flooding damage as Severe Damage; every 5 hits increase this chance by 15%, up to 75%; if the target is Flooded, deal 200% Flooding Damage as Severe Damage instead",
+        "Flooding II: adds 20% Damage as Flooding Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding II damage (charge rate unverified); Sea's Fury deals 200% Flooding damage as Severe Damage vs Flooded targets",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "30%"
+      },
+      "estimated": true,
+      "family": "Hellfire",
+      "name": "Hellfire",
+      "notes": "Epic Burning Rocket added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Faction War reward). Base damage unpublished (estimated:true). Range from rocket family; reload unpublished like all rockets. Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Burning Artillery: fires a volley of 15 heavy rockets instead of many smaller rockets; reduce target's Fire Resistance by 1% per hit up to 20% if the target is Ablaze, lasting for the duration of the status",
+        "Burning III: adds 30% Damage as Burning Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "via Burning III damage (charge rate unverified); Burning Artillery strips Fire Resistance on Ablaze targets",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "flooding": "30%",
+        "piercing": "10%"
+      },
+      "estimated": true,
+      "family": "Claws of the Deep",
+      "name": "Claws of the Deep",
+      "notes": "Epic Flooding Ballista added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Faction War reward). Base damage unpublished (estimated:true). Range from ballista family; reload unpublished (charged-shot family). Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Sinking Bolt: this weapon can be charged up to pierce through enemies, dealing damage as it pierces; hits on a target have a 10% chance to instantly apply Flooded status to them; Flooded targets take 3% more weapon damage per hit up to 12% from this weapon",
+        "Flooding III: adds 30% Damage as Flooding Damage",
+        "Piercing I: adds 10% Damage as Piercing Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified); Sinking Bolt has a 10% chance per hit to instantly apply Flooded",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%",
+        "flooding": "10% + Burning Thirst (1000 flat)"
+      },
+      "estimated": true,
+      "family": "Drakon's Jaws",
+      "name": "Drakon's Jaws",
+      "notes": "Epic Burning Flooding Torpedo added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Darktide Lullaby event reward). Base damage unpublished (estimated:true). Range/reload unpublished like all torpedoes. Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Burning Thirst: trigger an explosion when the target is either Ablaze or Flooded; Burning Thirst's explosion deals 1000 Flooding damage and an additional 20% weapon damage as Flooding damage per hit; consecutive hits increase this bonus up to 500%; this effect cannot trigger again for 30 seconds",
+        "Burning II: adds 20% Damage as Burning Damage",
+        "Flooding I: adds 10% Damage as Flooding Damage",
+        "Arming: increases damage from torpedoes by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified); Burning Thirst triggers on Ablaze targets",
+          "effect": "Ablaze"
+        },
+        {
+          "application": "via Flooding I damage (charge rate unverified); Burning Thirst triggers on Flooded targets",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "toxic": "30% + Rotting Ammo range scaling"
+      },
+      "estimated": true,
+      "family": "Anathema",
+      "name": "Anathema",
+      "notes": "Epic Poison Bombard added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Blackwood). Base damage unpublished (estimated:true). Reload/range from bombard family. Perk text quoted from official Y3S2 patch notes.",
+      "perks": [
+        "Rotting Ammo: for every 50m away the target is, deal 10% more Toxic damage up to 100%; if target receives 5000 Toxic damage while poisoned, trigger a Toxic explosion dealing 40% of the weapon's damage as Toxic damage to enemies within 150m; this effect has a cooldown of 60 seconds",
+        "Toxic III: adds 30% Damage as Toxic Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Toxic III damage (charge rate unverified); Rotting Ammo detonates a Toxic explosion once a poisoned target takes 5000 Toxic damage",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "bombard"
+    }
+  ]
+}
