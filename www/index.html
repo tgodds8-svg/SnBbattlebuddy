@@ -4,67 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a1420">
-<title>SnB Loadouts — Skull and Bones Loadout &amp; DPS Calculator</title>
+<title>SnB Loadouts — Skull and Bones Build Calculator</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="app-header">
   <div class="header-title">
     <span class="skull">☠</span>
     <div>
       <h1>SnB Loadouts</h1>
-      <p class="subtitle">Skull &amp; Bones loadout &amp; DPS calculator · Y3S2</p>
+      <p class="subtitle">Skull &amp; Bones build calculator · Y3S2 Crimson Waters</p>
     </div>
   </div>
-  <nav class="tabs" role="tablist">
-    <button class="tab active" data-tab="ships" role="tab">Ships</button>
-    <button class="tab" data-tab="builder" role="tab">Builder</button>
-    <button class="tab" data-tab="buffs" role="tab">Season</button>
-    <button class="tab" data-tab="mastery" role="tab">Mastery</button>
-    <button class="tab" data-tab="dps" role="tab">DPS</button>
-  </nav>
 </header>
 
 <main id="main">
-  <!-- SHIPS TAB -->
-  <section id="tab-ships" class="tab-panel active">
-    <div class="search-row">
-      <input id="ship-search" type="search" placeholder="Search ships…" autocomplete="off">
-      <select id="ship-class-filter"><option value="">All classes</option></select>
+
+  <!-- ============ BUILD TAB (Quick Build) ============ -->
+  <section id="tab-build" class="tab-panel active" aria-label="Quick build">
+
+    <div id="onboard-card" class="onboard" hidden>
+      <h2>☠ Welcome aboard</h2>
+      <p>Build your ship in three taps:</p>
+      <ol>
+        <li><strong>Pick your ship</strong> — find yours below.</li>
+        <li><strong>Add your guns</strong> — tap a slot, pick a weapon that fits.</li>
+        <li><strong>See your damage</strong> — one big number, updated live.</li>
+      </ol>
+      <p class="hint">Everything else — furniture, season buffs, mastery — lives under <strong>Tune</strong> below.</p>
+      <button id="onboard-dismiss" class="btn btn-primary">Got it, let's build</button>
     </div>
-    <div id="ship-list" class="card-grid"></div>
+
+    <div class="steps" role="navigation" aria-label="Build steps">
+      <button class="step active" data-step="step-1"><span class="step-num">1</span><span class="step-name">Ship</span></button>
+      <button class="step" data-step="step-2"><span class="step-num">2</span><span class="step-name">Guns</span></button>
+      <button class="step" data-step="step-3"><span class="step-num">3</span><span class="step-name">Damage</span></button>
+    </div>
+
+    <div id="build-status" class="status-bar" hidden></div>
+
+    <!-- STEP 1: SHIP -->
+    <div id="step-1" class="step-section">
+      <h2>Pick your ship</h2>
+      <div class="search-row">
+        <input id="ship-search" type="search" placeholder="Search ships…" autocomplete="off" aria-label="Search ships">
+        <select id="ship-class-filter" aria-label="Filter by ship class"><option value="">All classes</option></select>
+      </div>
+      <div id="ship-list" class="card-grid"></div>
+      <div class="preset-row">
+        <button id="btn-load-preset" class="btn">⚓ Load an example build</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: GUNS -->
+    <div id="step-2" class="step-section">
+      <h2>Your guns <span class="hint">tap a slot to pick a weapon</span></h2>
+      <div id="build-no-ship" class="empty-state">
+        <p>Pick a ship first — your gun slots appear here.</p>
+        <button id="btn-goto-ships" class="btn btn-primary">Choose a ship</button>
+      </div>
+      <div id="weapon-slots"></div>
+    </div>
+
+    <!-- STEP 3: DAMAGE -->
+    <div id="step-3" class="step-section">
+      <h2>Your damage</h2>
+      <div id="qdps-empty" class="empty-state">
+        <p>Add some guns and your damage number shows up right here.</p>
+      </div>
+      <div id="qdps-main" hidden>
+        <div class="dps-hero">
+          <div class="dps-label">Damage per second <span class="est-flag" title="Absolute numbers are estimates — Ubisoft never published the armor formula">est.</span></div>
+          <div id="qdps-total" class="dps-number">0</div>
+          <div class="dps-sub"><span class="hint">Broadside alpha:</span> <strong id="qdps-alpha">0</strong></div>
+        </div>
+        <p class="honesty">Numbers marked <span class="est-badge">est.</span> are community estimates — Ubisoft never published the armor formula. For the trustworthy armor-proof comparison, use <strong>Compare</strong> in the Tune tab.</p>
+        <div id="qdps-breakdown"></div>
+        <button id="btn-goto-tune" class="btn">⚙ Tune it further — furniture, buffs, mastery</button>
+      </div>
+    </div>
   </section>
 
-  <!-- BUILDER TAB -->
-  <section id="tab-builder" class="tab-panel">
-    <div id="builder-empty" class="empty-state">
-      <p>No loadout started. Pick a ship from the <strong>Ships</strong> tab, or load a saved one.</p>
-      <button id="btn-load-preset" class="btn btn-primary">Load "Help me?" preset</button>
-    </div>
-    <div id="builder-main" hidden>
-      <div class="loadout-header">
-        <input id="loadout-name" placeholder="Loadout name">
-        <div class="loadout-actions">
-          <button id="btn-save-loadout" class="btn btn-primary">Save</button>
-          <button id="btn-load-loadout" class="btn">Saved…</button>
+  <!-- ============ ADVANCED TAB (Tune) ============ -->
+  <section id="tab-advanced" class="tab-panel" aria-label="Advanced tuning">
+
+    <div class="adv-section">
+      <h2>Your loadout</h2>
+      <div id="adv-no-loadout" class="empty-state"><p>Nothing built yet — head to <strong>Build</strong> and pick a ship.</p></div>
+      <div id="adv-loadout" hidden>
+        <div class="loadout-header">
+          <input id="loadout-name" placeholder="Loadout name" aria-label="Loadout name">
+          <div class="loadout-actions">
+            <button id="btn-save-loadout" class="btn btn-primary">Save</button>
+            <button id="btn-load-loadout" class="btn">Saved…</button>
+          </div>
         </div>
+        <div id="saved-list" class="saved-list" hidden></div>
       </div>
-      <div id="saved-list" class="saved-list" hidden></div>
+    </div>
 
-      <h2>Weapons <span class="hint">tap a slot to pick</span></h2>
-      <div id="weapon-slots"></div>
-
+    <div class="adv-section" id="adv-furniture">
       <h2>Furniture <span class="hint">1 Major + minors</span></h2>
       <div class="furniture-controls">
         <label>Minor slots
-          <input id="minor-slot-count" type="number" min="0" max="8" value="4">
+          <input id="minor-slot-count" type="number" min="0" max="8" value="4" aria-label="Minor furniture slots">
         </label>
       </div>
       <div id="furniture-slots"></div>
+    </div>
 
-      <h2>Stacking rules <span class="hint">additive vs multiplicative is unpublished — flip after testing</span></h2>
+    <div class="adv-section">
+      <h2>Season buffs <span class="hint">Year 3 Season 2</span></h2>
+      <div class="notice">
+        <strong>Year 3 Season 2 · Crimson Waters</strong> · <span id="season-dates"></span><br>
+        Only officially documented nodes are listed — the full 500+ node tree is not published.
+      </div>
+      <div id="buff-list"></div>
+    </div>
+
+    <div class="adv-section">
+      <h2>Mastery <span class="hint">seasonal perks</span></h2>
+      <div class="mastery-bar">
+        <div><strong>Mastery points</strong></div>
+        <div class="points"><span id="mastery-used">0</span> / 90 used</div>
+        <div class="points-bar"><div id="mastery-fill"></div></div>
+      </div>
+      <div class="notice">Documented Y3S2 seasonal perks. Toggle what you've unlocked; costs are the unlock levels (10/30/50 = 90).</div>
+      <div id="mastery-list"></div>
+    </div>
+
+    <div class="adv-section">
+      <h2>Stacking rules <span class="hint">how % bonuses combine</span></h2>
+      <div class="notice small">Ubisoft never published whether % bonuses add or multiply — flip these after your own testing.</div>
       <div id="stacking-toggles" class="stacking-grid"></div>
+    </div>
 
+    <div class="adv-section">
       <h2>Combat assumptions</h2>
       <div class="assumptions">
         <label>Engagement range (m)
@@ -78,62 +154,50 @@
         </label>
       </div>
     </div>
-  </section>
 
-  <!-- SEASONAL BUFFS TAB -->
-  <section id="tab-buffs" class="tab-panel">
-    <div class="notice">
-      <strong>Year 3 Season 2</strong> · <span id="season-dates"></span><br>
-      Only the officially documented nodes are listed — the full 500+ node tree is not published.
-    </div>
-    <div id="buff-list"></div>
-  </section>
-
-  <!-- MASTERY TAB -->
-  <section id="tab-mastery" class="tab-panel">
-    <div class="mastery-bar">
-      <div><strong>Mastery points</strong></div>
-      <div class="points"><span id="mastery-used">0</span> / 90 used</div>
-      <div class="points-bar"><div id="mastery-fill"></div></div>
-    </div>
-    <div class="notice">Documented Y3S2 seasonal perks. Toggle what you've unlocked; costs are the unlock levels (10/30/50 = 90).</div>
-    <div id="mastery-list"></div>
-  </section>
-
-  <!-- DPS TAB -->
-  <section id="tab-dps" class="tab-panel">
-    <div id="dps-empty" class="empty-state"><p>Build a loadout first, then come back for numbers.</p></div>
-    <div id="dps-main" hidden>
-      <div class="dps-summary">
-        <div class="dps-total">
-          <div class="dps-label">Sustained DPS <span class="est-flag" title="Absolute numbers are estimates — armor formula unpublished">est.</span></div>
-          <div id="dps-total" class="dps-number">0</div>
-        </div>
-        <div class="dps-total">
-          <div class="dps-label">Broadside alpha <span class="est-flag">est.</span></div>
-          <div id="dps-alpha" class="dps-number">0</div>
-        </div>
-      </div>
-      <div class="notice small">Absolute DPS is an <strong>estimate</strong>: the armor-mitigation formula is unpublished. Use <strong>Compare</strong> for armor-independent relative numbers.</div>
-      <div id="dps-breakdown"></div>
-      <h2>Compare loadouts <span class="hint">relative % — armor cancels out</span></h2>
+    <div class="adv-section">
+      <h2>Compare loadouts <span class="hint">armor-proof relative numbers</span></h2>
       <div class="compare-row">
-        <select id="compare-a"></select>
+        <select id="compare-a" aria-label="First loadout to compare"></select>
         <span class="vs">vs</span>
-        <select id="compare-b"></select>
+        <select id="compare-b" aria-label="Second loadout to compare"></select>
         <button id="btn-compare" class="btn btn-primary">Compare</button>
       </div>
       <div id="compare-result"></div>
     </div>
+
+    <div class="adv-section">
+      <h2>Data reference</h2>
+      <p class="hint" id="data-verified-line"></p>
+      <h3>Status effects</h3>
+      <div id="status-ref-table" class="ref-table"></div>
+      <h3>Ships</h3>
+      <input id="ref-ship-search" type="search" placeholder="Search ships…" autocomplete="off" aria-label="Search ship table">
+      <div id="ref-ship-table" class="ref-table"></div>
+      <h3>Weapons</h3>
+      <input id="ref-weapon-search" type="search" placeholder="Search weapons…" autocomplete="off" aria-label="Search weapon table">
+      <div id="ref-weapon-table" class="ref-table"></div>
+    </div>
+
+    <footer class="app-foot">
+      <p>SnB Loadouts · community edition · Y3S2 Crimson Waters</p>
+      <p class="hint">Armor mitigation is unpublished — absolute DPS is an estimate. Relative comparisons are the honest numbers.</p>
+    </footer>
   </section>
 </main>
+
+<!-- Bottom tab bar -->
+<nav class="bottomnav" role="tablist" aria-label="Main sections">
+  <button class="btab active" data-tab="build" role="tab" aria-selected="true"><span class="btab-ico">⚒</span>Build</button>
+  <button class="btab" data-tab="advanced" role="tab" aria-selected="false"><span class="btab-ico">⚙</span>Tune</button>
+</nav>
 
 <!-- Generic searchable picker modal -->
 <div id="picker-modal" class="modal" hidden>
   <div class="modal-sheet">
     <div class="modal-head">
-      <input id="picker-search" type="search" placeholder="Search…" autocomplete="off">
-      <button id="picker-close" class="btn">✕</button>
+      <input id="picker-search" type="search" placeholder="Search…" autocomplete="off" aria-label="Search picker">
+      <button id="picker-close" class="btn" aria-label="Close">✕</button>
     </div>
     <div id="picker-clear-row"><button id="picker-clear" class="btn btn-danger">Clear slot</button></div>
     <div id="picker-list" class="picker-list"></div>
@@ -143,7 +207,7 @@
 <!-- Weapon detail editor modal -->
 <div id="weapon-modal" class="modal" hidden>
   <div class="modal-sheet">
-    <div class="modal-head"><h3 id="weapon-modal-title">Weapon</h3><button id="weapon-close" class="btn">✕</button></div>
+    <div class="modal-head"><h3 id="weapon-modal-title">Weapon</h3><button id="weapon-close" class="btn" aria-label="Close">✕</button></div>
     <div id="weapon-modal-body" class="modal-body"></div>
   </div>
 </div>
