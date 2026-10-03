@@ -261,3 +261,35 @@ input:focus, select:focus { outline: 2px solid var(--gold-dim); }
 .mod-row input { flex: 1; }
 .mod-row select { flex: 0 0 7.5rem; }
 .perk-text { font-size: .8rem; color: var(--ink-dim); background: var(--bg); border-radius: 8px; padding: .65rem; white-space: pre-wrap; }
+
+/* ---------- archetype subcategories (picker groups) ---------- */
+.arch-group { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg2); overflow: hidden; }
+.arch-group > summary {
+  display: flex; align-items: center; gap: .6rem;
+  min-height: 56px; padding: .7rem .9rem; cursor: pointer;
+  list-style: none; -webkit-tap-highlight-color: transparent;
+}
+.arch-group > summary::-webkit-details-marker { display: none; }
+.arch-group > summary::after { content: '▾'; margin-left: auto; color: var(--ink-dim); font-size: 1.1rem; }
+.arch-group:not([open]) > summary::after { content: '▸'; }
+.arch-ico { font-size: 1.5rem; }
+.arch-name { font-weight: 800; font-size: 1.02rem; }
+.arch-count { background: var(--card2); border: 1px solid var(--line); border-radius: 999px; padding: .05rem .55rem; font-size: .78rem; color: var(--ink-dim); }
+.arch-blurb { display: block; width: 100%; font-size: .76rem; color: var(--ink-dim); font-weight: 400; }
+.arch-group .picker-item { margin: .45rem; width: calc(100% - .9rem); }
+.arch-chips { display: inline-flex; gap: .2rem; margin-left: .35rem; vertical-align: middle; }
+.arch-chip { font-size: .85rem; background: var(--card2); border: 1px solid var(--line); border-radius: 999px; padding: 0 .3rem; cursor: help; }
+
+/* ---------- templates ---------- */
+.template-card {
+  display: block; width: 100%; text-align: left;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: .9rem; color: var(--ink); cursor: pointer;
+}
+.template-card:active { border-color: var(--gold); }
+.template-card .t-head { display: flex; gap: .6rem; align-items: center; margin-bottom: .4rem; }
+.template-card .t-head h3 { margin: 0; font-size: 1.05rem; }
+.template-card .t-head .meta { font-size: .78rem; color: var(--ink-dim); }
+.template-card .t-synergy { margin: .35rem 0; font-size: .85rem; color: var(--ink); }
+.template-card .t-kit { font-size: .75rem; color: var(--ink-dim); margin-bottom: .55rem; }
+.template-card .t-use { display: inline-block; background: var(--gold); color: #1a1206; font-weight: 800; border-radius: 999px; padding: .55rem 1.1rem; min-height: 44px; }
