@@ -188,24 +188,95 @@ $('btn-load-preset').addEventListener('click', () => {
   document.querySelector('[data-step="step-3"]').click();
 });
 
+/* ---------------- templates: curated starter builds ---------------- */
+function templateKitLine(t) {
+  const wnames = [...new Set((t.weapons || []).map(w => w.name))];
+  const fnames = [t.furniture && t.furniture.major, ...((t.furniture && t.furniture.minors) || [])].filter(Boolean);
+  return [...wnames, ...fnames].join(' · ');
+}
+function renderTemplates() {
+  const box = $('template-list');
+  if (!box) return;
+  box.innerHTML = '';
+  TEMPLATES.forEach(t => {
+    const meta = Archetypes.META[t.archetype] || Archetypes.META.general;
+    const d = document.createElement('button');
+    d.className = 'template-card';
+    d.innerHTML = `<div class="t-head"><span class="arch-ico">${meta.icon}</span>
+        <div><h3>${esc(t.name)}</h3><div class="meta">${esc(t.tagline)}</div></div></div>
+      <p class="t-synergy">${esc(t.synergy)}</p>
+      <div class="t-kit">${esc(templateKitLine(t))}</div>
+      <span class="t-use">Use this template →</span>`;
+    d.addEventListener('click', () => loadTemplate(t));
+    box.appendChild(d);
+  });
+}
+function loadTemplate(t) {
+  const L = newLoadout(t.ship);
+  L.name = 'Template: ' + t.name;
+  (t.weapons || []).forEach(spec => {
+    const s = L.weaponSlots.find(x => x.position === spec.position && !x.weapon);
+    if (!s) return;
+    const w = DB.weaponByName(spec.name);
+    if (w) { s.weapon = w; s.shotsPerVolley = spec.shots || 1; }
+  });
+  if (t.furniture) {
+    const fm = DB.furnitureByName(t.furniture.major);
+    if (fm) L.furniture[0] = { kind: 'major', item: fm, customMods: [] };
+    L.minorSlots = (t.furniture.minors || []).length;
+    (t.furniture.minors || []).forEach(nm => {
+      const it = DB.furnitureByName(nm);
+      if (it) L.furniture.push({ kind: 'minor', item: it, customMods: [] });
+    });
+  }
+  S.loadout = L;
+  ensureMinorSlots();
+  renderShips($('ship-search').value, $('ship-class-filter').value);
+  switchTab('build');
+  renderBuildAll();
+  renderFurniture();
+  document.querySelector('[data-step="step-2"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 /* ---------------- generic picker modal (unchanged logic from v1) ---------------- */
-function openPicker(title, items, renderFn, onPick, showClear) {
+/* Pass groupFn(item)->[archetypes...] to group items under collapsible
+ * archetype subcategories (primary archetype = first entry). */
+function openPicker(title, items, renderFn, onPick, showClear, groupFn) {
   $('picker-search').value = '';
   $('picker-search').placeholder = 'Search ' + title + '…';
   $('picker-clear-row').style.display = showClear ? '' : 'none';
   const draw = q => {
     const box = $('picker-list');
     box.innerHTML = '';
-    items
-      .filter(it => !q || renderFn(it).toLowerCase().includes(q.toLowerCase()))
-      .slice(0, 200)
-      .forEach(it => {
-        const b = document.createElement('button');
-        b.className = 'picker-item';
-        b.innerHTML = renderFn(it);
-        b.addEventListener('click', () => { closePicker(); onPick(it); });
-        box.appendChild(b);
+    const ql = (q || '').toLowerCase();
+    const match = it => !q || renderFn(it).toLowerCase().includes(ql);
+    const addBtn = it => {
+      const b = document.createElement('button');
+      b.className = 'picker-item';
+      b.innerHTML = renderFn(it);
+      b.addEventListener('click', () => { closePicker(); onPick(it); });
+      return b;
+    };
+    if (!groupFn) {
+      items.filter(match).slice(0, 200).forEach(it => box.appendChild(addBtn(it)));
+    } else {
+      Archetypes.ORDER.forEach(a => {
+        const list = items.filter(it => groupFn(it)[0] === a && match(it));
+        if (!list.length) return;
+        const meta = Archetypes.META[a];
+        const det = document.createElement('details');
+        det.className = 'arch-group';
+        det.open = true;
+        const sum = document.createElement('summary');
+        sum.innerHTML = `<span class="arch-ico">${meta.icon}</span>` +
+          `<span class="arch-name">${meta.name}</span>` +
+          `<span class="arch-count">${list.length}</span>` +
+          `<span class="arch-blurb">${esc(meta.blurb)}</span>`;
+        det.appendChild(sum);
+        list.slice(0, 200).forEach(it => det.appendChild(addBtn(it)));
+        box.appendChild(det);
       });
+    }
   };
   $('picker-search').oninput = e => draw(e.target.value);
   draw('');
@@ -241,9 +312,10 @@ function renderWeaponSlots() {
     d.addEventListener('click', () => {
       const items = DB.weaponsForSlot(slot.position);
       openPicker('weapons that fit here', items,
-        it => `<div class="pname">${esc(it.name)}${estBadge(it.estimated)}</div><div class="pmeta">${weaponPickerMeta(it)}</div>`,
+        it => `<div class="pname">${esc(it.name)}${estBadge(it.estimated)} ${Archetypes.chips(Archetypes.weaponArchetypes(it))}</div><div class="pmeta">${weaponPickerMeta(it)}</div>`,
         it => { slot.weapon = it; refreshNumbers(); },
-        true);
+        true,
+        it => Archetypes.weaponArchetypes(it));
       $('picker-clear').onclick = () => { slot.weapon = null; closePicker(); refreshNumbers(); };
     });
     d.querySelector('.slot-edit')?.addEventListener('click', e => { e.stopPropagation(); openWeaponEditor(i); });
@@ -437,9 +509,10 @@ function renderFurniture() {
     d.addEventListener('click', () => {
       const items = DB.furniture.filter(x => (x.tier || '').toLowerCase() === f.kind);
       openPicker('furniture', items,
-        x => `<div class="pname">${esc(x.name)}${estBadge(x.estimated)}</div><div class="pmeta">${esc(x.tier || '')} · ${esc((x.perk_text || '').slice(0, 110))}…</div>`,
+        x => `<div class="pname">${esc(x.name)}${estBadge(x.estimated)} ${Archetypes.chips(Archetypes.furnitureArchetypes(x))}</div><div class="pmeta">${esc(x.tier || '')} · ${esc((x.perk_text || '').slice(0, 110))}…</div>`,
         x => { f.item = x; renderFurniture(); refreshNumbers(); },
-        true);
+        true,
+        x => Archetypes.furnitureArchetypes(x));
       $('picker-clear').onclick = () => { f.item = null; f.customMods = []; closePicker(); renderFurniture(); refreshNumbers(); };
     });
     d.querySelector('.slot-edit')?.addEventListener('click', e => { e.stopPropagation(); openFurnitureEditor(i); });
@@ -661,6 +734,7 @@ function renderAdvanced() {
   } catch {}
   S.stacking = Calc.defaultStacking();
   renderShips();
+  renderTemplates();
   renderBuildAll();
   renderReference();
   renderAdvanced();
