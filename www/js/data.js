@@ -10,21 +10,24 @@ const DB = {
   furniture: [],
   mechanics: null,
   seasonal: null,
+  masteryTree: null,
   meta: {},
 
   async load() {
-    const [weapons, ships, furniture, mechanics, seasonal] = await Promise.all([
+    const [weapons, ships, furniture, mechanics, seasonal, masteryTree] = await Promise.all([
       fetch('data/weapons.json').then(r => r.json()),
       fetch('data/ships.json').then(r => r.json()),
       fetch('data/furniture.json').then(r => r.json()),
       fetch('data/mechanics.json').then(r => r.json()),
       fetch('data/seasonal_buffs.json').then(r => r.json()),
+      fetch('data/mastery_tree_y3s2.json').then(r => r.json()),
     ]);
     this.weapons = weapons.weapons || [];
     this.ships = ships.ships || [];
     this.furniture = furniture.furniture || [];
     this.mechanics = mechanics.mechanics || {};
     this.seasonal = seasonal;
+    this.masteryTree = masteryTree;
     this.meta = {
       weapons_verified: weapons.last_verified,
       ships_verified: ships.last_verified,
@@ -33,7 +36,7 @@ const DB = {
       season_dates: seasonal.season_dates || null,
     };
     // Raw payloads for reference tables (status effects etc.)
-    this.raw = { weapons, ships, furniture, mechanics, seasonal };
+    this.raw = { weapons, ships, furniture, mechanics, seasonal, masteryTree };
   },
 
   weaponByName(name) { return this.weapons.find(w => w.name === name) || null; },
@@ -67,6 +70,9 @@ const DB = {
 
   /** Documented seasonal nodes (buffs tab). */
   seasonalNodes() { return (this.seasonal && this.seasonal.nodes) || []; },
+
+  /** Full Y3S2 mastery tree catalog (565 nodes). */
+  masteryNodes() { return (this.masteryTree && this.masteryTree.nodes) || []; },
 
   statusReference() {
     return (this.raw && this.raw.weapons.status_effect_reference) || {};
