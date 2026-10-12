@@ -1,1 +1,468 @@
-{"infamy_rebalance_y3s2":{"confidence":"confirmed","description":"Y3S2 rebalanced Infamy gain (the mastery XP currency) by activity and Ship Rank. General ship combat: minimal adjustment at all ranks. Plunder: minimal (SR1-15), +15% (SR16-20), +40% (SR21-25), +65% (SR26+). Elite Warships / Sea Monsters: minimal (SR1-15), +25% (SR16-20), +45% (SR21-25), +55% (SR26+). Raw per-level Infamy requirements were also increased, but overall levelling pace is steadier early and less steep late."},"last_verified":"2026-10-02","nodes":[{"confidence":"confirmed","description":"New Y3S2 mastery mechanic. Impetus is a combat resource acquired through utilizing the season's new Seasonal Perks, and consumed to gain buffs and trigger powerful effects in other Seasonal Perks. Max 10 stacks.","modifies":"resource_system","name":"Impetus (seasonal combat resource)","ranks":[],"stacking":"n/a","type":"mechanic"},{"confidence":"confirmed","description":"Generate 1 stack of Impetus (max 10) for every 8 weapon hits on enemies. Demicannons require 4 times as many hits (i.e. 32 hits per stack). Generating Impetus increases Weapon Damage and Repair Amount by 15% for 5 seconds.","modifies":"weapon_damage, repair_amount","name":"Relentless Force","ranks":[{"effect":"weapon_damage, repair_amount","rank":1,"value":"+15% Weapon Damage and +15% Repair Amount for 5s on Impetus generation; 1 Impetus stack per 8 weapon hits (32 for Demicannons), max 10 stacks"}],"stacking":"unknown","stacking_note":"Patch notes do not state whether the 15% Weapon Damage is additive with other weapon-damage bonuses (furniture, ship perks, mods) or multiplicative. Treat as unknown until in-game tested.","tier":1,"type":"seasonal_perk","unlock_level":10},{"confidence":"confirmed","description":"Generating Impetus adds a 20% chance to convert any weapon shot into a weakpoint hit for 5 seconds.","modifies":"weakpoint_hit_chance","name":"Weakness Finder","ranks":[{"effect":"weakpoint_conversion","rank":1,"value":"20% chance per shot to convert to a weakpoint hit, for 5s after generating Impetus"}],"stacking":"unknown","stacking_note":"Weakpoint hits in S&B deal bonus damage via the weakpoint damage multiplier; a 'conversion' is not a flat damage % — the DPS calculator must apply the target's weakpoint multiplier to converted shots, not a simple +20% damage.","tier":2,"type":"seasonal_perk","unlock_level":30},{"confidence":"confirmed","description":"When at 10 stacks of Impetus, fire an Auxiliary Weapon to consume 10 stacks and convert all weapon hits to weakpoint hits for 8 seconds.","modifies":"weakpoint_hit_chance","name":"Firepower Order","ranks":[{"effect":"weakpoint_conversion_all","rank":1,"value":"Consume 10 Impetus stacks via auxiliary fire: all weapon hits become weakpoint hits for 8s"}],"stacking":"unknown","tier":3,"type":"seasonal_perk","unlock_level":50},{"confidence":"likely","description":"If you enter Bracing state, an explosion triggers 3 seconds later, dealing damage equal to 1000% of your current armor value to any targets within a 250-meter radius of your ship.","modifies":"armor_value","name":"Reactive Bulwark","ranks":[{"effect":"aoe_burst","rank":1,"value":"1000% of current armor value as damage in 250m radius, 3s after entering Brace"}],"season":"Y3S1 (prior season; replaced in Y3S2)","stacking":"unknown","type":"seasonal_perk"},{"confidence":"likely","description":"Converts 100% of the healing you generate into stored bonus damage, applied to your next attack. Maximum 100,000 stored points.","modifies":"healing_done","name":"Deadly Medicine","ranks":[{"effect":"stored_bonus_damage","rank":1,"value":"100% of healing stored as bonus damage (cap 100,000), added to next successful attack"}],"season":"Y3S1 (prior season; replaced in Y3S2)","stacking":"unknown","type":"seasonal_perk"},{"confidence":"likely","description":"The Seasonal Mastery Tree contains 500+ unlockable nodes (Y3S1 figure; Y3S2 'refreshed and overhauled' with 'new Seasonal Perks, Major Skills and minor adjustments in the skill tree layout'). 1 Mastery Point per Mastery Level (levels 1-80), plus Seasonal Journey rewards, for a 90-point seasonal cap. Tree scales Ship Rank from 13 up to 30 across the season. Minor nodes grant stat bonuses for build fine-tuning (weapon damage, hull, reload, etc. per community summaries); exact per-node names/values are not published in any official text source — they exist only in the in-game UI and the community planner at skullandbonestools.de.","modifies":"various","name":"Mastery Tree structure","ranks":[],"stacking":"unknown","type":"tree_meta"},{"confidence":"confirmed","description":"Y3S2 addition: save up to 10 Mastery Skill Tree loadouts (node + perk allocations), editable directly in the Mastery Tree UI, settable per ship in the Ship Loadout menu. Does not change node values; affects which buffs are active per ship.","modifies":"n/a","name":"Mastery Loadouts","ranks":[],"stacking":"n/a","type":"system_feature"}],"notes":"BIGGEST GAPS: (1) The full 500+ node list with exact per-rank values is not published in any official text source — official patch notes only show a 3-perk 'Sample Perk Build'. Node-level data exists only in the in-game UI and the community planner (SnB Tools Loadout Mastery, skullandbonestools.de); their data lives in the skullandbonestools/skullandbonestools website repo, not the open snbdata package (v10.1.1 verified to contain no mastery data). Filling the full tree will require either reading values in-game, or a live-browser session on the SnB Tools mastery planner. (2) 'Sample Perk Build' wording strongly implies there are MORE than 3 seasonal perks per tier — only Relentless Force / Weakness Finder / Firepower Order are officially documented. (3) Additive vs multiplicative stacking of the % buffs (e.g. the +15% Weapon Damage from Relentless Force) is unstated by Ubisoft — DPS calculator should expose this as a toggle until tested in-game. (4) 'New Major Skills' mentioned in Y3S2 notes are not named anywhere public. CHANGES FROM Y3S1: Tier 3 Seasonal Perk requirement lowered 60->50; all seasonal perks replaced (brace/heal themed Reactive Bulwark + Deadly Medicine -> Impetus engine); tree layout refreshed; mastery loadouts added (10 slots, per-ship); Seasonal Journey now also grants Mastery Points (90-point cap). Season runs 2026-08-18 to 2026-11-17.","reset_details":{"confidence":"confirmed","description":"The Seasonal Mastery Tree, node allocations, and seasonal perks reset at the start of each season. Returning players get a head start on Mastery Points based on their final mastery level of the prior season: previously Level 60 starts at Level 5, previously Level 70 starts at Level 10, previously Level 80 starts at Level 15 (accelerating toward Mastery 80). Note: a pre-launch May 2026 preview stream described the tree's stat bonuses as 'permanent'; the official Y3S2 patch notes' seasonal point reset recovery mechanic confirms the tree is in fact seasonal and resets."},"resets_each_season":true,"season":"Year 3 Season 2 (Crimson Waters)","season_dates":{"end":"2026-11-17","start":"2026-08-18"},"season_id":"crimsonWaters","sources":["https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2aVFScvAB18TIE5BY4VDSW/y3s2-patch-notes","https://www.mmorpg.com/news/skull-and-bones-year-3-season-2-features-new-large-ship-the-junk-new-enemy-faction-seasonal-refreshes-and-more-2000138745","https://www.iggm.com/news/skull-and-bones-a-detailed-guide-to-the-endgame-ship-loadout-weapons-furniture-and-more?id=Y5K","https://www.gamerstemple.com/news/2026/05/12/skull-and-bones-sets-out-on-shattered-seas","https://massivelyop.com/2026/05/06/skull-and-bones-previews-a-new-mastery-skill-tree-more-world-tiers-and-three-new-ships-arriving-in-year-3/","https://www.gameshedge.com/skull-and-bones-kicks-off-year-3-shattered-seas/","https://github.com/skullandbonestools/skullandbonesdata","https://skullandbonestools.de/en"],"unlock_mechanism":{"confidence":"confirmed","description":"Earn Infamy (post-Kingpin progression currency from contracts, ship combat, plunder, elites/sea monsters) to gain Seasonal Mastery Levels (1-80). Each level grants 1 Mastery Point to spend on nodes. The new Seasonal Journey quest track grants additional Mastery Point rewards, for a total cap of 90 Mastery Points per season. Seasonal Perks unlock at Mastery Levels 10 (Tier 1), 30 (Tier 2), and 50 (Tier 3). This is NOT the Smuggler Pass — that is a separate cosmetic/gear reward track; no Smuggler Pass tier is required to progress the mastery tree."}}
+{
+  "infamy_rebalance_y3s2": {
+    "confidence": "confirmed",
+    "description": "Y3S2 rebalanced Infamy gain (the mastery XP currency) by activity and Ship Rank. General ship combat: minimal adjustment at all ranks. Plunder: minimal (SR1-15), +15% (SR16-20), +40% (SR21-25), +65% (SR26+). Elite Warships / Sea Monsters: minimal (SR1-15), +25% (SR16-20), +45% (SR21-25), +55% (SR26+). Raw per-level Infamy requirements were also increased, but overall levelling pace is steadier early and less steep late."
+  },
+  "last_verified": "2026-10-12",
+  "nodes": [
+    {
+      "confidence": "confirmed",
+      "description": "New Y3S2 mastery mechanic. Impetus is a combat resource acquired through utilizing the season's new Seasonal Perks, and consumed to gain buffs and trigger powerful effects in other Seasonal Perks. Max 10 stacks.",
+      "modifies": "resource_system",
+      "name": "Impetus (seasonal combat resource)",
+      "ranks": [],
+      "stacking": "n/a",
+      "type": "mechanic"
+    },
+    {
+      "confidence": "confirmed",
+      "description": "Generate 1 stack of Impetus (max 10) for every 8 weapon hits on enemies. Demicannons require 4 times as many hits (i.e. 32 hits per stack). Generating Impetus increases Weapon Damage and Repair Amount by 15% for 5 seconds.",
+      "modifies": "weapon_damage, repair_amount",
+      "name": "Relentless Force",
+      "ranks": [
+        {
+          "effect": "weapon_damage, repair_amount",
+          "rank": 1,
+          "value": "+15% Weapon Damage and +15% Repair Amount for 5s on Impetus generation; 1 Impetus stack per 8 weapon hits (32 for Demicannons), max 10 stacks"
+        }
+      ],
+      "stacking": "unknown",
+      "stacking_note": "Patch notes do not state whether the 15% Weapon Damage is additive with other weapon-damage bonuses (furniture, ship perks, mods) or multiplicative. Treat as unknown until in-game tested.",
+      "tier": 1,
+      "type": "seasonal_perk",
+      "unlock_level": 10
+    },
+    {
+      "confidence": "confirmed",
+      "description": "Generating Impetus adds a 20% chance to convert any weapon shot into a weakpoint hit for 5 seconds.",
+      "modifies": "weakpoint_hit_chance",
+      "name": "Weakness Finder",
+      "ranks": [
+        {
+          "effect": "weakpoint_conversion",
+          "rank": 1,
+          "value": "20% chance per shot to convert to a weakpoint hit, for 5s after generating Impetus"
+        }
+      ],
+      "stacking": "unknown",
+      "stacking_note": "Weakpoint hits in S&B deal bonus damage via the weakpoint damage multiplier; a 'conversion' is not a flat damage % — the DPS calculator must apply the target's weakpoint multiplier to converted shots, not a simple +20% damage.",
+      "tier": 2,
+      "type": "seasonal_perk",
+      "unlock_level": 30
+    },
+    {
+      "confidence": "confirmed",
+      "description": "When at 10 stacks of Impetus, fire an Auxiliary Weapon to consume 10 stacks and convert all weapon hits to weakpoint hits for 8 seconds.",
+      "modifies": "weakpoint_hit_chance",
+      "name": "Firepower Order",
+      "ranks": [
+        {
+          "effect": "weakpoint_conversion_all",
+          "rank": 1,
+          "value": "Consume 10 Impetus stacks via auxiliary fire: all weapon hits become weakpoint hits for 8s"
+        }
+      ],
+      "stacking": "unknown",
+      "tier": 3,
+      "type": "seasonal_perk",
+      "unlock_level": 50
+    },
+    {
+      "confidence": "likely",
+      "description": "If you enter Bracing state, an explosion triggers 3 seconds later, dealing damage equal to 1000% of your current armor value to any targets within a 250-meter radius of your ship.",
+      "modifies": "armor_value",
+      "name": "Reactive Bulwark",
+      "ranks": [
+        {
+          "effect": "aoe_burst",
+          "rank": 1,
+          "value": "1000% of current armor value as damage in 250m radius, 3s after entering Brace"
+        }
+      ],
+      "season": "Y3S1 (prior season; replaced in Y3S2)",
+      "stacking": "unknown",
+      "type": "seasonal_perk"
+    },
+    {
+      "confidence": "likely",
+      "description": "Converts 100% of the healing you generate into stored bonus damage, applied to your next attack. Maximum 100,000 stored points.",
+      "modifies": "healing_done",
+      "name": "Deadly Medicine",
+      "ranks": [
+        {
+          "effect": "stored_bonus_damage",
+          "rank": 1,
+          "value": "100% of healing stored as bonus damage (cap 100,000), added to next successful attack"
+        }
+      ],
+      "season": "Y3S1 (prior season; replaced in Y3S2)",
+      "stacking": "unknown",
+      "type": "seasonal_perk"
+    },
+    {
+      "confidence": "likely",
+      "description": "The Seasonal Mastery Tree contains 500+ unlockable nodes (Y3S1 figure; Y3S2 'refreshed and overhauled' with 'new Seasonal Perks, Major Skills and minor adjustments in the skill tree layout'). 1 Mastery Point per Mastery Level (levels 1-80), plus Seasonal Journey rewards, for a 90-point seasonal cap. Tree scales Ship Rank from 13 up to 30 across the season. Minor nodes grant stat bonuses for build fine-tuning (weapon damage, hull, reload, etc. per community summaries); exact per-node names/values are not published in any official text source — they exist only in the in-game UI and the community planner at skullandbonestools.de.",
+      "modifies": "various",
+      "name": "Mastery Tree structure",
+      "ranks": [],
+      "stacking": "unknown",
+      "type": "tree_meta"
+    },
+    {
+      "confidence": "confirmed",
+      "description": "Y3S2 addition: save up to 10 Mastery Skill Tree loadouts (node + perk allocations), editable directly in the Mastery Tree UI, settable per ship in the Ship Loadout menu. Does not change node values; affects which buffs are active per ship.",
+      "modifies": "n/a",
+      "name": "Mastery Loadouts",
+      "ranks": [],
+      "stacking": "n/a",
+      "type": "system_feature"
+    },
+    {
+      "name": "Swift Strikes (mastery node)",
+      "type": "mastery_node",
+      "description": "Mastery tree node. Effect: Weapon Projectile Speed +5%. Screenshot-verified 2026-10-11 from Luke's mastery tree (tooltip: 'SWIFT STRIKES / Effects / Weapon Projectile Speed +5%').",
+      "modifies": "projectile_speed",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Volley Fire (mastery node)",
+      "type": "mastery_node",
+      "description": "Mastery tree node. Effects: Demi-cannon Damage +10%, Culverin Damage +10%. Screenshot-verified 2026-10-11 from Luke's mastery tree.",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Killing Drive (mastery node)",
+      "type": "mastery_node",
+      "description": "Generate 1 stack of Impetus by destroying a target. This effect can only trigger once every 5s. Source: Luke's in-game node tooltip, 2026-10-12 (re-confirmed).",
+      "modifies": "resource_system",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Fire and Steel",
+      "type": "mastery_node",
+      "description": "Generate 1 stack of Impetus by applying any elemental status effect on a target. This effect can only trigger once every 5s. Source: Luke's in-game node tooltip, 2026-10-12.",
+      "modifies": "impetus_generation",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_generation",
+          "value": "1 Impetus stack on applying elemental status (5s cooldown)"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Battering Force",
+      "type": "seasonal_perk",
+      "description": "Generate 5 stacks of Impetus (Max 10) upon Ramming or performing a Crew Attack. Generating Impetus increases weapon damage and repair amount by 50% for 10s. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 10 trio, bottom row left).",
+      "modifies": "weapon_damage, repair_amount",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_generation",
+          "value": "5 Impetus stacks on ram/crew attack (max 10); +50% weapon damage and repair amount for 10s on generation"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed",
+      "tier": 1,
+      "unlock_level": 10
+    },
+    {
+      "name": "Unstoppable Force",
+      "type": "seasonal_perk",
+      "description": "Generate 1 stack of Impetus (Max 10) for every 110m travelled. Generating Impetus increases weapon damage and repair amount by 3% for every knot of speed above 10 knots, for 5s. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 10 trio, bottom row right).",
+      "modifies": "weapon_damage, repair_amount",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_generation",
+          "value": "1 Impetus stack per 110m travelled (max 10); +3% weapon damage and repair per knot above 10 knots for 5s on generation"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed",
+      "tier": 1,
+      "unlock_level": 10
+    },
+    {
+      "name": "Vital Strike",
+      "type": "mastery_node",
+      "description": "Generate 1 stack of Impetus by destroying a Weakpoint. This effect can only trigger once every 5s. Source: Luke's in-game node tooltip, 2026-10-12.",
+      "modifies": "impetus_generation",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_generation",
+          "value": "1 Impetus stack on weakpoint destroyed (5s cooldown)"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Loaded Odds (seasonal perk)",
+      "type": "perks",
+      "description": "Passive: 10% chance to double any Impetus stack gained. Source: mmoexp Y3S2 skill-tree guide (2026-08).",
+      "modifies": "resource_system",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "likely"
+    },
+    {
+      "name": "Mending Order",
+      "type": "seasonal_perk",
+      "description": "When at 5 stacks of Impetus, brace for 2s and release to consume 5 stacks and release an AoE heal that heals you for 30% of your max health as well as all allies within 350m. Effect also triggers automatically when below 50% max health or on death. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 50 trio, top row right).",
+      "modifies": "healing",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_spend_heal",
+          "value": "At 5 Impetus: brace 2s, consume 5 stacks, AoE heal 30% max HP to self + allies within 350m; auto-triggers below 50% HP or on death"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed",
+      "tier": 3,
+      "unlock_level": 50
+    },
+    {
+      "name": "Stormblaze Order",
+      "type": "seasonal_perk",
+      "description": "When at 10 stacks of Impetus, the next weapon hit consumes 10 stacks and triggers an AoE burst on the target that deals 150% of your max health as Burning & Lightning damage to all enemies within 250m. Effect can also be triggered by Ramming without consuming Impetus. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 50 trio, top row left).",
+      "modifies": "aoe_burst",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "impetus_spend_burst",
+          "value": "At 10 Impetus: next weapon hit consumes 10 stacks, AoE burst = 150% max health as Burning+Lightning within 250m; ramming triggers it without consuming stacks"
+        }
+      ],
+      "stacking": "unknown",
+      "confidence": "confirmed",
+      "tier": 3,
+      "unlock_level": 50
+    },
+    {
+      "name": "Milestone spine",
+      "type": "structure",
+      "description": "Central milestone rows at Mastery Levels 10, 30, and 50 (Luke's reading 2026-10-11; pasted breakdown said 60 for the third tier — his eyes win). Nodes stay greyed out until the required mastery level is reached; one perk selectable per tier row. Luke is Mastery Level 55, so tiers 10 and 30 are unlocked for him.",
+      "modifies": "various",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Adaptive Arsenal (synergy node claim)",
+      "type": "mastery_node",
+      "description": "CLAIM: +5% weapon damage for each distinct weapon type equipped simultaneously. Luke's working model 2026-10-11 (his breakdown; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Volatile Arsenal (synergy node claim)",
+      "type": "mastery_node",
+      "description": "CLAIM: +5% elemental output for each unique element across weapon modifications. Luke's working model 2026-10-11 (his breakdown; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Velocity Threshold (node claim)",
+      "type": "mastery_node",
+      "description": "CLAIM: +15% weapon damage while ship velocity >= 12 knots, with 5s grace window on drop. Luke's working model 2026-10-11 (his breakdown; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Proxy Armor (defense node)",
+      "type": "mastery_node",
+      "description": "+100 Armor per enemy within 200m; caps at 4 ships / 400 Armor. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "armor_value",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Brace Efficiency (defense node)",
+      "type": "mastery_node",
+      "description": "Brace Efficiency +20%. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "armor_value",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Hull Health (defense node)",
+      "type": "mastery_node",
+      "description": "Hull Health +5,000. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Piercing Ammo (demicannon node)",
+      "type": "mastery_node",
+      "description": "Piercing Ammo +7%. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Demicannon Crit Chance (demicannon node)",
+      "type": "mastery_node",
+      "description": "Demicannon Crit Chance (value not shown). Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Support Multiplier (repair node)",
+      "type": "mastery_node",
+      "description": "10% damage per Repair Weapon equipped; TRIPLE if 4 equipped. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Toxic Buildup (status node)",
+      "type": "mastery_node",
+      "description": "Toxic Buildup +10%. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Electric Buildup (status node)",
+      "type": "mastery_node",
+      "description": "Electric Buildup +10%. Source: Luke's working model 2026-10-11 (from his AI-generated planner image; effect text awaits tooltip screenshot).",
+      "modifies": "weapon_damage",
+      "ranks": [],
+      "stacking": "unknown",
+      "confidence": "working-model"
+    },
+    {
+      "name": "Heavy Bombardment",
+      "type": "seasonal_perk",
+      "tier": 2,
+      "unlock_level": 30,
+      "confidence": "confirmed",
+      "description": "Generating Impetus increases the radius of all weapon Area-of-Effects by 5m for 10s (Max 5). At max stacks, Secondary Damage for all weapons is increased by 20%. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 30 trio, middle row left).",
+      "modifies": "aoe_radius, secondary_damage",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "aoe_and_secondary",
+          "value": "On Impetus generation: +5m weapon AoE radius for 10s (max 5 stacks); at max stacks +20% secondary damage all weapons"
+        }
+      ],
+      "stacking": "unknown"
+    },
+    {
+      "name": "Rejuvenation",
+      "type": "seasonal_perk",
+      "tier": 2,
+      "unlock_level": 30,
+      "confidence": "confirmed",
+      "description": "Generating Impetus restores 3% of max HP. Source: Luke's in-game milestone tooltip, 2026-10-12 (Tier 30 trio, middle row right).",
+      "modifies": "healing",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "heal_on_generation",
+          "value": "Restore 3% max HP on Impetus generation"
+        }
+      ],
+      "stacking": "unknown"
+    },
+    {
+      "name": "Slow Mending",
+      "type": "mastery_node",
+      "confidence": "confirmed",
+      "description": "Repairs 0.6% of Max Hull Health per second after not taking damage for 30s. Source: Luke's in-game node tooltip, 2026-10-12.",
+      "modifies": "hull_regen",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "hull_regen",
+          "value": "0.6% max hull HP/s after 30s without taking damage"
+        }
+      ],
+      "stacking": "unknown"
+    },
+    {
+      "name": "Wind Barrier",
+      "type": "mastery_node",
+      "confidence": "confirmed",
+      "description": "Reduces damage taken by 10% while sailing at 15kts or above. Source: Luke's in-game node tooltip, 2026-10-12.",
+      "modifies": "damage_reduction",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "damage_reduction",
+          "value": "-10% damage taken at 15+ knots"
+        }
+      ],
+      "stacking": "unknown"
+    },
+    {
+      "name": "Critical Damage Control",
+      "type": "mastery_node",
+      "confidence": "confirmed",
+      "description": "Repairs 4% of severe damage per second after not taking damage for 30s. Source: Luke's in-game node tooltip, 2026-10-12.",
+      "modifies": "severe_damage_repair",
+      "ranks": [
+        {
+          "rank": 1,
+          "effect": "severe_damage_repair",
+          "value": "4% of severe damage repaired/s after 30s without taking damage"
+        }
+      ],
+      "stacking": "unknown"
+    }
+  ],
+  "notes": "BIGGEST GAPS: (1) The full 500+ node list with exact per-rank values is not published in any official text source — official patch notes only show a 3-perk 'Sample Perk Build'. Node-level data exists only in the in-game UI and the community planner (SnB Tools Loadout Mastery, skullandbonestools.de); their data lives in the skullandbonestools/skullandbonestools website repo, not the open snbdata package (v10.1.1 verified to contain no mastery data). Filling the full tree will require either reading values in-game, or a live-browser session on the SnB Tools mastery planner. (2) 'Sample Perk Build' wording strongly implies there are MORE than 3 seasonal perks per tier — only Relentless Force / Weakness Finder / Firepower Order are officially documented. (3) Additive vs multiplicative stacking of the % buffs (e.g. the +15% Weapon Damage from Relentless Force) is unstated by Ubisoft — DPS calculator should expose this as a toggle until tested in-game. (4) 'New Major Skills' mentioned in Y3S2 notes are not named anywhere public. CHANGES FROM Y3S1: Tier 3 Seasonal Perk requirement lowered 60->50; all seasonal perks replaced (brace/heal themed Reactive Bulwark + Deadly Medicine -> Impetus engine); tree layout refreshed; mastery loadouts added (10 slots, per-ship); Seasonal Journey now also grants Mastery Points (90-point cap). Season runs 2026-08-18 to 2026-11-17.",
+  "reset_details": {
+    "confidence": "confirmed",
+    "description": "The Seasonal Mastery Tree, node allocations, and seasonal perks reset at the start of each season. Returning players get a head start on Mastery Points based on their final mastery level of the prior season: previously Level 60 starts at Level 5, previously Level 70 starts at Level 10, previously Level 80 starts at Level 15 (accelerating toward Mastery 80). Note: a pre-launch May 2026 preview stream described the tree's stat bonuses as 'permanent'; the official Y3S2 patch notes' seasonal point reset recovery mechanic confirms the tree is in fact seasonal and resets."
+  },
+  "resets_each_season": true,
+  "season": "Year 3 Season 2 (Crimson Waters)",
+  "season_dates": {
+    "end": "2026-11-17",
+    "start": "2026-08-18"
+  },
+  "season_id": "crimsonWaters",
+  "sources": [
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2aVFScvAB18TIE5BY4VDSW/y3s2-patch-notes",
+    "https://www.mmorpg.com/news/skull-and-bones-year-3-season-2-features-new-large-ship-the-junk-new-enemy-faction-seasonal-refreshes-and-more-2000138745",
+    "https://www.iggm.com/news/skull-and-bones-a-detailed-guide-to-the-endgame-ship-loadout-weapons-furniture-and-more?id=Y5K",
+    "https://www.gamerstemple.com/news/2026/05/12/skull-and-bones-sets-out-on-shattered-seas",
+    "https://massivelyop.com/2026/05/06/skull-and-bones-previews-a-new-mastery-skill-tree-more-world-tiers-and-three-new-ships-arriving-in-year-3/",
+    "https://www.gameshedge.com/skull-and-bones-kicks-off-year-3-shattered-seas/",
+    "https://github.com/skullandbonestools/skullandbonesdata",
+    "https://skullandbonestools.de/en"
+  ],
+  "unlock_mechanism": {
+    "confidence": "confirmed",
+    "description": "Earn Infamy (post-Kingpin progression currency from contracts, ship combat, plunder, elites/sea monsters) to gain Seasonal Mastery Levels (1-80). Each level grants 1 Mastery Point to spend on nodes. The new Seasonal Journey quest track grants additional Mastery Point rewards, for a total cap of 90 Mastery Points per season. Seasonal Perks unlock at Mastery Levels 10 (Tier 1), 30 (Tier 2), and 50 (Tier 3). This is NOT the Smuggler Pass — that is a separate cosmetic/gear reward track; no Smuggler Pass tier is required to progress the mastery tree."
+  }
+}

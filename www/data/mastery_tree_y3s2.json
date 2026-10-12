@@ -1,0 +1,9680 @@
+{
+ "season": "Year 3 Season 2 (Crimson Waters)",
+ "season_id": "crimsonWaters",
+ "node_count": 565,
+ "max_points": 90,
+ "sources": [
+  "https://github.com/GlowProw/glow-prow-data (structural: node IDs, positions, costs, prerequisites)",
+  "https://github.com/GlowProw/glow-prow-data-languages (names + effect text, mirrors in-game text)",
+  "https://skullandbonestools.de/en/loadout/mastery (planner UI, cross-checked)"
+ ],
+ "note": "Full Y3S2 mastery tree catalog. Names and effects mirror in-game text via the community language file. Entries Luke verified from his own in-game tooltips or Ubisoft patch notes are marked confirmed in seasonal_buffs.json and take precedence over this catalog where they differ.",
+ "last_verified": "2026-10-12",
+ "nodes": [
+  {
+   "key": "SPIO",
+   "id": "impetusOrder",
+   "name": "Impetus Order",
+   "effect": "You can now gain stacks of Impetus. When at 5 stacks of Impetus, consume 5 stacks to increase Turn Speed, Acceleration and Top Speed by 5% for 30s. When another Order Perk is activated, this buff no longer consumes Impetus and is applied permanently.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 1,
+   "group": "0",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": 184
+   }
+  },
+  {
+   "key": "SPBF",
+   "id": "batteringForce",
+   "name": "Battering Force",
+   "effect": "Generate 5 stacks of Impetus (Max 10) upon Ramming or performing a Crew Attack. Generating Impetus increases Weapon Damage and Repair Amount by 50% for 10s.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 10,
+   "group": "10",
+   "requisite": [],
+   "position": {
+    "x": -97,
+    "y": 84
+   }
+  },
+  {
+   "key": "SPRF",
+   "id": "relentlessForce",
+   "name": "Relentless Force",
+   "effect": "Generate 1 stack of Impetus (Max 10) for every 8 weapon hits on enemies. Demicannons require 4 times as many hits. Generating Impetus increases Weapon Damage and Repair Amount by 15% for 5s.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 10,
+   "group": "10",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": 32
+   }
+  },
+  {
+   "key": "SPUF",
+   "id": "unstoppableForce",
+   "name": "Unstoppable Force",
+   "effect": "Generate 1 stack of Impetus (Max 10) for every 110m travelled. Generating Impetus increases Weapon Damage and Repair Amount by 3% for every knot of speed above 10 knots, for 5s.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 10,
+   "group": "10",
+   "requisite": [],
+   "position": {
+    "x": 97,
+    "y": 84
+   }
+  },
+  {
+   "key": "SPHB",
+   "id": "heavyBombardment",
+   "name": "Heavy Bombardment",
+   "effect": "Generating Impetus increases the radius of all weapon Area-of-Effects by 5m for 10s (Max 5 stacks). At max stacks, Secondary Damage for all weapons is increased by 20%.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 30,
+   "group": "30",
+   "requisite": [],
+   "position": {
+    "x": -127,
+    "y": -20
+   }
+  },
+  {
+   "key": "SPR",
+   "id": "rejuvenation",
+   "name": "Rejuvenation",
+   "effect": "Generating Impetus restores 3% of max HP.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 30,
+   "group": "30",
+   "requisite": [],
+   "position": {
+    "x": 127,
+    "y": -20
+   }
+  },
+  {
+   "key": "SPWF",
+   "id": "weaknessFinder",
+   "name": "Weakness Finder",
+   "effect": "Generating Impetus adds a 20% chance to convert any weapon shot into a weakpoint hit for 5s.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 30,
+   "group": "30",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": -73
+   }
+  },
+  {
+   "key": "SPFO",
+   "id": "firepowerOrder",
+   "name": "Firepower Order",
+   "effect": "When at 10 stacks of Impetus, fire an Auxiliary weapon to consume 10 stacks and convert all weapon hits to weakpoint hits for 8s.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 50,
+   "group": "50",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": -177
+   }
+  },
+  {
+   "key": "SPMO",
+   "id": "mendingOrder",
+   "name": "Mending Order",
+   "effect": "When at 5 stacks of Impetus, brace for 2s and release to consume 5 stacks and release an AoE heal that heals you for 30% of your max. Hull Health as well as all allies within 350m. This effect also triggers automatically when below 50% max. Hull Health or on death.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 50,
+   "group": "50",
+   "requisite": [],
+   "position": {
+    "x": 156,
+    "y": -125
+   }
+  },
+  {
+   "key": "SPSO",
+   "id": "stormblazeOrder",
+   "name": "Stormblaze Order",
+   "effect": "When at 10 stacks of Impetus, the next weapon hit consumes 10 stacks and triggers an AoE burst on the target that deals 150% of your max. Hull Health as Burning & Lightning damage to all enemies within 250m. This effect can also be triggered by Ramming without it consuming Impetus.",
+   "role": "seasonalPerk",
+   "category": "impetus",
+   "cost": 50,
+   "group": "50",
+   "requisite": [],
+   "position": {
+    "x": -156,
+    "y": -125
+   }
+  },
+  {
+   "key": "KBAA",
+   "id": "adaptiveArsenal",
+   "name": "Adaptive Arsenal",
+   "effect": "Increases Weapon Damage by 5% for each different weapon type equipped",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-7-PC5",
+    "B-8-EP5",
+    "B-9-CP5",
+    "B-15-SD1",
+    "B-16-IS1"
+   ],
+   "position": {
+    "x": 1060,
+    "y": 612
+   }
+  },
+  {
+   "key": "KBAS",
+   "id": "adrenalSurge",
+   "name": "Adrenal Surge",
+   "effect": "Restores 10% Hull Health after a Crew Attack.",
+   "role": "keyBuff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-TP5",
+    "B-23-SA5",
+    "B-63-SH5"
+   ],
+   "position": {
+    "x": -229,
+    "y": 1866
+   }
+  },
+  {
+   "key": "KBBT",
+   "id": "battleTempo",
+   "name": "Battle Tempo",
+   "effect": "Increases the maximum stacks of Impetus by 5.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-VC1",
+    "B-42-HC1",
+    "B-43-SC1",
+    "B-44-HPS1",
+    "B-45-HS1",
+    "B-46-VF1"
+   ],
+   "position": {
+    "x": -1744,
+    "y": 1007
+   }
+  },
+  {
+   "key": "KBCAC",
+   "id": "careAndCarnage",
+   "name": "Care And Carnage",
+   "effect": "For every 10% increases of Repair per Shot, increase Weapon Damage by 5% up to a maximum of 30%.",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-51-VD3"
+   ],
+   "position": {
+    "x": -2072,
+    "y": -1196
+   }
+  },
+  {
+   "key": "KBCDC",
+   "id": "criticalDamageControl",
+   "name": "Critical Damage Control",
+   "effect": "Repairs 4% of Severe Damage per second after not taking damage for 30s.",
+   "role": "keyBuff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": -294,
+    "y": -170
+   }
+  },
+  {
+   "key": "KBEB",
+   "id": "enduringBrace",
+   "name": "Enduring Brace",
+   "effect": "Increase Brace Strength Recovery by 0.01% per 1000 points of Maximum Health.",
+   "role": "keyBuff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-64-TR5",
+    "B-5-RF3",
+    "B-6-ED3",
+    "B-15-TR1",
+    "B-4-IS3"
+   ],
+   "position": {
+    "x": 1060,
+    "y": -612
+   }
+  },
+  {
+   "key": "KBFAS",
+   "id": "fireAndSteel",
+   "name": "Fire And Steel",
+   "effect": "Generate 1 stack of Impetus by applying any elemental status effect on a target. This effect can only trigger once every 5s.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": 294,
+    "y": 170
+   }
+  },
+  {
+   "key": "KBFH",
+   "id": "fortifiedHull",
+   "name": "Fortified Hull",
+   "effect": "For every 2000 points of Brace Strength, increase incoming Repair Amount by 1% (max 10%).",
+   "role": "keyBuff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-24-IS3",
+    "B-25-RF5",
+    "B-26-SD2",
+    "B-27-TR5"
+   ],
+   "position": {
+    "x": 1625,
+    "y": -945
+   }
+  },
+  {
+   "key": "KBFNP",
+   "id": "feelNoPain",
+   "name": "Feel No Pain",
+   "effect": "Reduce Damage taken by 5%.",
+   "role": "keyBuff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-28-RM3"
+   ],
+   "position": {
+    "x": 2050,
+    "y": -1232
+   }
+  },
+  {
+   "key": "KBH",
+   "id": "hullbreaker",
+   "name": "Hullbreaker",
+   "effect": "Increase Ramming Damage by 50% when sailing at 15kts or higher.",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-BP3",
+    "B-23-BP5",
+    "B-63-SH5"
+   ],
+   "position": {
+    "x": 229,
+    "y": 1866
+   }
+  },
+  {
+   "key": "KBHM",
+   "id": "hardenedMunitions",
+   "name": "Hardened Munitions",
+   "effect": "Weapon Damage +20%",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-RF2",
+    "B-2-ED2",
+    "B-3-DE2",
+    "B-6-ED1",
+    "B-22-ED3"
+   ],
+   "position": {
+    "x": 0,
+    "y": -1224
+   }
+  },
+  {
+   "key": "KBHMT",
+   "id": "hardenedMomentum",
+   "name": "Hardened Momentum",
+   "effect": "While at or above 5 stacks of Impetus, increase Armor Multiplier by 5%.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-10-FR2",
+    "B-11-BR2",
+    "B-12-CF3",
+    "B-16-IS2",
+    "B-17-RF1"
+   ],
+   "position": {
+    "x": 0,
+    "y": 1224
+   }
+  },
+  {
+   "key": "KBKD",
+   "id": "killingDrive",
+   "name": "Killing Drive",
+   "effect": "Generate 1 stack of Impetus by destroying a target. This effect can only trigger once every 5s.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": -294,
+    "y": 170
+   }
+  },
+  {
+   "key": "KBLO",
+   "id": "loadedOdds",
+   "name": "Loaded Odds",
+   "effect": "Adds a chance of 10% to generate an additional stack of Impetus whenever an Impetus stack is generated.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-FD1",
+    "B-36-PM1",
+    "B-37-VT1",
+    "B-38-PS1",
+    "B-39-RF1",
+    "B-40-PF1"
+   ],
+   "position": {
+    "x": 1744,
+    "y": 1007
+   }
+  },
+  {
+   "key": "KBRF",
+   "id": "revitalizedFury",
+   "name": "Revitalized Fury",
+   "effect": "Increases Weapon Damage and Repair Amount by 15% for 5s when receiving a heal of 3% of your Maximum Health or greater.",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-47-TR5",
+    "B-48-RF3",
+    "B-49-RF5",
+    "B-50-HP5"
+   ],
+   "position": {
+    "x": -1630,
+    "y": -938
+   }
+  },
+  {
+   "key": "KBSM",
+   "id": "slowMending",
+   "name": "Slow Mending",
+   "effect": "Repairs 0.6% of Hull Health per second after not taking damage for 30s.",
+   "role": "keyBuff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": 294,
+    "y": -170
+   }
+  },
+  {
+   "key": "KBTG",
+   "id": "trueGrit",
+   "name": "True Grit",
+   "effect": "Reduce damage taken by 10% when Hull Health is 30% or below.",
+   "role": "keyBuff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-18-TR5",
+    "B-19-RF3",
+    "B-20-HP3",
+    "B-21-RF3",
+    "B-22-ED1"
+   ],
+   "position": {
+    "x": -1060,
+    "y": -612
+   }
+  },
+  {
+   "key": "KBVA",
+   "id": "volatileArsenal",
+   "name": "Volatile Arsenal",
+   "effect": "Increases elemental damage by 5% for each Weapon element equipped. Includes Elements gained from Weapon modifications",
+   "role": "keyBuff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-13-RC5",
+    "B-62-TR5",
+    "B-14-RC5",
+    "B-17-RF2",
+    "B-21-RF1"
+   ],
+   "position": {
+    "x": -1060,
+    "y": 612
+   }
+  },
+  {
+   "key": "KBVS",
+   "id": "vitalStrike",
+   "name": "Vital Strike",
+   "effect": "Generate 1 stack of Impetus by destroying a weakpoint. This effect can only trigger once every 5s.",
+   "role": "keyBuff",
+   "category": "impetus",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": -340
+   }
+  },
+  {
+   "key": "KBWB",
+   "id": "windBarrier",
+   "name": "Wind Barrier",
+   "effect": "Reduces damage taken by 10% while sailing at 15kts or above.",
+   "role": "keyBuff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [],
+   "position": {
+    "x": 0,
+    "y": 340
+   }
+  },
+  {
+   "key": "B-1-1-DE1",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-1-RF1"
+   ],
+   "position": {
+    "x": -375,
+    "y": -631
+   }
+  },
+  {
+   "key": "B-1-1-DE2",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-1-RF2"
+   ],
+   "position": {
+    "x": -366,
+    "y": -877
+   }
+  },
+  {
+   "key": "B-1-1-RF1",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-RF1"
+   ],
+   "position": {
+    "x": -301,
+    "y": -540
+   }
+  },
+  {
+   "key": "B-1-1-RF2",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-1-DE1"
+   ],
+   "position": {
+    "x": -355,
+    "y": -755
+   }
+  },
+  {
+   "key": "B-1-1-RF3",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-1-DE2"
+   ],
+   "position": {
+    "x": -339,
+    "y": -972
+   }
+  },
+  {
+   "key": "B-1-2-RF1",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-RF1"
+   ],
+   "position": {
+    "x": -228,
+    "y": -651
+   }
+  },
+  {
+   "key": "B-1-2-RF2",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-2-RF1"
+   ],
+   "position": {
+    "x": -242,
+    "y": -791
+   }
+  },
+  {
+   "key": "B-1-2-RF3",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-2-RF2"
+   ],
+   "position": {
+    "x": -227,
+    "y": -929
+   }
+  },
+  {
+   "key": "B-1-RF1",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVS"
+   ],
+   "position": {
+    "x": -209,
+    "y": -484
+   }
+  },
+  {
+   "key": "B-1-RF2",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-1-1-RF3",
+    "B-1-2-RF3"
+   ],
+   "position": {
+    "x": -255,
+    "y": -1058
+   }
+  },
+  {
+   "key": "B-10-1-FR1",
+   "id": "flexibleRudder",
+   "name": "Flexible Rudder",
+   "effect": "Turning Speed +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-10-BR1"
+   ],
+   "position": {
+    "x": 279,
+    "y": 743
+   }
+  },
+  {
+   "key": "B-10-2-FR1",
+   "id": "flexibleRudder",
+   "name": "Flexible Rudder",
+   "effect": "Turning Speed +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-10-BR1"
+   ],
+   "position": {
+    "x": 244,
+    "y": 836
+   }
+  },
+  {
+   "key": "B-10-BR1",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-10-FR1"
+   ],
+   "position": {
+    "x": 155,
+    "y": 813
+   }
+  },
+  {
+   "key": "B-10-FR1",
+   "id": "flexibleRudder",
+   "name": "Flexible Rudder",
+   "effect": "Turning Speed +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBWB"
+   ],
+   "position": {
+    "x": 110,
+    "y": 608
+   }
+  },
+  {
+   "key": "B-10-FR2",
+   "id": "flexibleRudder",
+   "name": "Flexible Rudder",
+   "effect": "Turning Speed +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-10-BR1"
+   ],
+   "position": {
+    "x": 134,
+    "y": 1009
+   }
+  },
+  {
+   "key": "B-11-1-BR1",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-11-FR1"
+   ],
+   "position": {
+    "x": -58,
+    "y": 934
+   }
+  },
+  {
+   "key": "B-11-2-BR1",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-11-FR1"
+   ],
+   "position": {
+    "x": 90,
+    "y": 935
+   }
+  },
+  {
+   "key": "B-11-BR1",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBWB"
+   ],
+   "position": {
+    "x": 0,
+    "y": 618
+   }
+  },
+  {
+   "key": "B-11-BR2",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-11-FR1"
+   ],
+   "position": {
+    "x": 8,
+    "y": 1018
+   }
+  },
+  {
+   "key": "B-11-FR1",
+   "id": "flexibleRudder",
+   "name": "Flexible Rudder",
+   "effect": "Turning Speed +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-11-BR1"
+   ],
+   "position": {
+    "x": 19,
+    "y": 827
+   }
+  },
+  {
+   "key": "B-12-1-CF1",
+   "id": "crewFitness",
+   "name": "Crew Fitness",
+   "effect": "Crew Stamina Recovery Speed +10%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-12-CF2"
+   ],
+   "position": {
+    "x": -225,
+    "y": 851
+   }
+  },
+  {
+   "key": "B-12-2-CF1",
+   "id": "crewFitness",
+   "name": "Crew Fitness",
+   "effect": "Crew Stamina Recovery Speed +10%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-12-CF2"
+   ],
+   "position": {
+    "x": -264,
+    "y": 760
+   }
+  },
+  {
+   "key": "B-12-CF1",
+   "id": "crewFitness",
+   "name": "Crew Fitness",
+   "effect": "Crew Stamina Recovery Speed +10%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBWB"
+   ],
+   "position": {
+    "x": -100,
+    "y": 610
+   }
+  },
+  {
+   "key": "B-12-CF2",
+   "id": "crewFitness",
+   "name": "Crew Fitness",
+   "effect": "Crew Stamina Recovery Speed +10%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-12-CF1"
+   ],
+   "position": {
+    "x": -119,
+    "y": 819
+   }
+  },
+  {
+   "key": "B-12-CF3",
+   "id": "crewFitness",
+   "name": "Crew Fitness",
+   "effect": "Crew Stamina Recovery Speed +10%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-12-CF2"
+   ],
+   "position": {
+    "x": -82,
+    "y": 1014
+   }
+  },
+  {
+   "key": "B-13-RC1",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBKD"
+   ],
+   "position": {
+    "x": -408,
+    "y": 361
+   }
+  },
+  {
+   "key": "B-13-RC2",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-13-RC1"
+   ],
+   "position": {
+    "x": -513,
+    "y": 461
+   }
+  },
+  {
+   "key": "B-13-RC3",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-13-RC2"
+   ],
+   "position": {
+    "x": -630,
+    "y": 537
+   }
+  },
+  {
+   "key": "B-13-RC4",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-13-RC3"
+   ],
+   "position": {
+    "x": -744,
+    "y": 602
+   }
+  },
+  {
+   "key": "B-13-RC5",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-13-RC4"
+   ],
+   "position": {
+    "x": -864,
+    "y": 640
+   }
+  },
+  {
+   "key": "B-14-RC1",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBKD"
+   ],
+   "position": {
+    "x": -517,
+    "y": 173
+   }
+  },
+  {
+   "key": "B-14-RC2",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-14-RC1"
+   ],
+   "position": {
+    "x": -653,
+    "y": 221
+   }
+  },
+  {
+   "key": "B-14-RC3",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-14-RC2"
+   ],
+   "position": {
+    "x": -783,
+    "y": 268
+   }
+  },
+  {
+   "key": "B-14-RC4",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-14-RC3"
+   ],
+   "position": {
+    "x": -890,
+    "y": 352
+   }
+  },
+  {
+   "key": "B-14-RC5",
+   "id": "reactiveCompounds",
+   "name": "Reactive Compounds",
+   "effect": "Burning Damage +20% Flooding Damage +20% Piercing Damage +20% Explosive Damage +20% Electric Damage +20% Toxic Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-14-RC4"
+   ],
+   "position": {
+    "x": -986,
+    "y": 428
+   }
+  },
+  {
+   "key": "B-15-1-TR1",
+   "id": "trainedRecovery",
+   "name": "Trained Recovery",
+   "effect": "Brace Recovery +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-15-RF1"
+   ],
+   "position": {
+    "x": 1317,
+    "y": -35
+   }
+  },
+  {
+   "key": "B-15-2-SD1",
+   "id": "steadyDefense",
+   "name": "Steady Defense",
+   "effect": "Stamina use while Bracing -10%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-15-RF1"
+   ],
+   "position": {
+    "x": 1070,
+    "y": 32
+   }
+  },
+  {
+   "key": "B-15-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-15-TR1",
+    "B-15-SD1"
+   ],
+   "position": {
+    "x": 1194,
+    "y": 0
+   }
+  },
+  {
+   "key": "B-15-SD1",
+   "id": "steadyDefense",
+   "name": "Steady Defense",
+   "effect": "Stamina use while Bracing -10%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA",
+    "B-15-RF1"
+   ],
+   "position": {
+    "x": 1149,
+    "y": 308
+   }
+  },
+  {
+   "key": "B-15-TR1",
+   "id": "trainedRecovery",
+   "name": "Trained Recovery",
+   "effect": "Brace Recovery +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBEB",
+    "B-15-RF1"
+   ],
+   "position": {
+    "x": 1149,
+    "y": -308
+   }
+  },
+  {
+   "key": "B-16-1-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-16-IS1"
+   ],
+   "position": {
+    "x": 764,
+    "y": 743
+   }
+  },
+  {
+   "key": "B-16-2-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-16-IS2"
+   ],
+   "position": {
+    "x": 262,
+    "y": 1033
+   }
+  },
+  {
+   "key": "B-16-IS1",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA",
+    "B-16-RF1"
+   ],
+   "position": {
+    "x": 841,
+    "y": 841
+   }
+  },
+  {
+   "key": "B-16-IS2",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT",
+    "B-16-RF1"
+   ],
+   "position": {
+    "x": 308,
+    "y": 1149
+   }
+  },
+  {
+   "key": "B-16-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-16-IS1",
+    "B-16-IS2"
+   ],
+   "position": {
+    "x": 597,
+    "y": 1034
+   }
+  },
+  {
+   "key": "B-17-1-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-17-RF1"
+   ],
+   "position": {
+    "x": -262,
+    "y": 1033
+   }
+  },
+  {
+   "key": "B-17-2-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-17-RF2"
+   ],
+   "position": {
+    "x": -764,
+    "y": 743
+   }
+  },
+  {
+   "key": "B-17-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-17-RF1",
+    "B-17-RF2"
+   ],
+   "position": {
+    "x": -597,
+    "y": 1034
+   }
+  },
+  {
+   "key": "B-17-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT",
+    "B-17-HP1"
+   ],
+   "position": {
+    "x": -308,
+    "y": 1149
+   }
+  },
+  {
+   "key": "B-17-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA",
+    "B-17-HP1"
+   ],
+   "position": {
+    "x": -841,
+    "y": 841
+   }
+  },
+  {
+   "key": "B-18-TR1",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCDC"
+   ],
+   "position": {
+    "x": -517,
+    "y": -173
+   }
+  },
+  {
+   "key": "B-18-TR2",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-18-TR1"
+   ],
+   "position": {
+    "x": -656,
+    "y": -214
+   }
+  },
+  {
+   "key": "B-18-TR3",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-18-TR2"
+   ],
+   "position": {
+    "x": -780,
+    "y": -277
+   }
+  },
+  {
+   "key": "B-18-TR4",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-18-TR3"
+   ],
+   "position": {
+    "x": -893,
+    "y": -343
+   }
+  },
+  {
+   "key": "B-18-TR5",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-18-TR4"
+   ],
+   "position": {
+    "x": -986,
+    "y": -428
+   }
+  },
+  {
+   "key": "B-19-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-19-RF1"
+   ],
+   "position": {
+    "x": -604,
+    "y": -333
+   }
+  },
+  {
+   "key": "B-19-HP2",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-19-RF2"
+   ],
+   "position": {
+    "x": -838,
+    "y": -461
+   }
+  },
+  {
+   "key": "B-19-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCDC"
+   ],
+   "position": {
+    "x": -472,
+    "y": -273
+   }
+  },
+  {
+   "key": "B-19-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-19-HP1"
+   ],
+   "position": {
+    "x": -706,
+    "y": -430
+   }
+  },
+  {
+   "key": "B-19-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-19-HP2"
+   ],
+   "position": {
+    "x": -931,
+    "y": -537
+   }
+  },
+  {
+   "key": "B-2-1-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-ED1"
+   ],
+   "position": {
+    "x": -89,
+    "y": -653
+   }
+  },
+  {
+   "key": "B-2-1-ED2",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-1-ED1"
+   ],
+   "position": {
+    "x": -104,
+    "y": -850
+   }
+  },
+  {
+   "key": "B-2-1-ED3",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-1-ED2"
+   ],
+   "position": {
+    "x": -77,
+    "y": -1008
+   }
+  },
+  {
+   "key": "B-2-2-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-2-SS1"
+   ],
+   "position": {
+    "x": -1,
+    "y": -822
+   }
+  },
+  {
+   "key": "B-2-2-SS1",
+   "id": "swiftStrikes",
+   "name": "Swift Strikes",
+   "effect": "Weapon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-ED1"
+   ],
+   "position": {
+    "x": -1,
+    "y": -678
+   }
+  },
+  {
+   "key": "B-2-2-SS2",
+   "id": "swiftStrikes",
+   "name": "Swift Strikes",
+   "effect": "Weapon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-2-ED1"
+   ],
+   "position": {
+    "x": -1,
+    "y": -952
+   }
+  },
+  {
+   "key": "B-2-3-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-ED1"
+   ],
+   "position": {
+    "x": 84,
+    "y": -651
+   }
+  },
+  {
+   "key": "B-2-3-ED2",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-3-ED1"
+   ],
+   "position": {
+    "x": 99,
+    "y": -847
+   }
+  },
+  {
+   "key": "B-2-3-ED3",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-3-ED2"
+   ],
+   "position": {
+    "x": 73,
+    "y": -1004
+   }
+  },
+  {
+   "key": "B-2-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVS"
+   ],
+   "position": {
+    "x": 0,
+    "y": -521
+   }
+  },
+  {
+   "key": "B-2-ED2",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-2-2-SS2",
+    "B-2-1-ED3",
+    "B-2-3-ED3"
+   ],
+   "position": {
+    "x": 0,
+    "y": -1093
+   }
+  },
+  {
+   "key": "B-20-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCDC"
+   ],
+   "position": {
+    "x": -401,
+    "y": -370
+   }
+  },
+  {
+   "key": "B-20-HP2",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-20-RF1"
+   ],
+   "position": {
+    "x": -603,
+    "y": -566
+   }
+  },
+  {
+   "key": "B-20-HP3",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-20-RF2"
+   ],
+   "position": {
+    "x": -856,
+    "y": -650
+   }
+  },
+  {
+   "key": "B-20-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-20-HP1"
+   ],
+   "position": {
+    "x": -515,
+    "y": -458
+   }
+  },
+  {
+   "key": "B-20-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-20-HP2"
+   ],
+   "position": {
+    "x": -750,
+    "y": -595
+   }
+  },
+  {
+   "key": "B-21-1-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-21-RF2"
+   ],
+   "position": {
+    "x": -1317,
+    "y": 35
+   }
+  },
+  {
+   "key": "B-21-2-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-21-RF2"
+   ],
+   "position": {
+    "x": -1070,
+    "y": -32
+   }
+  },
+  {
+   "key": "B-21-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA",
+    "B-21-RF2"
+   ],
+   "position": {
+    "x": -1149,
+    "y": 308
+   }
+  },
+  {
+   "key": "B-21-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-21-RF1",
+    "B-21-RF3"
+   ],
+   "position": {
+    "x": -1194,
+    "y": 0
+   }
+  },
+  {
+   "key": "B-21-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG",
+    "B-21-RF2"
+   ],
+   "position": {
+    "x": -1149,
+    "y": -308
+   }
+  },
+  {
+   "key": "B-22-BP1",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT"
+   ],
+   "position": {
+    "x": 284,
+    "y": 1350
+   }
+  },
+  {
+   "key": "B-22-BP2",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-BR1"
+   ],
+   "position": {
+    "x": 344,
+    "y": 1542
+   }
+  },
+  {
+   "key": "B-22-BP3",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-BR2"
+   ],
+   "position": {
+    "x": 487,
+    "y": 1712
+   }
+  },
+  {
+   "key": "B-22-BR1",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-BP1"
+   ],
+   "position": {
+    "x": 357,
+    "y": 1436
+   }
+  },
+  {
+   "key": "B-22-BR2",
+   "id": "barnacleRemoval",
+   "name": "Barnacle Removal",
+   "effect": "Acceleration +2%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-BP2"
+   ],
+   "position": {
+    "x": 469,
+    "y": 1613
+   }
+  },
+  {
+   "key": "B-22-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG",
+    "B-22-RF1"
+   ],
+   "position": {
+    "x": -909,
+    "y": -763
+   }
+  },
+  {
+   "key": "B-22-ED2",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-RF1",
+    "B-22-RF2"
+   ],
+   "position": {
+    "x": -597,
+    "y": -1034
+   }
+  },
+  {
+   "key": "B-22-ED3",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-RF2",
+    "KBHM"
+   ],
+   "position": {
+    "x": -206,
+    "y": -1169
+   }
+  },
+  {
+   "key": "B-22-RF1",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-ED1",
+    "B-22-ED2"
+   ],
+   "position": {
+    "x": -766,
+    "y": -913
+   }
+  },
+  {
+   "key": "B-22-RF2",
+   "id": "readyFire",
+   "name": "Ready Fire",
+   "effect": "Weapon Reload Time -3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-22-ED2",
+    "B-22-ED3"
+   ],
+   "position": {
+    "x": -408,
+    "y": -1120
+   }
+  },
+  {
+   "key": "B-23-BP1",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT"
+   ],
+   "position": {
+    "x": 142,
+    "y": 1373
+   }
+  },
+  {
+   "key": "B-23-BP2",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-BP1"
+   ],
+   "position": {
+    "x": 172,
+    "y": 1470
+   }
+  },
+  {
+   "key": "B-23-BP3",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-BP2"
+   ],
+   "position": {
+    "x": 181,
+    "y": 1570
+   }
+  },
+  {
+   "key": "B-23-BP4",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-BP3"
+   ],
+   "position": {
+    "x": 226,
+    "y": 1665
+   }
+  },
+  {
+   "key": "B-23-BP5",
+   "id": "batteringProw",
+   "name": "Battering Prow",
+   "effect": "Ram Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-BP4"
+   ],
+   "position": {
+    "x": 245,
+    "y": 1763
+   }
+  },
+  {
+   "key": "B-23-SA1",
+   "id": "savageAttacks",
+   "name": "Savage Attacks",
+   "effect": "Crew Attack Damage +25%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT"
+   ],
+   "position": {
+    "x": -259,
+    "y": 1356
+   }
+  },
+  {
+   "key": "B-23-SA2",
+   "id": "savageAttacks",
+   "name": "Savage Attacks",
+   "effect": "Crew Attack Damage +25%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-SA1"
+   ],
+   "position": {
+    "x": -294,
+    "y": 1450
+   }
+  },
+  {
+   "key": "B-23-SA3",
+   "id": "savageAttacks",
+   "name": "Savage Attacks",
+   "effect": "Crew Attack Damage +25%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-SA2"
+   ],
+   "position": {
+    "x": -354,
+    "y": 1540
+   }
+  },
+  {
+   "key": "B-23-SA4",
+   "id": "savageAttacks",
+   "name": "Savage Attacks",
+   "effect": "Crew Attack Damage +25%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-SA3"
+   ],
+   "position": {
+    "x": -384,
+    "y": 1636
+   }
+  },
+  {
+   "key": "B-23-SA5",
+   "id": "savageAttacks",
+   "name": "Savage Attacks",
+   "effect": "Crew Attack Damage +25%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-SA4"
+   ],
+   "position": {
+    "x": -444,
+    "y": 1724
+   }
+  },
+  {
+   "key": "B-23-TP1",
+   "id": "targetPractice",
+   "name": "Target Practice",
+   "effect": "Crew Attack Range +3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT"
+   ],
+   "position": {
+    "x": -142,
+    "y": 1373
+   }
+  },
+  {
+   "key": "B-23-TP2",
+   "id": "targetPractice",
+   "name": "Target Practice",
+   "effect": "Crew Attack Range +3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-TP1"
+   ],
+   "position": {
+    "x": -159,
+    "y": 1471
+   }
+  },
+  {
+   "key": "B-23-TP3",
+   "id": "targetPractice",
+   "name": "Target Practice",
+   "effect": "Crew Attack Range +3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-TP2"
+   ],
+   "position": {
+    "x": -199,
+    "y": 1567
+   }
+  },
+  {
+   "key": "B-23-TP4",
+   "id": "targetPractice",
+   "name": "Target Practice",
+   "effect": "Crew Attack Range +3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-TP3"
+   ],
+   "position": {
+    "x": -207,
+    "y": 1667
+   }
+  },
+  {
+   "key": "B-23-TP5",
+   "id": "targetPractice",
+   "name": "Target Practice",
+   "effect": "Crew Attack Range +3%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-23-TP4"
+   ],
+   "position": {
+    "x": -245,
+    "y": 1763
+   }
+  },
+  {
+   "key": "B-24-IS1",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBEB"
+   ],
+   "position": {
+    "x": 1088,
+    "y": -848
+   }
+  },
+  {
+   "key": "B-24-IS2",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-24-TR1"
+   ],
+   "position": {
+    "x": 1270,
+    "y": -940
+   }
+  },
+  {
+   "key": "B-24-IS3",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-24-TR2"
+   ],
+   "position": {
+    "x": 1450,
+    "y": -1033
+   }
+  },
+  {
+   "key": "B-24-TR1",
+   "id": "trainedRecovery",
+   "name": "Trained Recovery",
+   "effect": "Brace Recovery +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-24-IS1"
+   ],
+   "position": {
+    "x": 1147,
+    "y": -935
+   }
+  },
+  {
+   "key": "B-24-TR2",
+   "id": "trainedRecovery",
+   "name": "Trained Recovery",
+   "effect": "Brace Recovery +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-24-IS2"
+   ],
+   "position": {
+    "x": 1318,
+    "y": -1041
+   }
+  },
+  {
+   "key": "B-25-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBEB"
+   ],
+   "position": {
+    "x": 1165,
+    "y": -740
+   }
+  },
+  {
+   "key": "B-25-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-25-RF1"
+   ],
+   "position": {
+    "x": 1245,
+    "y": -800
+   }
+  },
+  {
+   "key": "B-25-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-25-RF2"
+   ],
+   "position": {
+    "x": 1339,
+    "y": -839
+   }
+  },
+  {
+   "key": "B-25-RF4",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-25-RF3"
+   ],
+   "position": {
+    "x": 1418,
+    "y": -901
+   }
+  },
+  {
+   "key": "B-25-RF5",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-25-RF4"
+   ],
+   "position": {
+    "x": 1515,
+    "y": -934
+   }
+  },
+  {
+   "key": "B-26-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-26-SD1"
+   ],
+   "position": {
+    "x": 1303,
+    "y": -703
+   }
+  },
+  {
+   "key": "B-26-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-26-TR1"
+   ],
+   "position": {
+    "x": 1470,
+    "y": -814
+   }
+  },
+  {
+   "key": "B-26-SD1",
+   "id": "steadyDefense",
+   "name": "Steady Defense",
+   "effect": "Stamina use while Bracing -10%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBEB"
+   ],
+   "position": {
+    "x": 1226,
+    "y": -634
+   }
+  },
+  {
+   "key": "B-26-SD2",
+   "id": "steadyDefense",
+   "name": "Steady Defense",
+   "effect": "Stamina use while Bracing -10%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-26-RF2"
+   ],
+   "position": {
+    "x": 1569,
+    "y": -841
+   }
+  },
+  {
+   "key": "B-26-TR1",
+   "id": "trainedRecovery",
+   "name": "Trained Recovery",
+   "effect": "Brace Recovery +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-26-RF1"
+   ],
+   "position": {
+    "x": 1419,
+    "y": -694
+   }
+  },
+  {
+   "key": "B-27-TR1",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBEB"
+   ],
+   "position": {
+    "x": 1272,
+    "y": -534
+   }
+  },
+  {
+   "key": "B-27-TR2",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-27-TR1"
+   ],
+   "position": {
+    "x": 1364,
+    "y": -575
+   }
+  },
+  {
+   "key": "B-27-TR3",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-27-TR2"
+   ],
+   "position": {
+    "x": 1459,
+    "y": -606
+   }
+  },
+  {
+   "key": "B-27-TR4",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-27-TR3"
+   ],
+   "position": {
+    "x": 1535,
+    "y": -683
+   }
+  },
+  {
+   "key": "B-27-TR5",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-27-TR4"
+   ],
+   "position": {
+    "x": 1613,
+    "y": -753
+   }
+  },
+  {
+   "key": "B-28-1-RM1",
+   "id": "reactiveMeasures",
+   "name": "Reactive Measures",
+   "effect": "Status Effects Damage Reduction -2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-28-RM2"
+   ],
+   "position": {
+    "x": 1714,
+    "y": -1261
+   }
+  },
+  {
+   "key": "B-28-2-RM1",
+   "id": "reactiveMeasures",
+   "name": "Reactive Measures",
+   "effect": "Status Effects Damage Reduction -2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-28-RM2"
+   ],
+   "position": {
+    "x": 1869,
+    "y": -1065
+   }
+  },
+  {
+   "key": "B-28-RM1",
+   "id": "reactiveMeasures",
+   "name": "Reactive Measures",
+   "effect": "Status Effects Damage Reduction -2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFH"
+   ],
+   "position": {
+    "x": 1731,
+    "y": -1017
+   }
+  },
+  {
+   "key": "B-28-RM2",
+   "id": "reactiveMeasures",
+   "name": "Reactive Measures",
+   "effect": "Status Effects Damage Reduction -2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-28-RM1"
+   ],
+   "position": {
+    "x": 1791,
+    "y": -1163
+   }
+  },
+  {
+   "key": "B-28-RM3",
+   "id": "reactiveMeasures",
+   "name": "Reactive Measures",
+   "effect": "Status Effects Damage Reduction -2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-28-RM2"
+   ],
+   "position": {
+    "x": 1855,
+    "y": -1299
+   }
+  },
+  {
+   "key": "B-29-FD1",
+   "id": "fireDrills",
+   "name": "Fire Drills",
+   "effect": "Ablaze Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 1942,
+    "y": -1607
+   }
+  },
+  {
+   "key": "B-29-FD2",
+   "id": "fireDrills",
+   "name": "Fire Drills",
+   "effect": "Ablaze Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-29-FD1"
+   ],
+   "position": {
+    "x": 2033,
+    "y": -1697
+   }
+  },
+  {
+   "key": "B-29-FD3",
+   "id": "fireDrills",
+   "name": "Fire Drills",
+   "effect": "Ablaze Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-29-FD2"
+   ],
+   "position": {
+    "x": 2144,
+    "y": -1764
+   }
+  },
+  {
+   "key": "B-29-FD4",
+   "id": "fireDrills",
+   "name": "Fire Drills",
+   "effect": "Ablaze Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-29-FD3"
+   ],
+   "position": {
+    "x": 2232,
+    "y": -1858
+   }
+  },
+  {
+   "key": "B-29-FD5",
+   "id": "fireDrills",
+   "name": "Fire Drills",
+   "effect": "Ablaze Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-29-FD4"
+   ],
+   "position": {
+    "x": 2334,
+    "y": -1935
+   }
+  },
+  {
+   "key": "B-3-1-DE1",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-DE1"
+   ],
+   "position": {
+    "x": 222,
+    "y": -653
+   }
+  },
+  {
+   "key": "B-3-1-DE2",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-1-DE1"
+   ],
+   "position": {
+    "x": 236,
+    "y": -795
+   }
+  },
+  {
+   "key": "B-3-1-DE3",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-1-DE2"
+   ],
+   "position": {
+    "x": 226,
+    "y": -919
+   }
+  },
+  {
+   "key": "B-3-2-DE1",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-DE1"
+   ],
+   "position": {
+    "x": 292,
+    "y": -545
+   }
+  },
+  {
+   "key": "B-3-2-DE2",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-2-SS1"
+   ],
+   "position": {
+    "x": 370,
+    "y": -755
+   }
+  },
+  {
+   "key": "B-3-2-DE3",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-2-SS2"
+   ],
+   "position": {
+    "x": 320,
+    "y": -966
+   }
+  },
+  {
+   "key": "B-3-2-SS1",
+   "id": "swiftStrikes",
+   "name": "Swift Strikes",
+   "effect": "Weapon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-2-DE1"
+   ],
+   "position": {
+    "x": 359,
+    "y": -630
+   }
+  },
+  {
+   "key": "B-3-2-SS2",
+   "id": "swiftStrikes",
+   "name": "Swift Strikes",
+   "effect": "Weapon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-2-DE2"
+   ],
+   "position": {
+    "x": 361,
+    "y": -872
+   }
+  },
+  {
+   "key": "B-3-DE1",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVS"
+   ],
+   "position": {
+    "x": 209,
+    "y": -484
+   }
+  },
+  {
+   "key": "B-3-DE2",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-3-1-DE3",
+    "B-3-2-DE3"
+   ],
+   "position": {
+    "x": 218,
+    "y": -1059
+   }
+  },
+  {
+   "key": "B-30-FD1",
+   "id": "floodingDrills",
+   "name": "Flooding Drills",
+   "effect": "Flooded Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 2034,
+    "y": -1487
+   }
+  },
+  {
+   "key": "B-30-FD2",
+   "id": "floodingDrills",
+   "name": "Flooding Drills",
+   "effect": "Flooded Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-30-FD1"
+   ],
+   "position": {
+    "x": 2131,
+    "y": -1572
+   }
+  },
+  {
+   "key": "B-30-FD3",
+   "id": "floodingDrills",
+   "name": "Flooding Drills",
+   "effect": "Flooded Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-30-FD2"
+   ],
+   "position": {
+    "x": 2245,
+    "y": -1632
+   }
+  },
+  {
+   "key": "B-30-FD4",
+   "id": "floodingDrills",
+   "name": "Flooding Drills",
+   "effect": "Flooded Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-30-FD3"
+   ],
+   "position": {
+    "x": 2339,
+    "y": -1721
+   }
+  },
+  {
+   "key": "B-30-FD5",
+   "id": "floodingDrills",
+   "name": "Flooding Drills",
+   "effect": "Flooded Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-30-FD4"
+   ],
+   "position": {
+    "x": 2446,
+    "y": -1792
+   }
+  },
+  {
+   "key": "B-31-IG1",
+   "id": "insulatedGear",
+   "name": "Insulated Gear",
+   "effect": "Stormstruck Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 2120,
+    "y": -1363
+   }
+  },
+  {
+   "key": "B-31-IG2",
+   "id": "insulatedGear",
+   "name": "Insulated Gear",
+   "effect": "Stormstruck Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-31-IG1"
+   ],
+   "position": {
+    "x": 2221,
+    "y": -1441
+   }
+  },
+  {
+   "key": "B-31-IG3",
+   "id": "insulatedGear",
+   "name": "Insulated Gear",
+   "effect": "Stormstruck Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-31-IG2"
+   ],
+   "position": {
+    "x": 2339,
+    "y": -1495
+   }
+  },
+  {
+   "key": "B-31-IG4",
+   "id": "insulatedGear",
+   "name": "Insulated Gear",
+   "effect": "Stormstruck Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-31-IG3"
+   ],
+   "position": {
+    "x": 2438,
+    "y": -1577
+   }
+  },
+  {
+   "key": "B-31-IG5",
+   "id": "insulatedGear",
+   "name": "Insulated Gear",
+   "effect": "Stormstruck Damage Reduction -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-31-IG4"
+   ],
+   "position": {
+    "x": 2549,
+    "y": -1642
+   }
+  },
+  {
+   "key": "B-32-FAT1",
+   "id": "firstAidTraining",
+   "name": "First Aid Training",
+   "effect": "Toxic Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 2198,
+    "y": -1233
+   }
+  },
+  {
+   "key": "B-32-FAT2",
+   "id": "firstAidTraining",
+   "name": "First Aid Training",
+   "effect": "Toxic Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-32-FAT1"
+   ],
+   "position": {
+    "x": 2304,
+    "y": -1306
+   }
+  },
+  {
+   "key": "B-32-FAT3",
+   "id": "firstAidTraining",
+   "name": "First Aid Training",
+   "effect": "Toxic Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-32-FAT2"
+   ],
+   "position": {
+    "x": 2425,
+    "y": -1352
+   }
+  },
+  {
+   "key": "B-32-FAT4",
+   "id": "firstAidTraining",
+   "name": "First Aid Training",
+   "effect": "Toxic Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-32-FAT3"
+   ],
+   "position": {
+    "x": 2528,
+    "y": -1428
+   }
+  },
+  {
+   "key": "B-32-FAT5",
+   "id": "firstAidTraining",
+   "name": "First Aid Training",
+   "effect": "Toxic Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-32-FAT4"
+   ],
+   "position": {
+    "x": 2643,
+    "y": -1486
+   }
+  },
+  {
+   "key": "B-33-BT1",
+   "id": "breachTraining",
+   "name": "Breach Training",
+   "effect": "Punctured Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 2268,
+    "y": -1099
+   }
+  },
+  {
+   "key": "B-33-BT2",
+   "id": "breachTraining",
+   "name": "Breach Training",
+   "effect": "Punctured Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-33-BT1"
+   ],
+   "position": {
+    "x": 2378,
+    "y": -1165
+   }
+  },
+  {
+   "key": "B-33-BT3",
+   "id": "breachTraining",
+   "name": "Breach Training",
+   "effect": "Punctured Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-33-BT2"
+   ],
+   "position": {
+    "x": 2501,
+    "y": -1204
+   }
+  },
+  {
+   "key": "B-33-BT4",
+   "id": "breachTraining",
+   "name": "Breach Training",
+   "effect": "Punctured Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-33-BT3"
+   ],
+   "position": {
+    "x": 2610,
+    "y": -1274
+   }
+  },
+  {
+   "key": "B-33-BT5",
+   "id": "breachTraining",
+   "name": "Breach Training",
+   "effect": "Punctured Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-33-BT4"
+   ],
+   "position": {
+    "x": 2727,
+    "y": -1325
+   }
+  },
+  {
+   "key": "B-34-PM1",
+   "id": "protectiveMeasures",
+   "name": "Protective Measures",
+   "effect": "Shell-Shocked Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFNP"
+   ],
+   "position": {
+    "x": 2329,
+    "y": -961
+   }
+  },
+  {
+   "key": "B-34-PM2",
+   "id": "protectiveMeasures",
+   "name": "Protective Measures",
+   "effect": "Shell-Shocked Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-34-PM1"
+   ],
+   "position": {
+    "x": 2443,
+    "y": -1021
+   }
+  },
+  {
+   "key": "B-34-PM3",
+   "id": "protectiveMeasures",
+   "name": "Protective Measures",
+   "effect": "Shell-Shocked Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-34-PM2"
+   ],
+   "position": {
+    "x": 2569,
+    "y": -1052
+   }
+  },
+  {
+   "key": "B-34-PM4",
+   "id": "protectiveMeasures",
+   "name": "Protective Measures",
+   "effect": "Shell-Shocked Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-34-PM3"
+   ],
+   "position": {
+    "x": 2681,
+    "y": -1116
+   }
+  },
+  {
+   "key": "B-34-PM5",
+   "id": "protectiveMeasures",
+   "name": "Protective Measures",
+   "effect": "Shell-Shocked Lifetime -5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-34-PM4"
+   ],
+   "position": {
+    "x": 2802,
+    "y": -1159
+   }
+  },
+  {
+   "key": "B-35-1-HPS1",
+   "id": "highPressureShockwave",
+   "name": "High Pressure Shockwave",
+   "effect": "Shell-Shocked Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-HPS1"
+   ],
+   "position": {
+    "x": 1460,
+    "y": 242
+   }
+  },
+  {
+   "key": "B-35-1-HPS2",
+   "id": "highPressureShockwave",
+   "name": "High Pressure Shockwave",
+   "effect": "Shell-Shocked Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-1-HPS1"
+   ],
+   "position": {
+    "x": 1555,
+    "y": 282
+   }
+  },
+  {
+   "key": "B-35-1-HPS3",
+   "id": "highPressureShockwave",
+   "name": "High Pressure Shockwave",
+   "effect": "Shell-Shocked Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-1-HPS2"
+   ],
+   "position": {
+    "x": 1650,
+    "y": 318
+   }
+  },
+  {
+   "key": "B-35-1-HPS4",
+   "id": "highPressureShockwave",
+   "name": "High Pressure Shockwave",
+   "effect": "Shell-Shocked Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-1-HPS3"
+   ],
+   "position": {
+    "x": 1725,
+    "y": 438
+   }
+  },
+  {
+   "key": "B-35-2-FD1",
+   "id": "flashDetonation",
+   "name": "Flash Detonation",
+   "effect": "Shell-Shocked Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-HPS1"
+   ],
+   "position": {
+    "x": 1444,
+    "y": 325
+   }
+  },
+  {
+   "key": "B-35-2-FD2",
+   "id": "flashDetonation",
+   "name": "Flash Detonation",
+   "effect": "Shell-Shocked Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-2-FD1"
+   ],
+   "position": {
+    "x": 1535,
+    "y": 373
+   }
+  },
+  {
+   "key": "B-35-2-FD3",
+   "id": "flashDetonation",
+   "name": "Flash Detonation",
+   "effect": "Shell-Shocked Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-2-FD2"
+   ],
+   "position": {
+    "x": 1629,
+    "y": 409
+   }
+  },
+  {
+   "key": "B-35-2-FD4",
+   "id": "flashDetonation",
+   "name": "Flash Detonation",
+   "effect": "Shell-Shocked Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-2-FD3"
+   ],
+   "position": {
+    "x": 1703,
+    "y": 516
+   }
+  },
+  {
+   "key": "B-35-FD1",
+   "id": "flashDetonation",
+   "name": "Flash Detonation",
+   "effect": "Shell-Shocked Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-35-2-FD4",
+    "B-35-1-HPS4"
+   ],
+   "position": {
+    "x": 1782,
+    "y": 600
+   }
+  },
+  {
+   "key": "B-35-HPS1",
+   "id": "highPressureShockwave",
+   "name": "High Pressure Shockwave",
+   "effect": "Shell-Shocked Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 1350,
+    "y": 285
+   }
+  },
+  {
+   "key": "B-36-1-VR1",
+   "id": "violentRupture",
+   "name": "Violent Rupture",
+   "effect": "Punctured Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-VR1"
+   ],
+   "position": {
+    "x": 1416,
+    "y": 429
+   }
+  },
+  {
+   "key": "B-36-1-VR2",
+   "id": "violentRupture",
+   "name": "Violent Rupture",
+   "effect": "Punctured Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-1-VR1"
+   ],
+   "position": {
+    "x": 1506,
+    "y": 478
+   }
+  },
+  {
+   "key": "B-36-1-VR3",
+   "id": "violentRupture",
+   "name": "Violent Rupture",
+   "effect": "Punctured Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-1-VR2"
+   ],
+   "position": {
+    "x": 1600,
+    "y": 513
+   }
+  },
+  {
+   "key": "B-36-1-VR4",
+   "id": "violentRupture",
+   "name": "Violent Rupture",
+   "effect": "Punctured Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-1-VR3"
+   ],
+   "position": {
+    "x": 1670,
+    "y": 615
+   }
+  },
+  {
+   "key": "B-36-2-PM1",
+   "id": "penetratingMunitions",
+   "name": "Penetrating Munitions",
+   "effect": "Punctured Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-VR1"
+   ],
+   "position": {
+    "x": 1390,
+    "y": 509
+   }
+  },
+  {
+   "key": "B-36-2-PM2",
+   "id": "penetratingMunitions",
+   "name": "Penetrating Munitions",
+   "effect": "Punctured Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-2-PM1"
+   ],
+   "position": {
+    "x": 1475,
+    "y": 566
+   }
+  },
+  {
+   "key": "B-36-2-PM3",
+   "id": "penetratingMunitions",
+   "name": "Penetrating Munitions",
+   "effect": "Punctured Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-2-PM2"
+   ],
+   "position": {
+    "x": 1569,
+    "y": 601
+   }
+  },
+  {
+   "key": "B-36-2-PM4",
+   "id": "penetratingMunitions",
+   "name": "Penetrating Munitions",
+   "effect": "Punctured Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-2-PM3"
+   ],
+   "position": {
+    "x": 1641,
+    "y": 691
+   }
+  },
+  {
+   "key": "B-36-PM1",
+   "id": "penetratingMunitions",
+   "name": "Penetrating Munitions",
+   "effect": "Punctured Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-36-2-PM4",
+    "B-36-1-VR4"
+   ],
+   "position": {
+    "x": 1728,
+    "y": 740
+   }
+  },
+  {
+   "key": "B-36-VR1",
+   "id": "violentRupture",
+   "name": "Violent Rupture",
+   "effect": "Punctured Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 1304,
+    "y": 453
+   }
+  },
+  {
+   "key": "B-37-1-PA1",
+   "id": "persistentAffliction",
+   "name": "Persistent Affliction",
+   "effect": "Toxic Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-PA1"
+   ],
+   "position": {
+    "x": 1349,
+    "y": 609
+   }
+  },
+  {
+   "key": "B-37-1-PA2",
+   "id": "persistentAffliction",
+   "name": "Persistent Affliction",
+   "effect": "Toxic Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-1-PA1"
+   ],
+   "position": {
+    "x": 1433,
+    "y": 666
+   }
+  },
+  {
+   "key": "B-37-1-PA3",
+   "id": "persistentAffliction",
+   "name": "Persistent Affliction",
+   "effect": "Toxic Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-1-PA2"
+   ],
+   "position": {
+    "x": 1527,
+    "y": 701
+   }
+  },
+  {
+   "key": "B-37-1-PA4",
+   "id": "persistentAffliction",
+   "name": "Persistent Affliction",
+   "effect": "Toxic Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-1-PA3"
+   ],
+   "position": {
+    "x": 1597,
+    "y": 785
+   }
+  },
+  {
+   "key": "B-37-2-VT1",
+   "id": "virulentToxins",
+   "name": "Virulent Toxins",
+   "effect": "Toxic Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-PA1"
+   ],
+   "position": {
+    "x": 1312,
+    "y": 685
+   }
+  },
+  {
+   "key": "B-37-2-VT2",
+   "id": "virulentToxins",
+   "name": "Virulent Toxins",
+   "effect": "Toxic Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-2-VT1"
+   ],
+   "position": {
+    "x": 1391,
+    "y": 750
+   }
+  },
+  {
+   "key": "B-37-2-VT3",
+   "id": "virulentToxins",
+   "name": "Virulent Toxins",
+   "effect": "Toxic Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-2-VT2"
+   ],
+   "position": {
+    "x": 1486,
+    "y": 784
+   }
+  },
+  {
+   "key": "B-37-2-VT4",
+   "id": "virulentToxins",
+   "name": "Virulent Toxins",
+   "effect": "Toxic Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-2-VT3"
+   ],
+   "position": {
+    "x": 1560,
+    "y": 857
+   }
+  },
+  {
+   "key": "B-37-PA1",
+   "id": "persistentAffliction",
+   "name": "Persistent Affliction",
+   "effect": "Toxic Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 1236,
+    "y": 613
+   }
+  },
+  {
+   "key": "B-37-VT1",
+   "id": "virulentToxins",
+   "name": "Virulent Toxins",
+   "effect": "Toxic Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-37-2-VT4",
+    "B-37-1-PA4"
+   ],
+   "position": {
+    "x": 1664,
+    "y": 875
+   }
+  },
+  {
+   "key": "B-38-1-VS1",
+   "id": "voltaicShock",
+   "name": "Voltaic Shock",
+   "effect": "Stormstruck Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-VS1"
+   ],
+   "position": {
+    "x": 1259,
+    "y": 778
+   }
+  },
+  {
+   "key": "B-38-1-VS2",
+   "id": "voltaicShock",
+   "name": "Voltaic Shock",
+   "effect": "Stormstruck Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-1-VS1"
+   ],
+   "position": {
+    "x": 1336,
+    "y": 844
+   }
+  },
+  {
+   "key": "B-38-1-VS3",
+   "id": "voltaicShock",
+   "name": "Voltaic Shock",
+   "effect": "Stormstruck Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-1-VS2"
+   ],
+   "position": {
+    "x": 1432,
+    "y": 878
+   }
+  },
+  {
+   "key": "B-38-1-VS4",
+   "id": "voltaicShock",
+   "name": "Voltaic Shock",
+   "effect": "Stormstruck Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-1-VS3"
+   ],
+   "position": {
+    "x": 1507,
+    "y": 947
+   }
+  },
+  {
+   "key": "B-38-2-PS1",
+   "id": "powerSurge",
+   "name": "Power Surge",
+   "effect": "Stormstruck Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-VS1"
+   ],
+   "position": {
+    "x": 1212,
+    "y": 849
+   }
+  },
+  {
+   "key": "B-38-2-PS2",
+   "id": "powerSurge",
+   "name": "Power Surge",
+   "effect": "Stormstruck Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-2-PS1"
+   ],
+   "position": {
+    "x": 1284,
+    "y": 921
+   }
+  },
+  {
+   "key": "B-38-2-PS3",
+   "id": "powerSurge",
+   "name": "Power Surge",
+   "effect": "Stormstruck Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-2-PS2"
+   ],
+   "position": {
+    "x": 1381,
+    "y": 956
+   }
+  },
+  {
+   "key": "B-38-2-PS4",
+   "id": "powerSurge",
+   "name": "Power Surge",
+   "effect": "Stormstruck Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-2-PS3"
+   ],
+   "position": {
+    "x": 1463,
+    "y": 1015
+   }
+  },
+  {
+   "key": "B-38-PS1",
+   "id": "powerSurge",
+   "name": "Power Surge",
+   "effect": "Stormstruck Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-38-2-PS4",
+    "B-38-1-VS4"
+   ],
+   "position": {
+    "x": 1589,
+    "y": 1004
+   }
+  },
+  {
+   "key": "B-38-VS1",
+   "id": "voltaicShock",
+   "name": "Voltaic Shock",
+   "effect": "Stormstruck Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 1149,
+    "y": 764
+   }
+  },
+  {
+   "key": "B-39-1-HF1",
+   "id": "heavyFlooding",
+   "name": "Heavy Flooding",
+   "effect": "Flooded Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-HF1"
+   ],
+   "position": {
+    "x": 1147,
+    "y": 935
+   }
+  },
+  {
+   "key": "B-39-1-HF2",
+   "id": "heavyFlooding",
+   "name": "Heavy Flooding",
+   "effect": "Flooded Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-1-HF1"
+   ],
+   "position": {
+    "x": 1217,
+    "y": 1008
+   }
+  },
+  {
+   "key": "B-39-1-HF3",
+   "id": "heavyFlooding",
+   "name": "Heavy Flooding",
+   "effect": "Flooded Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-1-HF2"
+   ],
+   "position": {
+    "x": 1317,
+    "y": 1043
+   }
+  },
+  {
+   "key": "B-39-1-HF4",
+   "id": "heavyFlooding",
+   "name": "Heavy Flooding",
+   "effect": "Flooded Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-1-HF3"
+   ],
+   "position": {
+    "x": 1401,
+    "y": 1098
+   }
+  },
+  {
+   "key": "B-39-2-RF1",
+   "id": "rapidFlooding",
+   "name": "Rapid Flooding",
+   "effect": "Flooded Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-HF1"
+   ],
+   "position": {
+    "x": 1092,
+    "y": 999
+   }
+  },
+  {
+   "key": "B-39-2-RF2",
+   "id": "rapidFlooding",
+   "name": "Rapid Flooding",
+   "effect": "Flooded Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-2-RF1"
+   ],
+   "position": {
+    "x": 1156,
+    "y": 1078
+   }
+  },
+  {
+   "key": "B-39-2-RF3",
+   "id": "rapidFlooding",
+   "name": "Rapid Flooding",
+   "effect": "Flooded Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-2-RF2"
+   ],
+   "position": {
+    "x": 1257,
+    "y": 1115
+   }
+  },
+  {
+   "key": "B-39-2-RF4",
+   "id": "rapidFlooding",
+   "name": "Rapid Flooding",
+   "effect": "Flooded Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-2-RF3"
+   ],
+   "position": {
+    "x": 1349,
+    "y": 1161
+   }
+  },
+  {
+   "key": "B-39-HF1",
+   "id": "heavyFlooding",
+   "name": "Heavy Flooding",
+   "effect": "Flooded Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 1044,
+    "y": 903
+   }
+  },
+  {
+   "key": "B-39-RF1",
+   "id": "rapidFlooding",
+   "name": "Rapid Flooding",
+   "effect": "Flooded Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-39-2-RF4",
+    "B-39-1-HF4"
+   ],
+   "position": {
+    "x": 1505,
+    "y": 1127
+   }
+  },
+  {
+   "key": "B-4-IS1",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBSM"
+   ],
+   "position": {
+    "x": 401,
+    "y": -370
+   }
+  },
+  {
+   "key": "B-4-IS2",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-4-RF1"
+   ],
+   "position": {
+    "x": 629,
+    "y": -537
+   }
+  },
+  {
+   "key": "B-4-IS3",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-4-RF2"
+   ],
+   "position": {
+    "x": 856,
+    "y": -650
+   }
+  },
+  {
+   "key": "B-4-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-4-IS1"
+   ],
+   "position": {
+    "x": 496,
+    "y": -479
+   }
+  },
+  {
+   "key": "B-4-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-4-IS2"
+   ],
+   "position": {
+    "x": 725,
+    "y": -625
+   }
+  },
+  {
+   "key": "B-40-1-PC1",
+   "id": "phosphorusCompound",
+   "name": "Phosphorus Compound",
+   "effect": "Ablaze Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-PC1"
+   ],
+   "position": {
+    "x": 1017,
+    "y": 1076
+   }
+  },
+  {
+   "key": "B-40-1-PC2",
+   "id": "phosphorusCompound",
+   "name": "Phosphorus Compound",
+   "effect": "Ablaze Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-1-PC1"
+   ],
+   "position": {
+    "x": 1078,
+    "y": 1155
+   }
+  },
+  {
+   "key": "B-40-1-PC3",
+   "id": "phosphorusCompound",
+   "name": "Phosphorus Compound",
+   "effect": "Ablaze Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-1-PC2"
+   ],
+   "position": {
+    "x": 1183,
+    "y": 1193
+   }
+  },
+  {
+   "key": "B-40-1-PC4",
+   "id": "phosphorusCompound",
+   "name": "Phosphorus Compound",
+   "effect": "Ablaze Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-1-PC3"
+   ],
+   "position": {
+    "x": 1279,
+    "y": 1238
+   }
+  },
+  {
+   "key": "B-40-2-PF1",
+   "id": "potentFuel",
+   "name": "Potent Fuel",
+   "effect": "Ablaze Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-PC1"
+   ],
+   "position": {
+    "x": 954,
+    "y": 1132
+   }
+  },
+  {
+   "key": "B-40-2-PF2",
+   "id": "potentFuel",
+   "name": "Potent Fuel",
+   "effect": "Ablaze Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-2-PF1"
+   ],
+   "position": {
+    "x": 1008,
+    "y": 1216
+   }
+  },
+  {
+   "key": "B-40-2-PF3",
+   "id": "potentFuel",
+   "name": "Potent Fuel",
+   "effect": "Ablaze Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-2-PF2"
+   ],
+   "position": {
+    "x": 1115,
+    "y": 1257
+   }
+  },
+  {
+   "key": "B-40-2-PF4",
+   "id": "potentFuel",
+   "name": "Potent Fuel",
+   "effect": "Ablaze Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-2-PF3"
+   ],
+   "position": {
+    "x": 1221,
+    "y": 1295
+   }
+  },
+  {
+   "key": "B-40-PC1",
+   "id": "phosphorusCompound",
+   "name": "Phosphorus Compound",
+   "effect": "Ablaze Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBAA"
+   ],
+   "position": {
+    "x": 922,
+    "y": 1027
+   }
+  },
+  {
+   "key": "B-40-PF1",
+   "id": "potentFuel",
+   "name": "Potent Fuel",
+   "effect": "Ablaze Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-40-2-PF4",
+    "B-40-1-PC4"
+   ],
+   "position": {
+    "x": 1410,
+    "y": 1243
+   }
+  },
+  {
+   "key": "B-41-1-VC1",
+   "id": "virulentContamination",
+   "name": "Virulent Contamination",
+   "effect": "Toxic Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-CT1"
+   ],
+   "position": {
+    "x": -935,
+    "y": 1147
+   }
+  },
+  {
+   "key": "B-41-1-VC2",
+   "id": "virulentContamination",
+   "name": "Virulent Contamination",
+   "effect": "Toxic Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-1-VC1"
+   ],
+   "position": {
+    "x": -1021,
+    "y": 1206
+   }
+  },
+  {
+   "key": "B-41-1-VC3",
+   "id": "virulentContamination",
+   "name": "Virulent Contamination",
+   "effect": "Toxic Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-1-VC2"
+   ],
+   "position": {
+    "x": -1100,
+    "y": 1270
+   }
+  },
+  {
+   "key": "B-41-1-VC4",
+   "id": "virulentContamination",
+   "name": "Virulent Contamination",
+   "effect": "Toxic Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-1-VC3"
+   ],
+   "position": {
+    "x": -1235,
+    "y": 1282
+   }
+  },
+  {
+   "key": "B-41-2-CT1",
+   "id": "corrosiveToxins",
+   "name": "Corrosive Toxins",
+   "effect": "Toxic Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-CT1"
+   ],
+   "position": {
+    "x": -1008,
+    "y": 1084
+   }
+  },
+  {
+   "key": "B-41-2-CT2",
+   "id": "corrosiveToxins",
+   "name": "Corrosive Toxins",
+   "effect": "Toxic Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-2-CT1"
+   ],
+   "position": {
+    "x": -1090,
+    "y": 1143
+   }
+  },
+  {
+   "key": "B-41-2-CT3",
+   "id": "corrosiveToxins",
+   "name": "Corrosive Toxins",
+   "effect": "Toxic Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-2-CT2"
+   ],
+   "position": {
+    "x": -1169,
+    "y": 1207
+   }
+  },
+  {
+   "key": "B-41-2-CT4",
+   "id": "corrosiveToxins",
+   "name": "Corrosive Toxins",
+   "effect": "Toxic Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-2-CT3"
+   ],
+   "position": {
+    "x": -1306,
+    "y": 1210
+   }
+  },
+  {
+   "key": "B-41-CT1",
+   "id": "corrosiveToxins",
+   "name": "Corrosive Toxins",
+   "effect": "Toxic Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -922,
+    "y": 1027
+   }
+  },
+  {
+   "key": "B-41-VC1",
+   "id": "virulentContamination",
+   "name": "Virulent Contamination",
+   "effect": "Toxic Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-41-1-VC4",
+    "B-41-2-CT4"
+   ],
+   "position": {
+    "x": -1410,
+    "y": 1243
+   }
+  },
+  {
+   "key": "B-42-1-HC1",
+   "id": "highCurrent",
+   "name": "High Current",
+   "effect": "Electric Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-VP1"
+   ],
+   "position": {
+    "x": -1076,
+    "y": 1017
+   }
+  },
+  {
+   "key": "B-42-1-HC2",
+   "id": "highCurrent",
+   "name": "High Current",
+   "effect": "Electric Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-1-HC1"
+   ],
+   "position": {
+    "x": -1167,
+    "y": 1065
+   }
+  },
+  {
+   "key": "B-42-1-HC3",
+   "id": "highCurrent",
+   "name": "High Current",
+   "effect": "Electric Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-1-HC2"
+   ],
+   "position": {
+    "x": -1244,
+    "y": 1129
+   }
+  },
+  {
+   "key": "B-42-1-HC4",
+   "id": "highCurrent",
+   "name": "High Current",
+   "effect": "Electric Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-1-HC3"
+   ],
+   "position": {
+    "x": -1362,
+    "y": 1147
+   }
+  },
+  {
+   "key": "B-42-2-VP1",
+   "id": "voltaicPowder",
+   "name": "Voltaic Powder",
+   "effect": "Electric Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-VP1"
+   ],
+   "position": {
+    "x": -1140,
+    "y": 944
+   }
+  },
+  {
+   "key": "B-42-2-VP2",
+   "id": "voltaicPowder",
+   "name": "Voltaic Powder",
+   "effect": "Electric Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-2-VP1"
+   ],
+   "position": {
+    "x": -1228,
+    "y": 995
+   }
+  },
+  {
+   "key": "B-42-2-VP3",
+   "id": "voltaicPowder",
+   "name": "Voltaic Powder",
+   "effect": "Electric Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-2-VP2"
+   ],
+   "position": {
+    "x": -1305,
+    "y": 1058
+   }
+  },
+  {
+   "key": "B-42-2-VP4",
+   "id": "voltaicPowder",
+   "name": "Voltaic Powder",
+   "effect": "Electric Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-2-VP3"
+   ],
+   "position": {
+    "x": -1424,
+    "y": 1068
+   }
+  },
+  {
+   "key": "B-42-HC1",
+   "id": "highCurrent",
+   "name": "High Current",
+   "effect": "Electric Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-42-1-HC4",
+    "B-42-2-VP4"
+   ],
+   "position": {
+    "x": -1505,
+    "y": 1127
+   }
+  },
+  {
+   "key": "B-42-VP1",
+   "id": "voltaicPowder",
+   "name": "Voltaic Powder",
+   "effect": "Electric Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -1044,
+    "y": 903
+   }
+  },
+  {
+   "key": "B-43-1-SC1",
+   "id": "shapedCharge",
+   "name": "Shaped Charge",
+   "effect": "Explosive Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-HYP1"
+   ],
+   "position": {
+    "x": -1198,
+    "y": 869
+   }
+  },
+  {
+   "key": "B-43-1-SC2",
+   "id": "shapedCharge",
+   "name": "Shaped Charge",
+   "effect": "Explosive Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-1-SC1"
+   ],
+   "position": {
+    "x": -1293,
+    "y": 907
+   }
+  },
+  {
+   "key": "B-43-1-SC3",
+   "id": "shapedCharge",
+   "name": "Shaped Charge",
+   "effect": "Explosive Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-1-SC2"
+   ],
+   "position": {
+    "x": -1370,
+    "y": 972
+   }
+  },
+  {
+   "key": "B-43-1-SC4",
+   "id": "shapedCharge",
+   "name": "Shaped Charge",
+   "effect": "Explosive Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-1-SC3"
+   ],
+   "position": {
+    "x": -1473,
+    "y": 999
+   }
+  },
+  {
+   "key": "B-43-2-HYP1",
+   "id": "highYieldPowder",
+   "name": "High Yield Powder",
+   "effect": "Explosive Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-HYP1"
+   ],
+   "position": {
+    "x": -1252,
+    "y": 789
+   }
+  },
+  {
+   "key": "B-43-2-HYP2",
+   "id": "highYieldPowder",
+   "name": "High Yield Powder",
+   "effect": "Explosive Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-2-HYP1"
+   ],
+   "position": {
+    "x": -1345,
+    "y": 830
+   }
+  },
+  {
+   "key": "B-43-2-HYP3",
+   "id": "highYieldPowder",
+   "name": "High Yield Powder",
+   "effect": "Explosive Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-2-HYP2"
+   ],
+   "position": {
+    "x": -1422,
+    "y": 895
+   }
+  },
+  {
+   "key": "B-43-2-HYP4",
+   "id": "highYieldPowder",
+   "name": "High Yield Powder",
+   "effect": "Explosive Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-2-HYP3"
+   ],
+   "position": {
+    "x": -1527,
+    "y": 914
+   }
+  },
+  {
+   "key": "B-43-HYP1",
+   "id": "highYieldPowder",
+   "name": "High Yield Powder",
+   "effect": "Explosive Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -1149,
+    "y": 764
+   }
+  },
+  {
+   "key": "B-43-SC1",
+   "id": "shapedCharge",
+   "name": "Shaped Charge",
+   "effect": "Explosive Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-43-1-SC4",
+    "B-43-2-HYP4"
+   ],
+   "position": {
+    "x": -1589,
+    "y": 1004
+   }
+  },
+  {
+   "key": "B-44-1-HPS1",
+   "id": "hullPiercerShots",
+   "name": "Hull Piercer Shots",
+   "effect": "Piercing Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-PP1"
+   ],
+   "position": {
+    "x": -1301,
+    "y": 706
+   }
+  },
+  {
+   "key": "B-44-1-HPS2",
+   "id": "hullPiercerShots",
+   "name": "Hull Piercer Shots",
+   "effect": "Piercing Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-1-HPS1"
+   ],
+   "position": {
+    "x": -1399,
+    "y": 735
+   }
+  },
+  {
+   "key": "B-44-1-HPS3",
+   "id": "hullPiercerShots",
+   "name": "Hull Piercer Shots",
+   "effect": "Piercing Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-1-HPS2"
+   ],
+   "position": {
+    "x": -1477,
+    "y": 801
+   }
+  },
+  {
+   "key": "B-44-1-HPS4",
+   "id": "hullPiercerShots",
+   "name": "Hull Piercer Shots",
+   "effect": "Piercing Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-1-HPS3"
+   ],
+   "position": {
+    "x": -1569,
+    "y": 841
+   }
+  },
+  {
+   "key": "B-44-2-PP1",
+   "id": "perforatingProjectiles",
+   "name": "Perforating Projectiles",
+   "effect": "Piercing Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-PP1"
+   ],
+   "position": {
+    "x": -1344,
+    "y": 620
+   }
+  },
+  {
+   "key": "B-44-2-PP2",
+   "id": "perforatingProjectiles",
+   "name": "Perforating Projectiles",
+   "effect": "Piercing Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-2-PP1"
+   ],
+   "position": {
+    "x": -1440,
+    "y": 651
+   }
+  },
+  {
+   "key": "B-44-2-PP3",
+   "id": "perforatingProjectiles",
+   "name": "Perforating Projectiles",
+   "effect": "Piercing Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-2-PP2"
+   ],
+   "position": {
+    "x": -1519,
+    "y": 718
+   }
+  },
+  {
+   "key": "B-44-2-PP4",
+   "id": "perforatingProjectiles",
+   "name": "Perforating Projectiles",
+   "effect": "Piercing Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-2-PP3"
+   ],
+   "position": {
+    "x": -1614,
+    "y": 750
+   }
+  },
+  {
+   "key": "B-44-HPS1",
+   "id": "hullPiercerShots",
+   "name": "Hull Piercer Shots",
+   "effect": "Piercing Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-44-1-HPS4",
+    "B-44-2-PP4"
+   ],
+   "position": {
+    "x": -1664,
+    "y": 875
+   }
+  },
+  {
+   "key": "B-44-PP1",
+   "id": "perforatingProjectiles",
+   "name": "Perforating Projectiles",
+   "effect": "Piercing Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -1236,
+    "y": 613
+   }
+  },
+  {
+   "key": "B-45-1-HS1",
+   "id": "hullShredder",
+   "name": "Hull Shredder",
+   "effect": "Flooding Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-EC1"
+   ],
+   "position": {
+    "x": -1381,
+    "y": 532
+   }
+  },
+  {
+   "key": "B-45-1-HS2",
+   "id": "hullShredder",
+   "name": "Hull Shredder",
+   "effect": "Flooding Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-1-HS1"
+   ],
+   "position": {
+    "x": -1481,
+    "y": 550
+   }
+  },
+  {
+   "key": "B-45-1-HS3",
+   "id": "hullShredder",
+   "name": "Hull Shredder",
+   "effect": "Flooding Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-1-HS2"
+   ],
+   "position": {
+    "x": -1562,
+    "y": 619
+   }
+  },
+  {
+   "key": "B-45-1-HS4",
+   "id": "hullShredder",
+   "name": "Hull Shredder",
+   "effect": "Flooding Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-1-HS3"
+   ],
+   "position": {
+    "x": -1648,
+    "y": 673
+   }
+  },
+  {
+   "key": "B-45-2-EC1",
+   "id": "expandingCasing",
+   "name": "Expanding Casing",
+   "effect": "Flooding Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-EC1"
+   ],
+   "position": {
+    "x": -1413,
+    "y": 441
+   }
+  },
+  {
+   "key": "B-45-2-EC2",
+   "id": "expandingCasing",
+   "name": "Expanding Casing",
+   "effect": "Flooding Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-2-EC1"
+   ],
+   "position": {
+    "x": -1511,
+    "y": 462
+   }
+  },
+  {
+   "key": "B-45-2-EC3",
+   "id": "expandingCasing",
+   "name": "Expanding Casing",
+   "effect": "Flooding Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-2-EC2"
+   ],
+   "position": {
+    "x": -1594,
+    "y": 531
+   }
+  },
+  {
+   "key": "B-45-2-EC4",
+   "id": "expandingCasing",
+   "name": "Expanding Casing",
+   "effect": "Flooding Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-2-EC3"
+   ],
+   "position": {
+    "x": -1683,
+    "y": 579
+   }
+  },
+  {
+   "key": "B-45-EC1",
+   "id": "expandingCasing",
+   "name": "Expanding Casing",
+   "effect": "Flooding Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -1304,
+    "y": 453
+   }
+  },
+  {
+   "key": "B-45-HS1",
+   "id": "hullShredder",
+   "name": "Hull Shredder",
+   "effect": "Flooding Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-45-1-HS4",
+    "B-45-2-EC4"
+   ],
+   "position": {
+    "x": -1728,
+    "y": 740
+   }
+  },
+  {
+   "key": "B-46-1-VF1",
+   "id": "volatileFuel",
+   "name": "Volatile Fuel",
+   "effect": "Burning Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-AF1"
+   ],
+   "position": {
+    "x": -1438,
+    "y": 349
+   }
+  },
+  {
+   "key": "B-46-1-VF2",
+   "id": "volatileFuel",
+   "name": "Volatile Fuel",
+   "effect": "Burning Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-1-VF1"
+   ],
+   "position": {
+    "x": -1539,
+    "y": 356
+   }
+  },
+  {
+   "key": "B-46-1-VF3",
+   "id": "volatileFuel",
+   "name": "Volatile Fuel",
+   "effect": "Burning Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-1-VF2"
+   ],
+   "position": {
+    "x": -1625,
+    "y": 428
+   }
+  },
+  {
+   "key": "B-46-1-VF4",
+   "id": "volatileFuel",
+   "name": "Volatile Fuel",
+   "effect": "Burning Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-1-VF3"
+   ],
+   "position": {
+    "x": -1709,
+    "y": 498
+   }
+  },
+  {
+   "key": "B-46-2-AF1",
+   "id": "alchemicFuel",
+   "name": "Alchemic Fuel",
+   "effect": "Burning Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-AF1"
+   ],
+   "position": {
+    "x": -1458,
+    "y": 254
+   }
+  },
+  {
+   "key": "B-46-2-AF2",
+   "id": "alchemicFuel",
+   "name": "Alchemic Fuel",
+   "effect": "Burning Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-2-AF1"
+   ],
+   "position": {
+    "x": -1558,
+    "y": 265
+   }
+  },
+  {
+   "key": "B-46-2-AF3",
+   "id": "alchemicFuel",
+   "name": "Alchemic Fuel",
+   "effect": "Burning Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-2-AF2"
+   ],
+   "position": {
+    "x": -1646,
+    "y": 337
+   }
+  },
+  {
+   "key": "B-46-2-AF4",
+   "id": "alchemicFuel",
+   "name": "Alchemic Fuel",
+   "effect": "Burning Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-2-AF3"
+   ],
+   "position": {
+    "x": -1734,
+    "y": 401
+   }
+  },
+  {
+   "key": "B-46-AF1",
+   "id": "alchemicFuel",
+   "name": "Alchemic Fuel",
+   "effect": "Burning Damage +40%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBVA"
+   ],
+   "position": {
+    "x": -1350,
+    "y": 285
+   }
+  },
+  {
+   "key": "B-46-VF1",
+   "id": "volatileFuel",
+   "name": "Volatile Fuel",
+   "effect": "Burning Damage Penetration +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-46-1-VF4",
+    "B-46-2-AF4"
+   ],
+   "position": {
+    "x": -1782,
+    "y": 600
+   }
+  },
+  {
+   "key": "B-47-TR1",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG"
+   ],
+   "position": {
+    "x": -1272,
+    "y": -534
+   }
+  },
+  {
+   "key": "B-47-TR2",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-47-TR1"
+   ],
+   "position": {
+    "x": -1369,
+    "y": -563
+   }
+  },
+  {
+   "key": "B-47-TR3",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-47-TR2"
+   ],
+   "position": {
+    "x": -1452,
+    "y": -622
+   }
+  },
+  {
+   "key": "B-47-TR4",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-47-TR3"
+   ],
+   "position": {
+    "x": -1543,
+    "y": -665
+   }
+  },
+  {
+   "key": "B-47-TR5",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-47-TR4"
+   ],
+   "position": {
+    "x": -1613,
+    "y": -753
+   }
+  },
+  {
+   "key": "B-48-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-48-RF1"
+   ],
+   "position": {
+    "x": -1328,
+    "y": -654
+   }
+  },
+  {
+   "key": "B-48-HP2",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-48-RF2"
+   ],
+   "position": {
+    "x": -1505,
+    "y": -746
+   }
+  },
+  {
+   "key": "B-48-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG"
+   ],
+   "position": {
+    "x": -1226,
+    "y": -634
+   }
+  },
+  {
+   "key": "B-48-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-48-HP1"
+   ],
+   "position": {
+    "x": -1386,
+    "y": -759
+   }
+  },
+  {
+   "key": "B-48-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-48-HP2"
+   ],
+   "position": {
+    "x": -1569,
+    "y": -841
+   }
+  },
+  {
+   "key": "B-49-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG"
+   ],
+   "position": {
+    "x": -1165,
+    "y": -740
+   }
+  },
+  {
+   "key": "B-49-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-49-RF1"
+   ],
+   "position": {
+    "x": -1252,
+    "y": -789
+   }
+  },
+  {
+   "key": "B-49-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-49-RF2"
+   ],
+   "position": {
+    "x": -1330,
+    "y": -854
+   }
+  },
+  {
+   "key": "B-49-RF4",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-49-RF3"
+   ],
+   "position": {
+    "x": -1428,
+    "y": -885
+   }
+  },
+  {
+   "key": "B-49-RF5",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-49-RF4"
+   ],
+   "position": {
+    "x": -1515,
+    "y": -934
+   }
+  },
+  {
+   "key": "B-5-IS1",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-5-RF1"
+   ],
+   "position": {
+    "x": 590,
+    "y": -357
+   }
+  },
+  {
+   "key": "B-5-IS2",
+   "id": "ironStance",
+   "name": "Iron Stance",
+   "effect": "Brace Strength +20%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-5-RF2"
+   ],
+   "position": {
+    "x": 819,
+    "y": -495
+   }
+  },
+  {
+   "key": "B-5-RF1",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBSM"
+   ],
+   "position": {
+    "x": 472,
+    "y": -273
+   }
+  },
+  {
+   "key": "B-5-RF2",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-5-IS1"
+   ],
+   "position": {
+    "x": 726,
+    "y": -397
+   }
+  },
+  {
+   "key": "B-5-RF3",
+   "id": "reinforcedFrame",
+   "name": "Reinforced Frame",
+   "effect": "Hull Health +7000",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-5-IS2"
+   ],
+   "position": {
+    "x": 931,
+    "y": -537
+   }
+  },
+  {
+   "key": "B-50-HP1",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBTG"
+   ],
+   "position": {
+    "x": -1099,
+    "y": -835
+   }
+  },
+  {
+   "key": "B-50-HP2",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-50-HP1"
+   ],
+   "position": {
+    "x": -1180,
+    "y": -893
+   }
+  },
+  {
+   "key": "B-50-HP3",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-50-HP2"
+   ],
+   "position": {
+    "x": -1254,
+    "y": -961
+   }
+  },
+  {
+   "key": "B-50-HP4",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-50-HP3"
+   ],
+   "position": {
+    "x": -1359,
+    "y": -988
+   }
+  },
+  {
+   "key": "B-50-HP5",
+   "id": "hullPlating",
+   "name": "Hull Plating",
+   "effect": "Armor Rating +200",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-50-HP4"
+   ],
+   "position": {
+    "x": -1459,
+    "y": -1020
+   }
+  },
+  {
+   "key": "B-51-1-VD1",
+   "id": "versatileDefenses",
+   "name": "Versatile Defenses",
+   "effect": "Burning Resistance +2% Flooding Resistance +2% Piercing Resistance +2% Explosive Resistance +2% Electric Resistance +2% Toxic Resistance +2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-51-VD2"
+   ],
+   "position": {
+    "x": -1949,
+    "y": -854
+   }
+  },
+  {
+   "key": "B-51-2-VD1",
+   "id": "versatileDefenses",
+   "name": "Versatile Defenses",
+   "effect": "Burning Resistance +2% Flooding Resistance +2% Piercing Resistance +2% Explosive Resistance +2% Electric Resistance +2% Toxic Resistance +2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-51-VD2"
+   ],
+   "position": {
+    "x": -1857,
+    "y": -1086
+   }
+  },
+  {
+   "key": "B-51-VD1",
+   "id": "versatileDefenses",
+   "name": "Versatile Defenses",
+   "effect": "Burning Resistance +2% Flooding Resistance +2% Piercing Resistance +2% Explosive Resistance +2% Electric Resistance +2% Toxic Resistance +2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBRF"
+   ],
+   "position": {
+    "x": -1743,
+    "y": -997
+   }
+  },
+  {
+   "key": "B-51-VD2",
+   "id": "versatileDefenses",
+   "name": "Versatile Defenses",
+   "effect": "Burning Resistance +2% Flooding Resistance +2% Piercing Resistance +2% Explosive Resistance +2% Electric Resistance +2% Toxic Resistance +2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-51-VD1"
+   ],
+   "position": {
+    "x": -1903,
+    "y": -970
+   }
+  },
+  {
+   "key": "B-51-VD3",
+   "id": "versatileDefenses",
+   "name": "Versatile Defenses",
+   "effect": "Burning Resistance +2% Flooding Resistance +2% Piercing Resistance +2% Explosive Resistance +2% Electric Resistance +2% Toxic Resistance +2%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-51-VD2"
+   ],
+   "position": {
+    "x": -2052,
+    "y": -957
+   }
+  },
+  {
+   "key": "B-52-ACC1",
+   "id": "antiCorrosiveCoating",
+   "name": "Anti Corrosive Coating",
+   "effect": "Toxic Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -2343,
+    "y": -928
+   }
+  },
+  {
+   "key": "B-52-ACC2",
+   "id": "antiCorrosiveCoating",
+   "name": "Anti Corrosive Coating",
+   "effect": "Toxic Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-52-ACC1"
+   ],
+   "position": {
+    "x": -2466,
+    "y": -965
+   }
+  },
+  {
+   "key": "B-52-ACC3",
+   "id": "antiCorrosiveCoating",
+   "name": "Anti Corrosive Coating",
+   "effect": "Toxic Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-52-ACC2"
+   ],
+   "position": {
+    "x": -2578,
+    "y": -1030
+   }
+  },
+  {
+   "key": "B-52-ACC4",
+   "id": "antiCorrosiveCoating",
+   "name": "Anti Corrosive Coating",
+   "effect": "Toxic Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-52-ACC3"
+   ],
+   "position": {
+    "x": -2703,
+    "y": -1062
+   }
+  },
+  {
+   "key": "B-52-ACC5",
+   "id": "antiCorrosiveCoating",
+   "name": "Anti Corrosive Coating",
+   "effect": "Toxic Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-52-ACC4"
+   ],
+   "position": {
+    "x": -2820,
+    "y": -1115
+   }
+  },
+  {
+   "key": "B-53-LP1",
+   "id": "layeredPlating",
+   "name": "Layered Plating",
+   "effect": "Piercing Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -2285,
+    "y": -1063
+   }
+  },
+  {
+   "key": "B-53-LP2",
+   "id": "layeredPlating",
+   "name": "Layered Plating",
+   "effect": "Piercing Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-53-LP1"
+   ],
+   "position": {
+    "x": -2405,
+    "y": -1107
+   }
+  },
+  {
+   "key": "B-53-LP3",
+   "id": "layeredPlating",
+   "name": "Layered Plating",
+   "effect": "Piercing Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-53-LP2"
+   ],
+   "position": {
+    "x": -2513,
+    "y": -1179
+   }
+  },
+  {
+   "key": "B-53-LP4",
+   "id": "layeredPlating",
+   "name": "Layered Plating",
+   "effect": "Piercing Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-53-LP3"
+   ],
+   "position": {
+    "x": -2636,
+    "y": -1219
+   }
+  },
+  {
+   "key": "B-53-LP5",
+   "id": "layeredPlating",
+   "name": "Layered Plating",
+   "effect": "Piercing Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-53-LP4"
+   ],
+   "position": {
+    "x": -2749,
+    "y": -1278
+   }
+  },
+  {
+   "key": "B-54-IG1",
+   "id": "insulatedGunwales",
+   "name": "Insulated Gunwales",
+   "effect": "Electric Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -2218,
+    "y": -1195
+   }
+  },
+  {
+   "key": "B-54-IG2",
+   "id": "insulatedGunwales",
+   "name": "Insulated Gunwales",
+   "effect": "Electric Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-54-IG1"
+   ],
+   "position": {
+    "x": -2336,
+    "y": -1246
+   }
+  },
+  {
+   "key": "B-54-IG3",
+   "id": "insulatedGunwales",
+   "name": "Insulated Gunwales",
+   "effect": "Electric Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-54-IG2"
+   ],
+   "position": {
+    "x": -2440,
+    "y": -1324
+   }
+  },
+  {
+   "key": "B-54-IG4",
+   "id": "insulatedGunwales",
+   "name": "Insulated Gunwales",
+   "effect": "Electric Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-54-IG3"
+   ],
+   "position": {
+    "x": -2560,
+    "y": -1371
+   }
+  },
+  {
+   "key": "B-54-IG5",
+   "id": "insulatedGunwales",
+   "name": "Insulated Gunwales",
+   "effect": "Electric Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-54-IG4"
+   ],
+   "position": {
+    "x": -2670,
+    "y": -1437
+   }
+  },
+  {
+   "key": "B-55-QS1",
+   "id": "quickSealant",
+   "name": "Quick Sealant",
+   "effect": "Flooding Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -2145,
+    "y": -1323
+   }
+  },
+  {
+   "key": "B-55-QS2",
+   "id": "quickSealant",
+   "name": "Quick Sealant",
+   "effect": "Flooding Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-55-QS1"
+   ],
+   "position": {
+    "x": -2259,
+    "y": -1381
+   }
+  },
+  {
+   "key": "B-55-QS3",
+   "id": "quickSealant",
+   "name": "Quick Sealant",
+   "effect": "Flooding Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-55-QS2"
+   ],
+   "position": {
+    "x": -2358,
+    "y": -1464
+   }
+  },
+  {
+   "key": "B-55-QS4",
+   "id": "quickSealant",
+   "name": "Quick Sealant",
+   "effect": "Flooding Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-55-QS3"
+   ],
+   "position": {
+    "x": -2475,
+    "y": -1518
+   }
+  },
+  {
+   "key": "B-55-QS5",
+   "id": "quickSealant",
+   "name": "Quick Sealant",
+   "effect": "Flooding Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-55-QS4"
+   ],
+   "position": {
+    "x": -2581,
+    "y": -1591
+   }
+  },
+  {
+   "key": "B-56-SL1",
+   "id": "spallLining",
+   "name": "Spall Lining",
+   "effect": "Explosive Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -2064,
+    "y": -1446
+   }
+  },
+  {
+   "key": "B-56-SL2",
+   "id": "spallLining",
+   "name": "Spall Lining",
+   "effect": "Explosive Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-56-SL1"
+   ],
+   "position": {
+    "x": -2175,
+    "y": -1511
+   }
+  },
+  {
+   "key": "B-56-SL3",
+   "id": "spallLining",
+   "name": "Spall Lining",
+   "effect": "Explosive Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-56-SL2"
+   ],
+   "position": {
+    "x": -2269,
+    "y": -1600
+   }
+  },
+  {
+   "key": "B-56-SL4",
+   "id": "spallLining",
+   "name": "Spall Lining",
+   "effect": "Explosive Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-56-SL3"
+   ],
+   "position": {
+    "x": -2382,
+    "y": -1661
+   }
+  },
+  {
+   "key": "B-56-SL5",
+   "id": "spallLining",
+   "name": "Spall Lining",
+   "effect": "Explosive Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-56-SL4"
+   ],
+   "position": {
+    "x": -2484,
+    "y": -1739
+   }
+  },
+  {
+   "key": "B-57-AC1",
+   "id": "asbestosCoating",
+   "name": "Asbestos Coating",
+   "effect": "Burning Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBCAC"
+   ],
+   "position": {
+    "x": -1975,
+    "y": -1565
+   }
+  },
+  {
+   "key": "B-57-AC2",
+   "id": "asbestosCoating",
+   "name": "Asbestos Coating",
+   "effect": "Burning Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-57-AC1"
+   ],
+   "position": {
+    "x": -2083,
+    "y": -1635
+   }
+  },
+  {
+   "key": "B-57-AC3",
+   "id": "asbestosCoating",
+   "name": "Asbestos Coating",
+   "effect": "Burning Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-57-AC2"
+   ],
+   "position": {
+    "x": -2171,
+    "y": -1730
+   }
+  },
+  {
+   "key": "B-57-AC4",
+   "id": "asbestosCoating",
+   "name": "Asbestos Coating",
+   "effect": "Burning Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-57-AC3"
+   ],
+   "position": {
+    "x": -2281,
+    "y": -1797
+   }
+  },
+  {
+   "key": "B-57-AC5",
+   "id": "asbestosCoating",
+   "name": "Asbestos Coating",
+   "effect": "Burning Resistance +5%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-57-AC4"
+   ],
+   "position": {
+    "x": -2378,
+    "y": -1881
+   }
+  },
+  {
+   "key": "B-58-1-1-BS1",
+   "id": "burstShells",
+   "name": "Burst Shells",
+   "effect": "Mortar Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-HW1"
+   ],
+   "position": {
+    "x": -861,
+    "y": -1325
+   }
+  },
+  {
+   "key": "B-58-1-1-BS2",
+   "id": "burstShells",
+   "name": "Burst Shells",
+   "effect": "Mortar Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-1-HS1"
+   ],
+   "position": {
+    "x": -1014,
+    "y": -1463
+   }
+  },
+  {
+   "key": "B-58-1-1-BS3",
+   "id": "burstShells",
+   "name": "Burst Shells",
+   "effect": "Mortar Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-1-HS2"
+   ],
+   "position": {
+    "x": -1189,
+    "y": -1584
+   }
+  },
+  {
+   "key": "B-58-1-1-HS1",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-1-BS1"
+   ],
+   "position": {
+    "x": -994,
+    "y": -1354
+   }
+  },
+  {
+   "key": "B-58-1-1-HS2",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-1-BS2"
+   ],
+   "position": {
+    "x": -1169,
+    "y": -1473
+   }
+  },
+  {
+   "key": "B-58-1-2-HS1",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-2-IT1"
+   ],
+   "position": {
+    "x": -907,
+    "y": -1414
+   }
+  },
+  {
+   "key": "B-58-1-2-HS2",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-2-IT2"
+   ],
+   "position": {
+    "x": -1074,
+    "y": -1543
+   }
+  },
+  {
+   "key": "B-58-1-2-IT1",
+   "id": "improvedTrajectories",
+   "name": "Improved Trajectories",
+   "effect": "Mortar Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-HW1"
+   ],
+   "position": {
+    "x": -776,
+    "y": -1376
+   }
+  },
+  {
+   "key": "B-58-1-2-IT2",
+   "id": "improvedTrajectories",
+   "name": "Improved Trajectories",
+   "effect": "Mortar Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-2-HS1"
+   ],
+   "position": {
+    "x": -921,
+    "y": -1523
+   }
+  },
+  {
+   "key": "B-58-1-2-IT3",
+   "id": "improvedTrajectories",
+   "name": "Improved Trajectories",
+   "effect": "Mortar Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-2-HS2"
+   ],
+   "position": {
+    "x": -1087,
+    "y": -1655
+   }
+  },
+  {
+   "key": "B-58-1-HS2",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-1-BS3",
+    "B-58-1-2-IT3"
+   ],
+   "position": {
+    "x": -1276,
+    "y": -1642
+   }
+  },
+  {
+   "key": "B-58-1-HS3",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-HS2"
+   ],
+   "position": {
+    "x": -1348,
+    "y": -1714
+   }
+  },
+  {
+   "key": "B-58-1-HS4",
+   "id": "heavyShells",
+   "name": "Heavy Shells",
+   "effect": "Mortar Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-1-HS3"
+   ],
+   "position": {
+    "x": -1447,
+    "y": -1762
+   }
+  },
+  {
+   "key": "B-58-1-HW1",
+   "id": "heavyWeaponry",
+   "name": "Heavy Weaponry",
+   "effect": "Mortar Damage +15% Rocket Damage +15% Springloader Damage +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-HW1"
+   ],
+   "position": {
+    "x": -775,
+    "y": -1261
+   }
+  },
+  {
+   "key": "B-58-2-1-HYM1",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-1-IG1"
+   ],
+   "position": {
+    "x": -817,
+    "y": -1468
+   }
+  },
+  {
+   "key": "B-58-2-1-HYM2",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-1-IL1"
+   ],
+   "position": {
+    "x": -975,
+    "y": -1607
+   }
+  },
+  {
+   "key": "B-58-2-1-IG1",
+   "id": "improvedGearset",
+   "name": "Improved Gearset",
+   "effect": "Springloader Area-of-Effect Radius +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-HW1"
+   ],
+   "position": {
+    "x": -688,
+    "y": -1422
+   }
+  },
+  {
+   "key": "B-58-2-1-IG2",
+   "id": "improvedGearset",
+   "name": "Improved Gearset",
+   "effect": "Springloader Area-of-Effect Radius +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-1-HYM2"
+   ],
+   "position": {
+    "x": -981,
+    "y": -1720
+   }
+  },
+  {
+   "key": "B-58-2-1-IL1",
+   "id": "improvedLaunchers",
+   "name": "Improved Launchers",
+   "effect": "Springloader Maximum Range +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-1-HYM1"
+   ],
+   "position": {
+    "x": -823,
+    "y": -1578
+   }
+  },
+  {
+   "key": "B-58-2-2-HYM1",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-2-LB1"
+   ],
+   "position": {
+    "x": -723,
+    "y": -1516
+   }
+  },
+  {
+   "key": "B-58-2-2-HYM2",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-2-LB2"
+   ],
+   "position": {
+    "x": -872,
+    "y": -1666
+   }
+  },
+  {
+   "key": "B-58-2-2-LB1",
+   "id": "lightweightBuoys",
+   "name": "Lightweight Buoys",
+   "effect": "Springloader Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-HW1"
+   ],
+   "position": {
+    "x": -597,
+    "y": -1463
+   }
+  },
+  {
+   "key": "B-58-2-2-LB2",
+   "id": "lightweightBuoys",
+   "name": "Lightweight Buoys",
+   "effect": "Springloader Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-2-HYM1"
+   ],
+   "position": {
+    "x": -722,
+    "y": -1627
+   }
+  },
+  {
+   "key": "B-58-2-2-LB3",
+   "id": "lightweightBuoys",
+   "name": "Lightweight Buoys",
+   "effect": "Springloader Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-2-HYM2"
+   ],
+   "position": {
+    "x": -871,
+    "y": -1778
+   }
+  },
+  {
+   "key": "B-58-2-HW1",
+   "id": "heavyWeaponry",
+   "name": "Heavy Weaponry",
+   "effect": "Mortar Damage +15% Rocket Damage +15% Springloader Damage +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-HW1"
+   ],
+   "position": {
+    "x": -611,
+    "y": -1348
+   }
+  },
+  {
+   "key": "B-58-2-HYM1",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-1-IG2",
+    "B-58-2-2-LB3"
+   ],
+   "position": {
+    "x": -1060,
+    "y": -1789
+   }
+  },
+  {
+   "key": "B-58-2-HYM2",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-HYM1"
+   ],
+   "position": {
+    "x": -1122,
+    "y": -1869
+   }
+  },
+  {
+   "key": "B-58-2-HYM3",
+   "id": "highYieldMines",
+   "name": "High Yield Mines",
+   "effect": "Springloader Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-2-HYM2"
+   ],
+   "position": {
+    "x": -1214,
+    "y": -1930
+   }
+  },
+  {
+   "key": "B-58-3-1-HP1",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-1-PR1"
+   ],
+   "position": {
+    "x": -626,
+    "y": -1559
+   }
+  },
+  {
+   "key": "B-58-3-1-HP2",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-1-PR2"
+   ],
+   "position": {
+    "x": -766,
+    "y": -1717
+   }
+  },
+  {
+   "key": "B-58-3-1-PR1",
+   "id": "packedRockets",
+   "name": "Packed Rockets",
+   "effect": "Rocket Maximum Range +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-HW1"
+   ],
+   "position": {
+    "x": -504,
+    "y": -1497
+   }
+  },
+  {
+   "key": "B-58-3-1-PR2",
+   "id": "packedRockets",
+   "name": "Packed Rockets",
+   "effect": "Rocket Maximum Range +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-1-HP1"
+   ],
+   "position": {
+    "x": -619,
+    "y": -1669
+   }
+  },
+  {
+   "key": "B-58-3-1-PR3",
+   "id": "packedRockets",
+   "name": "Packed Rockets",
+   "effect": "Rocket Maximum Range +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-1-HP2"
+   ],
+   "position": {
+    "x": -757,
+    "y": -1829
+   }
+  },
+  {
+   "key": "B-58-3-2-FR1",
+   "id": "flutedRockets",
+   "name": "Fluted Rockets",
+   "effect": "Rocket Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-HW1"
+   ],
+   "position": {
+    "x": -409,
+    "y": -1526
+   }
+  },
+  {
+   "key": "B-58-3-2-FR2",
+   "id": "flutedRockets",
+   "name": "Fluted Rockets",
+   "effect": "Rocket Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-2-HP1"
+   ],
+   "position": {
+    "x": -513,
+    "y": -1705
+   }
+  },
+  {
+   "key": "B-58-3-2-FR3",
+   "id": "flutedRockets",
+   "name": "Fluted Rockets",
+   "effect": "Rocket Time-to-Target -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-2-HP2"
+   ],
+   "position": {
+    "x": -641,
+    "y": -1873
+   }
+  },
+  {
+   "key": "B-58-3-2-HP1",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-2-FR1"
+   ],
+   "position": {
+    "x": -527,
+    "y": -1595
+   }
+  },
+  {
+   "key": "B-58-3-2-HP2",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-2-FR2"
+   ],
+   "position": {
+    "x": -656,
+    "y": -1762
+   }
+  },
+  {
+   "key": "B-58-3-HP2",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-1-PR3",
+    "B-58-3-2-FR3"
+   ],
+   "position": {
+    "x": -828,
+    "y": -1908
+   }
+  },
+  {
+   "key": "B-58-3-HP3",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-HP2"
+   ],
+   "position": {
+    "x": -879,
+    "y": -1995
+   }
+  },
+  {
+   "key": "B-58-3-HP4",
+   "id": "heavyPayload",
+   "name": "Heavy Payload",
+   "effect": "Rocket Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-3-HP3"
+   ],
+   "position": {
+    "x": -963,
+    "y": -2067
+   }
+  },
+  {
+   "key": "B-58-3-HW1",
+   "id": "heavyWeaponry",
+   "name": "Heavy Weaponry",
+   "effect": "Mortar Damage +15% Rocket Damage +15% Springloader Damage +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-58-HW1"
+   ],
+   "position": {
+    "x": -437,
+    "y": -1414
+   }
+  },
+  {
+   "key": "B-58-HW1",
+   "id": "heavyWeaponry",
+   "name": "Heavy Weaponry",
+   "effect": "Mortar Damage +15% Rocket Damage +15% Springloader Damage +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHM"
+   ],
+   "position": {
+    "x": -539,
+    "y": -1270
+   }
+  },
+  {
+   "key": "B-59-1-1-CS1",
+   "id": "carvedShot",
+   "name": "Carved Shot",
+   "effect": "Culverin Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-VF1"
+   ],
+   "position": {
+    "x": -299,
+    "y": -1551
+   }
+  },
+  {
+   "key": "B-59-1-1-CS2",
+   "id": "carvedShot",
+   "name": "Carved Shot",
+   "effect": "Culverin Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-1-HS1"
+   ],
+   "position": {
+    "x": -347,
+    "y": -1746
+   }
+  },
+  {
+   "key": "B-59-1-1-CS3",
+   "id": "carvedShot",
+   "name": "Carved Shot",
+   "effect": "Culverin Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-1-HS2"
+   ],
+   "position": {
+    "x": -412,
+    "y": -1937
+   }
+  },
+  {
+   "key": "B-59-1-1-HS1",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-1-CS1"
+   ],
+   "position": {
+    "x": -392,
+    "y": -1634
+   }
+  },
+  {
+   "key": "B-59-1-1-HS2",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-1-CS2"
+   ],
+   "position": {
+    "x": -463,
+    "y": -1822
+   }
+  },
+  {
+   "key": "B-59-1-2-HS1",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-2-LP1"
+   ],
+   "position": {
+    "x": -289,
+    "y": -1655
+   }
+  },
+  {
+   "key": "B-59-1-2-HS2",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-2-LP2"
+   ],
+   "position": {
+    "x": -348,
+    "y": -1848
+   }
+  },
+  {
+   "key": "B-59-1-2-LP1",
+   "id": "loadedPowder",
+   "name": "Loaded Powder",
+   "effect": "Culverin Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-VF1"
+   ],
+   "position": {
+    "x": -201,
+    "y": -1567
+   }
+  },
+  {
+   "key": "B-59-1-2-LP2",
+   "id": "loadedPowder",
+   "name": "Loaded Powder",
+   "effect": "Culverin Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-2-HS1"
+   ],
+   "position": {
+    "x": -237,
+    "y": -1764
+   }
+  },
+  {
+   "key": "B-59-1-2-LP3",
+   "id": "loadedPowder",
+   "name": "Loaded Powder",
+   "effect": "Culverin Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-2-HS2"
+   ],
+   "position": {
+    "x": -290,
+    "y": -1959
+   }
+  },
+  {
+   "key": "B-59-1-HS2",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-1-CS3",
+    "B-59-1-2-LP3"
+   ],
+   "position": {
+    "x": -442,
+    "y": -2032
+   }
+  },
+  {
+   "key": "B-59-1-HS3",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-HS2"
+   ],
+   "position": {
+    "x": -450,
+    "y": -2133
+   }
+  },
+  {
+   "key": "B-59-1-HS4",
+   "id": "heavyShot",
+   "name": "Heavy Shot",
+   "effect": "Culverin Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-1-HS3"
+   ],
+   "position": {
+    "x": -490,
+    "y": -2227
+   }
+  },
+  {
+   "key": "B-59-1-VF1",
+   "id": "volleyFire",
+   "name": "Volley Fire",
+   "effect": "Demicannon Damage +10% Culverin Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-VF1"
+   ],
+   "position": {
+    "x": -262,
+    "y": -1457
+   }
+  },
+  {
+   "key": "B-59-2-1-HG1",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-1-SS1"
+   ],
+   "position": {
+    "x": -184,
+    "y": -1670
+   }
+  },
+  {
+   "key": "B-59-2-1-HG2",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-1-SS2"
+   ],
+   "position": {
+    "x": -231,
+    "y": -1866
+   }
+  },
+  {
+   "key": "B-59-2-1-SS1",
+   "id": "solidSabot",
+   "name": "Solid Sabot",
+   "effect": "Demicannon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-VF1"
+   ],
+   "position": {
+    "x": -103,
+    "y": -1577
+   }
+  },
+  {
+   "key": "B-59-2-1-SS2",
+   "id": "solidSabot",
+   "name": "Solid Sabot",
+   "effect": "Demicannon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-1-HG1"
+   ],
+   "position": {
+    "x": -126,
+    "y": -1776
+   }
+  },
+  {
+   "key": "B-59-2-1-SS3",
+   "id": "solidSabot",
+   "name": "Solid Sabot",
+   "effect": "Demicannon Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-1-HG2"
+   ],
+   "position": {
+    "x": -166,
+    "y": -1973
+   }
+  },
+  {
+   "key": "B-59-2-2-HG1",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-2-LPDC1"
+   ],
+   "position": {
+    "x": -79,
+    "y": -1678
+   }
+  },
+  {
+   "key": "B-59-2-2-HG2",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-2-LPDC2"
+   ],
+   "position": {
+    "x": -113,
+    "y": -1877
+   }
+  },
+  {
+   "key": "B-59-2-2-LPDC1",
+   "id": "loadedPowderDC",
+   "name": "Loaded Powder Dc",
+   "effect": "Demicannon Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-VF1"
+   ],
+   "position": {
+    "x": -3,
+    "y": -1580
+   }
+  },
+  {
+   "key": "B-59-2-2-LPDC2",
+   "id": "loadedPowderDC",
+   "name": "Loaded Powder Dc",
+   "effect": "Demicannon Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-2-HG1"
+   ],
+   "position": {
+    "x": -14,
+    "y": -1780
+   }
+  },
+  {
+   "key": "B-59-2-2-LPDC3",
+   "id": "loadedPowderDC",
+   "name": "Loaded Powder Dc",
+   "effect": "Demicannon Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-2-HG2"
+   ],
+   "position": {
+    "x": -42,
+    "y": -1980
+   }
+  },
+  {
+   "key": "B-59-2-HG2",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-1-SS3",
+    "B-59-2-2-LPDC3"
+   ],
+   "position": {
+    "x": -184,
+    "y": -2072
+   }
+  },
+  {
+   "key": "B-59-2-HG3",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-HG2"
+   ],
+   "position": {
+    "x": -179,
+    "y": -2173
+   }
+  },
+  {
+   "key": "B-59-2-HG4",
+   "id": "heavyGrapeshot",
+   "name": "Heavy Grapeshot",
+   "effect": "Demicannon Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-2-HG3"
+   ],
+   "position": {
+    "x": -207,
+    "y": -2271
+   }
+  },
+  {
+   "key": "B-59-2-VF1",
+   "id": "volleyFire",
+   "name": "Volley Fire",
+   "effect": "Demicannon Damage +10% Culverin Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-59-VF1"
+   ],
+   "position": {
+    "x": -77,
+    "y": -1478
+   }
+  },
+  {
+   "key": "B-59-VF1",
+   "id": "volleyFire",
+   "name": "Volley Fire",
+   "effect": "Demicannon Damage +10% Culverin Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHM"
+   ],
+   "position": {
+    "x": -142,
+    "y": -1373
+   }
+  },
+  {
+   "key": "B-6-DE1",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-6-ED1",
+    "B-6-ED2"
+   ],
+   "position": {
+    "x": 408,
+    "y": -1120
+   }
+  },
+  {
+   "key": "B-6-DE2",
+   "id": "deadeye",
+   "name": "Deadeye",
+   "effect": "Weapon Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-6-DE2",
+    "B-6-ED3"
+   ],
+   "position": {
+    "x": 766,
+    "y": -913
+   }
+  },
+  {
+   "key": "B-6-ED1",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHM",
+    "B-6-DE1"
+   ],
+   "position": {
+    "x": 206,
+    "y": -1169
+   }
+  },
+  {
+   "key": "B-6-ED2",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-6-ED2",
+    "B-6-DE2"
+   ],
+   "position": {
+    "x": 597,
+    "y": -1034
+   }
+  },
+  {
+   "key": "B-6-ED3",
+   "id": "enhancedDamage",
+   "name": "Enhanced Damage",
+   "effect": "Weapon Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-6-ED3",
+    "KBEB"
+   ],
+   "position": {
+    "x": 909,
+    "y": -763
+   }
+  },
+  {
+   "key": "B-60-1-1-HB1",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-1-SB1"
+   ],
+   "position": {
+    "x": 7,
+    "y": -1680
+   }
+  },
+  {
+   "key": "B-60-1-1-HB2",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-1-SB2"
+   ],
+   "position": {
+    "x": 26,
+    "y": -1880
+   }
+  },
+  {
+   "key": "B-60-1-1-SB1",
+   "id": "swiftBolts",
+   "name": "Swift Bolts",
+   "effect": "Ballista Projectile Speed +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-FA1"
+   ],
+   "position": {
+    "x": 60,
+    "y": -1579
+   }
+  },
+  {
+   "key": "B-60-1-1-SB2",
+   "id": "swiftBolts",
+   "name": "Swift Bolts",
+   "effect": "Ballista Projectile Speed +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-1-HB1"
+   ],
+   "position": {
+    "x": 97,
+    "y": -1777
+   }
+  },
+  {
+   "key": "B-60-1-1-SB3",
+   "id": "swiftBolts",
+   "name": "Swift Bolts",
+   "effect": "Ballista Projectile Speed +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-1-HB2"
+   ],
+   "position": {
+    "x": 127,
+    "y": -1976
+   }
+  },
+  {
+   "key": "B-60-1-2-HB1",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-2-PB1"
+   ],
+   "position": {
+    "x": 112,
+    "y": -1676
+   }
+  },
+  {
+   "key": "B-60-1-2-HB2",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-2-PB2"
+   ],
+   "position": {
+    "x": 144,
+    "y": -1875
+   }
+  },
+  {
+   "key": "B-60-1-2-PB1",
+   "id": "precisionBolts",
+   "name": "Precision Bolts",
+   "effect": "Ballista Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-FA1"
+   ],
+   "position": {
+    "x": 159,
+    "y": -1572
+   }
+  },
+  {
+   "key": "B-60-1-2-PB2",
+   "id": "precisionBolts",
+   "name": "Precision Bolts",
+   "effect": "Ballista Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-2-HB1"
+   ],
+   "position": {
+    "x": 209,
+    "y": -1768
+   }
+  },
+  {
+   "key": "B-60-1-2-PB3",
+   "id": "precisionBolts",
+   "name": "Precision Bolts",
+   "effect": "Ballista Weakpoint (Critical) Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-2-HB2"
+   ],
+   "position": {
+    "x": 251,
+    "y": -1964
+   }
+  },
+  {
+   "key": "B-60-1-FA1",
+   "id": "frontalAssault",
+   "name": "Frontal Assault",
+   "effect": "Ballista Damage +20% Sea Fire Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-FA1"
+   ],
+   "position": {
+    "x": 58,
+    "y": -1479
+   }
+  },
+  {
+   "key": "B-60-1-HB2",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-1-SB3",
+    "B-60-1-2-PB3"
+   ],
+   "position": {
+    "x": 147,
+    "y": -2075
+   }
+  },
+  {
+   "key": "B-60-1-HB3",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-HB2"
+   ],
+   "position": {
+    "x": 193,
+    "y": -2171
+   }
+  },
+  {
+   "key": "B-60-1-HB4",
+   "id": "heavyBolts",
+   "name": "Heavy Bolts",
+   "effect": "Ballista Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-1-HB3"
+   ],
+   "position": {
+    "x": 207,
+    "y": -2271
+   }
+  },
+  {
+   "key": "B-60-2-1-BC1",
+   "id": "backupCanisters",
+   "name": "Backup Canisters",
+   "effect": "Sea Fire Magazine Size +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-FA1"
+   ],
+   "position": {
+    "x": 257,
+    "y": -1559
+   }
+  },
+  {
+   "key": "B-60-2-1-BC2",
+   "id": "backupCanisters",
+   "name": "Backup Canisters",
+   "effect": "Sea Fire Magazine Size +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-1-VFSF1"
+   ],
+   "position": {
+    "x": 319,
+    "y": -1751
+   }
+  },
+  {
+   "key": "B-60-2-1-BC3",
+   "id": "backupCanisters",
+   "name": "Backup Canisters",
+   "effect": "Sea Fire Magazine Size +15%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-1-VFSF2"
+   ],
+   "position": {
+    "x": 373,
+    "y": -1944
+   }
+  },
+  {
+   "key": "B-60-2-1-VFSF1",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-1-BC1"
+   ],
+   "position": {
+    "x": 218,
+    "y": -1666
+   }
+  },
+  {
+   "key": "B-60-2-1-VFSF2",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-1-BC2"
+   ],
+   "position": {
+    "x": 261,
+    "y": -1862
+   }
+  },
+  {
+   "key": "B-60-2-2-SFD1",
+   "id": "seaFireDrills",
+   "name": "Sea Fire Drills",
+   "effect": "Sea Fire Reload Time -10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-FA1"
+   ],
+   "position": {
+    "x": 354,
+    "y": -1540
+   }
+  },
+  {
+   "key": "B-60-2-2-SFD2",
+   "id": "seaFireDrills",
+   "name": "Sea Fire Drills",
+   "effect": "Sea Fire Reload Time -10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-2-VFSF2"
+   ],
+   "position": {
+    "x": 495,
+    "y": -1917
+   }
+  },
+  {
+   "key": "B-60-2-2-TN1",
+   "id": "tightenedNozzles",
+   "name": "Tightened Nozzles",
+   "effect": "Sea Fire Maximum Range +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-2-VFSF1"
+   ],
+   "position": {
+    "x": 428,
+    "y": -1728
+   }
+  },
+  {
+   "key": "B-60-2-2-VFSF1",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-2-SFD1"
+   ],
+   "position": {
+    "x": 322,
+    "y": -1649
+   }
+  },
+  {
+   "key": "B-60-2-2-VFSF2",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-2-TN1"
+   ],
+   "position": {
+    "x": 377,
+    "y": -1842
+   }
+  },
+  {
+   "key": "B-60-2-FA1",
+   "id": "frontalAssault",
+   "name": "Frontal Assault",
+   "effect": "Ballista Damage +20% Sea Fire Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-FA1"
+   ],
+   "position": {
+    "x": 243,
+    "y": -1460
+   }
+  },
+  {
+   "key": "B-60-2-VFSF1",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-1-BC3",
+    "B-60-2-2-SFD2"
+   ],
+   "position": {
+    "x": 406,
+    "y": -2040
+   }
+  },
+  {
+   "key": "B-60-2-VFSF2",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-VFSF1"
+   ],
+   "position": {
+    "x": 463,
+    "y": -2130
+   }
+  },
+  {
+   "key": "B-60-2-VFSF3",
+   "id": "volatileFuelSF",
+   "name": "Volatile Fuel Sf",
+   "effect": "Sea Fire Damage +30%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-60-2-VFSF2"
+   ],
+   "position": {
+    "x": 490,
+    "y": -2227
+   }
+  },
+  {
+   "key": "B-60-FA1",
+   "id": "frontalAssault",
+   "name": "Frontal Assault",
+   "effect": "Ballista Damage +20% Sea Fire Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHM"
+   ],
+   "position": {
+    "x": 142,
+    "y": -1373
+   }
+  },
+  {
+   "key": "B-61-1-1-EY1",
+   "id": "enhancedYield",
+   "name": "Enhanced Yield",
+   "effect": "Bombard Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-AHOD1"
+   ],
+   "position": {
+    "x": 464,
+    "y": -1510
+   }
+  },
+  {
+   "key": "B-61-1-1-EY2",
+   "id": "enhancedYield",
+   "name": "Enhanced Yield",
+   "effect": "Bombard Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-1-HB1"
+   ],
+   "position": {
+    "x": 592,
+    "y": -1679
+   }
+  },
+  {
+   "key": "B-61-1-1-EY3",
+   "id": "enhancedYield",
+   "name": "Enhanced Yield",
+   "effect": "Bombard Area-of-Effect Radius +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-1-HB2"
+   ],
+   "position": {
+    "x": 721,
+    "y": -1844
+   }
+  },
+  {
+   "key": "B-61-1-1-HB1",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-1-EY1"
+   ],
+   "position": {
+    "x": 458,
+    "y": -1616
+   }
+  },
+  {
+   "key": "B-61-1-1-HB2",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-1-EY2"
+   ],
+   "position": {
+    "x": 574,
+    "y": -1790
+   }
+  },
+  {
+   "key": "B-61-1-2-BD1",
+   "id": "bombardDrills",
+   "name": "Bombard Drills",
+   "effect": "Bombard Reload Time -5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-2-HB1"
+   ],
+   "position": {
+    "x": 696,
+    "y": -1638
+   }
+  },
+  {
+   "key": "B-61-1-2-HB1",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-2-SC1"
+   ],
+   "position": {
+    "x": 559,
+    "y": -1584
+   }
+  },
+  {
+   "key": "B-61-1-2-HB2",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-2-BD1"
+   ],
+   "position": {
+    "x": 685,
+    "y": -1751
+   }
+  },
+  {
+   "key": "B-61-1-2-SC1",
+   "id": "streamlinedCasing",
+   "name": "Streamlined Casing",
+   "effect": "Bombard Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-AHOD1"
+   ],
+   "position": {
+    "x": 557,
+    "y": -1478
+   }
+  },
+  {
+   "key": "B-61-1-2-SC2",
+   "id": "streamlinedCasing",
+   "name": "Streamlined Casing",
+   "effect": "Bombard Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-2-HB2"
+   ],
+   "position": {
+    "x": 835,
+    "y": -1795
+   }
+  },
+  {
+   "key": "B-61-1-AHOD1",
+   "id": "allHandsOnDeck",
+   "name": "All Hands On Deck",
+   "effect": "Bombard Damage +10% Long Gun Damage +10% Torpedo Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-AHOD1"
+   ],
+   "position": {
+    "x": 419,
+    "y": -1419
+   }
+  },
+  {
+   "key": "B-61-1-HB1",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-1-EY3",
+    "B-61-1-2-SC2"
+   ],
+   "position": {
+    "x": 794,
+    "y": -1923
+   }
+  },
+  {
+   "key": "B-61-1-HB2",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-HB1"
+   ],
+   "position": {
+    "x": 891,
+    "y": -1989
+   }
+  },
+  {
+   "key": "B-61-1-HB3",
+   "id": "heavyBombs",
+   "name": "Heavy Bombs",
+   "effect": "Bombard Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-1-HB2"
+   ],
+   "position": {
+    "x": 963,
+    "y": -2067
+   }
+  },
+  {
+   "key": "B-61-2-1-CSLG1",
+   "id": "carvedShotLG",
+   "name": "Carved Shot Lg",
+   "effect": "Long Gun Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-AHOD1"
+   ],
+   "position": {
+    "x": 649,
+    "y": -1440
+   }
+  },
+  {
+   "key": "B-61-2-1-CSLG3",
+   "id": "carvedShotLG",
+   "name": "Carved Shot Lg",
+   "effect": "Long Gun Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-1-HSLG2"
+   ],
+   "position": {
+    "x": 946,
+    "y": -1739
+   }
+  },
+  {
+   "key": "B-61-2-1-HSLG1",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-1-CSLG1"
+   ],
+   "position": {
+    "x": 657,
+    "y": -1546
+   }
+  },
+  {
+   "key": "B-61-2-1-HSLG2",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-1-LD1"
+   ],
+   "position": {
+    "x": 793,
+    "y": -1704
+   }
+  },
+  {
+   "key": "B-61-2-1-LD1",
+   "id": "longGunDrills",
+   "name": "Long Gun Drills",
+   "effect": "Long Gun Reload Time -10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-1-HSLG1"
+   ],
+   "position": {
+    "x": 797,
+    "y": -1591
+   }
+  },
+  {
+   "key": "B-61-2-2-HSLG1",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-2-PS1"
+   ],
+   "position": {
+    "x": 753,
+    "y": -1502
+   }
+  },
+  {
+   "key": "B-61-2-2-HSLG2",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-2-PS2"
+   ],
+   "position": {
+    "x": 899,
+    "y": -1651
+   }
+  },
+  {
+   "key": "B-61-2-2-PS1",
+   "id": "precisionShot",
+   "name": "Precision Shot",
+   "effect": "Long Gun Weakpoint (Critical) Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-AHOD1"
+   ],
+   "position": {
+    "x": 738,
+    "y": -1397
+   }
+  },
+  {
+   "key": "B-61-2-2-PS2",
+   "id": "precisionShot",
+   "name": "Precision Shot",
+   "effect": "Long Gun Weakpoint (Critical) Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-2-HSLG1"
+   ],
+   "position": {
+    "x": 896,
+    "y": -1538
+   }
+  },
+  {
+   "key": "B-61-2-2-PS3",
+   "id": "precisionShot",
+   "name": "Precision Shot",
+   "effect": "Long Gun Weakpoint (Critical) Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-2-HSLG2"
+   ],
+   "position": {
+    "x": 1054,
+    "y": -1676
+   }
+  },
+  {
+   "key": "B-61-2-AHOD1",
+   "id": "allHandsOnDeck",
+   "name": "All Hands On Deck",
+   "effect": "Bombard Damage +10% Long Gun Damage +10% Torpedo Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-AHOD1"
+   ],
+   "position": {
+    "x": 594,
+    "y": -1356
+   }
+  },
+  {
+   "key": "B-61-2-HSLG1",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-1-CSLG3",
+    "B-61-2-2-PS3"
+   ],
+   "position": {
+    "x": 1028,
+    "y": -1808
+   }
+  },
+  {
+   "key": "B-61-2-HSLG2",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-HSLG1"
+   ],
+   "position": {
+    "x": 1134,
+    "y": -1862
+   }
+  },
+  {
+   "key": "B-61-2-HSLG3",
+   "id": "heavyShotLG",
+   "name": "Heavy Shot Lg",
+   "effect": "Long Gun Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-2-HSLG2"
+   ],
+   "position": {
+    "x": 1214,
+    "y": -1930
+   }
+  },
+  {
+   "key": "B-61-3-1-ILT1",
+   "id": "improvedLaunchersT",
+   "name": "Improved Launchers T",
+   "effect": "Torpedo Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-AHOD1"
+   ],
+   "position": {
+    "x": 825,
+    "y": -1348
+   }
+  },
+  {
+   "key": "B-61-3-1-ILT2",
+   "id": "improvedLaunchersT",
+   "name": "Improved Launchers T",
+   "effect": "Torpedo Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-1-LT1"
+   ],
+   "position": {
+    "x": 991,
+    "y": -1479
+   }
+  },
+  {
+   "key": "B-61-3-1-ILT3",
+   "id": "improvedLaunchersT",
+   "name": "Improved Launchers T",
+   "effect": "Torpedo Projectile Speed +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-1-LT2"
+   ],
+   "position": {
+    "x": 1157,
+    "y": -1607
+   }
+  },
+  {
+   "key": "B-61-3-1-LT1",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-1-ILT1"
+   ],
+   "position": {
+    "x": 846,
+    "y": -1451
+   }
+  },
+  {
+   "key": "B-61-3-1-LT2",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-1-ILT2"
+   ],
+   "position": {
+    "x": 1001,
+    "y": -1591
+   }
+  },
+  {
+   "key": "B-61-3-2-FT1",
+   "id": "flutedTorpedoes",
+   "name": "Fluted Torpedoes",
+   "effect": "Torpedo Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-AHOD1"
+   ],
+   "position": {
+    "x": 908,
+    "y": -1293
+   }
+  },
+  {
+   "key": "B-61-3-2-FT2",
+   "id": "flutedTorpedoes",
+   "name": "Fluted Torpedoes",
+   "effect": "Torpedo Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-2-LT1"
+   ],
+   "position": {
+    "x": 1082,
+    "y": -1414
+   }
+  },
+  {
+   "key": "B-61-3-2-FT3",
+   "id": "flutedTorpedoes",
+   "name": "Fluted Torpedoes",
+   "effect": "Torpedo Maximum Range +5%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-2-LT2"
+   ],
+   "position": {
+    "x": 1255,
+    "y": -1531
+   }
+  },
+  {
+   "key": "B-61-3-2-LT1",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-2-FT1"
+   ],
+   "position": {
+    "x": 935,
+    "y": -1396
+   }
+  },
+  {
+   "key": "B-61-3-2-LT2",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-2-FT2"
+   ],
+   "position": {
+    "x": 1099,
+    "y": -1525
+   }
+  },
+  {
+   "key": "B-61-3-AHOD1",
+   "id": "allHandsOnDeck",
+   "name": "All Hands On Deck",
+   "effect": "Bombard Damage +10% Long Gun Damage +10% Torpedo Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-AHOD1"
+   ],
+   "position": {
+    "x": 759,
+    "y": -1271
+   }
+  },
+  {
+   "key": "B-61-3-LT1",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-1-ILT3",
+    "B-61-3-2-FT3"
+   ],
+   "position": {
+    "x": 1247,
+    "y": -1665
+   }
+  },
+  {
+   "key": "B-61-3-LT2",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-LT1"
+   ],
+   "position": {
+    "x": 1358,
+    "y": -1705
+   }
+  },
+  {
+   "key": "B-61-3-LT3",
+   "id": "loadedTorpedoes",
+   "name": "Loaded Torpedoes",
+   "effect": "Torpedo Damage +20%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-61-3-LT2"
+   ],
+   "position": {
+    "x": 1447,
+    "y": -1762
+   }
+  },
+  {
+   "key": "B-61-AHOD1",
+   "id": "allHandsOnDeck",
+   "name": "All Hands On Deck",
+   "effect": "Bombard Damage +10% Long Gun Damage +10% Torpedo Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHM"
+   ],
+   "position": {
+    "x": 539,
+    "y": -1270
+   }
+  },
+  {
+   "key": "B-62-TR1",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBKD"
+   ],
+   "position": {
+    "x": -472,
+    "y": 273
+   }
+  },
+  {
+   "key": "B-62-TR2",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-62-TR1"
+   ],
+   "position": {
+    "x": -595,
+    "y": 348
+   }
+  },
+  {
+   "key": "B-62-TR3",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-62-TR2"
+   ],
+   "position": {
+    "x": -719,
+    "y": 410
+   }
+  },
+  {
+   "key": "B-62-TR4",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-62-TR3"
+   ],
+   "position": {
+    "x": -826,
+    "y": 483
+   }
+  },
+  {
+   "key": "B-62-TR5",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-62-TR4"
+   ],
+   "position": {
+    "x": -931,
+    "y": 537
+   }
+  },
+  {
+   "key": "B-63-SH1",
+   "id": "steadyHands",
+   "name": "Steady Hands",
+   "effect": "Incoming Repair Multiplier +3%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBHMT"
+   ],
+   "position": {
+    "x": 0,
+    "y": 1380
+   }
+  },
+  {
+   "key": "B-63-SH2",
+   "id": "steadyHands",
+   "name": "Steady Hands",
+   "effect": "Incoming Repair Multiplier +3%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-63-SH1"
+   ],
+   "position": {
+    "x": 7,
+    "y": 1480
+   }
+  },
+  {
+   "key": "B-63-SH3",
+   "id": "steadyHands",
+   "name": "Steady Hands",
+   "effect": "Incoming Repair Multiplier +3%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-63-SH2"
+   ],
+   "position": {
+    "x": -9,
+    "y": 1580
+   }
+  },
+  {
+   "key": "B-63-SH4",
+   "id": "steadyHands",
+   "name": "Steady Hands",
+   "effect": "Incoming Repair Multiplier +3%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-63-SH3"
+   ],
+   "position": {
+    "x": 9,
+    "y": 1680
+   }
+  },
+  {
+   "key": "B-63-SH5",
+   "id": "steadyHands",
+   "name": "Steady Hands",
+   "effect": "Incoming Repair Multiplier +3%",
+   "role": "buff",
+   "category": "defensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-63-SH4"
+   ],
+   "position": {
+    "x": 0,
+    "y": 1780
+   }
+  },
+  {
+   "key": "B-64-TR1",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBSM"
+   ],
+   "position": {
+    "x": 517,
+    "y": -173
+   }
+  },
+  {
+   "key": "B-64-TR2",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-64-TR1"
+   ],
+   "position": {
+    "x": 653,
+    "y": -221
+   }
+  },
+  {
+   "key": "B-64-TR3",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-64-TR2"
+   ],
+   "position": {
+    "x": 783,
+    "y": -268
+   }
+  },
+  {
+   "key": "B-64-TR4",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-64-TR3"
+   ],
+   "position": {
+    "x": 890,
+    "y": -352
+   }
+  },
+  {
+   "key": "B-64-TR5",
+   "id": "targetedRepairs",
+   "name": "Targeted Repairs",
+   "effect": "Repair per Shot +3%",
+   "role": "buff",
+   "category": "support",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-64-TR4"
+   ],
+   "position": {
+    "x": 986,
+    "y": -428
+   }
+  },
+  {
+   "key": "B-7-PC1",
+   "id": "persistentCompounds",
+   "name": "Persistent Compounds",
+   "effect": "Status Effects Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFAS"
+   ],
+   "position": {
+    "x": 517,
+    "y": 173
+   }
+  },
+  {
+   "key": "B-7-PC2",
+   "id": "persistentCompounds",
+   "name": "Persistent Compounds",
+   "effect": "Status Effects Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-7-PC1"
+   ],
+   "position": {
+    "x": 656,
+    "y": 214
+   }
+  },
+  {
+   "key": "B-7-PC3",
+   "id": "persistentCompounds",
+   "name": "Persistent Compounds",
+   "effect": "Status Effects Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-7-PC2"
+   ],
+   "position": {
+    "x": 780,
+    "y": 277
+   }
+  },
+  {
+   "key": "B-7-PC4",
+   "id": "persistentCompounds",
+   "name": "Persistent Compounds",
+   "effect": "Status Effects Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-7-PC3"
+   ],
+   "position": {
+    "x": 893,
+    "y": 343
+   }
+  },
+  {
+   "key": "B-7-PC5",
+   "id": "persistentCompounds",
+   "name": "Persistent Compounds",
+   "effect": "Status Effects Lifetime +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-7-PC4"
+   ],
+   "position": {
+    "x": 986,
+    "y": 428
+   }
+  },
+  {
+   "key": "B-8-EP1",
+   "id": "enhancedPayload",
+   "name": "Enhanced Payload",
+   "effect": "Status Effects Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFAS"
+   ],
+   "position": {
+    "x": 472,
+    "y": 273
+   }
+  },
+  {
+   "key": "B-8-EP2",
+   "id": "enhancedPayload",
+   "name": "Enhanced Payload",
+   "effect": "Status Effects Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-8-EP1"
+   ],
+   "position": {
+    "x": 599,
+    "y": 342
+   }
+  },
+  {
+   "key": "B-8-EP3",
+   "id": "enhancedPayload",
+   "name": "Enhanced Payload",
+   "effect": "Status Effects Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-8-EP2"
+   ],
+   "position": {
+    "x": 714,
+    "y": 418
+   }
+  },
+  {
+   "key": "B-8-EP4",
+   "id": "enhancedPayload",
+   "name": "Enhanced Payload",
+   "effect": "Status Effects Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-8-EP3"
+   ],
+   "position": {
+    "x": 831,
+    "y": 474
+   }
+  },
+  {
+   "key": "B-8-EP5",
+   "id": "enhancedPayload",
+   "name": "Enhanced Payload",
+   "effect": "Status Effects Charge Rate +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-8-EP4"
+   ],
+   "position": {
+    "x": 931,
+    "y": 537
+   }
+  },
+  {
+   "key": "B-9-CP1",
+   "id": "concentratedPayload",
+   "name": "Concentrated Payload",
+   "effect": "Status Effects Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "KBFAS"
+   ],
+   "position": {
+    "x": 408,
+    "y": 361
+   }
+  },
+  {
+   "key": "B-9-CP2",
+   "id": "concentratedPayload",
+   "name": "Concentrated Payload",
+   "effect": "Status Effects Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-9-CP1"
+   ],
+   "position": {
+    "x": 518,
+    "y": 456
+   }
+  },
+  {
+   "key": "B-9-CP3",
+   "id": "concentratedPayload",
+   "name": "Concentrated Payload",
+   "effect": "Status Effects Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-9-CP2"
+   ],
+   "position": {
+    "x": 623,
+    "y": 544
+   }
+  },
+  {
+   "key": "B-9-CP4",
+   "id": "concentratedPayload",
+   "name": "Concentrated Payload",
+   "effect": "Status Effects Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-9-CP3"
+   ],
+   "position": {
+    "x": 750,
+    "y": 595
+   }
+  },
+  {
+   "key": "B-9-CP5",
+   "id": "concentratedPayload",
+   "name": "Concentrated Payload",
+   "effect": "Status Effects Damage +10%",
+   "role": "buff",
+   "category": "offensive",
+   "cost": 1,
+   "group": "radial",
+   "requisite": [
+    "B-9-CP4"
+   ],
+   "position": {
+    "x": 864,
+    "y": 640
+   }
+  }
+ ]
+}
