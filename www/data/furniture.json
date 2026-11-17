@@ -30,14 +30,22 @@
   ],
   "furniture": [
     {
-      "name": "DROWNING CABINET",
+      "name": "Drowning Cabinet",
       "tier": "Major",
       "cost": 250,
       "cost_secondary": null,
-      "perk_text": "Increases Flooding Weapon Damage for targets with Severe Damage. When dealing damage to a target with reduced Max Hull Health, Flooding Weapons deal 15% more weapon damage for 20s with a 60s cooldown. Flooded status applied to targets within 250m lasts 12% longer. -10% reload time for Flooding Weapons. Only one Major Furniture can be installed per ship.",
+      "perk_text": "When dealing damage to a target with reduced Max Hull Health, Flooding Weapons deals 15% more weapon damage for 20s with a cooldown of 60s. Flooded status effect applied to targets within 250m have a 12% increased duration. Reduces Reload Time of Flooding Weapons by 10%. Screenshot-verified 2026-10-09 from Luke's card (35 GS, 250 cost, Major). Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
       "verified_from_gameplay": true,
-      "estimated": false
+      "estimated": false,
+      "slot": "Major",
+      "gear_score": 250,
+      "perks": [
+        "When dealing damage to a target with reduced Max Hull Health, Flooding Weapons deal 15% more weapon damage for 20s (60s cooldown).",
+        "Flooded status effect applied to targets within 250m has 12% increased duration.",
+        "Reduces Reload Time of Flooding Weapons by 10%."
+      ],
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (250 GS, Major, on 'In Too Deep' Brigantine). Head-to-head vs Munitions Mixer 2026-10-18: Cabinet WINS for the flooding ram brig — -10% reload speeds flood application (the engine), +15% flooding weapon damage windows are real damage; Mixer's +100% duration is redundant when Carronades re-apply Flooded constantly, and its -30% DoT is a real penalty. Mixer suits ships that struggle to KEEP Flooded/Ablaze applied, not re-appliers."
     },
     {
       "name": "BLOODY RED",
@@ -156,8 +164,8 @@
       "cost_secondary": null,
       "perk_text": "Increases weapon damage by 20% for 30s after using a Crew Attack. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Megaphone",
@@ -166,8 +174,10 @@
       "cost_secondary": null,
       "perk_text": "Increases reload speed by 0.5% per consecutive hit, up to a maximum of 15%. Effect resets if no hit is landed within 10s. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "slot": "major",
+      "notes": "Slot: major (user-verified 2026-10-04)."
     },
     {
       "name": "Scoping Station",
@@ -206,8 +216,14 @@
       "cost_secondary": null,
       "perk_text": "Careful with that mix, you bastards! I'm not having my other brow seared off! Increases duration of Flooded and Ablaze effects applied to enemy ships by 100%, but reduces damage dealt from these effects by 20%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Verdict 2026-10-18: NO for the electric Oppressor — only boosts Ablaze/Flooded duration (statuses the electric guns don't apply); -30% damage penalty; Major slot should boost the ship's actual electric damage.",
+      "slot": "Major",
+      "gear_score": 250,
+      "perks": [
+        "Increases duration of Flooded and Ablaze effects applied to enemy ships by 100%, but reduces damage dealt from these effects by 30%."
+      ]
     },
     {
       "name": "War Drums",
@@ -226,8 +242,8 @@
       "cost_secondary": null,
       "perk_text": "Reduces stamina depletion while bracing by 50% and increases stamina recovery by 20%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Rigging Station",
@@ -264,10 +280,11 @@
       "tier": "Major",
       "cost": 250,
       "cost_secondary": null,
-      "perk_text": "Yer kiss your mother with those cannons?! Hitting a weakpoint applies Taunting Charge on the target. Increases Taunt Duration by 15%. Reduces Reload Time of Piercing weapons by 5%. Only one Major Furniture can be installed per ship.",
+      "perk_text": "Hitting a weakpoint applies Taunting Charge on the target. Increases Taunt Duration by 15%. Reduces Reload Time of Piercing weapons by 5%.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's full card (Major, 35 GS, slot I, 250). On Galleon 'Oppressor'. Third perk confirmed from clean card."
     },
     {
       "name": "Spikes Station",
@@ -304,10 +321,10 @@
       "tier": "Major",
       "cost": 250,
       "cost_secondary": null,
-      "perk_text": "When above 60% of Crew Stamina and below Max Hull Health, 6% of Crew Stamina is consumed to restore 0.28% of Hull Health per second. Increases Max Hull Health by 8%. Increases Crew Stamina Recovery Speed by 6% while out of combat. (Original Y1S4 values: 0.25%/s, +5% max hull, +3% stamina recovery; buffed in Y2S1.) Only one Major Furniture can be installed per ship.",
+      "perk_text": "When above 60% of Crew Stamina and below Max Hull Health, 6% of Crew Stamina is consumed to restore 0.28% of Hull Health per second. Increases Max Hull Health by 8%. Increases Crew Stamina Recovery Speed by 6% while out of combat. Screenshot-verified 2026-10-09 from Luke's card (35 GS, 250 cost, ship rank 4). Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Teuling's Guidance",
@@ -320,14 +337,14 @@
       "estimated": true
     },
     {
-      "name": "Wyrm's Breath Churner",
+      "name": "Wyrms' Breath Churner",
       "tier": "Major",
       "cost": 250,
       "cost_secondary": null,
       "perk_text": "Triggering Shell-shocked on the target increases the Reload Time of their weapons by 25% for 20s. Increases Secondary Damage of Explosive Weapons by 25%. Increases weapon damage of Explosive Weapons by 5%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Bilgefire Barrels",
@@ -336,8 +353,9 @@
       "cost_secondary": null,
       "perk_text": "Weapon hits against a target with a damaging status effect have a 5% chance to fully recharge those status effects. This effect has a 30s cooldown. Increases Secondary Damage of Broadside weapons by 10%. Increases Broadside weapons damage by 5%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-19 from Luke's card (35 GS, 250 cost, Major)."
     },
     {
       "name": "Mark of the Wolf",
@@ -374,10 +392,10 @@
       "tier": "Major",
       "cost": 250,
       "cost_secondary": null,
-      "perk_text": "Reduces duration of incoming Torn Sails effect by 25%. Reduces incoming Flooding Charge by 20%. Only one Major Furniture can be installed per ship.",
+      "perk_text": "Reduces Reload Time of Springloader weapons by 20% when Crew Stamina is full. Reduces duration of incoming Torn Sails effect by 25%. Reduces Incoming Flooding Charge by 20%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Royal Sterilization Station",
@@ -446,8 +464,8 @@
       "cost_secondary": null,
       "perk_text": "After 4 consecutive hits on a sea monster, broadside reload time is reduced by 15% for 20s; missing resets the count. Consecutive weakpoint hits on sea monsters increase secondary damage by 10% per hit up to 40% for 5s. +10% weapon damage to sea monsters. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Royal Ramming Works",
@@ -456,8 +474,8 @@
       "cost_secondary": null,
       "perk_text": "Primary: Ramming instantly builds 50% of the Punctured status effect on the target and slows the target by 20% for 20s. Secondary: Punctured targets receive 15% more damage from Piercing weapons. Tertiary: Targets within 250m receive 7% more Punctured status charge. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "St. Elmo's Chains",
@@ -476,8 +494,9 @@
       "cost_secondary": null,
       "perk_text": "Primary: 60% of Explosive damage dealt to a target with Shell-shocked is dealt as Burning damage; 40% of the Burning damage dealt to a target with Ablaze is dealt as Explosive damage. Secondary: Increase Shell-Shocked and Ablaze charge rate by 10%. Only one Major Furniture can be installed per ship.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-19 from Luke's card (35 GS, 250 cost, Major)."
     },
     {
       "name": "Ballista Works I",
@@ -572,12 +591,12 @@
     {
       "name": "Front Powder Kegs I",
       "tier": "Minor",
-      "cost": 80,
+      "cost": 200,
       "cost_secondary": null,
       "perk_text": "Increases Front Weapon damage by 10%.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Port Powder Kegs I",
@@ -624,10 +643,11 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "Increases damage from auxiliary weapons by 13%. (Increased from 10% in the Y2S1 balance patch.)",
+      "perk_text": "Increases damage from auxiliary weapons by 13%.",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (Minor, slot IV, 200). On Galleon 'Oppressor'."
     },
     {
       "name": "Bombard Powderhouse I",
@@ -1054,10 +1074,11 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "Reduces Secondary Damage of Electric weapons by 12%. (Reduced from 15% in the Y2S1 balance patch.)",
+      "perk_text": "Increases Secondary Damage of Electric weapons by 12%. Increases Maximum Range of Electric weapons by 8%. Screenshot-verified 2026-10-14 from Luke's card (was filed backwards as 'reduces').",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "FLAGGED 2026-10-13: perk_text says 'Reduces Secondary Damage of Electric weapons by 12%' but calculator.js template gives +12% electric secondary damage (buff). Contradiction — verify in game before trusting either."
     },
     {
       "name": "Density Furnace",
@@ -1114,20 +1135,21 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "Increases Acceleration by 14%. (Increased from 7% in the Y2S2 balance patch.)",
+      "perk_text": "Increases Crew Attack damage by 7%. Increases Weight Limit by 8%. Increases Acceleration by 14%. Screenshot-verified 2026-10-09 from Luke's card (25 GS, 80 cost).",
       "ship_rank_required": null,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Accelerated Gunrail Smithy",
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "Reduces Reload Time by 4% and increases Secondary Damage of Auxiliary Weapons by 4% for each weapon quadrant being reloaded, up to 16%. While not trimming sails, increases weapon damage for Auxiliary Weapons by 9%. Increases Turning Speed by 8%.",
+      "perk_text": "Reduces Reload Time by 5% and increases Secondary Damage of Auxiliary Weapons by 7% for each weapon quadrant being reloaded. While not trimming sails, increases weapon damage for Auxiliary Weapons by 9%. Increases Turning Speed by 8%.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (Minor, slot V, 80). On Galleon 'Oppressor'. UPDATES filed 4%/4% values — card wins."
     },
     {
       "name": "Ammo-Priming Bench",
@@ -1144,10 +1166,10 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "Flooding weapon hits beyond 200m increase Flooding damage by 13% for 10s. +1% Flooding damage per 1% projectile speed bonus, capped at 15% (reduced from 30% in the Y3S2 balance patch). +10% damage vs Flooded targets.",
+      "perk_text": "Damage dealt with a Flooding weapon from over 200m away increases Flooding Damage by 13% for 10s. For every 1% increase in Projectile Speed of weapons through bonuses, increases Flooding Damage of those weapons by 1% up to 15%. Increases damage to enemy ships with the Flooded effect by 10%. Screenshot-verified 2026-10-09 from Luke's card (25 GS, 80 cost).",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Leyden Vault Array",
@@ -1156,8 +1178,8 @@
       "cost_secondary": null,
       "perk_text": "+2% weapon damage as Electric damage per 5m of AoE radius. -6% Electric weapon reload time. +8% damage vs Stormstruck targets.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Cascade Coil Bench",
@@ -1184,10 +1206,11 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": "+14% weapon damage vs Taunted targets. +15% Taunted duration.",
+      "perk_text": "Deals 14% more weapon damage to Taunted targets. Increases duration of the Taunted status effect on a target by 15%.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (Minor, slot VI, 80). On Galleon 'Oppressor'."
     },
     {
       "name": "Anatomy Cabinet",
@@ -1196,8 +1219,8 @@
       "cost_secondary": null,
       "perk_text": "-18% brace-strength damage from sea monsters. -10% damaging status and curse mark duration on self.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Apothecary Tool Bench",
@@ -1274,10 +1297,11 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": null,
+      "perk_text": "Increases Max Hull Health by 7%. Increases Armor Rating of equipped armor by 7%.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (Minor, slot II, 80). On Galleon 'Oppressor'. Matches 2026-10-14 warehouse verification."
     },
     {
       "name": "Machinist Table (Repair)",
@@ -1336,8 +1360,8 @@
       "cost_secondary": null,
       "perk_text": null,
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Raised Quarterdeck I",
@@ -1354,20 +1378,20 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": null,
+      "perk_text": "Reduces Ablaze Damage from enemy ships by 15%. Reduces Incoming Burning Charge from enemy ships by 12%. Reduces duration of incoming Ablaze effect by 10%. Screenshot-verified 2026-10-09 from Luke's card (25 GS, 80 cost).",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Lemari Makanan I",
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": null,
+      "perk_text": "Increases Crew Stamina Recovery by 13%. Increases Maximum Stamina by 5%. Increases Torn Sails Charge Speed by 3%. Screenshot-verified 2026-10-09 from Luke's card (25 GS, 80 cost).",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Amber Coating Station",
@@ -1444,20 +1468,21 @@
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": null,
+      "perk_text": "Restores 15% Severe Damage after hitting a target with a Crew Attack. Increases Crew Stamina Recovery by 10% for 10s after each use of a Crew Attack. Increases Crew Attack Range by 5%. Screenshot-verified 2026-10-09 from Luke's card (25 GS, 80 cost).",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false
     },
     {
       "name": "Decoy Deck",
       "tier": "Minor",
       "cost": 80,
       "cost_secondary": null,
-      "perk_text": null,
+      "perk_text": "For every target that has received the Taunted status effect by your ship, increases incoming Repair Amount by 5%, up to a maximum of 20%. Increases the Charge Rate of the Taunted status effect on enemy targets by 7%. Increases Threat Generation by 7%.",
       "ship_rank_required": 4,
-      "verified_from_gameplay": false,
-      "estimated": true
+      "verified_from_gameplay": true,
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (Minor, slot III, 80). On Galleon 'Oppressor'."
     },
     {
       "name": "Float Collars",
@@ -1498,6 +1523,26 @@
       "ship_rank_required": 4,
       "verified_from_gameplay": false,
       "estimated": true
+    },
+    {
+      "name": "Atelier de Cuivrage",
+      "tier": "Major",
+      "cost": null,
+      "cost_secondary": null,
+      "perk_text": "Above 50% hull: -24% incoming secondary damage, +15% threat generation, +10% weapon damage, +100 armor rating. Restored from 2026-10-14 warehouse verification record; not re-verified 2026-10-26.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": true,
+      "estimated": false
+    },
+    {
+      "name": "Sandbag-Painting Station",
+      "tier": "Major",
+      "cost": null,
+      "cost_secondary": null,
+      "perk_text": "After 12 hits: Sea's Ward 30s, 60s cooldown: +18% brace strength, 3% of weapon damage builds Taunted on enemies, -14% brace stamina depletion. Restored from 2026-10-14 warehouse verification record; not re-verified 2026-10-26.",
+      "ship_rank_required": null,
+      "verified_from_gameplay": true,
+      "estimated": false
     }
   ],
   "notes": "Covers Year 1 Season 0 (launch) through Year 3 Season 2 (Crimson Waters, current as of 2026-10-02). Ship ranks now extend to 33. The 10 entries marked verified_from_gameplay:true are ground truth from the player's 2026-10-01 warehouse screenshots. GAPS: (1) cost_secondary: the parenthetical second number on some in-game costs (e.g. 80 (400), 80 (160)) is recorded verbatim where known but its meaning is unconfirmed; Game8 lists blueprint costs in Pieces of Eight that may correspond (e.g. Grindstone I blueprint costs 400 Po8). (2) ship_rank_required is null/estimated for all launch-era items: pre-Y2S1 items used Infamy-rank blueprint requirements instead of ship ranks (Outcast < Scoundrel < Rover < Freebooter < Buccaneer < Brigand < Marauder < Corsair < Cutthroat < Kingpin); from Y2S1 onward, item ship-rank requirements cap at SR4. Per-item Infamy requirements: Ballista Works I: Kingpin I; Culverin Works I, Vat of Volatiles I: Marauder I; Demi-cannon Works I, Torpedo Works I, Torpedo Furnace I, Torpedo Grinder I: Buccaneer I; Front/Port/Starboard Powder Kegs I, Sea Fire Works I, Sea Fire Furnace I, Ballista Grinder I, Double-planked Hull I, Flag Painting Station I, Lightened Mast I, Rum Pantry I: Corsair I; Bombard Works I, Long Gun Works I, Iron Cladding Station I, Bombard Powderhouse I, Demi-cannon Furnace I, Bombard Grinder I, Culverin Grinder I, Long Gun Grinder I: Rover I; Maintained Arsenal I, Mortar Works I, Rocket Works I, Mortar Furnace I, Mortar Powderhouse I, Rocket Furnace I, Brazing Furnace I, Grindstone I: Cutthroat I; Double-planked Hull I, Flag Painting Station I: Corsair I; Boatswain's Call I, Lead Kettle I, Tool Smithy I: Buccaneer I; Chains Locker I, Sticky Fuel Station I, Leather Rope Grips I: Marauder I; Maintenance Forge I, Gunpowder Bench I, Balanced Mast I: Brigand I; Sterile Galley I, Joinery Workshop I, Storage Compartment I: Freebooter I. (3) Perk numbers that changed across balance patches are recorded at their CURRENT (Y3S2) values with prior values noted in the text; affected: Rope Locker (300->450%), War Drums (stamina->brace stamina), Gunner's Quadrant (full Y2S1 rework), Munitions Mixer (-30%->-20%), Chains Locker I (10->20%), Lightened Mast I (13->26%), Balanced Mast I (8->16%), Secret Cache (8->16%), Lestari Trophy (7->14%), Signal Gong (15->20%), Maintained Arsenal I (10->13%), Joinery Workshop I (10->6%), Bloody Red (50/25/10->60/40/25), Breechlock Furnace (30/3%/7%/5%->20/2%/5%/3%), Dynamic Ballast Control (cap 40->30%), Chained Links (50%/10%/15%->60%/20% + armor perk removed), Drowned One's Toll (0.25/5/3->0.28/8/6), Freeman's Embrace (full rework to -30% status damage), Dummy Springloader (per Y2S1 notes), Mark of the Wolf (100%/10s->50%/7s), Ramrod Workshop (15/10->7/7), Fuse-Fusing Station (12/15->9/9), Shell-Packing Station (7/7->5/5), Teuling's Guidance (-7%->-5% front reload), Spikes Station (25->40% chance), Braced Gunwales (50->20%), Compagnie Screens (15/7/3->20/10/5), Copper Fastening Station (15->12%), Density Furnace (8/8->12/12), Expanding Corkscrew Station (15->12%), Devil's Concoction (15->12%), High-Velocity Kegs (15->12%), Plaguebringer's Ward (15/8->7/4), Hubac Tuning Rack (12/20/8->14/25/10), Tuning Station (17/10/5->20/13/10), Brouwer's Powderhouse (7/5->10/7), Caustic Spall Station (cap 30->15%), Gimbal Ring Stores (full Y3S2 rework), La Potence Schematics I (weakpoint dmg->toxic res penetration). (4) Number conflicts between sources flagged in perk_text: Siphon Furnace toxic damage 10% (patch notes) vs 14% (Smuggler Pass copy); Cascade Coil Bench secondary 15% (patch notes) vs 7% (devblog summary); Spikes Station Flooded-target chance bonus wording conflicts between mp1st (increases to 30%) and updatecrazy (buffed to 40%). (5) ~30 minor/event furniture entries (mostly from The Founding event shop and William Blackwood rotations) have confirmed names but unverifiable perk text; recorded with estimated:true and null perk_text. (6) Name variants seen: 'Spiteful Spikes Station' = Spikes Station; 'Pain Piper' = Pain-Piper; 'Cannonball-Charging Station' = Cannonball Charging Station; 'Riffled Barrel Workshop' = Rifled Barrel Workshop; 'Buoy Locker' = Buoy Locker I. (7) All Major furniture costs 250 in-game; most Minor furniture costs 80; Sterile Galley I costs 65; Grindstone I costs 175. Costs for non-anchor items are estimated from these patterns. (8) Season of introduction per item: Y1S0 launch (12 majors, 47 minors); Y1S1: Dummy Springloader I, Tuning Station, La Potence Schematics I; Y1S2 (Chorus of Havoc): Buoy Locker I, Teuling's Guidance; Y1S3 (Dragon's Wake): Bloody Red, Freeman's Embrace, Shot Carving Station, Spikes Station, Emergency Sails; Y1S4 (Shadows of the Deep): Chained Links, Pain-Piper, Drowned One's Toll, Mine-Clearing Locker; Y2S1: Wyrm's Breath Churner, Emergency Locker, Bilgefire Barrels, Mark of the Wolf, Breechlock Furnace, Dynamic Ballast Control, Ramrod Workshop, Fuse-Fusing Station, Debris Locker, Cannonball Charging Station, Rifled Barrel Workshop, Machinist Table (Mines), Organ Harvesting Station, Counterthrust Locker; Y2S2: Accelerated Gunrail Smithy, Ammo-Priming Bench, Trunnion Furnace, Smoked Canisters, Devil's Concoction, Beam Supports, Shell-Packing Station, Machinist Table (Repair), Bombard Menuiserie, Quick-Igniting Powder, Compagnie Screens, High-Velocity Kegs, Royal Sterilization Station; Y2S3: Stinkpot Station, Sheeting Winch Console, Gimbal Ring Stores, Siphon Furnace, Caustic Spall Station, Leyden Vault Array, Cascade Coil Bench, Curare Crushing Bench; Y2S4: Drowning Cabinet, Ballista Mount Smithy, Blubber Works, Inverted Flag Rack, Anatomy Cabinet, Apothecary Tool Bench; Y3S1: Royal Ramming Works; Y3S2: Hellshot Smithy, St. Elmo's Chains, Infernal Artificer's Bench. Some season attributions for shop/rotation items (Secret Cache, Lestari Trophy, Medicine Cabinet, Hubac Tuning Rack, Plaguebringer's Ward, Cursed Banner, Founding-shop items) are approximate."

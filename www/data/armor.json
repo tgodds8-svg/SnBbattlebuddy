@@ -1,0 +1,1060 @@
+[
+  {
+    "name": "Iron Husk I",
+    "category": "Basic",
+    "gear_score": 65,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 17
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint (early game).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Game8 list of all ship armors. Armor value not published."
+  },
+  {
+    "name": "Iron Husk II",
+    "category": "Basic",
+    "gear_score": 130,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 23
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Iron Husk III",
+    "category": "Basic",
+    "gear_score": 195,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 29
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Iron Husk IV",
+    "category": "Basic",
+    "gear_score": 260,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 34
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Iron Husk V",
+    "category": "Basic",
+    "gear_score": 325,
+    "armor_value": 1000,
+    "damage_mitigation": {
+      "exploding": 38
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Armor value 1000 from exputer best-armors comparison."
+  },
+  {
+    "name": "Layered Scales I",
+    "category": "Basic",
+    "gear_score": 65,
+    "armor_value": null,
+    "damage_mitigation": {
+      "piercing": 21
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Layered Scales II",
+    "category": "Basic",
+    "gear_score": 130,
+    "armor_value": null,
+    "damage_mitigation": {
+      "piercing": 28
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Layered Scales III",
+    "category": "Basic",
+    "gear_score": 195,
+    "armor_value": null,
+    "damage_mitigation": {
+      "piercing": 33
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Layered Scales IV",
+    "category": "Basic",
+    "gear_score": 260,
+    "armor_value": null,
+    "damage_mitigation": {
+      "piercing": 38
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "Layered Scales V",
+    "category": "Basic",
+    "gear_score": 325,
+    "armor_value": null,
+    "damage_mitigation": {
+      "piercing": 42
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Highest piercing mitigation of any basic armor."
+  },
+  {
+    "name": "The Bastion I",
+    "category": "Basic",
+    "gear_score": 160,
+    "armor_value": null,
+    "damage_mitigation": {
+      "fire": 16,
+      "piercing": 16
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "The Bastion II",
+    "category": "Basic",
+    "gear_score": 250,
+    "armor_value": null,
+    "damage_mitigation": {
+      "fire": 23,
+      "piercing": 23
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "The Bastion III",
+    "category": "Basic",
+    "gear_score": 340,
+    "armor_value": 1000,
+    "damage_mitigation": {
+      "fire": 29,
+      "piercing": 29
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Game8 best basic armor pick for fire+piercing. Armor value 1000 from exputer."
+  },
+  {
+    "name": "La Forteresse I",
+    "category": "Basic",
+    "gear_score": 160,
+    "armor_value": null,
+    "damage_mitigation": {
+      "flooding": 26,
+      "piercing": 8
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "La Forteresse II",
+    "category": "Basic",
+    "gear_score": 250,
+    "armor_value": null,
+    "damage_mitigation": {
+      "flooding": 33,
+      "piercing": 13
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": ""
+  },
+  {
+    "name": "La Forteresse III",
+    "category": "Basic",
+    "gear_score": 340,
+    "armor_value": 980,
+    "damage_mitigation": {
+      "flooding": 39,
+      "piercing": 18
+    },
+    "perks": [],
+    "infamy_required": "Rogue",
+    "how_to_obtain": "Blacksmith blueprint.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Highest flooding mitigation of any basic armor. Armor value 980 from exputer."
+  },
+  {
+    "name": "Kawaca I",
+    "category": "Advanced",
+    "gear_score": 280,
+    "armor_value": null,
+    "damage_mitigation": {
+      "flooding": 24,
+      "fire": 24,
+      "piercing": 24
+    },
+    "perks": [
+      "Rampart: Reduces 75% of damage from ramming."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Helm vendor (Pieces of Eight).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "blueprint_cost",
+      "crafting_materials"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Balanced triple mitigation. Rampart effect from gamerant."
+  },
+  {
+    "name": "Kawaca II",
+    "category": "Advanced",
+    "gear_score": 380,
+    "armor_value": 1050,
+    "damage_mitigation": {
+      "flooding": 30,
+      "fire": 30,
+      "piercing": 30
+    },
+    "perks": [
+      "Rampart: Reduces 75% of damage from ramming."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Blueprint 2800 Pieces of Eight at Sainte-Anne / Telok Penjarah Helm vendor.",
+    "blueprint_cost": "2800 Pieces of Eight",
+    "crafting_materials": {
+      "Cogwheel": 6,
+      "Greenheart Plank": 8,
+      "Screw Mechanism": 6,
+      "Rubber": 2,
+      "Eel's Twine": 1,
+      "Silver": 3800
+    },
+    "estimated": false,
+    "estimated_fields": [],
+    "verified_from_gameplay": false,
+    "notes": "gamerant best-armors. Best well-balanced armor."
+  },
+  {
+    "name": "Gamba Kobe I",
+    "category": "Advanced",
+    "gear_score": 280,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 4,
+      "flooding": 33,
+      "piercing": 12
+    },
+    "perks": [
+      "Sealing: Increases flooding resistance by 10%."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Helm vendor (Pieces of Eight).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value",
+      "blueprint_cost",
+      "crafting_materials"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Sealing perk effect from vhpg."
+  },
+  {
+    "name": "Gamba Kobe II",
+    "category": "Advanced",
+    "gear_score": 380,
+    "armor_value": null,
+    "damage_mitigation": {
+      "exploding": 6,
+      "flooding": 40,
+      "piercing": 15
+    },
+    "perks": [
+      "Sealing: Increases flooding resistance by 10%."
+    ],
+    "infamy_required": "Kingpin I",
+    "how_to_obtain": "Blueprint 2800 Pieces of Eight at Sainte-Anne / Telok Penjarah Helm vendor.",
+    "blueprint_cost": "2800 Pieces of Eight",
+    "crafting_materials": {
+      "Roselle Cloth": 6,
+      "Wood Tar": 4,
+      "Torsion Spring": 2,
+      "Rubber": 2,
+      "Gannets' Saltpeter": 1,
+      "Silver": 3800
+    },
+    "estimated": true,
+    "estimated_fields": [
+      "armor_value"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Highest flooding mitigation in game (40% + 10% Sealing). vhpg blueprint data."
+  },
+  {
+    "name": "Black Prince",
+    "category": "Advanced",
+    "gear_score": 400,
+    "armor_value": 1200,
+    "damage_mitigation": {
+      "exploding": 35,
+      "fire": 18,
+      "piercing": 20
+    },
+    "perks": [
+      "Resolute: Reduces damage taken by 40% when hull health is below 33%."
+    ],
+    "infamy_required": "Kingpin I",
+    "how_to_obtain": "450 Sovereigns from Black Market (Sainte-Anne / Telok Penjarah).",
+    "blueprint_cost": "450 Sovereigns",
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [],
+    "verified_from_gameplay": false,
+    "notes": "Game8 best midgame armor. gamerant best advanced armor. Highest raw armor value (1200). Resolute nerfed 50%->40% in S2.2 patch (mp1st 1.000.013)."
+  },
+  {
+    "name": "Ouroboros",
+    "category": "Exotic",
+    "gear_score": 400,
+    "armor_value": 1265,
+    "damage_mitigation": {
+      "exploding": 20,
+      "flooding": 30,
+      "fire": 30
+    },
+    "perks": [
+      "Amalgamate: Restores 15% of Hull Health while bracing.",
+      "Restoration: Restores 100 Severe Damage every second."
+    ],
+    "infamy_required": "Kingpin I",
+    "how_to_obtain": "Blueprint 50 Monstrous Teeth from Sea People Huntmaster, Lanitra Outpost (Kuharibu hunt).",
+    "blueprint_cost": "50 Monstrous Teeth",
+    "crafting_materials": {
+      "Monstrous Scales": 4,
+      "Monstrous Tooth": 4,
+      "Rubber": 2,
+      "Torsion Spring": 1,
+      "Gannets' Saltpeter": 1,
+      "Silver": 3800
+    },
+    "estimated": false,
+    "estimated_fields": [],
+    "verified_from_gameplay": false,
+    "notes": "Screenshot-verified 2026-10-13 from Luke's own card (GS 359, level 500). Armor 1265. Perks: 15% of braced damage converts to Hull Health restore (after brace ends); restores 100 Severe Damage/sec. Mods: +11.1% Electric Resist (Basic), +27.4%/s Brace Strength Recovery (Advanced), +13.1% Brace Strength (Advanced), Mythic: 541.3 Burning Damage AoE within 300m at end of Ablaze."
+  },
+  {
+    "name": "Royal Custodian",
+    "category": "Exotic",
+    "gear_score": 351,
+    "armor_value": 1323,
+    "damage_mitigation": {
+      "exploding": 24,
+      "flooding": 12,
+      "fire": 12,
+      "piercing": 30
+    },
+    "perks": [
+      "Applies the Fortified effect for 12s after using a repair kit, which increases Armor by 35%",
+      "[Basic] Increases All Secondary Damage Resistances by 5.0%",
+      "[Advanced] Increases Repair Amount of Repair Kits by 11.5%",
+      "[Advanced] Increases Brace Strength Recovery by 25.3% per second",
+      "[Mythic] Increases 5% of Brace Strength for every 10% of Explosive Resistance"
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Drop from merchant ships in Colonial Shipment world event, or Black Market.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [
+      "infamy_required"
+    ],
+    "verified_from_gameplay": true,
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (351 GS). Resists (card order): 29%/17%/17%/35%/17%/17%. NOT in use (2026-10-18)."
+  },
+  {
+    "name": "Leviathan",
+    "category": "Seasonal",
+    "gear_score": 367,
+    "armor_value": 1443,
+    "damage_mitigation": {
+      "flooding": 23,
+      "fire": 18,
+      "piercing": 35
+    },
+    "perks": [
+      "Every knot of Sailing Speed increases Armor by 1.4%",
+      "Reduces Weakpoint Damage by 35%",
+      "[Basic] Increases Armor by 105",
+      "[Advanced] Increases Brace Strength Recovery by 26.9% per second",
+      "[Advanced] When Hull Health drops below 25%, repairs 18.4% Hull Health over 10s. This effect has a 30s cooldown",
+      "[Mythic] Deals additional 2300 Explosive Damage when ramming a target. Reduces the target's Explosive Resistance by 30% for 10s"
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Lestari Bounty reward (defeat Mega Lestari).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [
+      "gear_score"
+    ],
+    "verified_from_gameplay": true,
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (367 GS). Resists (card order): 20%/23%/18%/35%/0%/0%. EQUIPPED on Brigantine 'IN TOO DEEP'."
+  },
+  {
+    "name": "Rhapsody of the Deep",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1160,
+    "damage_mitigation": {
+      "exploding": 20,
+      "flooding": 35,
+      "fire": 20
+    },
+    "perks": [
+      "Unsinkable: While bracing, the effects of being afflicted with Flooded are negated.",
+      "Iron Plastron: Reduces damage from Torpedoes by 30%, and by an additional 30% while bracing."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Smuggler Pass Shipmaster track (free).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Mitigation %s from aoeah S2 tier list. Armor 1160 and Iron Plastron 30%/30% current as of June 2025 patch 1.000.037."
+  },
+  {
+    "name": "Stormwoven Symphony",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1298,
+    "damage_mitigation": {
+      "exploding": 25,
+      "flooding": 25,
+      "piercing": 25
+    },
+    "perks": [
+      "Crescendo: Holding brace charges up a sonic attack damaging surrounding enemies (up to 7200 damage, 150m range when fully charged)."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Black Market.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [
+      "gear_score"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Screenshot-verified 2026-10-13 from Luke's own card (GS 329, level 500). Armor 1298. Perk: holding brace charges sonic attack, up to 7200 damage to surrounding hostiles within 150m when fully charged. Mods: +6.8% Tearing Resist (Basic), hull <25% → repair 19.4% over 10s, 30s cd (Advanced).",
+    "perk": "Holding brace charges up a sonic attack, dealing up to 7200 damage to surrounding hostiles, up to 150m away when fully charged"
+  },
+  {
+    "name": "Buccaneer's Dath",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1200,
+    "damage_mitigation": {
+      "exploding": null,
+      "flooding": null,
+      "fire": null,
+      "piercing": null
+    },
+    "perks": [
+      "Blood and Gold: Destroying a target increases weapon damage and armor by 25% for 30s. Effect refreshes if another ship is destroyed within 30s (no cooldown)."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Black Market.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "damage_mitigation"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "aoeah: covers explosive/flooding/fire/piercing 'across the board but lower percentages' - exact %s unpublished."
+  },
+  {
+    "name": "Buccaneer's Oath",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Black Market (Y1S2).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "perks",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Listed in Ubisoft Y1S2 patch notes alongside Abyssal. Possibly related to Buccaneer's Dath - stats unpublished."
+  },
+  {
+    "name": "Abyssal I",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Smuggler Pass Shipmaster track (Y1S2).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "perks",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Listed in esports.gg S2 Smuggler Pass Shipmaster track. Stats unpublished."
+  },
+  {
+    "name": "Abyssal II",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1284,
+    "damage_mitigation": {
+      "exploding": 23,
+      "fire": 33,
+      "piercing": 17
+    },
+    "perks": [
+      "Reduces the duration of the Blaze effect by 33%."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Abyssal I from Ruins of Luk Khun Outpost; Abyssal II is a random drop.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Stats from aoeah S2 tier list. Highest armor rating of S2 armors (1284)."
+  },
+  {
+    "name": "Immortal Vessel",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Immortal: Prevents a killing blow from sinking the ship; ship becomes invulnerable for 5s. 180s cooldown."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Smuggler Pass (Y1S3).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Immunity window nerfed 10s -> 5s in Y2S1 patch (mp1st 1.000.029). Current value 5s."
+  },
+  {
+    "name": "Volta's Ward",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Insulation: Reduces damage from the Stormstruck status effect by 25%."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y1S3 rewards.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Rare armor from Y1S3 patch notes (mp1st 1.000.014). Stats unpublished."
+  },
+  {
+    "name": "Shadow Aegis",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Negates status effects from enemy weapons when bracing."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Smuggler Pass (Y1S4).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "From Ubisoft Y1S4 announcement (news.ubisoft.com). Stats unpublished."
+  },
+  {
+    "name": "Pishacha",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Ramming a target repairs the ship's Hull Health by 138% of damage inflicted."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y1S4 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Perk value from Y2S1 patch notes (mp1st 1.000.029). Obtain method and other stats unpublished."
+  },
+  {
+    "name": "Celestial Dance",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1210,
+    "damage_mitigation": {},
+    "perks": [
+      "Lightning Stream: Maximum Electric damage dealt per target increased to 1850."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "damage_mitigation",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Armor 1210 current as of June 2025 patch (was 1150). Mitigation %s unpublished."
+  },
+  {
+    "name": "Crimson Lotus",
+    "category": "Seasonal",
+    "gear_score": 367,
+    "armor_value": 1638,
+    "damage_mitigation": {
+      "piercing": 27,
+      "exploding": 27
+    },
+    "perks": [
+      "Using a Crew Attack increases Broadside weapon damage by 33% and Stamina Recovery by 100% for the next 15 seconds",
+      "[Basic] Increases Armor by 105",
+      "[Advanced] Increases Armor by 10.5%",
+      "[Advanced] Increases Repair Amount of Repair Kits by 10.7%",
+      "[Mythic] Deals additional 1700 Electric Damage when ramming a target. Reduces the target's Electric Resistance by 30% for 10s"
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": true,
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (367 GS). Resists (card order): 27%/17%/7%/27%/5%/17%. In inventory, not equipped.",
+    "perk": "Using a Crew Attack increases Broadside weapon damage by 33% and Stamina Recovery by 100% for the next 15 seconds"
+  },
+  {
+    "name": "Hayden's Guard",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1210,
+    "damage_mitigation": {},
+    "perks": [
+      "Ember Ward: Reduces damage by Burning weapons by 30%, and by an additional 30% while bracing."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "damage_mitigation",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Armor 1210 current as of June 2025 patch (was 1150). Ember Ward buffed 25%->30%."
+  },
+  {
+    "name": "Phoenix Crest",
+    "category": "Seasonal",
+    "gear_score": 367,
+    "armor_value": 1426,
+    "damage_mitigation": {
+      "exploding": 15
+    },
+    "perks": [
+      "Every hit received while Bracing will build up the Taunted status effect on an attacking enemy",
+      "Increases Brace Strength Recovery by 100% for each enemy with the Taunted status effect that is actively targeting your ship, up to a maximum of 10 enemy ships",
+      "[Basic] Reduces incoming damage by 170 while Bracing",
+      "[Advanced] When Hull Health drops below 25%, repairs 18.7% Hull Health over 10s. This effect has a 30s cooldown",
+      "[Advanced] Restores 175 Hull Health per second",
+      "[Mythic] IMMOLATION: When the Ablaze status is applied on your ship, a Burning area-of-effect blast is released to all nearby enemies within a 300m radius, inflicting them with Ablazed Status. You gain 20% boost to Fire damage done to enemy targets. Boost to Burning damage is removed at the end of the Ablazed Status."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": true,
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (367 GS) + his Reforge Modification screen the same day. Mythic was ELECTRIC (+15% turning/+27% electric when Stormstruck); Luke RE-ROLLED it to IMMOLATION (FIRE) at the Blacksmith 2026-10-18 ~20:00 EDT for the Garuda loop — spend-order step 1 DONE. Resists (card order): 15%/10%/35%/10%/5%/10%. IMMOLATION: when enemies set YOUR ship Ablaze, Burning AoE blast to all nearby enemies within 300m applies Ablazed Status; +20% Fire damage while active. TRIGGER ANSWERED: procs when YOUR ship is set Ablaze (defensive proc)."
+  },
+  {
+    "name": "Wrathful Ward",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1180,
+    "damage_mitigation": {},
+    "perks": [
+      "Venomous Vengeance: When hit while bracing, releases a noxious cloud (140m radius) dealing 5000 Poison damage and draining 45 Crew Stamina. 10s cooldown."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "damage_mitigation",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Armor 1180 current as of June 2025 patch (was 1120). Cloud values from Y2S1 patch notes."
+  },
+  {
+    "name": "Wailing Ward",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": 1180,
+    "damage_mitigation": {},
+    "perks": [],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Y2 era.",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "damage_mitigation",
+      "perks",
+      "infamy_required",
+      "how_to_obtain"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Armor 1180 current as of June 2025 patch (was 1120). Perks/mitigation unpublished; Y1S3.2 notes mention a description correction."
+  },
+  {
+    "name": "Needle Shield",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Brackish Bite: Bracing hits from Punctured targets increase Armor Rating by 5% (up to 15%), and Piercing weapon damage by 3% (up to 9%) for 30s."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Smuggler Pass (Y3S1).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Epic armor, Y3S1 patch notes (ubisoft.com). Mitigation %s unpublished."
+  },
+  {
+    "name": "Floodbound",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {},
+    "perks": [
+      "Tide of Restoration: 20% of weapon damage dealt to Brace health by Flooded targets within 150m is restored as hull health."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Blackwood vendor (Y3S1).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Epic armor, Y3S1 patch notes. Mitigation %s unpublished."
+  },
+  {
+    "name": "Le Drac",
+    "category": "Seasonal",
+    "gear_score": null,
+    "armor_value": null,
+    "damage_mitigation": {
+      "flooding": null,
+      "exploding": null
+    },
+    "perks": [
+      "Floodstrike: Bracing hits from Flooded targets primes an explosion dealing 10% of Brace Health as Explosive damage. Each braced hit increases primed damage by 10% (up to 70%) for 30s. Ram a target to detonate."
+    ],
+    "infamy_required": "Kingpin",
+    "how_to_obtain": "Blackwood vendor (Y3S2).",
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": true,
+    "estimated_fields": [
+      "gear_score",
+      "armor_value",
+      "damage_mitigation",
+      "infamy_required"
+    ],
+    "verified_from_gameplay": false,
+    "notes": "Epic Flooding/Explosive armor, Y3S2 patch notes (ubisoft.com). Exact mitigation %s unpublished."
+  },
+  {
+    "name": "Living Bastion",
+    "armor_value": 1507,
+    "perk": "Gains a stack of Living Metal per second if no damage was taken in the last 5s. Stacks increase Armor Rating by 10% per stack, up to 150% at 15 stacks. Loses a stack on every hit taken. Bracing will not reduce stacks.",
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (367 GS). Resists (card order): 10%/10%/10%/34%/0%/5%. EQUIPPED on Galleon 'Oppressor'.",
+    "estimated": false,
+    "gear_score": 367,
+    "perks": [
+      "Gains a stack of Living Metal per second if no damage was taken in the last 5s. Stacks of Living Metal increase Armor Rating by 10% per stack, up to 150% at 15 stacks. Loses a stack on every hit taken. Bracing will not reduce stacks",
+      "[Basic] Increases Piercing Damage Resistance by 9.8%",
+      "[Advanced] Increases Armor by 10.6%",
+      "[Advanced] Using a Restoration Kit grants 37.9% reduction to all Secondary Damage for 5s",
+      "[Mythic] Increases Turning Speed by 15% and Electric damage dealt by 34% for 15s when afflicted by the Stormstruck status effect"
+    ],
+    "verified_from_gameplay": true
+  },
+  {
+    "name": "Silver Sentinel",
+    "category": "Epic",
+    "gear_score": 351,
+    "armor_value": 1265,
+    "damage_mitigation": {},
+    "perks": [
+      "During the first 2 seconds of Bracing, any damage taken is reduced by 3000. After 2 seconds, Bracing reduces damage taken by 200. Activating and maintaining Bracing consumes 200% as much Crew Stamina.",
+      "Reduces damage taken from Explosive Weapons by 15%",
+      "[Basic] Increases Hull Health by 4900",
+      "[Advanced] Using a Restoration Kit grants 29.7% reduction to all Secondary Damage for 5s",
+      "[Advanced] When Hull Health is below 25%, increases weapon damage by 8.7%",
+      "[Mythic] Increases 7% of Brace Strength for every 10% of Explosive Resistance"
+    ],
+    "infamy_required": null,
+    "how_to_obtain": null,
+    "blueprint_cost": null,
+    "crafting_materials": null,
+    "estimated": false,
+    "verified_from_gameplay": true,
+    "notes": "Screenshot-verified 2026-10-18 from Luke's own card (351 GS). Resists (card order): 35%/15%/10%/20%/10%/10%. NOT in use (2026-10-18)."
+  }
+]

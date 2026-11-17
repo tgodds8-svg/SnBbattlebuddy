@@ -1,42 +1,49 @@
-/* SnB Loadouts — community edition UI logic.
- *
- * Quick Build (default): Ship → Guns → Damage. All power-user depth
- * (furniture, season buffs, mastery, stacking, assumptions, compare,
- * data reference) lives one tap away in the Tune tab.
- *
- * Fidelity contract: the calculator (js/calculator.js) and data
- * (js/data.js + data/*.json) are untouched. Every number, formula,
- * default assumption and est. badge behaves exactly as in v1.
- */
+/* SnB Loadouts — Main UI Controller (Commercial & APK-Ready Edition) */
 'use strict';
 
 const S = {
-  loadout: null,          // { name, shipName, weaponSlots[], furniture[], minorSlots }
-  buffs: {},              // seasonal node name -> bool
+  loadout: null,
+  buffs: {},
   mastery: { relentlessForce: false, weaknessFinder: false, firepowerOrder: false },
   stacking: null,
-  assumptions: { rangeM: 300, weakpointRate: 20, weakpointBonus: 50, impetusUptime: 0.5, firepowerOrderUptime: 0.15, stormstruckArcs: 2 },
+  assumptions: {
+    rangeM: 300,
+    weakpointRate: 20,
+    weakpointBonus: 50,
+    impetusUptime: 0.5,
+    firepowerOrderUptime: 0.15,
+    stormstruckArcs: 2,
+  },
 };
 
 const MASTERY_COSTS = { relentlessForce: 10, weaknessFinder: 30, firepowerOrder: 50 };
-const LS_KEY = 'snb-loadouts-v1'; // same key as v1 — saved loadouts carry over
+const LS_KEY = 'snb-loadouts-v1';
 const ONBOARD_KEY = 'snb-v2-onboarded';
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const estBadge = flag => flag ? '<span class="est-badge" title="Unverified — community number, confirm in game">est.</span>' : '';
 const fmt = n => (n == null ? '—' : Number(n).toLocaleString());
 
-const SHIP_ICONS = {
-  'Dhow': '🛶', 'Bedar': '⛵', 'Hulk': '🚢', 'Cutter': '⛵', 'Barge': '🛳',
-  'Sloop': '⛵', 'Padewakang': '⛵', 'Snow': '⛵', 'Brigantine': '⛵',
-  'Sambuk': '⛵', 'Barque': '🚢', 'Brig': '⛵', 'Battle Junk': '🛶',
-  'Schooner': '⛵', 'Frigate': '🚢', 'Sloop of War': '⛵', 'Corvette': '🚢',
-  'Galleon': '🚢', 'Junk': '🛶',
-};
-const shipIcon = s => SHIP_ICONS[s.class] || '⛵';
+function itemBadge(item) {
+  if (typeof Icons !== 'undefined' && Icons.verifiedBadge) return Icons.verifiedBadge(item);
+  return item && item.estimated ? '<span class="est-badge" title="Community estimate">est.</span>' : '';
+}
 
-/* ---------------- bottom tabs ---------------- */
+function shipVisual(ship) {
+  if (typeof Icons !== 'undefined' && Icons.shipSvg) return Icons.shipSvg(ship);
+  return '⛵';
+}
+
+function weaponVisual(w) {
+  if (typeof Icons !== 'undefined' && Icons.weaponSvg) return Icons.weaponSvg(w);
+  return '🔫';
+}
+
+function rarityCls(item) {
+  return (typeof Icons !== 'undefined' && Icons.rarityClass) ? Icons.rarityClass(item) : '';
+}
+
+/* ---------------- navigation & tabs ---------------- */
 function switchTab(name) {
   document.querySelectorAll('.btab').forEach(b => {
     const on = b.dataset.tab === name;
@@ -44,87 +51,109 @@ function switchTab(name) {
     b.setAttribute('aria-selected', on ? 'true' : 'false');
   });
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  $('tab-' + name).classList.add('active');
-  if (name === 'build') { renderStatusBar(); renderQuickDps(); }
+  const panel = $('tab-' + name);
+  if (panel) panel.classList.add('active');
+  if (name === 'build') renderBuildAll();
   if (name === 'advanced') renderAdvanced();
+  if (name === 'optimize' && typeof OptimizerUI !== 'undefined') OptimizerUI.init();
   window.scrollTo(0, 0);
 }
 document.querySelectorAll('.btab').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
 
-/* ---------------- step nav ---------------- */
 document.querySelectorAll('.step').forEach(st => st.addEventListener('click', () => {
   document.querySelectorAll('.step').forEach(x => x.classList.remove('active'));
   st.classList.add('active');
-  $(st.dataset.step).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const target = $(st.dataset.step);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }));
-$('btn-goto-ships').addEventListener('click', () => {
-  document.querySelector('[data-step="step-1"]').click();
-});
-$('btn-goto-tune').addEventListener('click', () => switchTab('advanced'));
 
-/* ---------------- onboarding ---------------- */
-$('onboard-dismiss').addEventListener('click', () => {
+$('btn-goto-ships')?.addEventListener('click', () => document.querySelector('[data-step="step-1"]')?.click());
+$('btn-goto-tune')?.addEventListener('click', () => switchTab('advanced'));
+$('onboard-dismiss')?.addEventListener('click', () => {
   $('onboard-card').hidden = true;
   try { localStorage.setItem(ONBOARD_KEY, '1'); } catch {}
 });
 
-/* ---------------- loadout model (unchanged from v1) ---------------- */
-function blankSlot(position, index) {
-  return { position, index, weapon: null, shotsPerVolley: 1, ascension: { tier: 'none', flat: 0, pct: 0 }, customMods: [], extraStatusDps: 0 };
+/* ---------------- loadout model ---------------- */
+function blankSlot(position, index, ship) {
+  return {
+    position,
+    index,
+    weapon: null,
+    shotsPerVolley: DB.defaultVolleyFor ? DB.defaultVolleyFor(ship, position) : 1,
+    ascension: { tier: 'none', flat: 0, pct: 0 },
+    customMods: [],
+    extraStatusDps: 0,
+  };
 }
+
 function newLoadout(shipName) {
   const ship = DB.shipByName(shipName);
   return {
-    name: shipName + ' build',
+    name: shipName + ' Build',
     shipName,
-    weaponSlots: DB.slotsForShip(ship).map(s => blankSlot(s.position, s.index)),
+    armor: null,
+    weaponSlots: DB.slotsForShip(ship).map(s => blankSlot(s.position, s.index, ship)),
     furniture: [{ kind: 'major', item: null, customMods: [] }],
-    minorSlots: 4,
+    minorSlots: Math.max(0, ((ship && ship.furniture_slots && ship.furniture_slots.total) || 5) - 1),
   };
 }
+
 function ensureMinorSlots() {
   if (!S.loadout) return;
   const minors = S.loadout.furniture.filter(f => f.kind === 'minor');
   while (minors.length < S.loadout.minorSlots) {
     const f = { kind: 'minor', item: null, customMods: [] };
-    S.loadout.furniture.push(f); minors.push(f);
+    S.loadout.furniture.push(f);
+    minors.push(f);
   }
   while (minors.length > S.loadout.minorSlots) {
-    const i = S.loadout.furniture.map((f, idx) => f.kind === 'minor' ? idx : -1).filter(i => i >= 0).pop();
-    S.loadout.furniture.splice(i, 1); minors.pop();
+    const idx = S.loadout.furniture.map((f, i) => f.kind === 'minor' ? i : -1).filter(i => i >= 0).pop();
+    if (idx >= 0) S.loadout.furniture.splice(idx, 1);
+    minors.pop();
   }
 }
+
 function filledCount() {
   return S.loadout ? S.loadout.weaponSlots.filter(s => s.weapon).length : 0;
 }
 
-/* ---------------- assumptions (unchanged defaults from v1) ---------------- */
+/* ---------------- context & assumptions ---------------- */
 function readAssumptions() {
-  S.assumptions.rangeM = +$('assume-range').value || 300;
-  S.assumptions.weakpointRate = +$('assume-weakpoint').value || 0;
-  S.assumptions.weakpointBonus = +$('assume-weakpoint-bonus').value || 0;
+  if ($('assume-range')) S.assumptions.rangeM = +$('assume-range').value || 300;
+  if ($('assume-weakpoint')) S.assumptions.weakpointRate = +$('assume-weakpoint').value || 0;
+  if ($('assume-weakpoint-bonus')) S.assumptions.weakpointBonus = +$('assume-weakpoint-bonus').value || 0;
 }
 ['assume-range', 'assume-weakpoint', 'assume-weakpoint-bonus'].forEach(id =>
-  $(id).addEventListener('change', () => { readAssumptions(); refreshNumbers(); }));
+  $(id)?.addEventListener('change', () => { readAssumptions(); refreshNumbers(); }));
 
 function buildCtx() {
   readAssumptions();
+  const treeBridge = (typeof Tree !== 'undefined' && Tree.getSelected)
+    ? { includeTree: Tree.isApplied(), treeKeys: Tree.getSelected() }
+    : { includeTree: false, treeKeys: [] };
   return {
-    stacking: S.stacking,
+    stacking: S.stacking || Calc.defaultStacking(),
     mastery: { ...S.mastery },
-    // v1 fidelity: documented seasonal nodes are informational; DPS-relevant seasonal effects live in Mastery.
     buffMods: [],
     assumptions: { ...S.assumptions },
+    ...treeBridge,
   };
 }
 
 /* ---------------- step 1: ships ---------------- */
 function renderShips(filter = '', cls = '') {
   const list = $('ship-list');
+  if (!list) return;
   const classes = [...new Set(DB.ships.map(s => s.class).filter(Boolean))].sort();
   const sel = $('ship-class-filter');
-  if (!sel.options.length || sel.options.length === 1) {
-    classes.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; sel.appendChild(o); });
+  if (sel && sel.options.length <= 1) {
+    classes.forEach(c => {
+      const o = document.createElement('option');
+      o.value = c;
+      o.textContent = c;
+      sel.appendChild(o);
+    });
   }
   list.innerHTML = '';
   DB.ships
@@ -134,91 +163,60 @@ function renderShips(filter = '', cls = '') {
     .forEach(s => {
       const d = document.createElement('div');
       d.className = 'card' + (S.loadout && S.loadout.shipName === s.name ? ' selected' : '');
-      const guns = (s.weapon_slots || []).length;
-      d.innerHTML = `<div class="card-top"><span class="card-ico">${shipIcon(s)}</span>
-        <div><h3>${esc(s.name)}${estBadge(s.estimated)}</h3>
+      const guns = DB.slotsForShip(s).length;
+      d.innerHTML = `<div class="card-top"><span class="card-ico ship-ico-wrap">${shipVisual(s)}</span>
+        <div><h3>${esc(s.name)} ${itemBadge(s)}</h3>
         <div class="meta">${esc(s.class || '')}${s.role ? ' · ' + esc(s.role) : ''}</div></div></div>
         <div class="stats">
           <span class="stat">Hull <b>${s.hull ? fmt(s.hull) : '—'}</b></span>
           <span class="stat">Speed <b>${s.speed_kn != null ? s.speed_kn + ' kn' : '—'}</b></span>
-          <span class="stat">Gun positions <b>${guns}</b></span>
+          <span class="stat">Slots <b>${guns}</b></span>
         </div>`;
       d.addEventListener('click', () => selectShip(s.name));
       list.appendChild(d);
     });
 }
+
 function selectShip(name) {
   S.loadout = newLoadout(name);
   ensureMinorSlots();
-  renderShips($('ship-search').value, $('ship-class-filter').value);
+  renderShips($('ship-search')?.value || '', $('ship-class-filter')?.value || '');
   renderBuildAll();
-  document.querySelector('[data-step="step-2"]').click();
+  document.querySelector('[data-step="step-2"]')?.click();
 }
-$('ship-search').addEventListener('input', e => renderShips(e.target.value, $('ship-class-filter').value));
-$('ship-class-filter').addEventListener('change', e => renderShips($('ship-search').value, e.target.value));
+$('ship-search')?.addEventListener('input', e => renderShips(e.target.value, $('ship-class-filter')?.value || ''));
+$('ship-class-filter')?.addEventListener('change', e => renderShips($('ship-search')?.value || '', e.target.value));
 
-/* example preset: Luke's Frigate build (unchanged from v1) */
-$('btn-load-preset').addEventListener('click', () => {
-  const L = newLoadout('Frigate');
-  L.name = 'Example: Frigate electric build';
-  const put = (pos, weaponName, shots) => {
-    const s = L.weaponSlots.find(x => x.position === pos && !x.weapon);
-    if (!s) return;
-    const w = DB.weaponByName(weaponName);
-    if (w) { s.weapon = w; s.shotsPerVolley = shots || 1; }
-  };
-  const td = DB.weapons.find(w => w.family === 'Thunder Dragon') || DB.weapons.find(w => /thunder dragon/i.test(w.name));
-  if (td) {
-    L.weaponSlots.filter(s => s.position.startsWith('broadside')).forEach(s => { s.weapon = td; s.shotsPerVolley = 6; });
-  }
-  put('bow', 'Culverin V', 1);
-  const maw = DB.weaponByName('Infernal Maw');
-  const aux = L.weaponSlots.find(x => x.position === 'auxiliary' && !x.weapon);
-  if (maw && aux) {
-    aux.weapon = maw; aux.shotsPerVolley = 1;
-    aux.ascension = { tier: 'mythic', flat: 71, pct: 0.331 };
-  }
-  const leyden = DB.furniture.find(f => /leyden/i.test(f.name));
-  if (leyden) L.furniture[0] = { kind: 'major', item: leyden, customMods: [] };
-  L.minorSlots = 4;
-  S.loadout = L;
-  ensureMinorSlots();
-  renderShips($('ship-search').value, $('ship-class-filter').value);
-  renderBuildAll();
-  document.querySelector('[data-step="step-3"]').click();
-});
-
-/* ---------------- templates: curated starter builds ---------------- */
-function templateKitLine(t) {
-  const wnames = [...new Set((t.weapons || []).map(w => w.name))];
-  const fnames = [t.furniture && t.furniture.major, ...((t.furniture && t.furniture.minors) || [])].filter(Boolean);
-  return [...wnames, ...fnames].join(' · ');
-}
+/* ---------------- templates ---------------- */
 function renderTemplates() {
   const box = $('template-list');
-  if (!box) return;
+  if (!box || typeof TEMPLATES === 'undefined') return;
   box.innerHTML = '';
   TEMPLATES.forEach(t => {
     const meta = Archetypes.META[t.archetype] || Archetypes.META.general;
     const d = document.createElement('button');
     d.className = 'template-card';
+    const wnames = [...new Set((t.weapons || []).map(w => w.name))];
+    const fnames = [t.armor, t.furniture && t.furniture.major, ...((t.furniture && t.furniture.minors) || [])].filter(Boolean);
     d.innerHTML = `<div class="t-head"><span class="arch-ico">${meta.icon}</span>
         <div><h3>${esc(t.name)}</h3><div class="meta">${esc(t.tagline)}</div></div></div>
       <p class="t-synergy">${esc(t.synergy)}</p>
-      <div class="t-kit">${esc(templateKitLine(t))}</div>
-      <span class="t-use">Use this template →</span>`;
+      <div class="t-kit">${esc([...wnames, ...fnames].join(' · '))}</div>
+      <span class="t-use">Load Template →</span>`;
     d.addEventListener('click', () => loadTemplate(t));
     box.appendChild(d);
   });
 }
+
 function loadTemplate(t) {
   const L = newLoadout(t.ship);
-  L.name = 'Template: ' + t.name;
+  L.name = t.name;
+  if (t.armor) L.armor = DB.armorByName(t.armor);
   (t.weapons || []).forEach(spec => {
     const s = L.weaponSlots.find(x => x.position === spec.position && !x.weapon);
     if (!s) return;
     const w = DB.weaponByName(spec.name);
-    if (w) { s.weapon = w; s.shotsPerVolley = spec.shots || 1; }
+    if (w) { s.weapon = w; s.shotsPerVolley = spec.shots || s.shotsPerVolley; }
   });
   if (t.furniture) {
     const fm = DB.furnitureByName(t.furniture.major);
@@ -231,16 +229,12 @@ function loadTemplate(t) {
   }
   S.loadout = L;
   ensureMinorSlots();
-  renderShips($('ship-search').value, $('ship-class-filter').value);
+  renderShips($('ship-search')?.value || '', $('ship-class-filter')?.value || '');
   switchTab('build');
-  renderBuildAll();
-  renderFurniture();
-  document.querySelector('[data-step="step-2"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelector('[data-step="step-2"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-/* ---------------- generic picker modal (unchanged logic from v1) ---------------- */
-/* Pass groupFn(item)->[archetypes...] to group items under collapsible
- * archetype subcategories (primary archetype = first entry). */
+/* ---------------- picker modal ---------------- */
 function openPicker(title, items, renderFn, onPick, showClear, groupFn) {
   $('picker-search').value = '';
   $('picker-search').placeholder = 'Search ' + title + '…';
@@ -252,7 +246,7 @@ function openPicker(title, items, renderFn, onPick, showClear, groupFn) {
     const match = it => !q || renderFn(it).toLowerCase().includes(ql);
     const addBtn = it => {
       const b = document.createElement('button');
-      b.className = 'picker-item';
+      b.className = 'picker-item ' + rarityCls(it);
       b.innerHTML = renderFn(it);
       b.addEventListener('click', () => { closePicker(); onPick(it); });
       return b;
@@ -268,10 +262,7 @@ function openPicker(title, items, renderFn, onPick, showClear, groupFn) {
         det.className = 'arch-group';
         det.open = true;
         const sum = document.createElement('summary');
-        sum.innerHTML = `<span class="arch-ico">${meta.icon}</span>` +
-          `<span class="arch-name">${meta.name}</span>` +
-          `<span class="arch-count">${list.length}</span>` +
-          `<span class="arch-blurb">${esc(meta.blurb)}</span>`;
+        sum.innerHTML = `<span class="arch-ico">${meta.icon}</span><span class="arch-name">${meta.name}</span><span class="arch-count">${list.length}</span><span class="arch-blurb">${esc(meta.blurb)}</span>`;
         det.appendChild(sum);
         list.slice(0, 200).forEach(it => det.appendChild(addBtn(it)));
         box.appendChild(det);
@@ -283,57 +274,161 @@ function openPicker(title, items, renderFn, onPick, showClear, groupFn) {
   $('picker-modal').hidden = false;
 }
 function closePicker() { $('picker-modal').hidden = true; }
-$('picker-close').addEventListener('click', closePicker);
-$('picker-modal').addEventListener('click', e => { if (e.target === $('picker-modal')) closePicker(); });
+$('picker-close')?.addEventListener('click', closePicker);
+$('picker-modal')?.addEventListener('click', e => { if (e.target === $('picker-modal')) closePicker(); });
 
-/* ---------------- step 2: weapon slots ---------------- */
+/* ---------------- step 2: weapon & armor slots ---------------- */
 function slotLabel(slot) {
   const pos = slot.position.replace(/_/g, ' ');
   return slot.index > 0 ? `${pos} ${slot.index + 1}` : pos;
 }
+
 function weaponPickerMeta(w) {
-  return `${esc(w.type || '')} · ${w.damage_per_shot ? fmt(w.damage_per_shot) + ' dmg' : '? dmg'} · ${w.reload_time_s ? w.reload_time_s + 's reload' : '? reload'}${w.range_m ? ' · ' + w.range_m + 'm' : ''}`;
+  return `${esc(w.type || '')} · ${w.damage_per_shot ? fmt(w.damage_per_shot) + ' dmg' : '? dmg'} · ${w.reload_time_s ? w.reload_time_s + 's' : '? reload'}${w.range_m ? ' · ' + w.range_m + 'm' : ''}`;
 }
+
+function renderArmorSlot() {
+  const box = $('armor-slot-box');
+  if (!box) return;
+  box.innerHTML = '';
+  if (!S.loadout) return;
+  const ar = S.loadout.armor;
+  const d = document.createElement('div');
+  d.className = 'slot ' + (ar ? 'filled ' + rarityCls(ar) : '');
+  const mit = ar && ar.damage_mitigation
+    ? Object.entries(ar.damage_mitigation).filter(([, v]) => v != null).map(([k, v]) => `${k} ${v}%`).join(' · ')
+    : '';
+  d.innerHTML = `<span class="slot-pos">🛡️ Hull Armor</span>
+    <span class="slot-name">${ar ? esc(ar.name) + ' ' + itemBadge(ar) : '<span style="color:var(--ink-dim)">Tap to equip hull armor</span>'}
+    ${ar ? `<span class="slot-sub">Armor ${ar.armor_value ? fmt(ar.armor_value) : '—'}${mit ? ' · ' + esc(mit) : ''}</span>` : ''}</span>`;
+  d.addEventListener('click', () => {
+    openPicker('hull armor', DB.armors,
+      a => `<div class="pname">${esc(a.name)} ${itemBadge(a)}</div><div class="pmeta">${esc(a.category || '')} · Armor ${a.armor_value ? fmt(a.armor_value) : '—'} · ${esc((a.perks || [])[0] || '')}</div>`,
+      a => { S.loadout.armor = a; refreshNumbers(); },
+      true
+    );
+    $('picker-clear').onclick = () => { S.loadout.armor = null; closePicker(); refreshNumbers(); };
+  });
+  box.appendChild(d);
+}
+
 function renderWeaponSlots() {
   const has = !!S.loadout;
-  $('build-no-ship').hidden = has;
-  $('weapon-slots').innerHTML = '';
+  if ($('build-no-ship')) $('build-no-ship').hidden = has;
+  if ($('quick-swap-bar')) $('quick-swap-bar').hidden = !has;
+  const box = $('weapon-slots');
+  if (!box) return;
+  box.innerHTML = '';
   if (!has) return;
-  const L = S.loadout;
   ensureMinorSlots();
-  L.weaponSlots.forEach((slot, i) => {
+  renderArmorSlot();
+
+  S.loadout.weaponSlots.forEach((slot, i) => {
     const w = slot.weapon;
     const d = document.createElement('div');
-    d.className = 'slot' + (w ? ' filled' : '');
+    d.className = 'slot ' + (w ? 'filled ' + rarityCls(w) : '');
     d.innerHTML = `<span class="slot-pos">${esc(slotLabel(slot))}</span>
-      <span class="slot-name">${w ? esc(w.name) + estBadge(w.estimated) : '<span style="color:var(--ink-dim)">Tap to pick a weapon</span>'}
-      ${w ? `<span class="slot-sub">${weaponPickerMeta(w)}${slot.ascension.tier !== 'none' ? ' · ' + esc(slot.ascension.tier) : ''}</span>` : ''}</span>
-      ${w ? '<span class="slot-edit">edit</span>' : ''}`;
+      ${w ? `<span class="w-ico-wrap">${weaponVisual(w)}</span>` : ''}
+      <span class="slot-name">${w ? esc(w.name) + ' ' + itemBadge(w) : '<span style="color:var(--ink-dim)">Tap to equip weapon</span>'}
+      ${w ? `<span class="slot-sub">${weaponPickerMeta(w)} · ×${slot.shotsPerVolley}${slot.ascension.tier !== 'none' ? ' · ' + esc(slot.ascension.tier) : ''}</span>` : ''}</span>
+      ${w ? '<span class="slot-edit">tune</span>' : ''}`;
     d.addEventListener('click', () => {
       const items = DB.weaponsForSlot(slot.position);
-      openPicker('weapons that fit here', items,
-        it => `<div class="pname">${esc(it.name)}${estBadge(it.estimated)} ${Archetypes.chips(Archetypes.weaponArchetypes(it))}</div><div class="pmeta">${weaponPickerMeta(it)}</div>`,
+      openPicker('weapons for ' + slotLabel(slot), items,
+        it => `<div class="pname">${esc(it.name)} ${itemBadge(it)} ${Archetypes.chips(Archetypes.weaponArchetypes(it))}</div><div class="pmeta">${weaponPickerMeta(it)}</div>`,
         it => { slot.weapon = it; refreshNumbers(); },
         true,
-        it => Archetypes.weaponArchetypes(it));
+        it => Archetypes.weaponArchetypes(it)
+      );
       $('picker-clear').onclick = () => { slot.weapon = null; closePicker(); refreshNumbers(); };
     });
     d.querySelector('.slot-edit')?.addEventListener('click', e => { e.stopPropagation(); openWeaponEditor(i); });
-    $('weapon-slots').appendChild(d);
+    box.appendChild(d);
   });
 }
 
-/* weapon detail editor (unchanged fields from v1) */
+/* Quick-swap: mirror port weapon onto starboard (and vice versa) */
+$('btn-mirror-broadsides')?.addEventListener('click', () => {
+  if (!S.loadout) return;
+  const port = S.loadout.weaponSlots.find(s => s.position === 'broadside_port');
+  const stbd = S.loadout.weaponSlots.find(s => s.position === 'broadside_starboard');
+  if (!port || !stbd) return;
+  const src = port.weapon ? port : stbd;
+  const dst = port.weapon ? stbd : port;
+  if (!src.weapon) return;
+  dst.weapon = src.weapon;
+  dst.shotsPerVolley = src.shotsPerVolley;
+  dst.ascension = { ...src.ascension };
+  dst.customMods = JSON.parse(JSON.stringify(src.customMods || []));
+  dst.extraStatusDps = src.extraStatusDps || 0;
+  refreshNumbers();
+});
+
+/* Share / Import Build Code */
+$('btn-share-build')?.addEventListener('click', () => {
+  if (!S.loadout) return;
+  const payload = {
+    n: S.loadout.name,
+    s: S.loadout.shipName,
+    a: S.loadout.armor ? S.loadout.armor.name : null,
+    w: S.loadout.weaponSlots.map(sl => sl.weapon ? [sl.position, sl.weapon.name, sl.shotsPerVolley, sl.ascension] : null).filter(Boolean),
+    f: S.loadout.furniture.map(fn => fn.item ? [fn.kind, fn.item.name] : null).filter(Boolean),
+  };
+  const code = 'SNB1:' + btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  if (navigator.clipboard) navigator.clipboard.writeText(code).catch(() => {});
+  prompt('Copy your shareable build code:', code);
+});
+
+$('btn-import-build')?.addEventListener('click', () => {
+  const raw = prompt('Paste a build code (SNB1:...):');
+  if (!raw || !raw.trim().startsWith('SNB1:')) return;
+  try {
+    const data = JSON.parse(decodeURIComponent(escape(atob(raw.trim().slice(5)))));
+    const L = newLoadout(data.s);
+    L.name = data.n || L.name;
+    if (data.a) L.armor = DB.armorByName(data.a);
+    (data.w || []).forEach(([pos, wname, shots, asc]) => {
+      const slot = L.weaponSlots.find(x => x.position === pos && !x.weapon);
+      const w = DB.weaponByName(wname);
+      if (slot && w) {
+        slot.weapon = w;
+        slot.shotsPerVolley = shots || slot.shotsPerVolley;
+        if (asc) slot.ascension = asc;
+      }
+    });
+    if (data.f && data.f.length) {
+      L.furniture = [];
+      let minors = 0;
+      data.f.forEach(([kind, fname]) => {
+        const it = DB.furnitureByName(fname);
+        L.furniture.push({ kind, item: it || null, customMods: [] });
+        if (kind === 'minor') minors++;
+      });
+      L.minorSlots = Math.max(L.minorSlots, minors);
+    }
+    S.loadout = L;
+    ensureMinorSlots();
+    switchTab('build');
+  } catch {
+    alert('Invalid build code.');
+  }
+});
+
+/* ---------------- weapon detail editor + verified card rolls ---------------- */
 function openWeaponEditor(slotIdx) {
   const slot = S.loadout.weaponSlots[slotIdx];
   const w = slot.weapon;
   $('weapon-modal-title').textContent = w.name;
   const body = $('weapon-modal-body');
   const tiers = ['none', 'basic', 'advanced', 'special', 'mythic'];
+  const rolls = w.player_rolls || [];
+
   body.innerHTML = `
     <div class="perk-text">${esc((w.perks || []).join('\n')) || 'No perk text in data.'}
-${(w.status_effects || []).map(s => 'Status: ' + s.effect + (s.application ? ' — ' + s.application : '')).join('\n')}</div>
-    <div class="field"><label>Shots per volley <span class="hint">(data doesn't track this — set per weapon)</span></label>
+${(w.status_effects || []).map(s => 'Status: ' + (typeof s === 'string' ? s : s.effect)).join('\n')}</div>
+    ${rolls.length ? `<div class="field"><label>Verified Card Rolls <span class="hint">(tap to apply base damage)</span></label>
+      <div class="saved-list">${rolls.map((r, ri) => `<button type="button" class="saved-chip" data-roll="${ri}">GS ${r.gear_score} · ${r.damage_per_shot || '?'} dmg</button>`).join('')}</div></div>` : ''}
+    <div class="field"><label>Shots per volley <span class="hint">(guns firing per broadside/salvo)</span></label>
       <input id="we-shots" type="number" min="1" max="40" value="${slot.shotsPerVolley}"></div>
     <div class="field"><label>Ascension tier</label>
       <select id="we-tier">${tiers.map(t => `<option value="${t}"${slot.ascension.tier === t ? ' selected' : ''}>${t[0].toUpperCase() + t.slice(1)}</option>`).join('')}</select></div>
@@ -341,20 +436,31 @@ ${(w.status_effects || []).map(s => 'Status: ' + s.effect + (s.application ? ' �
       <input id="we-flat" type="number" step="1" value="${slot.ascension.flat || 0}"></div>
     <div class="field"><label>Ascension % damage (decimal, e.g. 0.15)</label>
       <input id="we-pct" type="number" step="0.01" value="${slot.ascension.pct || 0}"></div>
-    <div class="field"><label>Assumed extra status DPS <span class="hint">(for unmodeled damage-over-time)</span></label>
+    <div class="field"><label>Assumed extra status DPS</label>
       <input id="we-status" type="number" step="1" value="${slot.extraStatusDps || 0}"></div>
-    <div class="field"><label>Custom modifiers <span class="hint">(bonus type / decimal / applies to)</span></label>
+    <div class="field"><label>Custom modifiers</label>
       <div id="we-mods"></div>
-      <button id="we-addmod" class="btn">+ Add modifier</button></div>
-    <button id="we-done" class="btn btn-primary">Done</button>`;
+      <button id="we-addmod" type="button" class="btn">+ Add modifier</button></div>
+    <button id="we-done" type="button" class="btn btn-primary">Done</button>`;
+
+  body.querySelectorAll('[data-roll]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const r = rolls[+btn.dataset.roll];
+      if (r && r.damage_per_shot && w.damage_per_shot) {
+        body.querySelector('#we-flat').value = r.damage_per_shot - w.damage_per_shot;
+        body.querySelector('#we-tier').value = 'mythic';
+      }
+    });
+  });
+
   const modsBox = body.querySelector('#we-mods');
-  const modRow = (m) => {
+  const modRow = m => {
     const r = document.createElement('div');
     r.className = 'mod-row';
     r.innerHTML = `<select>${Calc.POOLS.map(p => `<option${m.pool === p ? ' selected' : ''}>${p}</option>`).join('')}</select>
       <input type="number" step="0.01" placeholder="0.15" value="${m.value || ''}">
       <input type="text" placeholder="applies to…" value="${esc(m.appliesTo || 'all')}">
-      <button class="btn btn-danger">✕</button>`;
+      <button type="button" class="btn btn-danger">✕</button>`;
     r.querySelector('.btn-danger').addEventListener('click', () => r.remove());
     modsBox.appendChild(r);
   };
@@ -378,33 +484,39 @@ ${(w.status_effects || []).map(s => 'Status: ' + s.effect + (s.application ? ' �
   });
   $('weapon-modal').hidden = false;
 }
-$('weapon-close').addEventListener('click', () => $('weapon-modal').hidden = true);
-$('weapon-modal').addEventListener('click', e => { if (e.target === $('weapon-modal')) $('weapon-modal').hidden = true; });
+$('weapon-close')?.addEventListener('click', () => $('weapon-modal').hidden = true);
+$('weapon-modal')?.addEventListener('click', e => { if (e.target === $('weapon-modal')) $('weapon-modal').hidden = true; });
 
-/* ---------------- step 3: damage (live) ---------------- */
+/* ---------------- step 3: live damage & survivability ---------------- */
 function quickResult() {
   if (!S.loadout || !filledCount()) return null;
   return Calc.loadoutDps(S.loadout, buildCtx());
 }
+
 function renderQuickDps() {
   const r = quickResult();
   const has = !!r;
-  $('qdps-empty').hidden = has;
-  $('qdps-main').hidden = !has;
-  // step-3 nav state
-  document.querySelector('[data-step="step-3"]').classList.toggle('done', has);
-  document.querySelector('[data-step="step-1"]').classList.toggle('done', !!S.loadout);
-  document.querySelector('[data-step="step-2"]').classList.toggle('done', filledCount() > 0);
+  if ($('qdps-empty')) $('qdps-empty').hidden = has;
+  if ($('qdps-main')) $('qdps-main').hidden = !has;
+  document.querySelector('[data-step="step-3"]')?.classList.toggle('done', has);
+  document.querySelector('[data-step="step-1"]')?.classList.toggle('done', !!S.loadout);
+  document.querySelector('[data-step="step-2"]')?.classList.toggle('done', filledCount() > 0);
   if (!has) return;
+
   $('qdps-total').textContent = fmt(r.sustainedDps);
   $('qdps-alpha').textContent = fmt(r.broadsideAlpha);
+  if ($('qdps-tree-pill')) {
+    $('qdps-tree-pill').hidden = !r.treeActiveCount;
+    $('qdps-tree-pill').textContent = `+${r.treeActiveCount} tree nodes active`;
+  }
+
   const box = $('qdps-breakdown');
   box.innerHTML = '';
   r.weapons.forEach(w => {
     const d = document.createElement('div');
     d.className = 'dps-row';
     d.innerHTML = `<span class="wdps">${fmt(w.dps)} <small>dps</small></span>
-      <div class="wname">${esc(w.name)}${estBadge(w.estimated)} <small>· ${esc(w.position.replace(/_/g, ' '))}${w.tier !== 'none' ? ' · ' + esc(w.tier) : ''}</small></div>
+      <div class="wname">${esc(w.name)}${w.estimated ? ' <span class="est-badge">est.</span>' : ''} <small>· ${esc(w.position.replace(/_/g, ' '))}${w.tier !== 'none' ? ' · ' + esc(w.tier) : ''}</small></div>
       <div class="wstats">volley ${fmt(w.volleyDamage)} · reload cycle ${w.cycle}s${w.statusDps ? ' · status ' + fmt(w.statusDps) : ''}</div>
       ${w.notes.length ? `<div class="wstats">⚠ ${w.notes.map(esc).join(' · ')}</div>` : ''}`;
     box.appendChild(d);
@@ -412,23 +524,37 @@ function renderQuickDps() {
   if (r.unparsedFurniture.length) {
     const n = document.createElement('div');
     n.className = 'notice small';
-    n.innerHTML = `These furniture pieces have no structured numbers and added <strong>nothing</strong> to the calc — tune them in the Tune tab: ${r.unparsedFurniture.map(esc).join(', ')}`;
+    n.innerHTML = `Utility/unmodeled furniture (no flat DPS modifier): ${r.unparsedFurniture.map(esc).join(', ')}`;
     box.prepend(n);
   }
 }
 
-/* ---------------- status bar ---------------- */
+/* ---------------- status bar & header pill ---------------- */
 function renderStatusBar() {
   const bar = $('build-status');
-  if (!S.loadout) { bar.hidden = true; return; }
-  bar.hidden = false;
+  const pill = $('header-live-pill');
+  if (!S.loadout) {
+    if (bar) bar.hidden = true;
+    if (pill) pill.hidden = true;
+    return;
+  }
   const ship = DB.shipByName(S.loadout.shipName);
+  const surv = Calc.armorSummary ? Calc.armorSummary(ship, S.loadout.armor, S.loadout.furniture) : null;
   const n = filledCount();
   const total = S.loadout.weaponSlots.length;
   const r = quickResult();
-  bar.innerHTML = `<span class="ship-ico">${ship ? shipIcon(ship) : '⛵'}</span>
-    <span><strong>${esc(S.loadout.shipName)}</strong> · ${n}/${total} guns</span>
-    ${r ? `<span class="live-dps">${fmt(r.sustainedDps)} dps</span>` : ''}`;
+
+  if (bar) {
+    bar.hidden = false;
+    bar.innerHTML = `<span class="ship-ico">${shipVisual(ship)}</span>
+      <span><strong>${esc(S.loadout.shipName)}</strong> · ${n}/${total} guns${surv && surv.totalArmor ? ' · 🛡️ ' + fmt(surv.totalArmor) : ''}</span>
+      ${r ? `<span class="live-dps">${fmt(r.sustainedDps)} dps</span>` : ''}`;
+  }
+  if (pill) {
+    pill.hidden = false;
+    $('pill-dps').textContent = r ? fmt(r.sustainedDps) : '0';
+    $('pill-armor').textContent = surv && surv.totalArmor ? fmt(surv.totalArmor) : '—';
+  }
 }
 
 function renderBuildAll() {
@@ -440,26 +566,31 @@ function refreshNumbers() {
   renderBuildAll();
 }
 
-/* ---------------- Tune tab: loadout save/load (unchanged from v1) ---------------- */
+/* ---------------- Tune tab: save/load, furniture, buffs, mastery, stacking, compare ---------------- */
 function getSaved() {
   try { return JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { return {}; }
 }
 function setSaved(o) { localStorage.setItem(LS_KEY, JSON.stringify(o)); }
-$('btn-save-loadout').addEventListener('click', () => {
+
+$('btn-save-loadout')?.addEventListener('click', () => {
   if (!S.loadout) return;
+  const nm = ($('loadout-name')?.value || S.loadout.name || 'Unnamed').trim();
+  S.loadout.name = nm;
   const all = getSaved();
-  all[S.loadout.name || 'Unnamed'] = S.loadout;
+  all[nm] = S.loadout;
   setSaved(all);
   renderSavedList();
   refreshCompareSelects();
 });
-$('btn-load-loadout').addEventListener('click', () => {
+$('btn-load-loadout')?.addEventListener('click', () => {
   const box = $('saved-list');
   box.hidden = !box.hidden;
   if (!box.hidden) renderSavedList();
 });
+
 function renderSavedList() {
   const box = $('saved-list');
+  if (!box) return;
   const all = getSaved();
   box.innerHTML = '';
   Object.keys(all).forEach(name => {
@@ -471,9 +602,7 @@ function renderSavedList() {
         const a2 = getSaved(); delete a2[name]; setSaved(a2); renderSavedList(); refreshCompareSelects();
       } else {
         S.loadout = all[name];
-        renderShips($('ship-search').value, $('ship-class-filter').value);
         switchTab('build');
-        renderBuildAll();
       }
     });
     box.appendChild(c);
@@ -481,21 +610,23 @@ function renderSavedList() {
   if (!Object.keys(all).length) box.innerHTML = '<span class="hint">No saved loadouts yet.</span>';
 }
 
-/* ---------------- Tune tab: furniture (unchanged logic from v1) ---------------- */
-$('minor-slot-count').addEventListener('change', e => {
+$('minor-slot-count')?.addEventListener('change', e => {
   if (!S.loadout) return;
   S.loadout.minorSlots = Math.max(0, Math.min(8, +e.target.value || 0));
   renderFurniture();
   refreshNumbers();
 });
+
 function renderFurniture() {
   const has = !!S.loadout;
-  $('adv-no-loadout').hidden = has;
-  $('adv-loadout').hidden = !has;
+  if ($('adv-no-loadout')) $('adv-no-loadout').hidden = has;
+  if ($('adv-loadout')) $('adv-loadout').hidden = !has;
   const fs = $('furniture-slots');
+  if (!fs) return;
   fs.innerHTML = '';
-  if (!has) { $('minor-slot-count').value = 4; return; }
+  if (!has) return;
   const L = S.loadout;
+  if ($('loadout-name')) $('loadout-name').value = L.name || '';
   ensureMinorSlots();
   $('minor-slot-count').value = L.minorSlots;
   L.furniture.forEach((f, i) => {
@@ -503,16 +634,17 @@ function renderFurniture() {
     const d = document.createElement('div');
     d.className = 'slot' + (it ? ' filled' : '');
     d.innerHTML = `<span class="slot-pos">${f.kind === 'major' ? '★ Major' : 'Minor'}</span>
-      <span class="slot-name">${it ? esc(it.name) + estBadge(it.estimated) : '<span style="color:var(--ink-dim)">Tap to pick furniture</span>'}
+      <span class="slot-name">${it ? esc(it.name) + ' ' + itemBadge(it) : '<span style="color:var(--ink-dim)">Tap to pick furniture</span>'}
       ${it ? `<span class="slot-sub">${esc((it.perk_text || '').slice(0, 90))}…</span>` : ''}</span>
-      ${it ? '<span class="slot-edit">edit</span>' : ''}`;
+      ${it ? '<span class="slot-edit">tune</span>' : ''}`;
     d.addEventListener('click', () => {
       const items = DB.furniture.filter(x => (x.tier || '').toLowerCase() === f.kind);
       openPicker('furniture', items,
-        x => `<div class="pname">${esc(x.name)}${estBadge(x.estimated)} ${Archetypes.chips(Archetypes.furnitureArchetypes(x))}</div><div class="pmeta">${esc(x.tier || '')} · ${esc((x.perk_text || '').slice(0, 110))}…</div>`,
+        x => `<div class="pname">${esc(x.name)} ${itemBadge(x)} ${Archetypes.chips(Archetypes.furnitureArchetypes(x))}</div><div class="pmeta">${esc(x.tier || '')} · ${esc((x.perk_text || '').slice(0, 110))}…</div>`,
         x => { f.item = x; renderFurniture(); refreshNumbers(); },
         true,
-        x => Archetypes.furnitureArchetypes(x));
+        x => Archetypes.furnitureArchetypes(x)
+      );
       $('picker-clear').onclick = () => { f.item = null; f.customMods = []; closePicker(); renderFurniture(); refreshNumbers(); };
     });
     d.querySelector('.slot-edit')?.addEventListener('click', e => { e.stopPropagation(); openFurnitureEditor(i); });
@@ -520,7 +652,6 @@ function renderFurniture() {
   });
 }
 
-/* furniture detail editor (unchanged logic from v1) */
 function openFurnitureEditor(fIdx) {
   const f = S.loadout.furniture[fIdx];
   $('weapon-modal-title').textContent = f.item.name;
@@ -528,20 +659,18 @@ function openFurnitureEditor(fIdx) {
   const known = Calc.templateFor(f.item.name);
   body.innerHTML = `
     <div class="perk-text">${esc(f.item.perk_text || '')}</div>
-    ${known.length ? `<div class="notice small">Known bonuses auto-applied:<br>${known.map(m => '• ' + esc(m.note)).join('<br>')}</div>`
-      : `<div class="notice small">No structured numbers for this piece — add custom modifiers below (bonus type / decimal / applies to).</div>`}
-    <div class="field"><label>Custom modifiers</label>
-      <div id="we-mods"></div>
-      <button id="we-addmod" class="btn">+ Add modifier</button></div>
-    <button id="we-done" class="btn btn-primary">Done</button>`;
+    ${known.length ? `<div class="notice small">Auto-applied modifiers:<br>${known.map(m => '• ' + esc(m.note)).join('<br>')}</div>`
+      : `<div class="notice small">No auto-parsed DPS modifiers — add custom modifiers below if desired.</div>`}
+    <div class="field"><label>Custom modifiers</label><div id="we-mods"></div><button id="we-addmod" type="button" class="btn">+ Add modifier</button></div>
+    <button id="we-done" type="button" class="btn btn-primary">Done</button>`;
   const modsBox = body.querySelector('#we-mods');
-  const modRow = (m) => {
+  const modRow = m => {
     const r = document.createElement('div');
     r.className = 'mod-row';
     r.innerHTML = `<select>${Calc.POOLS.map(p => `<option${m.pool === p ? ' selected' : ''}>${p}</option>`).join('')}</select>
       <input type="number" step="0.01" placeholder="0.15" value="${m.value || ''}">
       <input type="text" placeholder="applies to…" value="${esc(m.appliesTo || 'all')}">
-      <button class="btn btn-danger">✕</button>`;
+      <button type="button" class="btn btn-danger">✕</button>`;
     r.querySelector('.btn-danger').addEventListener('click', () => r.remove());
     modsBox.appendChild(r);
   };
@@ -559,28 +688,25 @@ function openFurnitureEditor(fIdx) {
   $('weapon-modal').hidden = false;
 }
 
-/* ---------------- Tune tab: season buffs (unchanged logic from v1) ---------------- */
 function renderBuffs() {
   const sd = DB.meta.season_dates;
-  $('season-dates').textContent = sd ? `${sd.start} → ${sd.end}` : '';
+  if ($('season-dates')) $('season-dates').textContent = sd ? `${sd.start} → ${sd.end}` : '';
   const box = $('buff-list');
+  if (!box) return;
   box.innerHTML = '';
   DB.seasonalNodes().forEach(n => {
     const d = document.createElement('div');
     d.className = 'buff-card';
     const on = !!S.buffs[n.name];
-    d.innerHTML = `<div class="buff-info"><h3>${esc(n.name)}${n.type === 'mechanic' ? '' : estBadge(n.confidence !== 'confirmed')}</h3>
-      <p>${esc(n.description || '')}</p>
-      ${n.stacking_note ? `<p><em>Stacking: ${esc(n.stacking_note)}</em></p>` : ''}</div>
-      <label class="switch"><input type="checkbox"${on ? ' checked' : ''} aria-label="${esc(n.name)}"><span class="slider"></span></label>`;
+    d.innerHTML = `<div class="buff-info"><h3>${esc(n.name)}</h3><p>${esc(n.description || '')}</p></div>
+      <label class="switch"><input type="checkbox"${on ? ' checked' : ''}><span class="slider"></span></label>`;
     d.querySelector('input').addEventListener('change', e => { S.buffs[n.name] = e.target.checked; refreshNumbers(); });
     box.appendChild(d);
   });
 }
 
-/* ---------------- Tune tab: mastery (unchanged logic from v1) ---------------- */
 const MASTERY_PERKS = [
-  { key: 'relentlessForce', name: 'Relentless Force', unlock: 10, desc: 'Generate 1 Impetus per 8 weapon hits (32 for demi-cannons), max 10 stacks. Generating Impetus: +15% weapon damage & +15% repair for 5s.' },
+  { key: 'relentlessForce', name: 'Relentless Force', unlock: 10, desc: 'Generate 1 Impetus per 8 weapon hits (32 for demi-cannons), max 10 stacks. +15% weapon damage & +15% repair for 5s.' },
   { key: 'weaknessFinder', name: 'Weakness Finder', unlock: 30, desc: 'Generating Impetus: 20% chance to convert any shot into a weakpoint hit for 5s.' },
   { key: 'firepowerOrder', name: 'Firepower Order', unlock: 50, desc: 'At 10 Impetus, fire an auxiliary weapon to consume all 10: every hit becomes a weakpoint hit for 8s.' },
 ];
@@ -589,20 +715,21 @@ function masteryUsed() {
 }
 function renderMastery() {
   const used = masteryUsed();
-  $('mastery-used').textContent = used;
-  $('mastery-fill').style.width = Math.min(100, used / 90 * 100) + '%';
+  if ($('mastery-used')) $('mastery-used').textContent = used;
+  if ($('mastery-fill')) $('mastery-fill').style.width = Math.min(100, used / 90 * 100) + '%';
   const box = $('mastery-list');
+  if (!box) return;
   box.innerHTML = '';
   MASTERY_PERKS.forEach(p => {
     const d = document.createElement('div');
     d.className = 'buff-card';
     const on = !!S.mastery[p.key];
     d.innerHTML = `<div class="buff-info"><h3>${esc(p.name)} <span class="hint">unlock ${p.unlock} · costs ${MASTERY_COSTS[p.key]} pts</span></h3><p>${esc(p.desc)}</p></div>
-      <label class="switch"><input type="checkbox"${on ? ' checked' : ''} aria-label="${esc(p.name)}"><span class="slider"></span></label>`;
+      <label class="switch"><input type="checkbox"${on ? ' checked' : ''}><span class="slider"></span></label>`;
     d.querySelector('input').addEventListener('change', e => {
       if (e.target.checked && masteryUsed() + MASTERY_COSTS[p.key] > 90) {
         e.target.checked = false;
-        alert('That would exceed the 90-point cap.');
+        alert('Exceeds 90-point cap.');
         return;
       }
       S.mastery[p.key] = e.target.checked;
@@ -613,14 +740,14 @@ function renderMastery() {
   });
 }
 
-/* ---------------- Tune tab: stacking (unchanged logic from v1) ---------------- */
 const POOL_INFO = {
-  weaponDamage: ['Weapon damage %', 'Furniture / mastery / ascension % damage bonuses'],
-  secondaryDamage: ['Secondary damage %', 'Status & secondary-damage bonuses'],
+  weaponDamage: ['Weapon damage %', 'Furniture / tree / ascension % damage bonuses'],
+  secondaryDamage: ['Secondary damage %', 'Elemental & secondary-damage bonuses'],
   reload: ['Reload reduction %', 'How multiple -% reload sources combine'],
 };
 function renderStacking() {
   const box = $('stacking-toggles');
+  if (!box) return;
   box.innerHTML = '';
   Object.keys(POOL_INFO).forEach(pool => {
     const [title, sub] = POOL_INFO[pool];
@@ -629,13 +756,10 @@ function renderStacking() {
     row.innerHTML = `<div class="stack-name">${title}<small>${sub}</small></div>`;
     const seg = document.createElement('div');
     seg.className = 'seg';
-    seg.setAttribute('role', 'group');
-    seg.setAttribute('aria-label', title);
     ['additive', 'multiplicative'].forEach(mode => {
       const b = document.createElement('button');
       b.textContent = mode === 'additive' ? 'Additive' : 'Multipl.';
       b.className = S.stacking[pool] === mode ? 'on' : '';
-      b.setAttribute('aria-pressed', S.stacking[pool] === mode ? 'true' : 'false');
       b.addEventListener('click', () => { S.stacking[pool] = mode; renderStacking(); refreshNumbers(); });
       seg.appendChild(b);
     });
@@ -644,12 +768,12 @@ function renderStacking() {
   });
 }
 
-/* ---------------- Tune tab: compare (unchanged logic from v1) ---------------- */
 function refreshCompareSelects() {
   const all = getSaved();
   const names = Object.keys(all);
   if (S.loadout) names.unshift('« current: ' + (S.loadout.name || 'Unnamed') + ' »');
   [$('compare-a'), $('compare-b')].forEach(sel => {
+    if (!sel) return;
     const cur = sel.value;
     sel.innerHTML = names.map(n => `<option${n === cur ? ' selected' : ''}>${esc(n)}</option>`).join('');
   });
@@ -659,7 +783,7 @@ function resolveCompareLoadout(label) {
   if (label.startsWith('« current:')) return S.loadout;
   return getSaved()[label] || null;
 }
-$('btn-compare').addEventListener('click', () => {
+$('btn-compare')?.addEventListener('click', () => {
   const a = resolveCompareLoadout($('compare-a').value);
   const b = resolveCompareLoadout($('compare-b').value);
   const box = $('compare-result');
@@ -669,48 +793,47 @@ $('btn-compare').addEventListener('click', () => {
   const sign = v => (v >= 0 ? '+' : '') + v + '%';
   box.innerHTML = `<div class="dps-row">
     <div class="wname">${esc(r.a.name)} vs ${esc(r.b.name)}</div>
-    <div class="wstats">Damage per second: ${fmt(r.a.sustainedDps)} vs ${fmt(r.b.sustainedDps)}
-      → <span class="${cls(r.sustainedDeltaPct)}">${sign(r.sustainedDeltaPct)}</span></div>
-    <div class="wstats">Broadside alpha: ${fmt(r.a.broadsideAlpha)} vs ${fmt(r.b.broadsideAlpha)}
-      → <span class="${cls(r.alphaDeltaPct)}">${sign(r.alphaDeltaPct)}</span></div>
-    <div class="wstats">Relative numbers — armor cancels out, so these are the trustworthy ones.</div>
+    <div class="wstats">Sustained DPS: ${fmt(r.a.sustainedDps)} vs ${fmt(r.b.sustainedDps)} → <span class="${cls(r.sustainedDeltaPct)}">${sign(r.sustainedDeltaPct)}</span></div>
+    <div class="wstats">Broadside alpha: ${fmt(r.a.broadsideAlpha)} vs ${fmt(r.b.broadsideAlpha)} → <span class="${cls(r.alphaDeltaPct)}">${sign(r.alphaDeltaPct)}</span></div>
   </div>`;
 });
 
-/* ---------------- Tune tab: data reference ---------------- */
+/* ---------------- reference tables (including Armor Codex) ---------------- */
 function renderReference() {
   const m = DB.meta;
-  $('data-verified-line').textContent =
-    `Game data last checked — weapons ${m.weapons_verified || '?'}, ships ${m.ships_verified || '?'}, furniture ${m.furniture_verified || '?'}.`;
-
-  // status effects
+  if ($('data-verified-line')) {
+    $('data-verified-line').textContent = `Data verified — weapons ${m.weapons_verified || '?'}, ships ${m.ships_verified || '?'}, furniture ${m.furniture_verified || '?'}.`;
+  }
   const ref = DB.statusReference();
-  $('status-ref-table').innerHTML = '<table><tr><th>Effect</th><th>What it does</th></tr>' +
-    Object.keys(ref).map(k => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(ref[k])}</td></tr>`).join('') + '</table>';
-
+  if ($('status-ref-table')) {
+    $('status-ref-table').innerHTML = '<table><tr><th>Effect</th><th>Description</th></tr>' +
+      Object.keys(ref).map(k => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(ref[k])}</td></tr>`).join('') + '</table>';
+  }
   const drawShips = q => {
-    $('ref-ship-table').innerHTML = '<table><tr><th>Ship</th><th>Class</th><th>Hull</th><th>Speed</th><th>Gun pos.</th></tr>' +
+    if (!$('ref-ship-table')) return;
+    $('ref-ship-table').innerHTML = '<table><tr><th>Ship</th><th>Class</th><th>Hull</th><th>Speed</th><th>Slots</th></tr>' +
       DB.ships.filter(s => s.playable !== false)
         .filter(s => !q || (s.name + ' ' + (s.class || '')).toLowerCase().includes(q.toLowerCase()))
-        .map(s => `<tr><td><strong>${esc(s.name)}</strong>${estBadge(s.estimated)}</td><td>${esc(s.class || '—')}</td>` +
-          `<td class="num">${s.hull ? fmt(s.hull) : '—'}</td><td class="num">${s.speed_kn != null ? s.speed_kn + ' kn' : '—'}</td>` +
-          `<td class="num">${(s.weapon_slots || []).length}</td></tr>`).join('') + '</table>';
+        .map(s => `<tr><td><strong>${esc(s.name)}</strong> ${itemBadge(s)}</td><td>${esc(s.class || '—')}</td><td class="num">${s.hull ? fmt(s.hull) : '—'}</td><td class="num">${s.speed_kn != null ? s.speed_kn + ' kn' : '—'}</td><td class="num">${DB.slotsForShip(s).length}</td></tr>`).join('') + '</table>';
   };
   const drawWeapons = q => {
+    if (!$('ref-weapon-table')) return;
     $('ref-weapon-table').innerHTML = '<table><tr><th>Weapon</th><th>Type</th><th>Dmg/shot</th><th>Reload</th><th>Range</th></tr>' +
-      DB.weapons
-        .filter(w => !q || (w.name + ' ' + (w.type || '') + ' ' + (w.family || '')).toLowerCase().includes(q.toLowerCase()))
-        .map(w => `<tr><td><strong>${esc(w.name)}</strong>${estBadge(w.estimated)}</td><td>${esc(w.type || '—')}</td>` +
-          `<td class="num">${w.damage_per_shot ? fmt(w.damage_per_shot) : '—'}</td>` +
-          `<td class="num">${w.reload_time_s ? w.reload_time_s + 's' : '—'}</td>` +
-          `<td class="num">${w.range_m ? w.range_m + 'm' : '—'}</td></tr>`).join('') + '</table>';
+      DB.weapons.filter(w => !q || (w.name + ' ' + (w.type || '')).toLowerCase().includes(q.toLowerCase()))
+        .map(w => `<tr><td><strong>${esc(w.name)}</strong> ${itemBadge(w)}</td><td>${esc(w.type || '—')}</td><td class="num">${w.damage_per_shot ? fmt(w.damage_per_shot) : '—'}</td><td class="num">${w.reload_time_s ? w.reload_time_s + 's' : '—'}</td><td class="num">${w.range_m ? w.range_m + 'm' : '—'}</td></tr>`).join('') + '</table>';
   };
-  drawShips(''); drawWeapons('');
-  $('ref-ship-search').oninput = e => drawShips(e.target.value);
-  $('ref-weapon-search').oninput = e => drawWeapons(e.target.value);
+  const drawArmors = q => {
+    if (!$('ref-armor-table')) return;
+    $('ref-armor-table').innerHTML = '<table><tr><th>Armor</th><th>Tier</th><th>Rating</th><th>Key Perk</th></tr>' +
+      DB.armors.filter(a => !q || (a.name + ' ' + (a.category || '')).toLowerCase().includes(q.toLowerCase()))
+        .map(a => `<tr><td><strong>${esc(a.name)}</strong> ${itemBadge(a)}</td><td>${esc(a.category || '—')}</td><td class="num">${a.armor_value ? fmt(a.armor_value) : '—'}</td><td>${esc(((a.perks || [])[0] || a.perk || '—').slice(0, 80))}</td></tr>`).join('') + '</table>';
+  };
+  drawShips(''); drawWeapons(''); drawArmors('');
+  $('ref-ship-search')?.addEventListener('input', e => drawShips(e.target.value));
+  $('ref-weapon-search')?.addEventListener('input', e => drawWeapons(e.target.value));
+  $('ref-armor-search')?.addEventListener('input', e => drawArmors(e.target.value));
 }
 
-/* ---------------- render advanced tab ---------------- */
 function renderAdvanced() {
   renderFurniture();
   renderBuffs();
@@ -720,17 +843,96 @@ function renderAdvanced() {
   refreshCompareSelects();
 }
 
+/* ---------------- optimizer UI ---------------- */
+const OptimizerUI = {
+  inited: false,
+  init() {
+    if (this.inited) return;
+    this.buildControls();
+    this.inited = true;
+  },
+  buildControls() {
+    const shipSel = $('opt-ship');
+    if (!shipSel) return;
+    shipSel.innerHTML = DB.ships.filter(s => s.playable !== false)
+      .map(s => `<option value="${esc(s.name)}">${esc(s.name)}</option>`).join('');
+    if ([...shipSel.options].some(o => o.value === 'Frigate')) shipSel.value = 'Frigate';
+    $('opt-enemy').innerHTML = Object.entries(Optimizer.ENEMIES)
+      .map(([id, e]) => `<option value="${id}">${e.icon} ${esc(e.name)}</option>`).join('');
+    $('opt-objective').innerHTML = Object.entries(Optimizer.OBJECTIVES)
+      .map(([id, o]) => `<option value="${id}">${o.icon} ${esc(o.name)}</option>`).join('');
+    $('btn-optimize').addEventListener('click', () => this.run());
+    this.renderPresets();
+  },
+  run() {
+    const out = Optimizer.optimize($('opt-ship').value, $('opt-enemy').value, $('opt-objective').value, {
+      mastery: {
+        relentlessForce: $('opt-m-relentless').checked,
+        weaknessFinder: $('opt-m-weakness').checked,
+        firepowerOrder: $('opt-m-firepower').checked,
+      },
+      rangeM: Math.max(50, +$('opt-range').value || 300),
+      includeEstimated: $('opt-estimated').checked,
+    });
+    const box = $('opt-results');
+    if (out.error) { box.innerHTML = `<div class="notice">${esc(out.error)}</div>`; return; }
+    box.innerHTML = out.results.map((r, i) => {
+      const meta = Archetypes.META[r.archetype] || Archetypes.META.general;
+      const guns = r.loadout.weaponSlots.map(s => `<li><strong>${esc(s.position)}</strong>: ${esc(s.weapon.name)}</li>`).join('');
+      const furn = r.loadout.furniture.map(f => f.item ? `<li>${esc(f.item.name)} <span class="hint">(${esc(f.kind)})</span></li>` : '').join('');
+      const medals = ['🥇', '🥈', '🥉'];
+      return `<div class="template-card">
+        <div class="t-head"><h3>${medals[i] || ''} ${meta.icon} ${esc(r.loadout.name)}</h3></div>
+        <div class="t-kit">Sustained <strong>${fmt(r.result.sustainedDps)}</strong> DPS · Alpha <strong>${fmt(r.result.broadsideAlpha)}</strong></div>
+        <div class="t-synergy"><strong>Weapons</strong><ul>${guns}</ul></div>
+        <div class="t-synergy"><strong>Armor & Furniture</strong><ul>${r.loadout.armor ? '<li>🛡️ ' + esc(r.loadout.armor.name) + '</li>' : ''}${furn}</ul></div>
+        <div class="t-synergy">${r.why}</div>
+        <button class="t-use" data-apply="${i}">Send to Builder →</button>
+      </div>`;
+    }).join('');
+    box.querySelectorAll('[data-apply]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        S.loadout = out.results[+btn.dataset.apply].loadout;
+        ensureMinorSlots();
+        switchTab('build');
+      });
+    });
+  },
+  renderPresets() {
+    const box = $('opt-presets');
+    if (!box) return;
+    box.innerHTML = Optimizer.PRESETS.map(p => {
+      const l = Optimizer.presetLoadout(p.id);
+      if (!l) return '';
+      const res = Calc.loadoutDps(l, Optimizer.scoreCtx({}));
+      const guns = l.weaponSlots.map(s => esc(s.weapon.name)).join(' · ');
+      return `<div class="template-card">
+        <div class="t-head"><h3>${esc(p.name)}</h3><span class="meta">${esc(p.tagline)}</span></div>
+        <div class="t-kit">Sustained <strong>${fmt(res.sustainedDps)}</strong> DPS · Alpha <strong>${fmt(res.broadsideAlpha)}</strong></div>
+        <div class="t-kit">${guns}</div>
+        <div class="t-synergy">${esc(p.why)}</div>
+        <button class="t-use" data-preset="${p.id}">Load in Builder →</button>
+      </div>`;
+    }).join('');
+    box.querySelectorAll('[data-preset]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const l = Optimizer.presetLoadout(btn.dataset.preset);
+        if (l) { S.loadout = l; ensureMinorSlots(); switchTab('build'); }
+      });
+    });
+  },
+};
+
 /* ---------------- boot ---------------- */
 (async function boot() {
   try {
     await DB.load();
   } catch (err) {
-    document.getElementById('main').innerHTML =
-      '<div class="notice">Failed to load game data: ' + esc(err.message) + '</div>';
+    if ($('main')) $('main').innerHTML = '<div class="notice">Failed to load game data: ' + esc(err.message) + '</div>';
     return;
   }
   try {
-    if (!localStorage.getItem(ONBOARD_KEY)) $('onboard-card').hidden = false;
+    if (!localStorage.getItem(ONBOARD_KEY) && $('onboard-card')) $('onboard-card').hidden = false;
   } catch {}
   S.stacking = Calc.defaultStacking();
   renderShips();
@@ -738,4 +940,5 @@ function renderAdvanced() {
   renderBuildAll();
   renderReference();
   renderAdvanced();
+  if (typeof Tree !== 'undefined' && Tree.init) Tree.init();
 })();

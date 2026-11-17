@@ -1,11 +1,4 @@
-/* SnB Loadouts — build-archetype taxonomy.
- *
- * Derived purely from existing data fields (no number/formula/data changes):
- *  - weapons: damage_types keys + status_effects effect names
- *  - furniture: perk_text keyword signals
- * Ambiguous items land in "general" rather than being guessed.
- * Plain-language, community-edition voice throughout.
- */
+/* SnB Loadouts — build-archetype taxonomy & verified starter templates. */
 'use strict';
 
 const Archetypes = {
@@ -23,7 +16,6 @@ const Archetypes = {
     general:   { icon: '🌐', name: 'General',   blurb: 'Fits any build — plain damage, reload, sailing' },
   },
 
-  // damage_types key -> archetype (weapons)
   _DMG: {
     electric: 'electric', shock: 'electric',
     explosive: 'explosive',
@@ -34,24 +26,24 @@ const Archetypes = {
     toxic: 'toxic',
     repair: 'support',
   },
-  // status effect name -> archetype (weapons). Taunted is utility — no archetype.
+
   _STATUS: {
     Stormstruck: 'electric', 'Shell-shocked': 'explosive', Flooded: 'flooding',
-    Ablaze: 'fire', Punctured: 'piercing', 'Torn Sails': 'tearing', Poisoned: 'toxic',
+    Ablaze: 'fire', Burning: 'fire', Punctured: 'piercing', 'Torn Sails': 'tearing',
+    Poisoned: 'toxic', Toxic: 'toxic',
   },
-  // perk_text keyword -> archetype (furniture), checked in order of appearance
+
   _PERK_PATS: [
     ['electric', /electric|stormstruck|leyden/i],
-    ['explosive', /explos/i],
+    ['explosive', /explos|shell-shock/i],
     ['flooding', /flood/i],
-    ['fire', /abla|burn|\bfire\b/i],
-    ['piercing', /pierc/i],
-    ['tearing', /tearing/i],
+    ['fire', /abla|burn|\bfire\b|charred/i],
+    ['piercing', /pierc|punctur/i],
+    ['tearing', /tearing|torn sails/i],
     ['toxic', /toxic|poison/i],
     ['support', /repair|\bheal/i],
   ],
 
-  /** Archetype list for a weapon, primary first. Always non-empty. */
   weaponArchetypes(w) {
     const sig = [];
     const push = a => { if (a && !sig.includes(a)) sig.push(a); };
@@ -64,7 +56,6 @@ const Archetypes = {
     return sig.length ? sig : ['general'];
   },
 
-  /** Archetype list for a furniture piece, primary first. Always non-empty. */
   furnitureArchetypes(f) {
     const t = String((f && f.perk_text) || '').toLowerCase();
     const hits = [];
@@ -78,7 +69,6 @@ const Archetypes = {
     return sig.length ? sig : ['general'];
   },
 
-  /** Small icon chips showing every archetype an item serves. HTML string. */
   chips(list) {
     return '<span class="arch-chips">' + list.map(a => {
       const m = this.META[a] || this.META.general;
@@ -87,21 +77,18 @@ const Archetypes = {
   },
 };
 
-/* ------------------------------------------------------------------ */
-/* Curated starter templates: one per archetype, full-catalog coverage. */
-/* Every name below was verified against data/weapons.json,            */
-/* data/furniture.json and data/ships.json.                            */
-/* ------------------------------------------------------------------ */
+/* Curated starter templates — verified against JSON catalogs. */
 const TEMPLATES = [
   {
     id: 'stormcaller', archetype: 'electric', name: 'Stormcaller',
     tagline: 'Frigate · Electric',
-    synergy: 'Thunder Dragon Cannons deal electric damage and slap Stormstruck on everything they touch. Leyden Vault Array turns that into bonus electric damage plus faster electric reloads — and it hits Stormstruck targets even harder. St. Elmo\u2019s Chains makes your lightning arc to nearby ships whenever you hit a Flooded target, so sail with a flooding friend and watch it chain.',
+    synergy: 'Thunder Dragon Cannons deal electric damage and inflict Stormstruck. Leyden Vault Array boosts damage against Stormstruck targets and speeds up electric reloads, while St. Elmo’s Chains arcs lightning to nearby ships off Flooded targets.',
     ship: 'Frigate',
+    armor: 'Celestial Dance',
     weapons: [
       { position: 'bow', name: 'Divine Thunder', shots: 1 },
-      { position: 'broadside_port', name: 'Thunder Dragon Cannon', shots: 6 },
-      { position: 'broadside_starboard', name: 'Thunder Dragon Cannon', shots: 6 },
+      { position: 'broadside_port', name: 'Thunder Dragon Cannon', shots: 17 },
+      { position: 'broadside_starboard', name: 'Thunder Dragon Cannon', shots: 17 },
       { position: 'stern', name: 'Divine Thunder', shots: 1 },
     ],
     furniture: { major: "St. Elmo's Chains", minors: ['Leyden Vault Array', 'Cannonball Charging Station', 'Copper Fastening Station'] },
@@ -109,40 +96,43 @@ const TEMPLATES = [
   {
     id: 'demolitionist', archetype: 'explosive', name: 'Demolitionist',
     tagline: 'Snow · Explosive',
-    synergy: 'Everything here booms. Bombards and the Explosive Demi-cannons stack Shell-shocked, and Wyrm\u2019s Breath Churner piles secondary damage onto all your explosive weapons. Honest note: no explosive minor furniture exists in the data yet, so the minors are plain damage and stamina to keep you in the fight.',
+    synergy: 'Heavy explosive broadsides and Bombards stack Shell-shocked to disable enemy weapons, while Wyrms’ Breath Churner piles +25% secondary damage onto all explosive weaponry.',
     ship: 'Snow',
+    armor: 'Black Prince',
     weapons: [
       { position: 'bow', name: 'Bombard V', shots: 1 },
-      { position: 'broadside_port', name: 'Explosive Demi-cannon III', shots: 1 },
-      { position: 'broadside_starboard', name: 'Explosive Demi-cannon III', shots: 1 },
+      { position: 'broadside_port', name: 'Explosive Demi-cannon III', shots: 7 },
+      { position: 'broadside_starboard', name: 'Explosive Demi-cannon III', shots: 7 },
       { position: 'stern', name: 'Bombard V', shots: 1 },
       { position: 'auxiliary', name: 'Mortar III', shots: 1 },
     ],
-    furniture: { major: "Wyrm's Breath Churner", minors: ['BREECHLOCK FURNACE', 'STERILE GALLEY I'] },
+    furniture: { major: "Wyrms' Breath Churner", minors: ['BREECHLOCK FURNACE', 'STERILE GALLEY I'] },
   },
   {
     id: 'tidecaller', archetype: 'flooding', name: 'Tidecaller',
     tagline: 'Padewakang · Flooding',
-    synergy: 'Drowning Cabinet is the heart of any flooding build: more flooding weapon damage, faster flooding reloads, and Flooded lasts longer on your targets. Torpedoes and Flooding Demi-cannons stack Flooded fast — drown them first, then let the water do the work.',
+    synergy: 'Drowning Cabinet cuts flooding weapon reloads by 10% and extends Flooded duration. Torpedoes and Flooding Demi-cannons rapidly stack Flooded to deal unrepairable Severe Damage.',
     ship: 'Padewakang',
+    armor: 'Rhapsody of the Deep',
     weapons: [
       { position: 'bow', name: 'Torpedo III', shots: 1 },
-      { position: 'broadside_port', name: 'Flooding Demi-cannon III', shots: 1 },
-      { position: 'broadside_starboard', name: 'Flooding Demi-cannon III', shots: 1 },
+      { position: 'broadside_port', name: 'Flooding Demi-cannon III', shots: 6 },
+      { position: 'broadside_starboard', name: 'Flooding Demi-cannon III', shots: 6 },
       { position: 'stern', name: 'Woundcaller', shots: 1 },
       { position: 'auxiliary', name: 'De Breker', shots: 1 },
     ],
-    furniture: { major: 'DROWNING CABINET', minors: ['Lead Kettle I', 'Rifled Barrel Workshop', 'Debris Locker'] },
+    furniture: { major: 'Drowning Cabinet', minors: ['Lead Kettle I', 'Rifled Barrel Workshop', 'Debris Locker'] },
   },
   {
     id: 'pyromaniac', archetype: 'fire', name: 'Pyromaniac',
     tagline: 'Barque · Fire',
-    synergy: 'Hellshot Smithy feeds all your fire damage, and the fuel stations stretch every burn. Burning Culverins and Fire Long Guns keep Ablaze rolling while the Infernal Maw drops sea-fire mines in your wake — everything that catches fire stays on fire.',
+    synergy: 'Hellshot Smithy applies Charred on heavy burning hits (+30% burning damage taken) and spreads fire across nearby targets while Infernal Maw drops sea-fire mines.',
     ship: 'Barque',
+    armor: 'Phoenix Crest',
     weapons: [
       { position: 'bow', name: 'Fire Long Gun III', shots: 1 },
-      { position: 'broadside_port', name: 'Burning Culverin III', shots: 1 },
-      { position: 'broadside_starboard', name: 'Burning Culverin III', shots: 1 },
+      { position: 'broadside_port', name: 'Burning Culverin III', shots: 6 },
+      { position: 'broadside_starboard', name: 'Burning Culverin III', shots: 6 },
       { position: 'stern', name: 'Fire Long Gun III', shots: 1 },
       { position: 'auxiliary', name: 'Infernal Maw', shots: 1 },
     ],
@@ -151,12 +141,13 @@ const TEMPLATES = [
   {
     id: 'needlepoint', archetype: 'piercing', name: 'Needlepoint',
     tagline: 'Brig · Piercing',
-    synergy: 'Piercing is about weak points and raw hull damage. Shot Carving Station sharpens the whole setup, and the ballast and kegs keep your shots flying flat and fast. Aim for the waterline and watch hull bars disappear.',
+    synergy: 'Built for precision weakpoint hits and armor penetration. Shot Carving Station turns weakpoint hits into Taunt while speeding up piercing reloads.',
     ship: 'Brig',
+    armor: 'Needle Shield',
     weapons: [
       { position: 'bow', name: 'Ballista III', shots: 1 },
-      { position: 'broadside_port', name: 'Piercing Demi-cannon III', shots: 1 },
-      { position: 'broadside_starboard', name: 'Piercing Demi-cannon III', shots: 1 },
+      { position: 'broadside_port', name: 'Piercing Demi-cannon III', shots: 6 },
+      { position: 'broadside_starboard', name: 'Piercing Demi-cannon III', shots: 6 },
       { position: 'stern', name: 'Long Gun V', shots: 1 },
       { position: 'auxiliary', name: "L'Aiguille", shots: 1 },
     ],
@@ -165,12 +156,13 @@ const TEMPLATES = [
   {
     id: 'sailshredder', archetype: 'tearing', name: 'Sailshredder',
     tagline: 'Sambuk · Tearing',
-    synergy: 'Honest note: no furniture in the data buffs tearing specifically yet, so this runs on raw sail-shredding. Tearing guns stack Torn Sails and slow your target to a crawl, while Megaphone and the Breechlock keep your reloads and damage honest. Shred their sails, then pick them apart at your leisure.',
+    synergy: 'Tearing guns stack Torn Sails and cut enemy speed by 75%, while Megaphone and Breechlock Furnace keep your reloads and close-range damage sharp.',
     ship: 'Sambuk',
+    armor: 'Crimson Lotus',
     weapons: [
       { position: 'bow', name: 'Tearing Long Gun III', shots: 1 },
-      { position: 'broadside_port', name: 'Tearing Culverin III', shots: 1 },
-      { position: 'broadside_starboard', name: 'Tearing Culverin III', shots: 1 },
+      { position: 'broadside_port', name: 'Tearing Culverin III', shots: 6 },
+      { position: 'broadside_starboard', name: 'Tearing Culverin III', shots: 6 },
       { position: 'stern', name: 'Tearing Long Gun III', shots: 1 },
     ],
     furniture: { major: 'Megaphone', minors: ['BREECHLOCK FURNACE', 'STERILE GALLEY I'] },
@@ -178,12 +170,13 @@ const TEMPLATES = [
   {
     id: 'plaguedoctor', archetype: 'toxic', name: 'Plague Doctor',
     tagline: 'Snow · Toxic',
-    synergy: 'Stinkpot Station is the heart of any poison build, and the benches stretch your Poisoned duration and damage. Stack Poisoned with every volley and let it eat the hull while you circle out of range.',
+    synergy: 'Stinkpot Station powers up Poisoned targets within 250m while draining enemy crew stamina so they cannot brace.',
     ship: 'Snow',
+    armor: 'Wrathful Ward',
     weapons: [
       { position: 'bow', name: 'La Piqûre', shots: 1 },
-      { position: 'broadside_port', name: 'Brightmaw', shots: 1 },
-      { position: 'broadside_starboard', name: 'Brightmaw', shots: 1 },
+      { position: 'broadside_port', name: 'Brightmaw', shots: 7 },
+      { position: 'broadside_starboard', name: 'Brightmaw', shots: 7 },
       { position: 'stern', name: 'Blightbearer', shots: 1 },
     ],
     furniture: { major: 'Stinkpot Station', minors: ['La Potence Schematics I', 'Curare Crushing Bench', 'Apothecary Tool Bench'] },
@@ -191,26 +184,28 @@ const TEMPLATES = [
   {
     id: 'lifeline', archetype: 'support', name: 'Lifeline',
     tagline: 'Barque · Support',
-    synergy: 'First Aid Station plus the hull and joinery pieces keep you — and anyone near you — patched up. Repair guns heal on hit; the broadsides carry plain Demi-cannons for self-defense while the repair pieces do the real work. Swap First Aid Station for Buoy Locker I if you run a Springloader.',
+    synergy: 'First Aid Station plus Joinery Workshop keep you and your fleet patched up. Repair guns heal on hit while broadside Demi-cannons handle self-defense.',
     ship: 'Barque',
+    armor: 'Ouroboros',
     weapons: [
       { position: 'bow', name: 'Repair Long Gun III', shots: 1 },
-      { position: 'broadside_port', name: 'Demi-cannon V', shots: 1 },
-      { position: 'broadside_starboard', name: 'Demi-cannon V', shots: 1 },
+      { position: 'broadside_port', name: 'Demi-cannon V', shots: 6 },
+      { position: 'broadside_starboard', name: 'Demi-cannon V', shots: 6 },
       { position: 'stern', name: 'Repair Bombard III', shots: 1 },
       { position: 'auxiliary', name: 'Repair Mortar III', shots: 1 },
     ],
-    furniture: { major: 'First Aid Station', minors: ['DOUBLE-PLANKED HULL I', 'ORGAN HARVESTING STATION', 'Joinery Workshop I'] },
+    furniture: { major: 'First Aid Station', minors: ['DOUBLE-PLANKED HULL I', 'Joinery Workshop I', 'STERILE GALLEY I'] },
   },
   {
     id: 'firstcommand', archetype: 'general', name: 'First Command',
     tagline: 'Sloop · Beginner',
-    synergy: 'No element, no problem. Plain guns, faster reloads the more you land hits, extra damage up close, and stamina to keep you moving. Learn the ropes here — then pick an element above and go deep.',
+    synergy: 'No element, no problem. Plain guns, faster reloads the more hits you land, and extra damage up close.',
     ship: 'Sloop',
+    armor: 'Kawaca II',
     weapons: [
       { position: 'bow', name: 'Culverin V', shots: 1 },
-      { position: 'broadside_port', name: 'Demi-cannon V', shots: 1 },
-      { position: 'broadside_starboard', name: 'Demi-cannon V', shots: 1 },
+      { position: 'broadside_port', name: 'Demi-cannon V', shots: 3 },
+      { position: 'broadside_starboard', name: 'Demi-cannon V', shots: 3 },
     ],
     furniture: { major: 'Megaphone', minors: ['BREECHLOCK FURNACE', 'STERILE GALLEY I'] },
   },

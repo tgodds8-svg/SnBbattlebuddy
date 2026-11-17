@@ -1,227 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0a1420">
-<title>SnB Loadouts — Skull and Bones Build Calculator</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#08111c" />
+  <title>SnB Loadouts — Skull &amp; Bones Naval Arsenal</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="app-header">
-  <div class="header-title">
-    <span class="skull">☠</span>
-    <div>
-      <h1>SnB Loadouts</h1>
-      <p class="subtitle">Skull &amp; Bones build calculator · Y3S2 Crimson Waters</p>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- ============ BUILD TAB (Quick Build) ============ -->
-  <section id="tab-build" class="tab-panel active" aria-label="Quick build">
-
-    <div id="onboard-card" class="onboard" hidden>
-      <h2>☠ Welcome aboard</h2>
-      <p>Build your ship in three taps:</p>
-      <ol>
-        <li><strong>Pick your ship</strong> — find yours below.</li>
-        <li><strong>Add your guns</strong> — tap a slot, pick a weapon that fits.</li>
-        <li><strong>See your damage</strong> — one big number, updated live.</li>
-      </ol>
-      <p class="hint">Everything else — furniture, season buffs, mastery — lives under <strong>Tune</strong> below.</p>
-      <button id="onboard-dismiss" class="btn btn-primary">Got it, let's build</button>
-    </div>
-
-    <div class="steps" role="navigation" aria-label="Build steps">
-      <button class="step active" data-step="step-1"><span class="step-num">1</span><span class="step-name">Ship</span></button>
-      <button class="step" data-step="step-2"><span class="step-num">2</span><span class="step-name">Guns</span></button>
-      <button class="step" data-step="step-3"><span class="step-num">3</span><span class="step-name">Damage</span></button>
-    </div>
-
-    <div id="build-status" class="status-bar" hidden></div>
-
-    <!-- TEMPLATES: curated starter builds, one per archetype -->
-    <div id="templates-section" class="step-section">
-      <h2>Start from a template <span class="hint">pick one, then make it yours</span></h2>
-      <p class="hint">Nine ready-made builds — one per style, furniture included. Tap one to load it, then tweak anything.</p>
-      <div id="template-list" class="card-grid"></div>
-    </div>
-
-    <!-- STEP 1: SHIP -->
-    <div id="step-1" class="step-section">
-      <h2>Pick your ship</h2>
-      <div class="search-row">
-        <input id="ship-search" type="search" placeholder="Search ships…" autocomplete="off" aria-label="Search ships">
-        <select id="ship-class-filter" aria-label="Filter by ship class"><option value="">All classes</option></select>
-      </div>
-      <div id="ship-list" class="card-grid"></div>
-      <div class="preset-row">
-        <button id="btn-load-preset" class="btn">⚓ Load an example build</button>
-      </div>
-    </div>
-
-    <!-- STEP 2: GUNS -->
-    <div id="step-2" class="step-section">
-      <h2>Your guns <span class="hint">tap a slot to pick a weapon</span></h2>
-      <div id="build-no-ship" class="empty-state">
-        <p>Pick a ship first — your gun slots appear here.</p>
-        <button id="btn-goto-ships" class="btn btn-primary">Choose a ship</button>
-      </div>
-      <div id="weapon-slots"></div>
-    </div>
-
-    <!-- STEP 3: DAMAGE -->
-    <div id="step-3" class="step-section">
-      <h2>Your damage</h2>
-      <div id="qdps-empty" class="empty-state">
-        <p>Add some guns and your damage number shows up right here.</p>
-      </div>
-      <div id="qdps-main" hidden>
-        <div class="dps-hero">
-          <div class="dps-label">Damage per second <span class="est-flag" title="Absolute numbers are estimates — Ubisoft never published the armor formula">est.</span></div>
-          <div id="qdps-total" class="dps-number">0</div>
-          <div class="dps-sub"><span class="hint">Broadside alpha:</span> <strong id="qdps-alpha">0</strong></div>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-crest" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+            <circle cx="18" cy="18" r="16" stroke="#d8a94e" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <path d="M18 5L20 15L30 18L20 21L18 31L16 21L6 18L16 15Z" fill="#d8a94e"/>
+            <circle cx="18" cy="18" r="3" fill="#08111c"/>
+          </svg>
+        </span>
+        <div>
+          <h1>SNB LOADOUTS</h1>
+          <p class="subtitle">Naval Arsenal &amp; Build Architect · Y3S2</p>
         </div>
-        <p class="honesty">Numbers marked <span class="est-badge">est.</span> are community estimates — Ubisoft never published the armor formula. For the trustworthy armor-proof comparison, use <strong>Compare</strong> in the Tune tab.</p>
-        <div id="qdps-breakdown"></div>
-        <button id="btn-goto-tune" class="btn">⚙ Tune it further — furniture, buffs, mastery</button>
+      </div>
+      <div class="header-telemetry" id="header-telemetry" hidden>
+        <div class="tele-pill"><span class="tele-lbl">DPS</span><strong id="tele-dps">0</strong></div>
+        <div class="tele-pill"><span class="tele-lbl">ARMOR</span><strong id="tele-armor">—</strong></div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ============ ADVANCED TAB (Tune) ============ -->
-  <section id="tab-advanced" class="tab-panel" aria-label="Advanced tuning">
+  <main id="main">
+    <!-- ==================== TAB 1: BUILD ==================== -->
+    <section id="tab-build" class="tab-panel active" role="tabpanel">
+      <div id="onboard-card" class="onboard" hidden>
+        <div class="onboard-top">
+          <h2>Chart Your Warship</h2>
+          <button id="onboard-dismiss" class="btn btn-sm">Dismiss</button>
+        </div>
+        <ol>
+          <li><strong>Select a Hull</strong> — Pick your ship class below.</li>
+          <li><strong>Arm &amp; Plate</strong> — Tap any deck slot or hull armor to equip or quick-swap.</li>
+          <li><strong>Inspect Telemetry</strong> — Live sustained DPS, broadside alpha, and resistances update automatically.</li>
+        </ol>
+      </div>
 
-    <div class="adv-section">
-      <h2>Your loadout</h2>
-      <div id="adv-no-loadout" class="empty-state"><p>Nothing built yet — head to <strong>Build</strong> and pick a ship.</p></div>
+      <nav class="steps" aria-label="Build steps">
+        <button class="step active" data-step="step-1"><span class="step-num">1</span>Hull</button>
+        <button class="step" data-step="step-2"><span class="step-num">2</span>Arsenal</button>
+        <button class="step" data-step="step-3"><span class="step-num">3</span>Telemetry</button>
+      </nav>
+
+      <div id="build-status" class="status-bar" hidden></div>
+
+      <!-- STEP 1: SHIP HULL -->
+      <div id="step-1" class="build-block">
+        <div class="sec-head">
+          <h2>1. Select Warship</h2>
+          <span class="hint">Tap a hull to begin</span>
+        </div>
+        <div class="search-row">
+          <input id="ship-search" type="search" placeholder="Search vessels…" aria-label="Search vessels" />
+          <select id="ship-class-filter" aria-label="Filter by ship class">
+            <option value="">All Classes</option>
+          </select>
+        </div>
+        <div id="ship-list" class="card-grid"></div>
+      </div>
+
+      <!-- STEP 2: WEAPONS & ARMOR -->
+      <div id="step-2" class="build-block">
+        <div class="sec-head">
+          <h2>2. Deck Arsenal &amp; Plating</h2>
+          <div class="quick-actions" id="arsenal-actions" hidden>
+            <button id="btn-mirror-broadsides" class="btn btn-sm" title="Copy Port broadside to Starboard">⇄ Mirror Broadsides</button>
+            <button id="btn-share-code" class="btn btn-sm" title="Copy shareable build code">⎘ Share Code</button>
+          </div>
+        </div>
+        <div id="build-no-ship" class="empty-state">
+          <p>Select a warship above to unlock its gun decks and armor mount.</p>
+          <button id="btn-goto-ships" class="btn btn-primary">Choose a Ship</button>
+        </div>
+        <div id="armor-slot-wrap"></div>
+        <div id="weapon-slots"></div>
+      </div>
+
+      <!-- STEP 3: LIVE TELEMETRY -->
+      <div id="step-3" class="build-block">
+        <div class="sec-head">
+          <h2>3. Combat Telemetry</h2>
+          <span class="hint">Live output</span>
+        </div>
+        <div id="qdps-empty" class="empty-state">
+          <p>Equip at least one weapon to calculate sustained DPS and broadside alpha.</p>
+        </div>
+        <div id="qdps-main" hidden>
+          <div class="dps-hero">
+            <div class="hero-grid">
+              <div class="hero-stat">
+                <span class="dps-label">Sustained DPS <span class="est-badge">est.</span></span>
+                <div class="dps-number" id="qdps-total">0</div>
+              </div>
+              <div class="hero-stat">
+                <span class="dps-label">Broadside Alpha</span>
+                <div class="dps-number teal" id="qdps-alpha">0</div>
+              </div>
+            </div>
+            <div id="defense-strip" class="defense-strip"></div>
+          </div>
+          <p class="honesty">Armor mitigation curves are unpublished by Ubisoft — treat absolute DPS as an estimate and use <strong>Compare</strong> in the Tune tab for armor-independent rankings.</p>
+          <div id="qdps-breakdown"></div>
+          <button id="btn-goto-tune" class="btn btn-primary">⚙ Tune Furniture, Mastery &amp; Stacking</button>
+        </div>
+      </div>
+
+      <!-- STARTER TEMPLATES -->
+      <div class="build-block">
+        <div class="sec-head">
+          <h2>Archetype Blueprints</h2>
+          <span class="hint">One-tap builds with furniture &amp; armor</span>
+        </div>
+        <div id="template-list" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: OPTIMIZE ==================== -->
+    <section id="tab-optimize" class="tab-panel" role="tabpanel">
+      <div class="sec-head">
+        <h2>🎯 Tactical Optimizer</h2>
+        <span class="hint">Scenario-driven recommendations</span>
+      </div>
+      <div class="notice">Choose your hull, target profile, and combat goal. The engine evaluates every valid weapon and furniture combination using verified game data.</div>
+      <div class="opt-grid">
+        <label>Warship<select id="opt-ship"></select></label>
+        <label>Target Profile<select id="opt-enemy"></select></label>
+        <label>Combat Objective<select id="opt-objective"></select></label>
+        <label>Engagement Range (m)<input id="opt-range" type="number" min="50" max="1200" step="25" value="300" /></label>
+      </div>
+      <div class="opt-mastery">
+        <span class="hint">Active Mastery Perks:</span>
+        <label><input type="checkbox" id="opt-m-relentless" /> Relentless Force</label>
+        <label><input type="checkbox" id="opt-m-weakness" /> Weakness Finder</label>
+        <label><input type="checkbox" id="opt-m-firepower" /> Firepower Order</label>
+      </div>
+      <label class="opt-check"><input type="checkbox" id="opt-estimated" /> Include community-estimated (unverified) weapons</label>
+      <button id="btn-optimize" class="btn btn-primary full-btn">Calculate Best Loadouts</button>
+      <div id="opt-results" style="margin-top:1rem;"></div>
+
+      <h2>Curated Fleet Presets</h2>
+      <div id="opt-presets"></div>
+    </section>
+
+    <!-- ==================== TAB 3: MASTERY TREE ==================== -->
+    <section id="tab-tree" class="tab-panel" role="tabpanel">
+      <div class="sec-head">
+        <h2>🌳 Y3S2 Mastery Tree</h2>
+        <span class="hint">565 Nodes · 90 Pt Cap</span>
+      </div>
+      <div class="tree-controls">
+        <button id="btn-tree-optimum" class="btn btn-primary btn-sm">Load Optimum (80)</button>
+        <button id="btn-tree-clear" class="btn btn-sm">Clear</button>
+        <button id="btn-tree-zoom-in" class="btn btn-sm" title="Zoom in">+</button>
+        <button id="btn-tree-zoom-out" class="btn btn-sm" title="Zoom out">−</button>
+        <button id="btn-tree-reset" class="btn btn-sm">Reset View</button>
+        <span id="tree-count" class="hint">0 / 90 pts</span>
+      </div>
+      <div class="tree-bridge-bar">
+        <label class="opt-check" style="margin:0;">
+          <input type="checkbox" id="tree-apply-dps" checked />
+          <span>Sync selected tree nodes into DPS Calculator</span>
+        </label>
+        <input id="tree-search" type="search" placeholder="Highlight node name…" style="max-width:210px;min-height:38px;padding:.35rem .6rem;font-size:.85rem;" />
+      </div>
+      <div id="tree-error" class="notice" hidden>Unable to load mastery tree data.</div>
+      <div class="tree-wrap" id="tree-wrap">
+        <svg id="tree-svg" viewBox="-2500 -2400 5000 4800" role="img" aria-label="Seasonal Mastery Tree"></svg>
+      </div>
+      <h3>Milestone Spine Picks (1 per Tier)</h3>
+      <div class="opt-grid">
+        <label>Tier 10<select id="center-10"></select></label>
+        <label>Tier 30<select id="center-30"></select></label>
+        <label>Tier 50<select id="center-50"></select></label>
+      </div>
+      <div id="tree-center"></div>
+      <h3>Node Stat Totals</h3>
+      <div id="tree-math"></div>
+      <h3>Selected Nodes</h3>
+      <div id="tree-selected-list"></div>
+    </section>
+
+    <!-- ==================== TAB 4: TUNE & COMPARE ==================== -->
+    <section id="tab-advanced" class="tab-panel" role="tabpanel">
+      <h2>Saved Loadouts &amp; Sharing</h2>
+      <div id="adv-no-loadout" class="notice">Select a ship in the <strong>Build</strong> tab to save, share, or equip furniture.</div>
       <div id="adv-loadout" hidden>
         <div class="loadout-header">
-          <input id="loadout-name" placeholder="Loadout name" aria-label="Loadout name">
+          <input id="loadout-name" type="text" placeholder="Loadout name…" aria-label="Loadout name" />
           <div class="loadout-actions">
             <button id="btn-save-loadout" class="btn btn-primary">Save</button>
             <button id="btn-load-loadout" class="btn">Saved…</button>
+            <button id="btn-export-code" class="btn">Export</button>
+            <button id="btn-import-code" class="btn">Import</button>
           </div>
         </div>
         <div id="saved-list" class="saved-list" hidden></div>
-      </div>
-    </div>
 
-    <div class="adv-section" id="adv-furniture">
-      <h2>Furniture <span class="hint">1 Major + minors</span></h2>
-      <div class="furniture-controls">
-        <label>Minor slots
-          <input id="minor-slot-count" type="number" min="0" max="8" value="4" aria-label="Minor furniture slots">
-        </label>
+        <h2>Ship Furniture (1 Major + Minors)</h2>
+        <div class="furniture-controls">
+          <label>Minor slots <input id="minor-slot-count" type="number" min="0" max="8" value="4" /></label>
+        </div>
+        <div id="furniture-slots"></div>
       </div>
-      <div id="furniture-slots"></div>
-    </div>
 
-    <div class="adv-section">
-      <h2>Season buffs <span class="hint">Year 3 Season 2</span></h2>
-      <div class="notice">
-        <strong>Year 3 Season 2 · Crimson Waters</strong> · <span id="season-dates"></span><br>
-        Only officially documented nodes are listed — the full 500+ node tree is not published.
-      </div>
-      <div id="buff-list"></div>
-    </div>
-
-    <div class="adv-section">
-      <h2>Mastery <span class="hint">seasonal perks</span></h2>
+      <h2>Seasonal Perks (Y3S2)</h2>
       <div class="mastery-bar">
-        <div><strong>Mastery points</strong></div>
-        <div class="points"><span id="mastery-used">0</span> / 90 used</div>
+        <div class="points">Mastery Points: <strong id="mastery-used">0</strong> / 90</div>
         <div class="points-bar"><div id="mastery-fill"></div></div>
       </div>
-      <div class="notice">Documented Y3S2 seasonal perks. Toggle what you've unlocked; costs are the unlock levels (10/30/50 = 90).</div>
       <div id="mastery-list"></div>
-    </div>
 
-    <div class="adv-section">
-      <h2>Stacking rules <span class="hint">how % bonuses combine</span></h2>
-      <div class="notice small">Ubisoft never published whether % bonuses add or multiply — flip these after your own testing.</div>
+      <h2>Stacking Rules</h2>
       <div id="stacking-toggles" class="stacking-grid"></div>
-    </div>
 
-    <div class="adv-section">
-      <h2>Combat assumptions</h2>
+      <h2>Combat Assumptions</h2>
       <div class="assumptions">
-        <label>Engagement range (m)
-          <input id="assume-range" type="number" min="0" max="1500" value="300">
-        </label>
-        <label>Weakpoint hit rate %
-          <input id="assume-weakpoint" type="number" min="0" max="100" value="20">
-        </label>
-        <label>Weakpoint damage bonus %
-          <input id="assume-weakpoint-bonus" type="number" min="0" max="200" value="50">
-        </label>
+        <label>Engagement Range (m)<input id="assume-range" type="number" min="50" max="1500" step="25" value="300" /></label>
+        <label>Weakpoint Hit Rate (%)<input id="assume-weakpoint" type="number" min="0" max="100" step="5" value="20" /></label>
+        <label>Weakpoint Damage Bonus (%)<input id="assume-weakpoint-bonus" type="number" min="0" max="300" step="10" value="50" /></label>
       </div>
-    </div>
 
-    <div class="adv-section">
-      <h2>Compare loadouts <span class="hint">armor-proof relative numbers</span></h2>
+      <h2>Compare Loadouts</h2>
       <div class="compare-row">
-        <select id="compare-a" aria-label="First loadout to compare"></select>
+        <select id="compare-a" aria-label="Loadout A"></select>
         <span class="vs">vs</span>
-        <select id="compare-b" aria-label="Second loadout to compare"></select>
+        <select id="compare-b" aria-label="Loadout B"></select>
         <button id="btn-compare" class="btn btn-primary">Compare</button>
       </div>
       <div id="compare-result"></div>
-    </div>
 
-    <div class="adv-section">
-      <h2>Data reference</h2>
+      <h2>Season Notes</h2>
+      <p class="hint" id="season-dates"></p>
+      <div id="buff-list"></div>
+
+      <h2>Codex Reference</h2>
       <p class="hint" id="data-verified-line"></p>
-      <h3>Status effects</h3>
-      <div id="status-ref-table" class="ref-table"></div>
-      <h3>Ships</h3>
-      <input id="ref-ship-search" type="search" placeholder="Search ships…" autocomplete="off" aria-label="Search ship table">
-      <div id="ref-ship-table" class="ref-table"></div>
-      <h3>Weapons</h3>
-      <input id="ref-weapon-search" type="search" placeholder="Search weapons…" autocomplete="off" aria-label="Search weapon table">
-      <div id="ref-weapon-table" class="ref-table"></div>
+      <details class="adv-section">
+        <summary class="btn full-btn">Status Effects</summary>
+        <div id="status-ref-table" class="ref-table"></div>
+      </details>
+      <details class="adv-section">
+        <summary class="btn full-btn">Ships Codex</summary>
+        <input id="ref-ship-search" type="search" placeholder="Filter ships…" />
+        <div id="ref-ship-table" class="ref-table"></div>
+      </details>
+      <details class="adv-section">
+        <summary class="btn full-btn">Weapons Codex</summary>
+        <input id="ref-weapon-search" type="search" placeholder="Filter weapons…" />
+        <div id="ref-weapon-table" class="ref-table"></div>
+      </details>
+      <details class="adv-section">
+        <summary class="btn full-btn">Armor Codex</summary>
+        <input id="ref-armor-search" type="search" placeholder="Filter armor…" />
+        <div id="ref-armor-table" class="ref-table"></div>
+      </details>
+
+      <footer class="app-foot">
+        SnB Loadouts · Community Edition · Unofficial fan tool for Skull &amp; Bones™. Game data &amp; trademarks belong to Ubisoft Entertainment.
+      </footer>
+    </section>
+  </main>
+
+  <nav class="bottomnav" role="tablist" aria-label="Main navigation">
+    <button class="btab active" data-tab="build" role="tab" aria-selected="true"><span class="btab-ico">⚒</span>Build</button>
+    <button class="btab" data-tab="optimize" role="tab" aria-selected="false"><span class="btab-ico">🎯</span>Optimize</button>
+    <button class="btab" data-tab="tree" role="tab" aria-selected="false"><span class="btab-ico">🌳</span>Tree</button>
+    <button class="btab" data-tab="advanced" role="tab" aria-selected="false"><span class="btab-ico">⚙</span>Tune</button>
+  </nav>
+
+  <!-- PICKER MODAL -->
+  <div id="picker-modal" class="modal" hidden>
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <input id="picker-search" type="search" placeholder="Search…" />
+        <button id="picker-close" class="btn">✕</button>
+      </div>
+      <div id="picker-clear-row"><button id="picker-clear" class="btn btn-danger full-btn">Clear Slot</button></div>
+      <div id="picker-list" class="picker-list"></div>
     </div>
+  </div>
 
-    <footer class="app-foot">
-      <p>SnB Loadouts · community edition · Y3S2 Crimson Waters</p>
-      <p class="hint">Armor mitigation is unpublished — absolute DPS is an estimate. Relative comparisons are the honest numbers.</p>
-    </footer>
-  </section>
-</main>
-
-<!-- Bottom tab bar -->
-<nav class="bottomnav" role="tablist" aria-label="Main sections">
-  <button class="btab active" data-tab="build" role="tab" aria-selected="true"><span class="btab-ico">⚒</span>Build</button>
-  <button class="btab" data-tab="advanced" role="tab" aria-selected="false"><span class="btab-ico">⚙</span>Tune</button>
-</nav>
-
-<!-- Generic searchable picker modal -->
-<div id="picker-modal" class="modal" hidden>
-  <div class="modal-sheet">
-    <div class="modal-head">
-      <input id="picker-search" type="search" placeholder="Search…" autocomplete="off" aria-label="Search picker">
-      <button id="picker-close" class="btn" aria-label="Close">✕</button>
+  <!-- DETAIL EDITOR MODAL -->
+  <div id="weapon-modal" class="modal" hidden>
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <h3 id="weapon-modal-title">Configure</h3>
+        <button id="weapon-close" class="btn">✕</button>
+      </div>
+      <div id="weapon-modal-body" class="modal-body"></div>
     </div>
-    <div id="picker-clear-row"><button id="picker-clear" class="btn btn-danger">Clear slot</button></div>
-    <div id="picker-list" class="picker-list"></div>
   </div>
-</div>
 
-<!-- Weapon detail editor modal -->
-<div id="weapon-modal" class="modal" hidden>
-  <div class="modal-sheet">
-    <div class="modal-head"><h3 id="weapon-modal-title">Weapon</h3><button id="weapon-close" class="btn" aria-label="Close">✕</button></div>
-    <div id="weapon-modal-body" class="modal-body"></div>
-  </div>
-</div>
-
-<script src="js/data.js"></script>
-<script src="js/calculator.js"></script>
-<script src="js/archetypes.js"></script>
-<script src="js/app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/archetypes.js"></script>
+  <script src="js/optimizer.js"></script>
+  <script src="js/tree.js"></script>
+  <script src="js/icons.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
